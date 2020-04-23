@@ -1,0 +1,29 @@
+{
+  "name": "creatissimo/otto-market-api",
+  "description": "PHP library for OTTO Market API build from swagger schema",
+  "keywords": [
+    "swagger",
+    "php",
+    "sdk",
+    "api",
+    "otto"
+  ],
+  "homepage": "https://github.com/creatissimo/otto-market-api",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Otto\\Client\\": "lib/"
+    }
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.19"
+  }
+}

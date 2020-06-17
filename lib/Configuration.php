@@ -80,7 +80,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://live.api.otto.market/';
+    protected $host = 'https://live.api.otto.market';
 
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default

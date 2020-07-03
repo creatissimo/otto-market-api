@@ -58,7 +58,7 @@ class OnlineStatus implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'sku' => 'string',
 'online' => 'bool',
-'last_modified' => 'int'    ];
+'last_modified' => '\DateTime'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,7 +68,7 @@ class OnlineStatus implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'sku' => null,
 'online' => null,
-'last_modified' => 'int64'    ];
+'last_modified' => 'date-time'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -259,7 +259,7 @@ class OnlineStatus implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return int
+     * @return \DateTime
      */
     public function getLastModified()
     {
@@ -269,7 +269,7 @@ class OnlineStatus implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param int $last_modified the timestamp (date and time) of the last modification of the online status
+     * @param \DateTime $last_modified the timestamp (date and time) of the last modification of the online status
      *
      * @return $this
      */

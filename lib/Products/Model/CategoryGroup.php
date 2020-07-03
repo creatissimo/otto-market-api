@@ -60,7 +60,7 @@ class CategoryGroup implements ModelInterface, ArrayAccess
 'categories' => 'string[]',
 'variation_themes' => 'string[]',
 'attributes' => '\Otto\Client\Products\Model\AttributeDefinition[]',
-'last_modified' => 'int'    ];
+'last_modified' => '\DateTime'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -72,7 +72,7 @@ class CategoryGroup implements ModelInterface, ArrayAccess
 'categories' => null,
 'variation_themes' => null,
 'attributes' => null,
-'last_modified' => 'int64'    ];
+'last_modified' => 'date-time'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class CategoryGroup implements ModelInterface, ArrayAccess
     /**
      * Gets last_modified
      *
-     * @return int
+     * @return \DateTime
      */
     public function getLastModified()
     {
@@ -329,7 +329,7 @@ class CategoryGroup implements ModelInterface, ArrayAccess
     /**
      * Sets last_modified
      *
-     * @param int $last_modified last modification date of the category.
+     * @param \DateTime $last_modified last modification date of the category.
      *
      * @return $this
      */

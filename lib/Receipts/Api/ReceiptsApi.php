@@ -146,7 +146,7 @@ class ReceiptsApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            return [$response->getBody()->getContents(), $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {

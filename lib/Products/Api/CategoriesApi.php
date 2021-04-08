@@ -266,7 +266,7 @@ class CategoriesApi
     protected function getCategoryGroupsRequest($page = null, $limit = null)
     {
 
-        $resourcePath = '/v1/products/categories';
+        $resourcePath = '/v2/products/categories';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

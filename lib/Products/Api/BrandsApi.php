@@ -256,7 +256,7 @@ class BrandsApi
     protected function getBrandsRequest()
     {
 
-        $resourcePath = '/v1/products/brands';
+        $resourcePath = '/v2/products/brands';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

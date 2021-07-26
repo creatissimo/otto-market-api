@@ -288,7 +288,7 @@ class ShipmentsApi
             );
         }
 
-        $resourcePath = '/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber}/positionitems';
+        $resourcePath = '/v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber}/positionitems';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -571,7 +571,7 @@ class ShipmentsApi
             );
         }
 
-        $resourcePath = '/shipments/{shipmentId}/positionitems';
+        $resourcePath = '/v1/shipments/{shipmentId}/positionitems';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -864,7 +864,7 @@ class ShipmentsApi
             );
         }
 
-        $resourcePath = '/shipments';
+        $resourcePath = '/v1/shipments';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1135,7 +1135,7 @@ class ShipmentsApi
             );
         }
 
-        $resourcePath = '/shipments';
+        $resourcePath = '/v1/shipments';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1432,7 +1432,7 @@ class ShipmentsApi
             );
         }
 
-        $resourcePath = '/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber}';
+        $resourcePath = '/v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1722,7 +1722,7 @@ class ShipmentsApi
             );
         }
 
-        $resourcePath = '/shipments/{shipmentId}';
+        $resourcePath = '/v1/shipments/{shipmentId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

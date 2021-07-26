@@ -60,7 +60,7 @@ class MarketPlaceStatus implements ModelInterface, ArrayAccess
 'status' => 'string',
 'errors' => '\Otto\Client\Products\Model\MarketPlaceStatusError[]',
 'links' => '\Otto\Client\Products\Model\MarketPlaceStatusLink[]',
-'last_modified' => 'int'    ];
+'last_modified' => '\DateTime'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -72,7 +72,7 @@ class MarketPlaceStatus implements ModelInterface, ArrayAccess
 'status' => null,
 'errors' => null,
 'links' => null,
-'last_modified' => 'int64'    ];
+'last_modified' => 'date-time'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -355,7 +355,7 @@ self::STATUS_INACTIVE,        ];
     /**
      * Gets last_modified
      *
-     * @return int
+     * @return \DateTime
      */
     public function getLastModified()
     {
@@ -365,7 +365,7 @@ self::STATUS_INACTIVE,        ];
     /**
      * Sets last_modified
      *
-     * @param int $last_modified last change of the marketplace status
+     * @param \DateTime $last_modified last change of the marketplace status
      *
      * @return $this
      */

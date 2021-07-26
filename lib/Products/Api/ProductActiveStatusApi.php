@@ -91,7 +91,7 @@ class ProductActiveStatusApi
      *
      * Read the active status of your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page page (optional)
@@ -101,9 +101,9 @@ class ProductActiveStatusApi
      * @throws \InvalidArgumentException
      * @return \Otto\Client\Products\Model\OnlineStatusListResponse
      */
-    public function getActiveStatus($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getActiveStatus($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
-        list($response) = $this->getActiveStatusWithHttpInfo($product_name, $category, $brand, $page, $limit);
+        list($response) = $this->getActiveStatusWithHttpInfo($product_reference, $category, $brand, $page, $limit);
         return $response;
     }
 
@@ -112,7 +112,7 @@ class ProductActiveStatusApi
      *
      * Read the active status of your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -122,10 +122,10 @@ class ProductActiveStatusApi
      * @throws \InvalidArgumentException
      * @return array of \Otto\Client\Products\Model\OnlineStatusListResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getActiveStatusWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getActiveStatusWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
         $returnType = '\Otto\Client\Products\Model\OnlineStatusListResponse';
-        $request = $this->getActiveStatusRequest($product_name, $category, $brand, $page, $limit);
+        $request = $this->getActiveStatusRequest($product_reference, $category, $brand, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -191,7 +191,7 @@ class ProductActiveStatusApi
      *
      * Read the active status of your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -200,9 +200,9 @@ class ProductActiveStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getActiveStatusAsync($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getActiveStatusAsync($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
-        return $this->getActiveStatusAsyncWithHttpInfo($product_name, $category, $brand, $page, $limit)
+        return $this->getActiveStatusAsyncWithHttpInfo($product_reference, $category, $brand, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -215,7 +215,7 @@ class ProductActiveStatusApi
      *
      * Read the active status of your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -224,10 +224,10 @@ class ProductActiveStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getActiveStatusAsyncWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getActiveStatusAsyncWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
         $returnType = '\Otto\Client\Products\Model\OnlineStatusListResponse';
-        $request = $this->getActiveStatusRequest($product_name, $category, $brand, $page, $limit);
+        $request = $this->getActiveStatusRequest($product_reference, $category, $brand, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -269,7 +269,7 @@ class ProductActiveStatusApi
     /**
      * Create request for operation 'getActiveStatus'
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -278,10 +278,10 @@ class ProductActiveStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getActiveStatusRequest($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    protected function getActiveStatusRequest($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
 
-        $resourcePath = '/v1/products/active-status';
+        $resourcePath = '/v2/products/active-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -289,8 +289,8 @@ class ProductActiveStatusApi
         $multipart = false;
 
         // query params
-        if ($product_name !== null) {
-            $queryParams['productName'] = ObjectSerializer::toQueryValue($product_name);
+        if ($product_reference !== null) {
+            $queryParams['productReference'] = ObjectSerializer::toQueryValue($product_reference);
         }
         // query params
         if ($category !== null) {
@@ -555,7 +555,7 @@ class ProductActiveStatusApi
             );
         }
 
-        $resourcePath = '/v1/products/{sku}/active-status';
+        $resourcePath = '/v2/products/{sku}/active-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -816,7 +816,7 @@ class ProductActiveStatusApi
     protected function updateActiveStatusRequest($body = null, $x_request_timestamp = null)
     {
 
-        $resourcePath = '/v1/products/active-status';
+        $resourcePath = '/v2/products/active-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

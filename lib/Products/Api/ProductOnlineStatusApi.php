@@ -91,7 +91,7 @@ class ProductOnlineStatusApi
      *
      * DEPRECATED - please use the corresponding active-status endpoint instead.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page page (optional)
@@ -101,9 +101,9 @@ class ProductOnlineStatusApi
      * @throws \InvalidArgumentException
      * @return \Otto\Client\Products\Model\OnlineStatusListResponse
      */
-    public function getOnlineStatus($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getOnlineStatus($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
-        list($response) = $this->getOnlineStatusWithHttpInfo($product_name, $category, $brand, $page, $limit);
+        list($response) = $this->getOnlineStatusWithHttpInfo($product_reference, $category, $brand, $page, $limit);
         return $response;
     }
 
@@ -112,7 +112,7 @@ class ProductOnlineStatusApi
      *
      * DEPRECATED - please use the corresponding active-status endpoint instead.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -122,10 +122,10 @@ class ProductOnlineStatusApi
      * @throws \InvalidArgumentException
      * @return array of \Otto\Client\Products\Model\OnlineStatusListResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOnlineStatusWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getOnlineStatusWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
         $returnType = '\Otto\Client\Products\Model\OnlineStatusListResponse';
-        $request = $this->getOnlineStatusRequest($product_name, $category, $brand, $page, $limit);
+        $request = $this->getOnlineStatusRequest($product_reference, $category, $brand, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -191,7 +191,7 @@ class ProductOnlineStatusApi
      *
      * DEPRECATED - please use the corresponding active-status endpoint instead.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -200,9 +200,9 @@ class ProductOnlineStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnlineStatusAsync($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getOnlineStatusAsync($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
-        return $this->getOnlineStatusAsyncWithHttpInfo($product_name, $category, $brand, $page, $limit)
+        return $this->getOnlineStatusAsyncWithHttpInfo($product_reference, $category, $brand, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -215,7 +215,7 @@ class ProductOnlineStatusApi
      *
      * DEPRECATED - please use the corresponding active-status endpoint instead.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -224,10 +224,10 @@ class ProductOnlineStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnlineStatusAsyncWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getOnlineStatusAsyncWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
         $returnType = '\Otto\Client\Products\Model\OnlineStatusListResponse';
-        $request = $this->getOnlineStatusRequest($product_name, $category, $brand, $page, $limit);
+        $request = $this->getOnlineStatusRequest($product_reference, $category, $brand, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -269,7 +269,7 @@ class ProductOnlineStatusApi
     /**
      * Create request for operation 'getOnlineStatus'
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -278,10 +278,10 @@ class ProductOnlineStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOnlineStatusRequest($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    protected function getOnlineStatusRequest($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
 
-        $resourcePath = '/v1/products/online-status';
+        $resourcePath = '/v2/products/online-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -289,8 +289,8 @@ class ProductOnlineStatusApi
         $multipart = false;
 
         // query params
-        if ($product_name !== null) {
-            $queryParams['productName'] = ObjectSerializer::toQueryValue($product_name);
+        if ($product_reference !== null) {
+            $queryParams['productReference'] = ObjectSerializer::toQueryValue($product_reference);
         }
         // query params
         if ($category !== null) {
@@ -555,7 +555,7 @@ class ProductOnlineStatusApi
             );
         }
 
-        $resourcePath = '/v1/products/{sku}/online-status';
+        $resourcePath = '/v2/products/{sku}/online-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -816,7 +816,7 @@ class ProductOnlineStatusApi
     protected function updateOnlineStatusRequest($body = null, $x_request_timestamp = null)
     {
 
-        $resourcePath = '/v1/products/online-status';
+        $resourcePath = '/v2/products/online-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

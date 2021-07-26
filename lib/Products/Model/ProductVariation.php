@@ -56,7 +56,7 @@ class ProductVariation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_name' => 'string',
+        'product_reference' => 'string',
 'sku' => 'string',
 'ean' => 'string',
 'gtin' => 'string',
@@ -80,7 +80,7 @@ class ProductVariation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'product_name' => null,
+        'product_reference' => null,
 'sku' => null,
 'ean' => null,
 'gtin' => null,
@@ -125,7 +125,7 @@ class ProductVariation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_name' => 'productName',
+        'product_reference' => 'productReference',
 'sku' => 'sku',
 'ean' => 'ean',
 'gtin' => 'gtin',
@@ -149,7 +149,7 @@ class ProductVariation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_name' => 'setProductName',
+        'product_reference' => 'setProductReference',
 'sku' => 'setSku',
 'ean' => 'setEan',
 'gtin' => 'setGtin',
@@ -173,7 +173,7 @@ class ProductVariation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_name' => 'getProductName',
+        'product_reference' => 'getProductReference',
 'sku' => 'getSku',
 'ean' => 'getEan',
 'gtin' => 'getGtin',
@@ -249,7 +249,7 @@ class ProductVariation implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_name'] = isset($data['product_name']) ? $data['product_name'] : null;
+        $this->container['product_reference'] = isset($data['product_reference']) ? $data['product_reference'] : null;
         $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
         $this->container['ean'] = isset($data['ean']) ? $data['ean'] : null;
         $this->container['gtin'] = isset($data['gtin']) ? $data['gtin'] : null;
@@ -277,8 +277,8 @@ class ProductVariation implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['product_name'] === null) {
-            $invalidProperties[] = "'product_name' can't be null";
+        if ($this->container['product_reference'] === null) {
+            $invalidProperties[] = "'product_reference' can't be null";
         }
         if ($this->container['sku'] === null) {
             $invalidProperties[] = "'sku' can't be null";
@@ -303,27 +303,26 @@ class ProductVariation implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
-     * Gets product_name
+     * Gets product_reference
      *
      * @return string
      */
-    public function getProductName()
+    public function getProductReference()
     {
-        return $this->container['product_name'];
+        return $this->container['product_reference'];
     }
 
     /**
-     * Sets product_name
+     * Sets product_reference
      *
-     * @param string $product_name The productName groups all variations, that you want to combine into one product. This is not visible to the customer. The productName can be freely assigned and may consist of maximum 50 characters. You can only use the productName once within your product catalog. You should therefore use a value that makes sense for all variations of the product and does not refer to any specifics of a particular variation. You will find the product name, for example, in the product overview in the portal or on the orders you receive from OTTO.
+     * @param string $product_reference The productReference groups all variations, that you want to combine into one product. This is not visible to the customer. The productReference can be freely assigned and may consist of maximum 50 characters. You can only use the productReference once within your product catalog. You should therefore use a value that makes sense for all variations of the product and does not refer to any specifics of a particular variation. You will find the product name, for example, in the product overview in the portal or on the orders you receive from OTTO.
      *
      * @return $this
      */
-    public function setProductName($product_name)
+    public function setProductReference($product_reference)
     {
-        $this->container['product_name'] = $product_name;
+        $this->container['product_reference'] = $product_reference;
 
         return $this;
     }

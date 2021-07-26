@@ -267,7 +267,7 @@ class MarketplaceStatusApi
             );
         }
 
-        $resourcePath = '/v1/products/{sku}/marketplace-status';
+        $resourcePath = '/v2/products/{sku}/marketplace-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -353,7 +353,7 @@ class MarketplaceStatusApi
      *
      * Read the marketplace status for your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search marketplace status by the productName value of the related product variations (optional)
+     * @param  string $product_reference search marketplace status by the productReference value of the related product variations (optional)
      * @param  string $category search marketplace status by the category value of the related product variations (optional)
      * @param  string $brand search marketplace status by the brand value of the related product variations (optional)
      * @param  int $page page to load (optional)
@@ -364,9 +364,9 @@ class MarketplaceStatusApi
      * @throws \InvalidArgumentException
      * @return \Otto\Client\Products\Model\MarketPlaceStatusApiResult
      */
-    public function getMarketPlaceStatusList($product_name = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
+    public function getMarketPlaceStatusList($product_reference = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
     {
-        list($response) = $this->getMarketPlaceStatusListWithHttpInfo($product_name, $category, $brand, $page, $limit, $market_place_status);
+        list($response) = $this->getMarketPlaceStatusListWithHttpInfo($product_reference, $category, $brand, $page, $limit, $market_place_status);
         return $response;
     }
 
@@ -375,7 +375,7 @@ class MarketplaceStatusApi
      *
      * Read the marketplace status for your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search marketplace status by the productName value of the related product variations (optional)
+     * @param  string $product_reference search marketplace status by the productReference value of the related product variations (optional)
      * @param  string $category search marketplace status by the category value of the related product variations (optional)
      * @param  string $brand search marketplace status by the brand value of the related product variations (optional)
      * @param  int $page page to load (optional)
@@ -386,10 +386,10 @@ class MarketplaceStatusApi
      * @throws \InvalidArgumentException
      * @return array of \Otto\Client\Products\Model\MarketPlaceStatusApiResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMarketPlaceStatusListWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
+    public function getMarketPlaceStatusListWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
     {
         $returnType = '\Otto\Client\Products\Model\MarketPlaceStatusApiResult';
-        $request = $this->getMarketPlaceStatusListRequest($product_name, $category, $brand, $page, $limit, $market_place_status);
+        $request = $this->getMarketPlaceStatusListRequest($product_reference, $category, $brand, $page, $limit, $market_place_status);
 
         try {
             $options = $this->createHttpClientOption();
@@ -455,7 +455,7 @@ class MarketplaceStatusApi
      *
      * Read the marketplace status for your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search marketplace status by the productName value of the related product variations (optional)
+     * @param  string $product_reference search marketplace status by the productReference value of the related product variations (optional)
      * @param  string $category search marketplace status by the category value of the related product variations (optional)
      * @param  string $brand search marketplace status by the brand value of the related product variations (optional)
      * @param  int $page page to load (optional)
@@ -465,9 +465,9 @@ class MarketplaceStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMarketPlaceStatusListAsync($product_name = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
+    public function getMarketPlaceStatusListAsync($product_reference = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
     {
-        return $this->getMarketPlaceStatusListAsyncWithHttpInfo($product_name, $category, $brand, $page, $limit, $market_place_status)
+        return $this->getMarketPlaceStatusListAsyncWithHttpInfo($product_reference, $category, $brand, $page, $limit, $market_place_status)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -480,7 +480,7 @@ class MarketplaceStatusApi
      *
      * Read the marketplace status for your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search marketplace status by the productName value of the related product variations (optional)
+     * @param  string $product_reference search marketplace status by the productReference value of the related product variations (optional)
      * @param  string $category search marketplace status by the category value of the related product variations (optional)
      * @param  string $brand search marketplace status by the brand value of the related product variations (optional)
      * @param  int $page page to load (optional)
@@ -490,10 +490,10 @@ class MarketplaceStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMarketPlaceStatusListAsyncWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
+    public function getMarketPlaceStatusListAsyncWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
     {
         $returnType = '\Otto\Client\Products\Model\MarketPlaceStatusApiResult';
-        $request = $this->getMarketPlaceStatusListRequest($product_name, $category, $brand, $page, $limit, $market_place_status);
+        $request = $this->getMarketPlaceStatusListRequest($product_reference, $category, $brand, $page, $limit, $market_place_status);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -535,7 +535,7 @@ class MarketplaceStatusApi
     /**
      * Create request for operation 'getMarketPlaceStatusList'
      *
-     * @param  string $product_name search marketplace status by the productName value of the related product variations (optional)
+     * @param  string $product_reference search marketplace status by the productReference value of the related product variations (optional)
      * @param  string $category search marketplace status by the category value of the related product variations (optional)
      * @param  string $brand search marketplace status by the brand value of the related product variations (optional)
      * @param  int $page page to load (optional)
@@ -545,10 +545,10 @@ class MarketplaceStatusApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getMarketPlaceStatusListRequest($product_name = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
+    protected function getMarketPlaceStatusListRequest($product_reference = null, $category = null, $brand = null, $page = null, $limit = null, $market_place_status = null)
     {
 
-        $resourcePath = '/v1/products/marketplace-status';
+        $resourcePath = '/v2/products/marketplace-status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -556,8 +556,8 @@ class MarketplaceStatusApi
         $multipart = false;
 
         // query params
-        if ($product_name !== null) {
-            $queryParams['productName'] = ObjectSerializer::toQueryValue($product_name);
+        if ($product_reference !== null) {
+            $queryParams['productReference'] = ObjectSerializer::toQueryValue($product_reference);
         }
         // query params
         if ($category !== null) {

@@ -266,7 +266,7 @@ class ProductsApi
     protected function createOrUpdateProductVariationsRequest($body = null, $x_request_timestamp = null)
     {
 
-        $resourcePath = '/v1/products';
+        $resourcePath = '/v2/products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -351,7 +351,7 @@ class ProductsApi
      *
      * Read your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page page (optional)
@@ -361,9 +361,9 @@ class ProductsApi
      * @throws \InvalidArgumentException
      * @return \Otto\Client\Products\Model\ProductVariationApiResult
      */
-    public function getPartnerProducts($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getPartnerProducts($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
-        list($response) = $this->getPartnerProductsWithHttpInfo($product_name, $category, $brand, $page, $limit);
+        list($response) = $this->getPartnerProductsWithHttpInfo($product_reference, $category, $brand, $page, $limit);
         return $response;
     }
 
@@ -372,7 +372,7 @@ class ProductsApi
      *
      * Read your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -382,10 +382,10 @@ class ProductsApi
      * @throws \InvalidArgumentException
      * @return array of \Otto\Client\Products\Model\ProductVariationApiResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPartnerProductsWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getPartnerProductsWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
         $returnType = '\Otto\Client\Products\Model\ProductVariationApiResult';
-        $request = $this->getPartnerProductsRequest($product_name, $category, $brand, $page, $limit);
+        $request = $this->getPartnerProductsRequest($product_reference, $category, $brand, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -451,7 +451,7 @@ class ProductsApi
      *
      * Read your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -460,9 +460,9 @@ class ProductsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPartnerProductsAsync($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getPartnerProductsAsync($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
-        return $this->getPartnerProductsAsyncWithHttpInfo($product_name, $category, $brand, $page, $limit)
+        return $this->getPartnerProductsAsyncWithHttpInfo($product_reference, $category, $brand, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -475,7 +475,7 @@ class ProductsApi
      *
      * Read your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -484,10 +484,10 @@ class ProductsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPartnerProductsAsyncWithHttpInfo($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    public function getPartnerProductsAsyncWithHttpInfo($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
         $returnType = '\Otto\Client\Products\Model\ProductVariationApiResult';
-        $request = $this->getPartnerProductsRequest($product_name, $category, $brand, $page, $limit);
+        $request = $this->getPartnerProductsRequest($product_reference, $category, $brand, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -529,7 +529,7 @@ class ProductsApi
     /**
      * Create request for operation 'getPartnerProducts'
      *
-     * @param  string $product_name search for product variations by their productName value (optional)
+     * @param  string $product_reference search for product variations by their productReference value (optional)
      * @param  string $category search for product variations by their category value (optional)
      * @param  string $brand search for product variations by their brand value (optional)
      * @param  int $page (optional)
@@ -538,10 +538,10 @@ class ProductsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPartnerProductsRequest($product_name = null, $category = null, $brand = null, $page = null, $limit = null)
+    protected function getPartnerProductsRequest($product_reference = null, $category = null, $brand = null, $page = null, $limit = null)
     {
 
-        $resourcePath = '/v1/products';
+        $resourcePath = '/v2/products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -549,8 +549,8 @@ class ProductsApi
         $multipart = false;
 
         // query params
-        if ($product_name !== null) {
-            $queryParams['productName'] = ObjectSerializer::toQueryValue($product_name);
+        if ($product_reference !== null) {
+            $queryParams['productReference'] = ObjectSerializer::toQueryValue($product_reference);
         }
         // query params
         if ($category !== null) {
@@ -815,7 +815,7 @@ class ProductsApi
             );
         }
 
-        $resourcePath = '/v1/products/{sku}';
+        $resourcePath = '/v2/products/{sku}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

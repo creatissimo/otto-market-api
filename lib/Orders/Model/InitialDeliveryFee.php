@@ -1,6 +1,6 @@
 <?php
 /**
- * Link
+ * InitialDeliveryFee
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ use \ArrayAccess;
 use \Otto\Client\ObjectSerializer;
 
 /**
- * Link Class Doc Comment
+ * InitialDeliveryFee Class Doc Comment
  *
  * @category Class
- * @description A link to various resources. A link can have different meanings and targets. The type of relation is specified with the property &#x27;rel&#x27;.
+ * @description InitialDeliveryFee
  * @package  Otto\Client\
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Link implements ModelInterface, ArrayAccess
+class InitialDeliveryFee implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Link implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Link';
+    protected static $swaggerModelName = 'InitialDeliveryFee';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,10 @@ class Link implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'rel' => 'string',
-'href' => 'string'    ];
+        'name' => 'string',
+'delivery_fee_amount' => '\Otto\Client\\Model\Amount',
+'position_item_ids' => 'string[]',
+'vat_rate' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,8 +68,10 @@ class Link implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'rel' => null,
-'href' => null    ];
+        'name' => null,
+'delivery_fee_amount' => null,
+'position_item_ids' => null,
+'vat_rate' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -96,8 +100,10 @@ class Link implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'rel' => 'rel',
-'href' => 'href'    ];
+        'name' => 'name',
+'delivery_fee_amount' => 'deliveryFeeAmount',
+'position_item_ids' => 'positionItemIds',
+'vat_rate' => 'vatRate'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,8 +111,10 @@ class Link implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'rel' => 'setRel',
-'href' => 'setHref'    ];
+        'name' => 'setName',
+'delivery_fee_amount' => 'setDeliveryFeeAmount',
+'position_item_ids' => 'setPositionItemIds',
+'vat_rate' => 'setVatRate'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,8 +122,10 @@ class Link implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'rel' => 'getRel',
-'href' => 'getHref'    ];
+        'name' => 'getName',
+'delivery_fee_amount' => 'getDeliveryFeeAmount',
+'position_item_ids' => 'getPositionItemIds',
+'vat_rate' => 'getVatRate'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -175,8 +185,10 @@ class Link implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['rel'] = isset($data['rel']) ? $data['rel'] : null;
-        $this->container['href'] = isset($data['href']) ? $data['href'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['delivery_fee_amount'] = isset($data['delivery_fee_amount']) ? $data['delivery_fee_amount'] : null;
+        $this->container['position_item_ids'] = isset($data['position_item_ids']) ? $data['position_item_ids'] : null;
+        $this->container['vat_rate'] = isset($data['vat_rate']) ? $data['vat_rate'] : null;
     }
 
     /**
@@ -188,6 +200,18 @@ class Link implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['delivery_fee_amount'] === null) {
+            $invalidProperties[] = "'delivery_fee_amount' can't be null";
+        }
+        if ($this->container['position_item_ids'] === null) {
+            $invalidProperties[] = "'position_item_ids' can't be null";
+        }
+        if ($this->container['vat_rate'] === null) {
+            $invalidProperties[] = "'vat_rate' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -204,49 +228,97 @@ class Link implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets rel
+     * Gets name
      *
      * @return string
      */
-    public function getRel()
+    public function getName()
     {
-        return $this->container['rel'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets rel
+     * Sets name
      *
-     * @param string $rel The relation type of the link. See also https://www.iana.org/assignments/link-relations/link-relations.xhtml. The relation type 'next' is used for paging. The relation type 'self' refers to the url of the resource
+     * @param string $name The type of this delivery fee
      *
      * @return $this
      */
-    public function setRel($rel)
+    public function setName($name)
     {
-        $this->container['rel'] = $rel;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets href
+     * Gets delivery_fee_amount
      *
-     * @return string
+     * @return \Otto\Client\\Model\Amount
      */
-    public function getHref()
+    public function getDeliveryFeeAmount()
     {
-        return $this->container['href'];
+        return $this->container['delivery_fee_amount'];
     }
 
     /**
-     * Sets href
+     * Sets delivery_fee_amount
      *
-     * @param string $href The url of the link
+     * @param \Otto\Client\\Model\Amount $delivery_fee_amount delivery_fee_amount
      *
      * @return $this
      */
-    public function setHref($href)
+    public function setDeliveryFeeAmount($delivery_fee_amount)
     {
-        $this->container['href'] = $href;
+        $this->container['delivery_fee_amount'] = $delivery_fee_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets position_item_ids
+     *
+     * @return string[]
+     */
+    public function getPositionItemIds()
+    {
+        return $this->container['position_item_ids'];
+    }
+
+    /**
+     * Sets position_item_ids
+     *
+     * @param string[] $position_item_ids The position item ids to which this delivery fee applies
+     *
+     * @return $this
+     */
+    public function setPositionItemIds($position_item_ids)
+    {
+        $this->container['position_item_ids'] = $position_item_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_rate
+     *
+     * @return float
+     */
+    public function getVatRate()
+    {
+        return $this->container['vat_rate'];
+    }
+
+    /**
+     * Sets vat_rate
+     *
+     * @param float $vat_rate The VAT rate for this delivery fee
+     *
+     * @return $this
+     */
+    public function setVatRate($vat_rate)
+    {
+        $this->container['vat_rate'] = $vat_rate;
 
         return $this;
     }

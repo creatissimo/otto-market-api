@@ -94,7 +94,7 @@ class PositionItemsApi
      * @param  string $sales_order_id The salesOrderId of the order (required)
      * @param  string[] $position_item_id The positionItemIds of the order to cancel (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class PositionItemsApi
      * @param  string $sales_order_id The salesOrderId of the order (required)
      * @param  string[] $position_item_id The positionItemIds of the order to cancel (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

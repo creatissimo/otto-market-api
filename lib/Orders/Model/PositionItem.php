@@ -28,8 +28,8 @@
 
 namespace Otto\Client\Orders\Model;
 
-use \ArrayAccess;
-use \Otto\Client\ObjectSerializer;
+use ArrayAccess;
+use Otto\Client\ObjectSerializer;
 
 /**
  * PositionItem Class Doc Comment
@@ -60,11 +60,11 @@ class PositionItem implements ModelInterface, ArrayAccess
         'position_item_id' => 'string',
 'fulfillment_status' => 'string',
 'delivery_service_hes' => 'bool',
-'item_value_gross_price' => '\Otto\Client\\Model\Amount',
-'item_value_reduced_gross_price' => '\Otto\Client\\Model\Amount',
-'item_value_discount' => '\Otto\Client\\Model\Amount',
-'product' => '\Otto\Client\\Model\Product',
-'tracking_info' => '\Otto\Client\\Model\TrackingInfo',
+'item_value_gross_price' => '\Otto\Client\Orders\Model\Amount',
+'item_value_reduced_gross_price' => '\Otto\Client\Orders\Model\Amount',
+'item_value_discount' => '\Otto\Client\Orders\Model\Amount',
+'product' => '\Otto\Client\Orders\Model\Product',
+'tracking_info' => '\Otto\Client\Orders\Model\TrackingInfo',
 'expected_delivery_date' => '\DateTime',
 'sent_date' => '\DateTime',
 'returned_date' => '\DateTime',
@@ -396,7 +396,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Gets item_value_gross_price
      *
-     * @return \Otto\Client\\Model\Amount
+     * @return \Otto\Client\Orders\Model\Amount
      */
     public function getItemValueGrossPrice()
     {
@@ -406,7 +406,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Sets item_value_gross_price
      *
-     * @param \Otto\Client\\Model\Amount $item_value_gross_price item_value_gross_price
+     * @param \Otto\Client\Orders\Model\Amount $item_value_gross_price item_value_gross_price
      *
      * @return $this
      */
@@ -420,7 +420,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Gets item_value_reduced_gross_price
      *
-     * @return \Otto\Client\\Model\Amount
+     * @return \Otto\Client\Orders\Model\Amount
      */
     public function getItemValueReducedGrossPrice()
     {
@@ -430,7 +430,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Sets item_value_reduced_gross_price
      *
-     * @param \Otto\Client\\Model\Amount $item_value_reduced_gross_price item_value_reduced_gross_price
+     * @param \Otto\Client\Orders\Model\Amount $item_value_reduced_gross_price item_value_reduced_gross_price
      *
      * @return $this
      */
@@ -444,7 +444,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Gets item_value_discount
      *
-     * @return \Otto\Client\\Model\Amount
+     * @return \Otto\Client\Orders\Model\Amount
      */
     public function getItemValueDiscount()
     {
@@ -454,7 +454,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Sets item_value_discount
      *
-     * @param \Otto\Client\\Model\Amount $item_value_discount item_value_discount
+     * @param \Otto\Client\Orders\Model\Amount $item_value_discount item_value_discount
      *
      * @return $this
      */
@@ -468,7 +468,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Gets product
      *
-     * @return \Otto\Client\\Model\Product
+     * @return \Otto\Client\Orders\Model\Product
      */
     public function getProduct()
     {
@@ -478,7 +478,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Sets product
      *
-     * @param \Otto\Client\\Model\Product $product product
+     * @param \Otto\Client\Orders\Model\Product $product product
      *
      * @return $this
      */
@@ -492,7 +492,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Gets tracking_info
      *
-     * @return \Otto\Client\\Model\TrackingInfo
+     * @return \Otto\Client\Orders\Model\TrackingInfo
      */
     public function getTrackingInfo()
     {
@@ -502,7 +502,7 @@ self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
     /**
      * Sets tracking_info
      *
-     * @param \Otto\Client\\Model\TrackingInfo $tracking_info tracking_info
+     * @param \Otto\Client\Orders\Model\TrackingInfo $tracking_info tracking_info
      *
      * @return $this
      */

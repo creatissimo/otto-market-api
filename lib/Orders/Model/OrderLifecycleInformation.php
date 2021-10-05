@@ -28,8 +28,8 @@
 
 namespace Otto\Client\Orders\Model;
 
-use \ArrayAccess;
-use \Otto\Client\ObjectSerializer;
+use ArrayAccess;
+use Otto\Client\ObjectSerializer;
 
 /**
  * OrderLifecycleInformation Class Doc Comment

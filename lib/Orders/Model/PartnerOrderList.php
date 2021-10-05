@@ -28,8 +28,8 @@
 
 namespace Otto\Client\Orders\Model;
 
-use \ArrayAccess;
-use \Otto\Client\ObjectSerializer;
+use ArrayAccess;
+use Otto\Client\ObjectSerializer;
 
 /**
  * PartnerOrderList Class Doc Comment
@@ -56,8 +56,8 @@ class PartnerOrderList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'resources' => '\Otto\Client\\Model\PartnerOrder[]',
-'links' => '\Otto\Client\\Model\Link[]'    ];
+        'resources' => '\Otto\Client\Orders\Model\PartnerOrder[]',
+'links' => '\Otto\Client\Orders\Model\Link[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -205,7 +205,7 @@ class PartnerOrderList implements ModelInterface, ArrayAccess
     /**
      * Gets resources
      *
-     * @return \Otto\Client\\Model\PartnerOrder[]
+     * @return \Otto\Client\Orders\Model\PartnerOrder[]
      */
     public function getResources()
     {
@@ -215,7 +215,7 @@ class PartnerOrderList implements ModelInterface, ArrayAccess
     /**
      * Sets resources
      *
-     * @param \Otto\Client\\Model\PartnerOrder[] $resources The list of queried resources. In this case partner orders.
+     * @param \Otto\Client\Orders\Model\PartnerOrder[] $resources The list of queried resources. In this case partner orders.
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ class PartnerOrderList implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \Otto\Client\\Model\Link[]
+     * @return \Otto\Client\Orders\Model\Link[]
      */
     public function getLinks()
     {
@@ -239,7 +239,7 @@ class PartnerOrderList implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \Otto\Client\\Model\Link[] $links Links related to the list. E.g. the link to the successive list used during paging.
+     * @param \Otto\Client\Orders\Model\Link[] $links Links related to the list. E.g. the link to the successive list used during paging.
      *
      * @return $this
      */

@@ -93,7 +93,7 @@ class OrdersApi
      *
      * @param  string[] $sales_order_id The salesOrderIds of the orders to cancel (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class OrdersApi
      *
      * @param  string[] $sales_order_id The salesOrderIds of the orders to cancel (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -326,9 +326,9 @@ class OrdersApi
      * @param  string $mode In search mode AT_LEAST_ONE orders with at least one  position item in given &#x27;fulfillmentStatus&#x27; will always be returned (optional, default to BUCKET)
      * @param  string $nextcursor Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#x27;limit&#x27;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link (optional)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Otto\Client\\Model\PartnerOrderList
+     * @return \Otto\Client\Orders\Model\PartnerOrderList
      */
     public function findPartnerOrders($from_date = null, $from_order_date = null, $to_order_date = null, $fulfillment_status = null, $limit = '128', $order_direction = 'ASC', $order_column_type = 'ORDER_LIFECYCLE_DATE', $mode = 'BUCKET', $nextcursor = null)
     {
@@ -351,13 +351,13 @@ class OrdersApi
      * @param  string $mode In search mode AT_LEAST_ONE orders with at least one  position item in given &#x27;fulfillmentStatus&#x27; will always be returned (optional, default to BUCKET)
      * @param  string $nextcursor Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#x27;limit&#x27;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link (optional)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Otto\Client\\Model\PartnerOrderList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Orders\Model\PartnerOrderList, HTTP status code, HTTP response headers (array of strings)
      */
     public function findPartnerOrdersWithHttpInfo($from_date = null, $from_order_date = null, $to_order_date = null, $fulfillment_status = null, $limit = '128', $order_direction = 'ASC', $order_column_type = 'ORDER_LIFECYCLE_DATE', $mode = 'BUCKET', $nextcursor = null)
     {
-        $returnType = '\Otto\Client\\Model\PartnerOrderList';
+        $returnType = '\Otto\Client\Orders\Model\PartnerOrderList';
         $request = $this->findPartnerOrdersRequest($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor);
 
         try {
@@ -409,7 +409,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Otto\Client\\Model\PartnerOrderList',
+                        '\Otto\Client\Orders\Model\PartnerOrderList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -467,7 +467,7 @@ class OrdersApi
      */
     public function findPartnerOrdersAsyncWithHttpInfo($from_date = null, $from_order_date = null, $to_order_date = null, $fulfillment_status = null, $limit = '128', $order_direction = 'ASC', $order_column_type = 'ORDER_LIFECYCLE_DATE', $mode = 'BUCKET', $nextcursor = null)
     {
-        $returnType = '\Otto\Client\\Model\PartnerOrderList';
+        $returnType = '\Otto\Client\Orders\Model\PartnerOrderList';
         $request = $this->findPartnerOrdersRequest($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor);
 
         return $this->client
@@ -642,9 +642,9 @@ class OrdersApi
      *
      * @param  string $order_number order_number (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Otto\Client\\Model\PartnerOrder
+     * @return \Otto\Client\Orders\Model\PartnerOrder
      */
     public function getPartnerOrderByOrderNumber($order_number)
     {
@@ -659,13 +659,13 @@ class OrdersApi
      *
      * @param  string $order_number (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Otto\Client\\Model\PartnerOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Orders\Model\PartnerOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPartnerOrderByOrderNumberWithHttpInfo($order_number)
     {
-        $returnType = '\Otto\Client\\Model\PartnerOrder';
+        $returnType = '\Otto\Client\Orders\Model\PartnerOrder';
         $request = $this->getPartnerOrderByOrderNumberRequest($order_number);
 
         try {
@@ -717,7 +717,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Otto\Client\\Model\PartnerOrder',
+                        '\Otto\Client\Orders\Model\PartnerOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -759,7 +759,7 @@ class OrdersApi
      */
     public function getPartnerOrderByOrderNumberAsyncWithHttpInfo($order_number)
     {
-        $returnType = '\Otto\Client\\Model\PartnerOrder';
+        $returnType = '\Otto\Client\Orders\Model\PartnerOrder';
         $request = $this->getPartnerOrderByOrderNumberRequest($order_number);
 
         return $this->client
@@ -904,9 +904,9 @@ class OrdersApi
      *
      * @param  string $sales_order_id sales_order_id (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Otto\Client\\Model\PartnerOrder
+     * @return \Otto\Client\Orders\Model\PartnerOrder
      */
     public function getPartnerOrderBySalesOrderId($sales_order_id)
     {
@@ -921,13 +921,13 @@ class OrdersApi
      *
      * @param  string $sales_order_id (required)
      *
-     * @throws \Otto\Client\\ApiException on non-2xx response
+     * @throws \Otto\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Otto\Client\\Model\PartnerOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Orders\Model\PartnerOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPartnerOrderBySalesOrderIdWithHttpInfo($sales_order_id)
     {
-        $returnType = '\Otto\Client\\Model\PartnerOrder';
+        $returnType = '\Otto\Client\Orders\Model\PartnerOrder';
         $request = $this->getPartnerOrderBySalesOrderIdRequest($sales_order_id);
 
         try {
@@ -979,7 +979,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Otto\Client\\Model\PartnerOrder',
+                        '\Otto\Client\Orders\Model\PartnerOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1021,7 +1021,7 @@ class OrdersApi
      */
     public function getPartnerOrderBySalesOrderIdAsyncWithHttpInfo($sales_order_id)
     {
-        $returnType = '\Otto\Client\\Model\PartnerOrder';
+        $returnType = '\Otto\Client\Orders\Model\PartnerOrder';
         $request = $this->getPartnerOrderBySalesOrderIdRequest($sales_order_id);
 
         return $this->client

@@ -28,8 +28,8 @@
 
 namespace Otto\Client\Orders\Model;
 
-use \ArrayAccess;
-use \Otto\Client\ObjectSerializer;
+use ArrayAccess;
+use Otto\Client\ObjectSerializer;
 
 /**
  * PartnerOrder Class Doc Comment
@@ -60,13 +60,13 @@ class PartnerOrder implements ModelInterface, ArrayAccess
 'order_number' => 'string',
 'order_date' => '\DateTime',
 'last_modified_date' => '\DateTime',
-'position_items' => '\Otto\Client\\Model\PositionItem[]',
-'order_lifecycle_information' => '\Otto\Client\\Model\OrderLifecycleInformation',
-'initial_delivery_fees' => '\Otto\Client\\Model\InitialDeliveryFee[]',
-'initial_discounts' => '\Otto\Client\\Model\InitialDiscount[]',
-'delivery_address' => '\Otto\Client\\Model\Address',
-'invoice_address' => '\Otto\Client\\Model\Address',
-'links' => '\Otto\Client\\Model\Link[]'    ];
+'position_items' => '\Otto\Client\Orders\Model\PositionItem[]',
+'order_lifecycle_information' => '\Otto\Client\Orders\Model\OrderLifecycleInformation',
+'initial_delivery_fees' => '\Otto\Client\Orders\Model\InitialDeliveryFee[]',
+'initial_discounts' => '\Otto\Client\Orders\Model\InitialDiscount[]',
+'delivery_address' => '\Otto\Client\Orders\Model\Address',
+'invoice_address' => '\Otto\Client\Orders\Model\Address',
+'links' => '\Otto\Client\Orders\Model\Link[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -370,7 +370,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Gets position_items
      *
-     * @return \Otto\Client\\Model\PositionItem[]
+     * @return \Otto\Client\Orders\Model\PositionItem[]
      */
     public function getPositionItems()
     {
@@ -380,7 +380,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Sets position_items
      *
-     * @param \Otto\Client\\Model\PositionItem[] $position_items The physical position items of this order. Multiple position item can refer to the same product
+     * @param \Otto\Client\Orders\Model\PositionItem[] $position_items The physical position items of this order. Multiple position item can refer to the same product
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Gets order_lifecycle_information
      *
-     * @return \Otto\Client\\Model\OrderLifecycleInformation
+     * @return \Otto\Client\Orders\Model\OrderLifecycleInformation
      */
     public function getOrderLifecycleInformation()
     {
@@ -404,7 +404,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Sets order_lifecycle_information
      *
-     * @param \Otto\Client\\Model\OrderLifecycleInformation $order_lifecycle_information order_lifecycle_information
+     * @param \Otto\Client\Orders\Model\OrderLifecycleInformation $order_lifecycle_information order_lifecycle_information
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Gets initial_delivery_fees
      *
-     * @return \Otto\Client\\Model\InitialDeliveryFee[]
+     * @return \Otto\Client\Orders\Model\InitialDeliveryFee[]
      */
     public function getInitialDeliveryFees()
     {
@@ -428,7 +428,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Sets initial_delivery_fees
      *
-     * @param \Otto\Client\\Model\InitialDeliveryFee[] $initial_delivery_fees The delivery fees on customer checkout
+     * @param \Otto\Client\Orders\Model\InitialDeliveryFee[] $initial_delivery_fees The delivery fees on customer checkout
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Gets initial_discounts
      *
-     * @return \Otto\Client\\Model\InitialDiscount[]
+     * @return \Otto\Client\Orders\Model\InitialDiscount[]
      */
     public function getInitialDiscounts()
     {
@@ -452,7 +452,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Sets initial_discounts
      *
-     * @param \Otto\Client\\Model\InitialDiscount[] $initial_discounts The initial discounts on customer checkout
+     * @param \Otto\Client\Orders\Model\InitialDiscount[] $initial_discounts The initial discounts on customer checkout
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_address
      *
-     * @return \Otto\Client\\Model\Address
+     * @return \Otto\Client\Orders\Model\Address
      */
     public function getDeliveryAddress()
     {
@@ -476,7 +476,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_address
      *
-     * @param \Otto\Client\\Model\Address $delivery_address delivery_address
+     * @param \Otto\Client\Orders\Model\Address $delivery_address delivery_address
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_address
      *
-     * @return \Otto\Client\\Model\Address
+     * @return \Otto\Client\Orders\Model\Address
      */
     public function getInvoiceAddress()
     {
@@ -500,7 +500,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_address
      *
-     * @param \Otto\Client\\Model\Address $invoice_address invoice_address
+     * @param \Otto\Client\Orders\Model\Address $invoice_address invoice_address
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \Otto\Client\\Model\Link[]
+     * @return \Otto\Client\Orders\Model\Link[]
      */
     public function getLinks()
     {
@@ -524,7 +524,7 @@ class PartnerOrder implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \Otto\Client\\Model\Link[] $links Order related links like the link to fetch the single partner order
+     * @param \Otto\Client\Orders\Model\Link[] $links Order related links like the link to fetch the single partner order
      *
      * @return $this
      */

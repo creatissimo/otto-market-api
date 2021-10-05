@@ -28,7 +28,7 @@
 
 namespace Otto\Client\Quantity\Model;
 
-use \ArrayAccess;
+use ArrayAccess;
 use Otto\Client\ObjectSerializer;
 
 /**

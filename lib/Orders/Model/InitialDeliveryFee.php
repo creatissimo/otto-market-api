@@ -28,8 +28,8 @@
 
 namespace Otto\Client\Orders\Model;
 
-use \ArrayAccess;
-use \Otto\Client\ObjectSerializer;
+use ArrayAccess;
+use Otto\Client\ObjectSerializer;
 
 /**
  * InitialDeliveryFee Class Doc Comment
@@ -58,7 +58,7 @@ class InitialDeliveryFee implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-'delivery_fee_amount' => '\Otto\Client\\Model\Amount',
+'delivery_fee_amount' => '\Otto\Client\Orders\Model\Amount',
 'position_item_ids' => 'string[]',
 'vat_rate' => 'float'    ];
 
@@ -254,7 +254,7 @@ class InitialDeliveryFee implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_fee_amount
      *
-     * @return \Otto\Client\\Model\Amount
+     * @return \Otto\Client\Orders\Model\Amount
      */
     public function getDeliveryFeeAmount()
     {
@@ -264,7 +264,7 @@ class InitialDeliveryFee implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_fee_amount
      *
-     * @param \Otto\Client\\Model\Amount $delivery_fee_amount delivery_fee_amount
+     * @param \Otto\Client\Orders\Model\Amount $delivery_fee_amount delivery_fee_amount
      *
      * @return $this
      */

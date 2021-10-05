@@ -28,7 +28,7 @@
 
 namespace Otto\Client\Products\Model;
 
-use \ArrayAccess;
+use ArrayAccess;
 use Otto\Client\ObjectSerializer;
 
 /**

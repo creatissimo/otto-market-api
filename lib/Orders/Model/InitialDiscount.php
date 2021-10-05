@@ -28,8 +28,8 @@
 
 namespace Otto\Client\Orders\Model;
 
-use \ArrayAccess;
-use \Otto\Client\ObjectSerializer;
+use ArrayAccess;
+use Otto\Client\ObjectSerializer;
 
 /**
  * InitialDiscount Class Doc Comment
@@ -58,7 +58,7 @@ class InitialDiscount implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-'discount_amount' => '\Otto\Client\\Model\Amount',
+'discount_amount' => '\Otto\Client\Orders\Model\Amount',
 'discount_id' => 'string',
 'discount_name' => 'string',
 'position_item_ids' => 'string[]',
@@ -272,7 +272,7 @@ class InitialDiscount implements ModelInterface, ArrayAccess
     /**
      * Gets discount_amount
      *
-     * @return \Otto\Client\\Model\Amount
+     * @return \Otto\Client\Orders\Model\Amount
      */
     public function getDiscountAmount()
     {
@@ -282,7 +282,7 @@ class InitialDiscount implements ModelInterface, ArrayAccess
     /**
      * Sets discount_amount
      *
-     * @param \Otto\Client\\Model\Amount $discount_amount discount_amount
+     * @param \Otto\Client\Orders\Model\Amount $discount_amount discount_amount
      *
      * @return $this
      */

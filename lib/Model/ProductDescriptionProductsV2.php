@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * ProductDescriptionProductsV2
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,635 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * ProductDescriptionProductsV2 Class Doc Comment
  *
  * @category Class
+ * @description Extensive description of the product.
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class ProductDescriptionProductsV2 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'ProductDescription__Products-V2';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'category' => 'string',
+'brand' => 'string',
+'product_line' => 'string',
+'manufacturer' => 'string',
+'production_date' => '\DateTime',
+'multi_pack' => 'bool',
+'bundle' => 'bool',
+'fsc_certified' => 'bool',
+'disposal' => 'bool',
+'product_url' => 'string',
+'description' => 'string',
+'bullet_points' => 'string[]',
+'attributes' => '\Otto\Client\Model\AttributeProductsV2[]'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'category' => null,
+'brand' => null,
+'product_line' => null,
+'manufacturer' => null,
+'production_date' => 'date-time',
+'multi_pack' => null,
+'bundle' => null,
+'fsc_certified' => null,
+'disposal' => null,
+'product_url' => null,
+'description' => null,
+'bullet_points' => null,
+'attributes' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'category' => 'category',
+'brand' => 'brand',
+'product_line' => 'productLine',
+'manufacturer' => 'manufacturer',
+'production_date' => 'productionDate',
+'multi_pack' => 'multiPack',
+'bundle' => 'bundle',
+'fsc_certified' => 'fscCertified',
+'disposal' => 'disposal',
+'product_url' => 'productUrl',
+'description' => 'description',
+'bullet_points' => 'bulletPoints',
+'attributes' => 'attributes'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'category' => 'setCategory',
+'brand' => 'setBrand',
+'product_line' => 'setProductLine',
+'manufacturer' => 'setManufacturer',
+'production_date' => 'setProductionDate',
+'multi_pack' => 'setMultiPack',
+'bundle' => 'setBundle',
+'fsc_certified' => 'setFscCertified',
+'disposal' => 'setDisposal',
+'product_url' => 'setProductUrl',
+'description' => 'setDescription',
+'bullet_points' => 'setBulletPoints',
+'attributes' => 'setAttributes'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'category' => 'getCategory',
+'brand' => 'getBrand',
+'product_line' => 'getProductLine',
+'manufacturer' => 'getManufacturer',
+'production_date' => 'getProductionDate',
+'multi_pack' => 'getMultiPack',
+'bundle' => 'getBundle',
+'fsc_certified' => 'getFscCertified',
+'disposal' => 'getDisposal',
+'product_url' => 'getProductUrl',
+'description' => 'getDescription',
+'bullet_points' => 'getBulletPoints',
+'attributes' => 'getAttributes'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
+        $this->container['product_line'] = isset($data['product_line']) ? $data['product_line'] : null;
+        $this->container['manufacturer'] = isset($data['manufacturer']) ? $data['manufacturer'] : null;
+        $this->container['production_date'] = isset($data['production_date']) ? $data['production_date'] : null;
+        $this->container['multi_pack'] = isset($data['multi_pack']) ? $data['multi_pack'] : null;
+        $this->container['bundle'] = isset($data['bundle']) ? $data['bundle'] : null;
+        $this->container['fsc_certified'] = isset($data['fsc_certified']) ? $data['fsc_certified'] : null;
+        $this->container['disposal'] = isset($data['disposal']) ? $data['disposal'] : null;
+        $this->container['product_url'] = isset($data['product_url']) ? $data['product_url'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['bullet_points'] = isset($data['bullet_points']) ? $data['bullet_points'] : null;
+        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+        if ($this->container['brand'] === null) {
+            $invalidProperties[] = "'brand' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets category
+     *
+     * @return string
+     */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+     * Sets category
+     *
+     * @param string $category Denotes the assortment type of the product, like 'bag' or 'shirt'. Mandatory. Must be identical for all variants of a product. Must be present in the Category service offered via Category endpoint
+     *
+     * @return $this
+     */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand
+     *
+     * @return string
+     */
+    public function getBrand()
+    {
+        return $this->container['brand'];
+    }
+
+    /**
+     * Sets brand
+     *
+     * @param string $brand Denotes the brand name of a product, like 'Levis'. Must be identical for all variants of a product. Must be present in the Brand service offered via Brand endpoint.
+     *
+     * @return $this
+     */
+    public function setBrand($brand)
+    {
+        $this->container['brand'] = $brand;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_line
+     *
+     * @return string
+     */
+    public function getProductLine()
+    {
+        return $this->container['product_line'];
+    }
+
+    /**
+     * Sets product_line
+     *
+     * @param string $product_line Denotes the proper name of a product, like '501'. May contain a maximum of 50 characters. If provided, it must be identical for all variants of a product.
+     *
+     * @return $this
+     */
+    public function setProductLine($product_line)
+    {
+        $this->container['product_line'] = $product_line;
+
+        return $this;
+    }
+
+    /**
+     * Gets manufacturer
+     *
+     * @return string
+     */
+    public function getManufacturer()
+    {
+        return $this->container['manufacturer'];
+    }
+
+    /**
+     * Sets manufacturer
+     *
+     * @param string $manufacturer Denotes the manufacturer of a product. If provided, it must be identical for all variants of a product.
+     *
+     * @return $this
+     */
+    public function setManufacturer($manufacturer)
+    {
+        $this->container['manufacturer'] = $manufacturer;
+
+        return $this;
+    }
+
+    /**
+     * Gets production_date
+     *
+     * @return \DateTime
+     */
+    public function getProductionDate()
+    {
+        return $this->container['production_date'];
+    }
+
+    /**
+     * Sets production_date
+     *
+     * @param \DateTime $production_date Denotes the date of manufacture of a product variant.
+     *
+     * @return $this
+     */
+    public function setProductionDate($production_date)
+    {
+        $this->container['production_date'] = $production_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets multi_pack
+     *
+     * @return bool
+     */
+    public function getMultiPack()
+    {
+        return $this->container['multi_pack'];
+    }
+
+    /**
+     * Sets multi_pack
+     *
+     * @param bool $multi_pack If the product variant is part of a set: 'true'; otherwise 'false'
+     *
+     * @return $this
+     */
+    public function setMultiPack($multi_pack)
+    {
+        $this->container['multi_pack'] = $multi_pack;
+
+        return $this;
+    }
+
+    /**
+     * Gets bundle
+     *
+     * @return bool
+     */
+    public function getBundle()
+    {
+        return $this->container['bundle'];
+    }
+
+    /**
+     * Sets bundle
+     *
+     * @param bool $bundle If the product variant is part of a bundle: 'true'; otherwise 'false'
+     *
+     * @return $this
+     */
+    public function setBundle($bundle)
+    {
+        $this->container['bundle'] = $bundle;
+
+        return $this;
+    }
+
+    /**
+     * Gets fsc_certified
+     *
+     * @return bool
+     */
+    public function getFscCertified()
+    {
+        return $this->container['fsc_certified'];
+    }
+
+    /**
+     * Sets fsc_certified
+     *
+     * @param bool $fsc_certified If the product variant is certified by the Forest Stewardship Council: 'true'; otherwise 'false'
+     *
+     * @return $this
+     */
+    public function setFscCertified($fsc_certified)
+    {
+        $this->container['fsc_certified'] = $fsc_certified;
+
+        return $this;
+    }
+
+    /**
+     * Gets disposal
+     *
+     * @return bool
+     */
+    public function getDisposal()
+    {
+        return $this->container['disposal'];
+    }
+
+    /**
+     * Sets disposal
+     *
+     * @param bool $disposal If true, otto.de will present information about the disposal of the product (or parts of it).
+     *
+     * @return $this
+     */
+    public function setDisposal($disposal)
+    {
+        $this->container['disposal'] = $disposal;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_url
+     *
+     * @return string
+     */
+    public function getProductUrl()
+    {
+        return $this->container['product_url'];
+    }
+
+    /**
+     * Sets product_url
+     *
+     * @param string $product_url Refers to a representation of the product variant in a shop of the partner. Should be a valid URL.
+     *
+     * @return $this
+     */
+    public function setProductUrl($product_url)
+    {
+        $this->container['product_url'] = $product_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description Represents a textual description of a product variant. May contain HTML elements. May contain a maximum of 2000 characters. Relevant for SEO.
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets bullet_points
+     *
+     * @return string[]
+     */
+    public function getBulletPoints()
+    {
+        return $this->container['bullet_points'];
+    }
+
+    /**
+     * Sets bullet_points
+     *
+     * @param string[] $bullet_points At least one bullet point must be provided. Up to five bullet points can be specified. May contain a minimum of 3 and a maximum of 180 characters.
+     *
+     * @return $this
+     */
+    public function setBulletPoints($bullet_points)
+    {
+        $this->container['bullet_points'] = $bullet_points;
+
+        return $this;
+    }
+
+    /**
+     * Gets attributes
+     *
+     * @return \Otto\Client\Model\AttributeProductsV2[]
+     */
+    public function getAttributes()
+    {
+        return $this->container['attributes'];
+    }
+
+    /**
+     * Sets attributes
+     *
+     * @param \Otto\Client\Model\AttributeProductsV2[] $attributes Lists all the descriptive information about a product variant a partner can provide. Must be provided in the form of a key values pair. Will be validated against the AttributeDefinitions from Category endpoint provided by Otto market.
+     *
+     * @return $this
+     */
+    public function setAttributes($attributes)
+    {
+        $this->container['attributes'] = $attributes;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

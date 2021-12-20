@@ -1,10 +1,11 @@
 <?php
 /**
- * ApiException
+ * ModelInterface
+ *
  * PHP version 5
  *
  * @category Class
- * @package  Otto\Client
+ * @package  Otto\Client\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,85 +26,70 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
-
-use \Exception;
+namespace Otto\Client\Model;
 
 /**
- * ApiException Class Doc Comment
+ * Interface abstracting model access.
  *
- * @category Class
- * @package  Otto\Client
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @package Otto\Client\Model
+ * @author  Swagger Codegen team
  */
-class HeaderSelector
+interface ModelInterface
 {
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName();
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
-    {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
-    }
+    public static function swaggerTypes();
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
-    {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
-    }
+    public static function swaggerFormats();
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name, and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @return array
      */
-    private function selectAcceptHeader($accept)
-    {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
-        } else {
-            return implode(',', $accept);
-        }
-    }
+    public static function attributeMap();
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Array of attributes to setter functions (for deserialization of responses)
      *
-     * @param string[] $contentType Array fo content-type
-     *
-     * @return string Content-Type (e.g. application/json)
+     * @return array
      */
-    private function selectContentTypeHeader($contentType)
-    {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
-        } else {
-            return implode(',', $contentType);
-        }
-    }
+    public static function setters();
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters();
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array
+     */
+    public function listInvalidProperties();
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool
+     */
+    public function valid();
 }
-

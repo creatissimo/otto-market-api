@@ -1,7 +1,6 @@
 <?php
 /**
- * ObjectSerializer
- *
+ * QuantitiesV2Api
  * PHP version 5
  *
  * @category Class
@@ -26,293 +25,899 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Api;
+
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
- * ObjectSerializer Class Doc Comment
+ * QuantitiesV2Api Class Doc Comment
  *
  * @category Class
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ObjectSerializer
+class QuantitiesV2Api
 {
     /**
-     * Serialize data
-     *
-     * @param mixed  $data   the data to serialize
-     * @param string $format the format of the Swagger type of the data
-     *
-     * @return string|object serialized form of $data
+     * @var ClientInterface
      */
-    public static function sanitizeForSerialization($data, $format = null)
+    protected $client;
+
+    /**
+     * @var Configuration
+     */
+    protected $config;
+
+    /**
+     * @var HeaderSelector
+     */
+    protected $headerSelector;
+
+    /**
+     * @param ClientInterface $client
+     * @param Configuration   $config
+     * @param HeaderSelector  $selector
+     */
+    public function __construct(
+        ClientInterface $client = null,
+        Configuration $config = null,
+        HeaderSelector $selector = null
+    ) {
+        $this->client = $client ?: new Client();
+        $this->config = $config ?: new Configuration();
+        $this->headerSelector = $selector ?: new HeaderSelector();
+    }
+
+    /**
+     * @return Configuration
+     */
+    public function getConfig()
     {
-        if (is_scalar($data) || null === $data) {
-            return $data;
-        } elseif ($data instanceof \DateTime) {
-            return ($format === 'date') ? $data->format('Y-m-d') : $data->format(\DateTime::ATOM);
-        } elseif (is_array($data)) {
-            foreach ($data as $property => $value) {
-                $data[$property] = self::sanitizeForSerialization($value);
+        return $this->config;
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantities
+     *
+     * Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
+     *
+     * @param  int $limit The maximum number of available quantities to be returned in each response. (optional, default to 200)
+     * @param  int $page Page number (0..N) (optional, default to 0)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2
+     */
+    public function quantitiesV2GetAvailableQuantities($limit = '200', $page = '0')
+    {
+        list($response) = $this->quantitiesV2GetAvailableQuantitiesWithHttpInfo($limit, $page);
+        return $response;
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantitiesWithHttpInfo
+     *
+     * Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
+     *
+     * @param  int $limit The maximum number of available quantities to be returned in each response. (optional, default to 200)
+     * @param  int $page Page number (0..N) (optional, default to 0)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function quantitiesV2GetAvailableQuantitiesWithHttpInfo($limit = '200', $page = '0')
+    {
+        $returnType = '\Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2';
+        $request = $this->quantitiesV2GetAvailableQuantitiesRequest($limit, $page);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
             }
-            return $data;
-        } elseif (is_object($data)) {
-            $values = [];
-            $formats = $data::swaggerFormats();
-            foreach ($data::swaggerTypes() as $property => $swaggerType) {
-                $getter = $data::getters()[$property];
-                $value = $data->$getter();
-                if ($value !== null
-                    && !in_array($swaggerType, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)
-                    && method_exists($swaggerType, 'getAllowableEnumValues')
-                    && !in_array($value, $swaggerType::getAllowableEnumValues())) {
-                    $imploded = implode("', '", $swaggerType::getAllowableEnumValues());
-                    throw new \InvalidArgumentException("Invalid value for enum '$swaggerType', must be one of: '$imploded'");
-                }
-                if ($value !== null) {
-                    $values[$data::attributeMap()[$property]] = self::sanitizeForSerialization($value, $swaggerType, $formats[$property]);
-                }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
             }
-            return (object)$values;
-        } else {
-            return (string)$data;
-        }
-    }
 
-    /**
-     * Sanitize filename by removing path.
-     * e.g. ../../sun.gif becomes sun.gif
-     *
-     * @param string $filename filename to be sanitized
-     *
-     * @return string the sanitized filename
-     */
-    public static function sanitizeFilename($filename)
-    {
-        if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
-            return $match[1];
-        } else {
-            return $filename;
-        }
-    }
-
-    /**
-     * Take value and turn it into a string suitable for inclusion in
-     * the path, by url-encoding.
-     *
-     * @param string $value a string which will be part of the path
-     *
-     * @return string the serialized object
-     */
-    public static function toPathValue($value)
-    {
-        return rawurlencode(self::toString($value));
-    }
-
-    /**
-     * Take value and turn it into a string suitable for inclusion in
-     * the query, by imploding comma-separated if it's an object.
-     * If it's a string, pass through unchanged. It will be url-encoded
-     * later.
-     *
-     * @param string[]|string|\DateTime $object an object to be serialized to a string
-     * @param string|null $format the format of the parameter
-     *
-     * @return string the serialized object
-     */
-    public static function toQueryValue($object, $format = null)
-    {
-        if (is_array($object)) {
-            return implode(',', $object);
-        } else {
-            return self::toString($object, $format);
-        }
-    }
-
-    /**
-     * Take value and turn it into a string suitable for inclusion in
-     * the header. If it's a string, pass through unchanged
-     * If it's a datetime object, format it in RFC3339
-     *
-     * @param string $value a string which will be part of the header
-     *
-     * @return string the header string
-     */
-    public static function toHeaderValue($value)
-    {
-        return self::toString($value);
-    }
-
-    /**
-     * Take value and turn it into a string suitable for inclusion in
-     * the http body (form parameter). If it's a string, pass through unchanged
-     * If it's a datetime object, format it in RFC3339
-     *
-     * @param string|\SplFileObject $value the value of the form parameter
-     *
-     * @return string the form string
-     */
-    public static function toFormValue($value)
-    {
-        if ($value instanceof \SplFileObject) {
-            return $value->getRealPath();
-        } else {
-            return self::toString($value);
-        }
-    }
-
-    /**
-     * Take value and turn it into a string suitable for inclusion in
-     * the parameter. If it's a string, pass through unchanged
-     * If it's a datetime object, format it in RFC3339
-     * If it's a date, format it in Y-m-d
-     *
-     * @param string|\DateTime $value the value of the parameter
-     * @param string|null $format the format of the parameter
-     *
-     * @return string the header string
-     */
-    public static function toString($value, $format = null)
-    {
-        if ($value instanceof \DateTime) {
-            return ($format === 'date') ? $value->format('Y-m-d') : $value->format(\DateTime::ATOM);
-        } else {
-            return $value;
-        }
-    }
-
-    /**
-     * Serialize an array to a string.
-     *
-     * @param array  $collection                 collection to serialize to a string
-     * @param string $collectionFormat           the format use for serialization (csv,
-     * ssv, tsv, pipes, multi)
-     * @param bool   $allowCollectionFormatMulti allow collection format to be a multidimensional array
-     *
-     * @return string
-     */
-    public static function serializeCollection(array $collection, $collectionFormat, $allowCollectionFormatMulti = false)
-    {
-        if ($allowCollectionFormatMulti && ('multi' === $collectionFormat)) {
-            // http_build_query() almost does the job for us. We just
-            // need to fix the result of multidimensional arrays.
-            return preg_replace('/%5B[0-9]+%5D=/', '=', http_build_query($collection, '', '&'));
-        }
-        switch ($collectionFormat) {
-            case 'pipes':
-                return implode('|', $collection);
-
-            case 'tsv':
-                return implode("\t", $collection);
-
-            case 'ssv':
-                return implode(' ', $collection);
-
-            case 'csv':
-                // Deliberate fall through. CSV is default format.
-            default:
-                return implode(',', $collection);
-        }
-    }
-
-    /**
-     * Deserialize a JSON string into an object
-     *
-     * @param mixed    $data          object or primitive to be deserialized
-     * @param string   $class         class name is passed as a string
-     * @param string[] $httpHeaders   HTTP headers
-     * @param string   $discriminator discriminator if polymorphism is used
-     *
-     * @return object|array|null an single or an array of $class instances
-     */
-    public static function deserialize($data, $class, $httpHeaders = null)
-    {
-        if (null === $data) {
-            return null;
-        } elseif (substr($class, 0, 4) === 'map[') { // for associative array e.g. map[string,int]
-            $inner = substr($class, 4, -1);
-            $deserialized = [];
-            if (strrpos($inner, ",") !== false) {
-                $subClass_array = explode(',', $inner, 2);
-                $subClass = $subClass_array[1];
-                foreach ($data as $key => $value) {
-                    $deserialized[$key] = self::deserialize($value, $subClass, null);
-                }
-            }
-            return $deserialized;
-        } elseif (strcasecmp(substr($class, -2), '[]') === 0) {
-            $subClass = substr($class, 0, -2);
-            $values = [];
-            foreach ($data as $key => $value) {
-                $values[] = self::deserialize($value, $subClass, null);
-            }
-            return $values;
-        } elseif ($class === 'object') {
-            settype($data, 'array');
-            return $data;
-        } elseif ($class === '\DateTime') {
-            // Some API's return an invalid, empty string as a
-            // date-time property. DateTime::__construct() will return
-            // the current time for empty input which is probably not
-            // what is meant. The invalid empty string is probably to
-            // be interpreted as a missing field/value. Let's handle
-            // this graceful.
-            if (!empty($data)) {
-                return new \DateTime($data);
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
             } else {
-                return null;
-            }
-        } elseif (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
-            settype($data, $class);
-            return $data;
-        } elseif ($class === '\SplFileObject') {
-            /** @var \Psr\Http\Message\StreamInterface $data */
-
-            // determine file name
-            if (array_key_exists('Content-Disposition', $httpHeaders) &&
-                preg_match('/inline; filename=[\'"]?([^\'"\s]+)[\'"]?$/i', $httpHeaders['Content-Disposition'], $match)) {
-                $filename = Configuration::getDefaultConfiguration()->getTempFolderPath() . DIRECTORY_SEPARATOR . self::sanitizeFilename($match[1]);
-            } else {
-                $filename = tempnam(Configuration::getDefaultConfiguration()->getTempFolderPath(), '');
-            }
-
-            $file = fopen($filename, 'w');
-            while ($chunk = $data->read(200)) {
-                fwrite($file, $chunk);
-            }
-            fclose($file);
-
-            return new \SplFileObject($filename, 'r');
-        } elseif (method_exists($class, 'getAllowableEnumValues')) {
-            if (!in_array($data, $class::getAllowableEnumValues())) {
-                $imploded = implode("', '", $class::getAllowableEnumValues());
-                throw new \InvalidArgumentException("Invalid value for enum '$class', must be one of: '$imploded'");
-            }
-            return $data;
-        } else {
-            // If a discriminator is defined and points to a valid subclass, use it.
-            $discriminator = $class::DISCRIMINATOR;
-            if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '{{invokerPackage}}\Model\\' . $data->{$discriminator};
-                if (is_subclass_of($subclass, $class)) {
-                    $class = $subclass;
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
                 }
             }
-            $instance = new $class();
-            foreach ($instance::swaggerTypes() as $property => $type) {
-                $propertySetter = $instance::setters()[$property];
 
-                if (!isset($propertySetter) || !isset($data->{$instance::attributeMap()[$property]})) {
-                    continue;
-                }
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
-                $propertyValue = $data->{$instance::attributeMap()[$property]};
-                if (isset($propertyValue)) {
-                    $instance->$propertySetter(self::deserialize($propertyValue, $type, null));
-                }
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
-            return $instance;
+            throw $e;
         }
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantitiesAsync
+     *
+     * Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
+     *
+     * @param  int $limit The maximum number of available quantities to be returned in each response. (optional, default to 200)
+     * @param  int $page Page number (0..N) (optional, default to 0)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function quantitiesV2GetAvailableQuantitiesAsync($limit = '200', $page = '0')
+    {
+        return $this->quantitiesV2GetAvailableQuantitiesAsyncWithHttpInfo($limit, $page)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantitiesAsyncWithHttpInfo
+     *
+     * Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
+     *
+     * @param  int $limit The maximum number of available quantities to be returned in each response. (optional, default to 200)
+     * @param  int $page Page number (0..N) (optional, default to 0)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function quantitiesV2GetAvailableQuantitiesAsyncWithHttpInfo($limit = '200', $page = '0')
+    {
+        $returnType = '\Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2';
+        $request = $this->quantitiesV2GetAvailableQuantitiesRequest($limit, $page);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'quantitiesV2GetAvailableQuantities'
+     *
+     * @param  int $limit The maximum number of available quantities to be returned in each response. (optional, default to 200)
+     * @param  int $page Page number (0..N) (optional, default to 0)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function quantitiesV2GetAvailableQuantitiesRequest($limit = '200', $page = '0')
+    {
+
+        $resourcePath = '/v2/quantities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit, 'int32');
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = ObjectSerializer::toQueryValue($page, 'int32');
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantityBySku
+     *
+     * Get available quantity for a specific Sku
+     *
+     * @param  string $sku The sku for the available quantity (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Otto\Client\Model\AvailableQuantitySingleResponseDTOV2QuantitiesV2
+     */
+    public function quantitiesV2GetAvailableQuantityBySku($sku)
+    {
+        list($response) = $this->quantitiesV2GetAvailableQuantityBySkuWithHttpInfo($sku);
+        return $response;
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantityBySkuWithHttpInfo
+     *
+     * Get available quantity for a specific Sku
+     *
+     * @param  string $sku The sku for the available quantity (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Otto\Client\Model\AvailableQuantitySingleResponseDTOV2QuantitiesV2, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function quantitiesV2GetAvailableQuantityBySkuWithHttpInfo($sku)
+    {
+        $returnType = '\Otto\Client\Model\AvailableQuantitySingleResponseDTOV2QuantitiesV2';
+        $request = $this->quantitiesV2GetAvailableQuantityBySkuRequest($sku);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Otto\Client\Model\AvailableQuantitySingleResponseDTOV2QuantitiesV2',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantityBySkuAsync
+     *
+     * Get available quantity for a specific Sku
+     *
+     * @param  string $sku The sku for the available quantity (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function quantitiesV2GetAvailableQuantityBySkuAsync($sku)
+    {
+        return $this->quantitiesV2GetAvailableQuantityBySkuAsyncWithHttpInfo($sku)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation quantitiesV2GetAvailableQuantityBySkuAsyncWithHttpInfo
+     *
+     * Get available quantity for a specific Sku
+     *
+     * @param  string $sku The sku for the available quantity (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function quantitiesV2GetAvailableQuantityBySkuAsyncWithHttpInfo($sku)
+    {
+        $returnType = '\Otto\Client\Model\AvailableQuantitySingleResponseDTOV2QuantitiesV2';
+        $request = $this->quantitiesV2GetAvailableQuantityBySkuRequest($sku);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'quantitiesV2GetAvailableQuantityBySku'
+     *
+     * @param  string $sku The sku for the available quantity (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function quantitiesV2GetAvailableQuantityBySkuRequest($sku)
+    {
+        // verify the required parameter 'sku' is set
+        if ($sku === null || (is_array($sku) && count($sku) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $sku when calling quantitiesV2GetAvailableQuantityBySku'
+            );
+        }
+
+        $resourcePath = '/v2/quantities/{sku}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($sku !== null) {
+            $resourcePath = str_replace(
+                '{' . 'sku' . '}',
+                ObjectSerializer::toPathValue($sku),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation quantitiesV2StoreAvailableQuantitiesUsingPOST
+     *
+     * Update the available quantity for a specific SKU (up to 200 SKUs per request)
+     *
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[] $body availableQuantityRequestDTO (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return object
+     */
+    public function quantitiesV2StoreAvailableQuantitiesUsingPOST($body)
+    {
+        list($response) = $this->quantitiesV2StoreAvailableQuantitiesUsingPOSTWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation quantitiesV2StoreAvailableQuantitiesUsingPOSTWithHttpInfo
+     *
+     * Update the available quantity for a specific SKU (up to 200 SKUs per request)
+     *
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[] $body availableQuantityRequestDTO (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function quantitiesV2StoreAvailableQuantitiesUsingPOSTWithHttpInfo($body)
+    {
+        $returnType = 'object';
+        $request = $this->quantitiesV2StoreAvailableQuantitiesUsingPOSTRequest($body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 207:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Otto\Client\Model\UpdateQuantityMultiStatusResponseQuantitiesV2',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 413:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Otto\Client\Model\PayloadTooLargeApiErrorResponseV2QuantitiesV2',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Otto\Client\Model\ApiErrorResponseV2QuantitiesV2',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation quantitiesV2StoreAvailableQuantitiesUsingPOSTAsync
+     *
+     * Update the available quantity for a specific SKU (up to 200 SKUs per request)
+     *
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[] $body availableQuantityRequestDTO (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function quantitiesV2StoreAvailableQuantitiesUsingPOSTAsync($body)
+    {
+        return $this->quantitiesV2StoreAvailableQuantitiesUsingPOSTAsyncWithHttpInfo($body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation quantitiesV2StoreAvailableQuantitiesUsingPOSTAsyncWithHttpInfo
+     *
+     * Update the available quantity for a specific SKU (up to 200 SKUs per request)
+     *
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[] $body availableQuantityRequestDTO (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function quantitiesV2StoreAvailableQuantitiesUsingPOSTAsyncWithHttpInfo($body)
+    {
+        $returnType = 'object';
+        $request = $this->quantitiesV2StoreAvailableQuantitiesUsingPOSTRequest($body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'quantitiesV2StoreAvailableQuantitiesUsingPOST'
+     *
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[] $body availableQuantityRequestDTO (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function quantitiesV2StoreAvailableQuantitiesUsingPOSTRequest($body)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling quantitiesV2StoreAvailableQuantitiesUsingPOST'
+            );
+        }
+
+        $resourcePath = '/v2/quantities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
     }
 }

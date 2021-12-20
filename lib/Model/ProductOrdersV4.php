@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * ProductOrdersV4
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,401 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * ProductOrdersV4 Class Doc Comment
  *
  * @category Class
+ * @description Product
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class ProductOrdersV4 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'Product__Orders-V4';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'sku' => 'string',
+'product_title' => 'string',
+'article_number' => 'string',
+'ean' => 'string',
+'vat_rate' => 'float'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'sku' => null,
+'product_title' => null,
+'article_number' => null,
+'ean' => null,
+'vat_rate' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'sku' => 'sku',
+'product_title' => 'productTitle',
+'article_number' => 'articleNumber',
+'ean' => 'ean',
+'vat_rate' => 'vatRate'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'sku' => 'setSku',
+'product_title' => 'setProductTitle',
+'article_number' => 'setArticleNumber',
+'ean' => 'setEan',
+'vat_rate' => 'setVatRate'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'sku' => 'getSku',
+'product_title' => 'getProductTitle',
+'article_number' => 'getArticleNumber',
+'ean' => 'getEan',
+'vat_rate' => 'getVatRate'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
+        $this->container['product_title'] = isset($data['product_title']) ? $data['product_title'] : null;
+        $this->container['article_number'] = isset($data['article_number']) ? $data['article_number'] : null;
+        $this->container['ean'] = isset($data['ean']) ? $data['ean'] : null;
+        $this->container['vat_rate'] = isset($data['vat_rate']) ? $data['vat_rate'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        if ($this->container['sku'] === null) {
+            $invalidProperties[] = "'sku' can't be null";
+        }
+        if ($this->container['product_title'] === null) {
+            $invalidProperties[] = "'product_title' can't be null";
+        }
+        if ($this->container['article_number'] === null) {
+            $invalidProperties[] = "'article_number' can't be null";
+        }
+        if ($this->container['vat_rate'] === null) {
+            $invalidProperties[] = "'vat_rate' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets sku
+     *
+     * @return string
+     */
+    public function getSku()
+    {
+        return $this->container['sku'];
+    }
+
+    /**
+     * Sets sku
+     *
+     * @param string $sku The external identifier of the variation, uniquely identifies a variation in partner cataloq
+     *
+     * @return $this
+     */
+    public function setSku($sku)
+    {
+        $this->container['sku'] = $sku;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_title
+     *
+     * @return string
+     */
+    public function getProductTitle()
+    {
+        return $this->container['product_title'];
+    }
+
+    /**
+     * Sets product_title
+     *
+     * @param string $product_title The title of this product
+     *
+     * @return $this
+     */
+    public function setProductTitle($product_title)
+    {
+        $this->container['product_title'] = $product_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets article_number
+     *
+     * @return string
+     */
+    public function getArticleNumber()
+    {
+        return $this->container['article_number'];
+    }
+
+    /**
+     * Sets article_number
+     *
+     * @param string $article_number The external identifier of the product, it is shown as \"article number\" on the product detail page of otto.de to the customer.
+     *
+     * @return $this
+     */
+    public function setArticleNumber($article_number)
+    {
+        $this->container['article_number'] = $article_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets ean
+     *
+     * @return string
+     */
+    public function getEan()
+    {
+        return $this->container['ean'];
+    }
+
+    /**
+     * Sets ean
+     *
+     * @param string $ean EAN number of this product
+     *
+     * @return $this
+     */
+    public function setEan($ean)
+    {
+        $this->container['ean'] = $ean;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_rate
+     *
+     * @return float
+     */
+    public function getVatRate()
+    {
+        return $this->container['vat_rate'];
+    }
+
+    /**
+     * Sets vat_rate
+     *
+     * @param float $vat_rate The VAT rate for ordered products and shipping costs
+     *
+     * @return $this
+     */
+    public function setVatRate($vat_rate)
+    {
+        $this->container['vat_rate'] = $vat_rate;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

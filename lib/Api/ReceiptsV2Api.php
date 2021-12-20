@@ -1,6 +1,6 @@
 <?php
 /**
- * ApiException
+ * ReceiptsV2Api
  * PHP version 5
  *
  * @category Class
@@ -25,85 +25,861 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Api;
 
-use \Exception;
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * ReceiptsV2Api Class Doc Comment
  *
  * @category Class
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class ReceiptsV2Api
 {
+    /**
+     * @var ClientInterface
+     */
+    protected $client;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
-     * @return array
+     * @var Configuration
      */
-    public function selectHeaders($accept, $contentTypes)
-    {
-        $headers = [];
+    protected $config;
 
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
+    /**
+     * @var HeaderSelector
+     */
+    protected $headerSelector;
+
+    /**
+     * @param ClientInterface $client
+     * @param Configuration   $config
+     * @param HeaderSelector  $selector
+     */
+    public function __construct(
+        ClientInterface $client = null,
+        Configuration $config = null,
+        HeaderSelector $selector = null
+    ) {
+        $this->client = $client ?: new Client();
+        $this->config = $config ?: new Configuration();
+        $this->headerSelector = $selector ?: new HeaderSelector();
+    }
+
+    /**
+     * @return Configuration
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptPdfUsingGET3
+     *
+     * Get the PDF document of a specific receipt by receipt number.
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function receiptsV2GetReceiptPdfUsingGET3($receipt_number)
+    {
+        $this->receiptsV2GetReceiptPdfUsingGET3WithHttpInfo($receipt_number);
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptPdfUsingGET3WithHttpInfo
+     *
+     * Get the PDF document of a specific receipt by receipt number.
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function receiptsV2GetReceiptPdfUsingGET3WithHttpInfo($receipt_number)
+    {
+        $returnType = '';
+        $request = $this->receiptsV2GetReceiptPdfUsingGET3Request($receipt_number);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptPdfUsingGET3Async
+     *
+     * Get the PDF document of a specific receipt by receipt number.
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function receiptsV2GetReceiptPdfUsingGET3Async($receipt_number)
+    {
+        return $this->receiptsV2GetReceiptPdfUsingGET3AsyncWithHttpInfo($receipt_number)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptPdfUsingGET3AsyncWithHttpInfo
+     *
+     * Get the PDF document of a specific receipt by receipt number.
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function receiptsV2GetReceiptPdfUsingGET3AsyncWithHttpInfo($receipt_number)
+    {
+        $returnType = '';
+        $request = $this->receiptsV2GetReceiptPdfUsingGET3Request($receipt_number);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'receiptsV2GetReceiptPdfUsingGET3'
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function receiptsV2GetReceiptPdfUsingGET3Request($receipt_number)
+    {
+        // verify the required parameter 'receipt_number' is set
+        if ($receipt_number === null || (is_array($receipt_number) && count($receipt_number) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $receipt_number when calling receiptsV2GetReceiptPdfUsingGET3'
+            );
         }
 
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
-    }
+        $resourcePath = '/v2/receipts/{receiptNumber}.pdf';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
 
-    /**
-     * @param string[] $accept
-     * @return array
-     */
-    public function selectHeadersForMultipart($accept)
-    {
-        $headers = $this->selectHeaders($accept, []);
 
-        unset($headers['Content-Type']);
-        return $headers;
-    }
+        // path params
+        if ($receipt_number !== null) {
+            $resourcePath = str_replace(
+                '{' . 'receiptNumber' . '}',
+                ObjectSerializer::toPathValue($receipt_number),
+                $resourcePath
+            );
+        }
 
-    /**
-     * Return the header 'Accept' based on an array of Accept provided
-     *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
-     */
-    private function selectAcceptHeader($accept)
-    {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/pdf']
+            );
         } else {
-            return implode(',', $accept);
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/pdf'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptUsingGET5
+     *
+     * Get a specific receipt for the given receipt number as JSON object
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Otto\Client\Model\ReceiptReceiptsV2
+     */
+    public function receiptsV2GetReceiptUsingGET5($receipt_number)
+    {
+        list($response) = $this->receiptsV2GetReceiptUsingGET5WithHttpInfo($receipt_number);
+        return $response;
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptUsingGET5WithHttpInfo
+     *
+     * Get a specific receipt for the given receipt number as JSON object
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Otto\Client\Model\ReceiptReceiptsV2, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function receiptsV2GetReceiptUsingGET5WithHttpInfo($receipt_number)
+    {
+        $returnType = '\Otto\Client\Model\ReceiptReceiptsV2';
+        $request = $this->receiptsV2GetReceiptUsingGET5Request($receipt_number);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Otto\Client\Model\ReceiptReceiptsV2',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Operation receiptsV2GetReceiptUsingGET5Async
      *
-     * @param string[] $contentType Array fo content-type
+     * Get a specific receipt for the given receipt number as JSON object
      *
-     * @return string Content-Type (e.g. application/json)
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    private function selectContentTypeHeader($contentType)
+    public function receiptsV2GetReceiptUsingGET5Async($receipt_number)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
-        } else {
-            return implode(',', $contentType);
+        return $this->receiptsV2GetReceiptUsingGET5AsyncWithHttpInfo($receipt_number)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptUsingGET5AsyncWithHttpInfo
+     *
+     * Get a specific receipt for the given receipt number as JSON object
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function receiptsV2GetReceiptUsingGET5AsyncWithHttpInfo($receipt_number)
+    {
+        $returnType = '\Otto\Client\Model\ReceiptReceiptsV2';
+        $request = $this->receiptsV2GetReceiptUsingGET5Request($receipt_number);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'receiptsV2GetReceiptUsingGET5'
+     *
+     * @param  string $receipt_number ReceiptNumber (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function receiptsV2GetReceiptUsingGET5Request($receipt_number)
+    {
+        // verify the required parameter 'receipt_number' is set
+        if ($receipt_number === null || (is_array($receipt_number) && count($receipt_number) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $receipt_number when calling receiptsV2GetReceiptUsingGET5'
+            );
         }
+
+        $resourcePath = '/v2/receipts/{receiptNumber}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($receipt_number !== null) {
+            $resourcePath = str_replace(
+                '{' . 'receiptNumber' . '}',
+                ObjectSerializer::toPathValue($receipt_number),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptsUsingGET5
+     *
+     * Get all receipts as list of JSON objects
+     *
+     * @param  int $limit Page size to limit the number of receipts returned in the response (optional, default to 128)
+     * @param  int $page Page number to fetch. This parameter is required to fetch data for specific page number (optional, default to 1)
+     * @param  string $type Search for receipts filtered by receipt type (optional)
+     * @param  string $sales_order_id Search for receipts filtered by sales order Id (optional)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Otto\Client\Model\ReceiptsListReceiptsV2
+     */
+    public function receiptsV2GetReceiptsUsingGET5($limit = '128', $page = '1', $type = null, $sales_order_id = null)
+    {
+        list($response) = $this->receiptsV2GetReceiptsUsingGET5WithHttpInfo($limit, $page, $type, $sales_order_id);
+        return $response;
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptsUsingGET5WithHttpInfo
+     *
+     * Get all receipts as list of JSON objects
+     *
+     * @param  int $limit Page size to limit the number of receipts returned in the response (optional, default to 128)
+     * @param  int $page Page number to fetch. This parameter is required to fetch data for specific page number (optional, default to 1)
+     * @param  string $type Search for receipts filtered by receipt type (optional)
+     * @param  string $sales_order_id Search for receipts filtered by sales order Id (optional)
+     *
+     * @throws \Otto\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Otto\Client\Model\ReceiptsListReceiptsV2, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function receiptsV2GetReceiptsUsingGET5WithHttpInfo($limit = '128', $page = '1', $type = null, $sales_order_id = null)
+    {
+        $returnType = '\Otto\Client\Model\ReceiptsListReceiptsV2';
+        $request = $this->receiptsV2GetReceiptsUsingGET5Request($limit, $page, $type, $sales_order_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Otto\Client\Model\ReceiptsListReceiptsV2',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptsUsingGET5Async
+     *
+     * Get all receipts as list of JSON objects
+     *
+     * @param  int $limit Page size to limit the number of receipts returned in the response (optional, default to 128)
+     * @param  int $page Page number to fetch. This parameter is required to fetch data for specific page number (optional, default to 1)
+     * @param  string $type Search for receipts filtered by receipt type (optional)
+     * @param  string $sales_order_id Search for receipts filtered by sales order Id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function receiptsV2GetReceiptsUsingGET5Async($limit = '128', $page = '1', $type = null, $sales_order_id = null)
+    {
+        return $this->receiptsV2GetReceiptsUsingGET5AsyncWithHttpInfo($limit, $page, $type, $sales_order_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation receiptsV2GetReceiptsUsingGET5AsyncWithHttpInfo
+     *
+     * Get all receipts as list of JSON objects
+     *
+     * @param  int $limit Page size to limit the number of receipts returned in the response (optional, default to 128)
+     * @param  int $page Page number to fetch. This parameter is required to fetch data for specific page number (optional, default to 1)
+     * @param  string $type Search for receipts filtered by receipt type (optional)
+     * @param  string $sales_order_id Search for receipts filtered by sales order Id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function receiptsV2GetReceiptsUsingGET5AsyncWithHttpInfo($limit = '128', $page = '1', $type = null, $sales_order_id = null)
+    {
+        $returnType = '\Otto\Client\Model\ReceiptsListReceiptsV2';
+        $request = $this->receiptsV2GetReceiptsUsingGET5Request($limit, $page, $type, $sales_order_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'receiptsV2GetReceiptsUsingGET5'
+     *
+     * @param  int $limit Page size to limit the number of receipts returned in the response (optional, default to 128)
+     * @param  int $page Page number to fetch. This parameter is required to fetch data for specific page number (optional, default to 1)
+     * @param  string $type Search for receipts filtered by receipt type (optional)
+     * @param  string $sales_order_id Search for receipts filtered by sales order Id (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function receiptsV2GetReceiptsUsingGET5Request($limit = '128', $page = '1', $type = null, $sales_order_id = null)
+    {
+
+        $resourcePath = '/v2/receipts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit, 'int32');
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = ObjectSerializer::toQueryValue($page, 'int32');
+        }
+        // query params
+        if ($type !== null) {
+            $queryParams['type'] = ObjectSerializer::toQueryValue($type, null);
+        }
+        // query params
+        if ($sales_order_id !== null) {
+            $queryParams['sales_order_id'] = ObjectSerializer::toQueryValue($sales_order_id, null);
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
     }
 }
-

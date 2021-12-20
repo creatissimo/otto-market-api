@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * AttributeDefinitionProductsV2
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,658 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * AttributeDefinitionProductsV2 Class Doc Comment
  *
  * @category Class
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class AttributeDefinitionProductsV2 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'AttributeDefinition__Products-V2';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'name' => 'string',
+'attribute_group' => 'string',
+'type' => 'string',
+'multi_value' => 'bool',
+'unit' => 'string',
+'unit_display_name' => 'string',
+'allowed_values' => 'string[]',
+'feature_relevance' => 'string[]',
+'related_media_assets' => 'string[]',
+'relevance' => 'string',
+'description' => 'string',
+'example_values' => 'string[]',
+'recommended_values' => 'string[]',
+'reference' => 'string'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'name' => null,
+'attribute_group' => null,
+'type' => null,
+'multi_value' => null,
+'unit' => null,
+'unit_display_name' => null,
+'allowed_values' => null,
+'feature_relevance' => null,
+'related_media_assets' => null,
+'relevance' => null,
+'description' => null,
+'example_values' => null,
+'recommended_values' => null,
+'reference' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'name' => 'name',
+'attribute_group' => 'attributeGroup',
+'type' => 'type',
+'multi_value' => 'multiValue',
+'unit' => 'unit',
+'unit_display_name' => 'unitDisplayName',
+'allowed_values' => 'allowedValues',
+'feature_relevance' => 'featureRelevance',
+'related_media_assets' => 'relatedMediaAssets',
+'relevance' => 'relevance',
+'description' => 'description',
+'example_values' => 'exampleValues',
+'recommended_values' => 'recommendedValues',
+'reference' => 'reference'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'name' => 'setName',
+'attribute_group' => 'setAttributeGroup',
+'type' => 'setType',
+'multi_value' => 'setMultiValue',
+'unit' => 'setUnit',
+'unit_display_name' => 'setUnitDisplayName',
+'allowed_values' => 'setAllowedValues',
+'feature_relevance' => 'setFeatureRelevance',
+'related_media_assets' => 'setRelatedMediaAssets',
+'relevance' => 'setRelevance',
+'description' => 'setDescription',
+'example_values' => 'setExampleValues',
+'recommended_values' => 'setRecommendedValues',
+'reference' => 'setReference'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'name' => 'getName',
+'attribute_group' => 'getAttributeGroup',
+'type' => 'getType',
+'multi_value' => 'getMultiValue',
+'unit' => 'getUnit',
+'unit_display_name' => 'getUnitDisplayName',
+'allowed_values' => 'getAllowedValues',
+'feature_relevance' => 'getFeatureRelevance',
+'related_media_assets' => 'getRelatedMediaAssets',
+'relevance' => 'getRelevance',
+'description' => 'getDescription',
+'example_values' => 'getExampleValues',
+'recommended_values' => 'getRecommendedValues',
+'reference' => 'getReference'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['attribute_group'] = isset($data['attribute_group']) ? $data['attribute_group'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['multi_value'] = isset($data['multi_value']) ? $data['multi_value'] : null;
+        $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
+        $this->container['unit_display_name'] = isset($data['unit_display_name']) ? $data['unit_display_name'] : null;
+        $this->container['allowed_values'] = isset($data['allowed_values']) ? $data['allowed_values'] : null;
+        $this->container['feature_relevance'] = isset($data['feature_relevance']) ? $data['feature_relevance'] : null;
+        $this->container['related_media_assets'] = isset($data['related_media_assets']) ? $data['related_media_assets'] : null;
+        $this->container['relevance'] = isset($data['relevance']) ? $data['relevance'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['example_values'] = isset($data['example_values']) ? $data['example_values'] : null;
+        $this->container['recommended_values'] = isset($data['recommended_values']) ? $data['recommended_values'] : null;
+        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name the name of the attribute. This attribute name has to be used within the product description.
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets attribute_group
+     *
+     * @return string
+     */
+    public function getAttributeGroup()
+    {
+        return $this->container['attribute_group'];
+    }
+
+    /**
+     * Sets attribute_group
+     *
+     * @param string $attribute_group title of the attributes displayed in the product details in the shop.
+     *
+     * @return $this
+     */
+    public function setAttributeGroup($attribute_group)
+    {
+        $this->container['attribute_group'] = $attribute_group;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type defines the format of the attribute value, such as string, integer, etc.
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets multi_value
+     *
+     * @return bool
+     */
+    public function getMultiValue()
+    {
+        return $this->container['multi_value'];
+    }
+
+    /**
+     * Sets multi_value
+     *
+     * @param bool $multi_value if the value is true, several values can be transferred to this attribute (polyvalence attribute); otherwise, only a single value may be transferred to this attribute.
+     *
+     * @return $this
+     */
+    public function setMultiValue($multi_value)
+    {
+        $this->container['multi_value'] = $multi_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets unit
+     *
+     * @return string
+     */
+    public function getUnit()
+    {
+        return $this->container['unit'];
+    }
+
+    /**
+     * Sets unit
+     *
+     * @param string $unit the values must be transferred in the specified unit.
+     *
+     * @return $this
+     */
+    public function setUnit($unit)
+    {
+        $this->container['unit'] = $unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets unit_display_name
+     *
+     * @return string
+     */
+    public function getUnitDisplayName()
+    {
+        return $this->container['unit_display_name'];
+    }
+
+    /**
+     * Sets unit_display_name
+     *
+     * @param string $unit_display_name the value gets displayed with this unit in the shop.
+     *
+     * @return $this
+     */
+    public function setUnitDisplayName($unit_display_name)
+    {
+        $this->container['unit_display_name'] = $unit_display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets allowed_values
+     *
+     * @return string[]
+     */
+    public function getAllowedValues()
+    {
+        return $this->container['allowed_values'];
+    }
+
+    /**
+     * Sets allowed_values
+     *
+     * @param string[] $allowed_values only the listed values are permitted for the attribute.
+     *
+     * @return $this
+     */
+    public function setAllowedValues($allowed_values)
+    {
+        $this->container['allowed_values'] = $allowed_values;
+
+        return $this;
+    }
+
+    /**
+     * Gets feature_relevance
+     *
+     * @return string[]
+     */
+    public function getFeatureRelevance()
+    {
+        return $this->container['feature_relevance'];
+    }
+
+    /**
+     * Sets feature_relevance
+     *
+     * @param string[] $feature_relevance describes what the attribute can be used for and where it gets displayed in the shop.
+     *
+     * @return $this
+     */
+    public function setFeatureRelevance($feature_relevance)
+    {
+        $this->container['feature_relevance'] = $feature_relevance;
+
+        return $this;
+    }
+
+    /**
+     * Gets related_media_assets
+     *
+     * @return string[]
+     */
+    public function getRelatedMediaAssets()
+    {
+        return $this->container['related_media_assets'];
+    }
+
+    /**
+     * Sets related_media_assets
+     *
+     * @param string[] $related_media_assets mandatory media assets for the category
+     *
+     * @return $this
+     */
+    public function setRelatedMediaAssets($related_media_assets)
+    {
+        $this->container['related_media_assets'] = $related_media_assets;
+
+        return $this;
+    }
+
+    /**
+     * Gets relevance
+     *
+     * @return string
+     */
+    public function getRelevance()
+    {
+        return $this->container['relevance'];
+    }
+
+    /**
+     * Sets relevance
+     *
+     * @param string $relevance the relevance of the attribute.
+     *
+     * @return $this
+     */
+    public function setRelevance($relevance)
+    {
+        $this->container['relevance'] = $relevance;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description additional information for the attribute.
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets example_values
+     *
+     * @return string[]
+     */
+    public function getExampleValues()
+    {
+        return $this->container['example_values'];
+    }
+
+    /**
+     * Sets example_values
+     *
+     * @param string[] $example_values example values for the attribute.
+     *
+     * @return $this
+     */
+    public function setExampleValues($example_values)
+    {
+        $this->container['example_values'] = $example_values;
+
+        return $this;
+    }
+
+    /**
+     * Gets recommended_values
+     *
+     * @return string[]
+     */
+    public function getRecommendedValues()
+    {
+        return $this->container['recommended_values'];
+    }
+
+    /**
+     * Sets recommended_values
+     *
+     * @param string[] $recommended_values use the listed values to get full navigation and filter features on otto.de. If no suitable value exists, then enter your own value.
+     *
+     * @return $this
+     */
+    public function setRecommendedValues($recommended_values)
+    {
+        $this->container['recommended_values'] = $recommended_values;
+
+        return $this;
+    }
+
+    /**
+     * Gets reference
+     *
+     * @return string
+     */
+    public function getReference()
+    {
+        return $this->container['reference'];
+    }
+
+    /**
+     * Sets reference
+     *
+     * @param string $reference reference to further documentation.
+     *
+     * @return $this
+     */
+    public function setReference($reference)
+    {
+        $this->container['reference'] = $reference;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

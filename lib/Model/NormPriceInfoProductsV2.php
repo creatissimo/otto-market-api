@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * NormPriceInfoProductsV2
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,483 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * NormPriceInfoProductsV2 Class Doc Comment
  *
  * @category Class
+ * @description The information about normed prices, must be provided completely, or not at all. The representation of the normprice have to contain from the following values for normAmount and normUnit: 1 pcs,1 sqm,1 kg,1 l,1 m,100 ml,100 g,1 g,1000 g,1 pair,1 RM,1 dm3.
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class NormPriceInfoProductsV2 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'NormPriceInfo__Products-V2';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'norm_amount' => 'int',
+'norm_unit' => 'string',
+'sales_amount' => 'float',
+'sales_unit' => 'string'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'norm_amount' => 'int32',
+'norm_unit' => null,
+'sales_amount' => null,
+'sales_unit' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'norm_amount' => 'normAmount',
+'norm_unit' => 'normUnit',
+'sales_amount' => 'salesAmount',
+'sales_unit' => 'salesUnit'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'norm_amount' => 'setNormAmount',
+'norm_unit' => 'setNormUnit',
+'sales_amount' => 'setSalesAmount',
+'sales_unit' => 'setSalesUnit'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'norm_amount' => 'getNormAmount',
+'norm_unit' => 'getNormUnit',
+'sales_amount' => 'getSalesAmount',
+'sales_unit' => 'getSalesUnit'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    const NORM_AMOUNT_1 = 1;
+const NORM_AMOUNT_100 = 100;
+const NORM_AMOUNT_1000 = 1000;
+const NORM_UNIT_STK = 'Stk';
+const NORM_UNIT_QM = 'qm';
+const NORM_UNIT_KG = 'kg';
+const NORM_UNIT_L = 'l';
+const NORM_UNIT_M = 'm';
+const NORM_UNIT_ML = 'ml';
+const NORM_UNIT_G = 'g';
+const NORM_UNIT_PAAR = 'Paar';
+const NORM_UNIT_RM = 'RM';
+const NORM_UNIT_DM3 = 'dm3';
+const SALES_UNIT_STK = 'Stk';
+const SALES_UNIT_QM = 'qm';
+const SALES_UNIT_KG = 'kg';
+const SALES_UNIT_L = 'l';
+const SALES_UNIT_M = 'm';
+const SALES_UNIT_ML = 'ml';
+const SALES_UNIT_G = 'g';
+const SALES_UNIT_PAAR = 'Paar';
+const SALES_UNIT_RM = 'RM';
+const SALES_UNIT_DM3 = 'dm3';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getNormAmountAllowableValues()
+    {
+        return [
+            self::NORM_AMOUNT_1,
+self::NORM_AMOUNT_100,
+self::NORM_AMOUNT_1000,        ];
+    }
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getNormUnitAllowableValues()
+    {
+        return [
+            self::NORM_UNIT_STK,
+self::NORM_UNIT_QM,
+self::NORM_UNIT_KG,
+self::NORM_UNIT_L,
+self::NORM_UNIT_M,
+self::NORM_UNIT_ML,
+self::NORM_UNIT_G,
+self::NORM_UNIT_PAAR,
+self::NORM_UNIT_RM,
+self::NORM_UNIT_DM3,        ];
+    }
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getSalesUnitAllowableValues()
+    {
+        return [
+            self::SALES_UNIT_STK,
+self::SALES_UNIT_QM,
+self::SALES_UNIT_KG,
+self::SALES_UNIT_L,
+self::SALES_UNIT_M,
+self::SALES_UNIT_ML,
+self::SALES_UNIT_G,
+self::SALES_UNIT_PAAR,
+self::SALES_UNIT_RM,
+self::SALES_UNIT_DM3,        ];
+    }
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['norm_amount'] = isset($data['norm_amount']) ? $data['norm_amount'] : null;
+        $this->container['norm_unit'] = isset($data['norm_unit']) ? $data['norm_unit'] : null;
+        $this->container['sales_amount'] = isset($data['sales_amount']) ? $data['sales_amount'] : null;
+        $this->container['sales_unit'] = isset($data['sales_unit']) ? $data['sales_unit'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        $allowedValues = $this->getNormAmountAllowableValues();
+        if (!is_null($this->container['norm_amount']) && !in_array($this->container['norm_amount'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'norm_amount', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getNormUnitAllowableValues();
+        if (!is_null($this->container['norm_unit']) && !in_array($this->container['norm_unit'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'norm_unit', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getSalesUnitAllowableValues();
+        if (!is_null($this->container['sales_unit']) && !in_array($this->container['sales_unit'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'sales_unit', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets norm_amount
+     *
+     * @return int
+     */
+    public function getNormAmount()
+    {
+        return $this->container['norm_amount'];
+    }
+
+    /**
+     * Sets norm_amount
+     *
+     * @param int $norm_amount The norm packaging size.
+     *
+     * @return $this
+     */
+    public function setNormAmount($norm_amount)
+    {
+        $allowedValues = $this->getNormAmountAllowableValues();
+        if (!is_null($norm_amount) && !in_array($norm_amount, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'norm_amount', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['norm_amount'] = $norm_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets norm_unit
+     *
+     * @return string
+     */
+    public function getNormUnit()
+    {
+        return $this->container['norm_unit'];
+    }
+
+    /**
+     * Sets norm_unit
+     *
+     * @param string $norm_unit The name of the unit the norm price is based on.
+     *
+     * @return $this
+     */
+    public function setNormUnit($norm_unit)
+    {
+        $allowedValues = $this->getNormUnitAllowableValues();
+        if (!is_null($norm_unit) && !in_array($norm_unit, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'norm_unit', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['norm_unit'] = $norm_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets sales_amount
+     *
+     * @return float
+     */
+    public function getSalesAmount()
+    {
+        return $this->container['sales_amount'];
+    }
+
+    /**
+     * Sets sales_amount
+     *
+     * @param float $sales_amount The packaging size of the sales unit.
+     *
+     * @return $this
+     */
+    public function setSalesAmount($sales_amount)
+    {
+        $this->container['sales_amount'] = $sales_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets sales_unit
+     *
+     * @return string
+     */
+    public function getSalesUnit()
+    {
+        return $this->container['sales_unit'];
+    }
+
+    /**
+     * Sets sales_unit
+     *
+     * @param string $sales_unit The name of the unit the sales price is based on.
+     *
+     * @return $this
+     */
+    public function setSalesUnit($sales_unit)
+    {
+        $allowedValues = $this->getSalesUnitAllowableValues();
+        if (!is_null($sales_unit) && !in_array($sales_unit, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sales_unit', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['sales_unit'] = $sales_unit;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

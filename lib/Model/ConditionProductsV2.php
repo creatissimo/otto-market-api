@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * ConditionProductsV2
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,328 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * ConditionProductsV2 Class Doc Comment
  *
  * @category Class
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class ConditionProductsV2 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'Condition__Products-V2';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'name' => 'string',
+'json_path' => 'string',
+'value' => 'string'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'name' => null,
+'json_path' => null,
+'value' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'name' => 'name',
+'json_path' => 'jsonPath',
+'value' => 'value'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'name' => 'setName',
+'json_path' => 'setJsonPath',
+'value' => 'setValue'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'name' => 'getName',
+'json_path' => 'getJsonPath',
+'value' => 'getValue'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['json_path'] = isset($data['json_path']) ? $data['json_path'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name the name of an attribute.
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets json_path
+     *
+     * @return string
+     */
+    public function getJsonPath()
+    {
+        return $this->container['json_path'];
+    }
+
+    /**
+     * Sets json_path
+     *
+     * @param string $json_path the JSON path that leads to the attribute value.
+     *
+     * @return $this
+     */
+    public function setJsonPath($json_path)
+    {
+        $this->container['json_path'] = $json_path;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param string $value the value of the attribute to which the requirement applies.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

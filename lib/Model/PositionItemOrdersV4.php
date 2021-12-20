@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * PositionItemOrdersV4
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,771 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * PositionItemOrdersV4 Class Doc Comment
  *
  * @category Class
+ * @description PositionItem
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class PositionItemOrdersV4 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'PositionItem__Orders-V4';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'position_item_id' => 'string',
+'fulfillment_status' => 'string',
+'delivery_service_hes' => 'bool',
+'item_value_gross_price' => '\Otto\Client\Model\AmountOrdersV4',
+'item_value_reduced_gross_price' => '\Otto\Client\Model\AmountOrdersV4',
+'item_value_discount' => '\Otto\Client\Model\AmountOrdersV4',
+'product' => '\Otto\Client\Model\ProductOrdersV4',
+'tracking_info' => '\Otto\Client\Model\TrackingInfoOrdersV4',
+'expected_delivery_date' => '\DateTime',
+'sent_date' => '\DateTime',
+'returned_date' => '\DateTime',
+'cancellation_date' => '\DateTime',
+'cancellation_reason' => 'string',
+'processable_date' => '\DateTime',
+'weee_pickup' => 'bool'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'position_item_id' => null,
+'fulfillment_status' => null,
+'delivery_service_hes' => null,
+'item_value_gross_price' => null,
+'item_value_reduced_gross_price' => null,
+'item_value_discount' => null,
+'product' => null,
+'tracking_info' => null,
+'expected_delivery_date' => 'date-time',
+'sent_date' => 'date-time',
+'returned_date' => 'date-time',
+'cancellation_date' => 'date-time',
+'cancellation_reason' => null,
+'processable_date' => 'date-time',
+'weee_pickup' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'position_item_id' => 'positionItemId',
+'fulfillment_status' => 'fulfillmentStatus',
+'delivery_service_hes' => 'deliveryServiceHes',
+'item_value_gross_price' => 'itemValueGrossPrice',
+'item_value_reduced_gross_price' => 'itemValueReducedGrossPrice',
+'item_value_discount' => 'itemValueDiscount',
+'product' => 'product',
+'tracking_info' => 'trackingInfo',
+'expected_delivery_date' => 'expectedDeliveryDate',
+'sent_date' => 'sentDate',
+'returned_date' => 'returnedDate',
+'cancellation_date' => 'cancellationDate',
+'cancellation_reason' => 'cancellationReason',
+'processable_date' => 'processableDate',
+'weee_pickup' => 'weeePickup'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'position_item_id' => 'setPositionItemId',
+'fulfillment_status' => 'setFulfillmentStatus',
+'delivery_service_hes' => 'setDeliveryServiceHes',
+'item_value_gross_price' => 'setItemValueGrossPrice',
+'item_value_reduced_gross_price' => 'setItemValueReducedGrossPrice',
+'item_value_discount' => 'setItemValueDiscount',
+'product' => 'setProduct',
+'tracking_info' => 'setTrackingInfo',
+'expected_delivery_date' => 'setExpectedDeliveryDate',
+'sent_date' => 'setSentDate',
+'returned_date' => 'setReturnedDate',
+'cancellation_date' => 'setCancellationDate',
+'cancellation_reason' => 'setCancellationReason',
+'processable_date' => 'setProcessableDate',
+'weee_pickup' => 'setWeeePickup'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'position_item_id' => 'getPositionItemId',
+'fulfillment_status' => 'getFulfillmentStatus',
+'delivery_service_hes' => 'getDeliveryServiceHes',
+'item_value_gross_price' => 'getItemValueGrossPrice',
+'item_value_reduced_gross_price' => 'getItemValueReducedGrossPrice',
+'item_value_discount' => 'getItemValueDiscount',
+'product' => 'getProduct',
+'tracking_info' => 'getTrackingInfo',
+'expected_delivery_date' => 'getExpectedDeliveryDate',
+'sent_date' => 'getSentDate',
+'returned_date' => 'getReturnedDate',
+'cancellation_date' => 'getCancellationDate',
+'cancellation_reason' => 'getCancellationReason',
+'processable_date' => 'getProcessableDate',
+'weee_pickup' => 'getWeeePickup'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    const FULFILLMENT_STATUS_ANNOUNCED = 'ANNOUNCED';
+const FULFILLMENT_STATUS_PROCESSABLE = 'PROCESSABLE';
+const FULFILLMENT_STATUS_SENT = 'SENT';
+const FULFILLMENT_STATUS_RETURNED = 'RETURNED';
+const FULFILLMENT_STATUS_CANCELLED_BY_PARTNER = 'CANCELLED_BY_PARTNER';
+const FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE = 'CANCELLED_BY_MARKETPLACE';
+const CANCELLATION_REASON_CANCELLED_ON_CUSTOMER_WISH = 'CANCELLED_ON_CUSTOMER_WISH';
+const CANCELLATION_REASON_CANCELLED_ON_PARTNER_WISH = 'CANCELLED_ON_PARTNER_WISH';
+const CANCELLATION_REASON_PAYMENT_ABORTED = 'PAYMENT_ABORTED';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getFulfillmentStatusAllowableValues()
+    {
+        return [
+            self::FULFILLMENT_STATUS_ANNOUNCED,
+self::FULFILLMENT_STATUS_PROCESSABLE,
+self::FULFILLMENT_STATUS_SENT,
+self::FULFILLMENT_STATUS_RETURNED,
+self::FULFILLMENT_STATUS_CANCELLED_BY_PARTNER,
+self::FULFILLMENT_STATUS_CANCELLED_BY_MARKETPLACE,        ];
+    }
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getCancellationReasonAllowableValues()
+    {
+        return [
+            self::CANCELLATION_REASON_CANCELLED_ON_CUSTOMER_WISH,
+self::CANCELLATION_REASON_CANCELLED_ON_PARTNER_WISH,
+self::CANCELLATION_REASON_PAYMENT_ABORTED,        ];
+    }
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['position_item_id'] = isset($data['position_item_id']) ? $data['position_item_id'] : null;
+        $this->container['fulfillment_status'] = isset($data['fulfillment_status']) ? $data['fulfillment_status'] : null;
+        $this->container['delivery_service_hes'] = isset($data['delivery_service_hes']) ? $data['delivery_service_hes'] : null;
+        $this->container['item_value_gross_price'] = isset($data['item_value_gross_price']) ? $data['item_value_gross_price'] : null;
+        $this->container['item_value_reduced_gross_price'] = isset($data['item_value_reduced_gross_price']) ? $data['item_value_reduced_gross_price'] : null;
+        $this->container['item_value_discount'] = isset($data['item_value_discount']) ? $data['item_value_discount'] : null;
+        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
+        $this->container['tracking_info'] = isset($data['tracking_info']) ? $data['tracking_info'] : null;
+        $this->container['expected_delivery_date'] = isset($data['expected_delivery_date']) ? $data['expected_delivery_date'] : null;
+        $this->container['sent_date'] = isset($data['sent_date']) ? $data['sent_date'] : null;
+        $this->container['returned_date'] = isset($data['returned_date']) ? $data['returned_date'] : null;
+        $this->container['cancellation_date'] = isset($data['cancellation_date']) ? $data['cancellation_date'] : null;
+        $this->container['cancellation_reason'] = isset($data['cancellation_reason']) ? $data['cancellation_reason'] : null;
+        $this->container['processable_date'] = isset($data['processable_date']) ? $data['processable_date'] : null;
+        $this->container['weee_pickup'] = isset($data['weee_pickup']) ? $data['weee_pickup'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        if ($this->container['position_item_id'] === null) {
+            $invalidProperties[] = "'position_item_id' can't be null";
+        }
+        if ($this->container['fulfillment_status'] === null) {
+            $invalidProperties[] = "'fulfillment_status' can't be null";
+        }
+        $allowedValues = $this->getFulfillmentStatusAllowableValues();
+        if (!is_null($this->container['fulfillment_status']) && !in_array($this->container['fulfillment_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'fulfillment_status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['item_value_gross_price'] === null) {
+            $invalidProperties[] = "'item_value_gross_price' can't be null";
+        }
+        if ($this->container['product'] === null) {
+            $invalidProperties[] = "'product' can't be null";
+        }
+        $allowedValues = $this->getCancellationReasonAllowableValues();
+        if (!is_null($this->container['cancellation_reason']) && !in_array($this->container['cancellation_reason'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'cancellation_reason', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets position_item_id
+     *
+     * @return string
+     */
+    public function getPositionItemId()
+    {
+        return $this->container['position_item_id'];
+    }
+
+    /**
+     * Sets position_item_id
+     *
+     * @param string $position_item_id The unique id of the position item
+     *
+     * @return $this
+     */
+    public function setPositionItemId($position_item_id)
+    {
+        $this->container['position_item_id'] = $position_item_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets fulfillment_status
+     *
+     * @return string
+     */
+    public function getFulfillmentStatus()
+    {
+        return $this->container['fulfillment_status'];
+    }
+
+    /**
+     * Sets fulfillment_status
+     *
+     * @param string $fulfillment_status The fulfillment status of the position item
+     *
+     * @return $this
+     */
+    public function setFulfillmentStatus($fulfillment_status)
+    {
+        $allowedValues = $this->getFulfillmentStatusAllowableValues();
+        if (!in_array($fulfillment_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'fulfillment_status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['fulfillment_status'] = $fulfillment_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_service_hes
+     *
+     * @return bool
+     */
+    public function getDeliveryServiceHes()
+    {
+        return $this->container['delivery_service_hes'];
+    }
+
+    /**
+     * Sets delivery_service_hes
+     *
+     * @param bool $delivery_service_hes Position item has delivery service HES
+     *
+     * @return $this
+     */
+    public function setDeliveryServiceHes($delivery_service_hes)
+    {
+        $this->container['delivery_service_hes'] = $delivery_service_hes;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_value_gross_price
+     *
+     * @return \Otto\Client\Model\AmountOrdersV4
+     */
+    public function getItemValueGrossPrice()
+    {
+        return $this->container['item_value_gross_price'];
+    }
+
+    /**
+     * Sets item_value_gross_price
+     *
+     * @param \Otto\Client\Model\AmountOrdersV4 $item_value_gross_price item_value_gross_price
+     *
+     * @return $this
+     */
+    public function setItemValueGrossPrice($item_value_gross_price)
+    {
+        $this->container['item_value_gross_price'] = $item_value_gross_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_value_reduced_gross_price
+     *
+     * @return \Otto\Client\Model\AmountOrdersV4
+     */
+    public function getItemValueReducedGrossPrice()
+    {
+        return $this->container['item_value_reduced_gross_price'];
+    }
+
+    /**
+     * Sets item_value_reduced_gross_price
+     *
+     * @param \Otto\Client\Model\AmountOrdersV4 $item_value_reduced_gross_price item_value_reduced_gross_price
+     *
+     * @return $this
+     */
+    public function setItemValueReducedGrossPrice($item_value_reduced_gross_price)
+    {
+        $this->container['item_value_reduced_gross_price'] = $item_value_reduced_gross_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_value_discount
+     *
+     * @return \Otto\Client\Model\AmountOrdersV4
+     */
+    public function getItemValueDiscount()
+    {
+        return $this->container['item_value_discount'];
+    }
+
+    /**
+     * Sets item_value_discount
+     *
+     * @param \Otto\Client\Model\AmountOrdersV4 $item_value_discount item_value_discount
+     *
+     * @return $this
+     */
+    public function setItemValueDiscount($item_value_discount)
+    {
+        $this->container['item_value_discount'] = $item_value_discount;
+
+        return $this;
+    }
+
+    /**
+     * Gets product
+     *
+     * @return \Otto\Client\Model\ProductOrdersV4
+     */
+    public function getProduct()
+    {
+        return $this->container['product'];
+    }
+
+    /**
+     * Sets product
+     *
+     * @param \Otto\Client\Model\ProductOrdersV4 $product product
+     *
+     * @return $this
+     */
+    public function setProduct($product)
+    {
+        $this->container['product'] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Gets tracking_info
+     *
+     * @return \Otto\Client\Model\TrackingInfoOrdersV4
+     */
+    public function getTrackingInfo()
+    {
+        return $this->container['tracking_info'];
+    }
+
+    /**
+     * Sets tracking_info
+     *
+     * @param \Otto\Client\Model\TrackingInfoOrdersV4 $tracking_info tracking_info
+     *
+     * @return $this
+     */
+    public function setTrackingInfo($tracking_info)
+    {
+        $this->container['tracking_info'] = $tracking_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets expected_delivery_date
+     *
+     * @return \DateTime
+     */
+    public function getExpectedDeliveryDate()
+    {
+        return $this->container['expected_delivery_date'];
+    }
+
+    /**
+     * Sets expected_delivery_date
+     *
+     * @param \DateTime $expected_delivery_date The date the position item should be delivered
+     *
+     * @return $this
+     */
+    public function setExpectedDeliveryDate($expected_delivery_date)
+    {
+        $this->container['expected_delivery_date'] = $expected_delivery_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets sent_date
+     *
+     * @return \DateTime
+     */
+    public function getSentDate()
+    {
+        return $this->container['sent_date'];
+    }
+
+    /**
+     * Sets sent_date
+     *
+     * @param \DateTime $sent_date Date the position item was sent
+     *
+     * @return $this
+     */
+    public function setSentDate($sent_date)
+    {
+        $this->container['sent_date'] = $sent_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets returned_date
+     *
+     * @return \DateTime
+     */
+    public function getReturnedDate()
+    {
+        return $this->container['returned_date'];
+    }
+
+    /**
+     * Sets returned_date
+     *
+     * @param \DateTime $returned_date Date the position item was returned
+     *
+     * @return $this
+     */
+    public function setReturnedDate($returned_date)
+    {
+        $this->container['returned_date'] = $returned_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets cancellation_date
+     *
+     * @return \DateTime
+     */
+    public function getCancellationDate()
+    {
+        return $this->container['cancellation_date'];
+    }
+
+    /**
+     * Sets cancellation_date
+     *
+     * @param \DateTime $cancellation_date Date the position item was cancelled
+     *
+     * @return $this
+     */
+    public function setCancellationDate($cancellation_date)
+    {
+        $this->container['cancellation_date'] = $cancellation_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets cancellation_reason
+     *
+     * @return string
+     */
+    public function getCancellationReason()
+    {
+        return $this->container['cancellation_reason'];
+    }
+
+    /**
+     * Sets cancellation_reason
+     *
+     * @param string $cancellation_reason Reason why a position was cancelled
+     *
+     * @return $this
+     */
+    public function setCancellationReason($cancellation_reason)
+    {
+        $allowedValues = $this->getCancellationReasonAllowableValues();
+        if (!is_null($cancellation_reason) && !in_array($cancellation_reason, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'cancellation_reason', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['cancellation_reason'] = $cancellation_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets processable_date
+     *
+     * @return \DateTime
+     */
+    public function getProcessableDate()
+    {
+        return $this->container['processable_date'];
+    }
+
+    /**
+     * Sets processable_date
+     *
+     * @param \DateTime $processable_date Date the position item has reached PROCESSABLE fulfillment status
+     *
+     * @return $this
+     */
+    public function setProcessableDate($processable_date)
+    {
+        $this->container['processable_date'] = $processable_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets weee_pickup
+     *
+     * @return bool
+     */
+    public function getWeeePickup()
+    {
+        return $this->container['weee_pickup'];
+    }
+
+    /**
+     * Sets weee_pickup
+     *
+     * @param bool $weee_pickup Position item has electrical and electronic equipment disposal service (WEEE)
+     *
+     * @return $this
+     */
+    public function setWeeePickup($weee_pickup)
+    {
+        $this->container['weee_pickup'] = $weee_pickup;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

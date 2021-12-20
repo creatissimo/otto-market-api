@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * CreateShipmentRequestShipmentsV1
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,370 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * CreateShipmentRequestShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'CreateShipmentRequest__Shipments-V1';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'tracking_key' => '\Otto\Client\Model\TrackingKeyShipmentsV1',
+'ship_date' => '\DateTime',
+'ship_from_address' => '\Otto\Client\Model\AddressShipmentsV1',
+'position_items' => '\Otto\Client\Model\PositionItemShipmentsV1[]'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'tracking_key' => null,
+'ship_date' => 'date-time',
+'ship_from_address' => null,
+'position_items' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'tracking_key' => 'trackingKey',
+'ship_date' => 'shipDate',
+'ship_from_address' => 'shipFromAddress',
+'position_items' => 'positionItems'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'tracking_key' => 'setTrackingKey',
+'ship_date' => 'setShipDate',
+'ship_from_address' => 'setShipFromAddress',
+'position_items' => 'setPositionItems'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'tracking_key' => 'getTrackingKey',
+'ship_date' => 'getShipDate',
+'ship_from_address' => 'getShipFromAddress',
+'position_items' => 'getPositionItems'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['tracking_key'] = isset($data['tracking_key']) ? $data['tracking_key'] : null;
+        $this->container['ship_date'] = isset($data['ship_date']) ? $data['ship_date'] : null;
+        $this->container['ship_from_address'] = isset($data['ship_from_address']) ? $data['ship_from_address'] : null;
+        $this->container['position_items'] = isset($data['position_items']) ? $data['position_items'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        if ($this->container['tracking_key'] === null) {
+            $invalidProperties[] = "'tracking_key' can't be null";
+        }
+        if ($this->container['ship_date'] === null) {
+            $invalidProperties[] = "'ship_date' can't be null";
+        }
+        if ($this->container['ship_from_address'] === null) {
+            $invalidProperties[] = "'ship_from_address' can't be null";
+        }
+        if ($this->container['position_items'] === null) {
+            $invalidProperties[] = "'position_items' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets tracking_key
+     *
+     * @return \Otto\Client\Model\TrackingKeyShipmentsV1
+     */
+    public function getTrackingKey()
+    {
+        return $this->container['tracking_key'];
+    }
+
+    /**
+     * Sets tracking_key
+     *
+     * @param \Otto\Client\Model\TrackingKeyShipmentsV1 $tracking_key tracking_key
+     *
+     * @return $this
+     */
+    public function setTrackingKey($tracking_key)
+    {
+        $this->container['tracking_key'] = $tracking_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets ship_date
+     *
+     * @return \DateTime
+     */
+    public function getShipDate()
+    {
+        return $this->container['ship_date'];
+    }
+
+    /**
+     * Sets ship_date
+     *
+     * @param \DateTime $ship_date The date that the shipment is handed over to the carrier. Must be a valid UTC dateTime according to ISO 8601.
+     *
+     * @return $this
+     */
+    public function setShipDate($ship_date)
+    {
+        $this->container['ship_date'] = $ship_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets ship_from_address
+     *
+     * @return \Otto\Client\Model\AddressShipmentsV1
+     */
+    public function getShipFromAddress()
+    {
+        return $this->container['ship_from_address'];
+    }
+
+    /**
+     * Sets ship_from_address
+     *
+     * @param \Otto\Client\Model\AddressShipmentsV1 $ship_from_address ship_from_address
+     *
+     * @return $this
+     */
+    public function setShipFromAddress($ship_from_address)
+    {
+        $this->container['ship_from_address'] = $ship_from_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets position_items
+     *
+     * @return \Otto\Client\Model\PositionItemShipmentsV1[]
+     */
+    public function getPositionItems()
+    {
+        return $this->container['position_items'];
+    }
+
+    /**
+     * Sets position_items
+     *
+     * @param \Otto\Client\Model\PositionItemShipmentsV1[] $position_items The position items included in shipment.
+     *
+     * @return $this
+     */
+    public function setPositionItems($position_items)
+    {
+        $this->container['position_items'] = $position_items;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

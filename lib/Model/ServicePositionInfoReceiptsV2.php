@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * ServicePositionInfoReceiptsV2
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,612 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * ServicePositionInfoReceiptsV2 Class Doc Comment
  *
  * @category Class
+ * @description Service information. This field will be present for REFUND and PURCHASE receipt
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class ServicePositionInfoReceiptsV2 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'ServicePositionInfo__Receipts-V2';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'unit_price' => 'AllOfServicePositionInfoReceiptsV2UnitPrice',
+'vat_rate' => 'float',
+'quantity' => 'int',
+'total' => 'AllOfServicePositionInfoReceiptsV2Total',
+'service_name' => 'string',
+'service_type' => 'string',
+'product_title' => 'string',
+'article_number' => 'string',
+'promotion' => 'string',
+'service_position_items' => '\Otto\Client\Model\ServicePositionItemInfoReceiptsV2[]'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'unit_price' => null,
+'vat_rate' => null,
+'quantity' => 'int32',
+'total' => null,
+'service_name' => null,
+'service_type' => null,
+'product_title' => null,
+'article_number' => null,
+'promotion' => null,
+'service_position_items' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'unit_price' => 'unitPrice',
+'vat_rate' => 'vatRate',
+'quantity' => 'quantity',
+'total' => 'total',
+'service_name' => 'serviceName',
+'service_type' => 'serviceType',
+'product_title' => 'productTitle',
+'article_number' => 'articleNumber',
+'promotion' => 'promotion',
+'service_position_items' => 'servicePositionItems'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'unit_price' => 'setUnitPrice',
+'vat_rate' => 'setVatRate',
+'quantity' => 'setQuantity',
+'total' => 'setTotal',
+'service_name' => 'setServiceName',
+'service_type' => 'setServiceType',
+'product_title' => 'setProductTitle',
+'article_number' => 'setArticleNumber',
+'promotion' => 'setPromotion',
+'service_position_items' => 'setServicePositionItems'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'unit_price' => 'getUnitPrice',
+'vat_rate' => 'getVatRate',
+'quantity' => 'getQuantity',
+'total' => 'getTotal',
+'service_name' => 'getServiceName',
+'service_type' => 'getServiceType',
+'product_title' => 'getProductTitle',
+'article_number' => 'getArticleNumber',
+'promotion' => 'getPromotion',
+'service_position_items' => 'getServicePositionItems'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    const SERVICE_TYPE_SUBSCRIPTION = 'SUBSCRIPTION';
+const SERVICE_TYPE_DISPOSAL = 'DISPOSAL';
+const SERVICE_TYPE_ASSEMBLY = 'ASSEMBLY';
+const SERVICE_TYPE_DISPOSAL_FURNITURE = 'DISPOSAL_FURNITURE';
+const SERVICE_TYPE_CONSULTING = 'CONSULTING';
+const SERVICE_TYPE_INSTALLATION = 'INSTALLATION';
+const SERVICE_TYPE_WARRANTY = 'WARRANTY';
+const SERVICE_TYPE_MARKETING = 'MARKETING';
+const SERVICE_TYPE_LICENCE = 'LICENCE';
+const SERVICE_TYPE_INSURANCE = 'INSURANCE';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getServiceTypeAllowableValues()
+    {
+        return [
+            self::SERVICE_TYPE_SUBSCRIPTION,
+self::SERVICE_TYPE_DISPOSAL,
+self::SERVICE_TYPE_ASSEMBLY,
+self::SERVICE_TYPE_DISPOSAL_FURNITURE,
+self::SERVICE_TYPE_CONSULTING,
+self::SERVICE_TYPE_INSTALLATION,
+self::SERVICE_TYPE_WARRANTY,
+self::SERVICE_TYPE_MARKETING,
+self::SERVICE_TYPE_LICENCE,
+self::SERVICE_TYPE_INSURANCE,        ];
+    }
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['unit_price'] = isset($data['unit_price']) ? $data['unit_price'] : null;
+        $this->container['vat_rate'] = isset($data['vat_rate']) ? $data['vat_rate'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['service_name'] = isset($data['service_name']) ? $data['service_name'] : null;
+        $this->container['service_type'] = isset($data['service_type']) ? $data['service_type'] : null;
+        $this->container['product_title'] = isset($data['product_title']) ? $data['product_title'] : null;
+        $this->container['article_number'] = isset($data['article_number']) ? $data['article_number'] : null;
+        $this->container['promotion'] = isset($data['promotion']) ? $data['promotion'] : null;
+        $this->container['service_position_items'] = isset($data['service_position_items']) ? $data['service_position_items'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        if ($this->container['unit_price'] === null) {
+            $invalidProperties[] = "'unit_price' can't be null";
+        }
+        if ($this->container['vat_rate'] === null) {
+            $invalidProperties[] = "'vat_rate' can't be null";
+        }
+        if ($this->container['quantity'] === null) {
+            $invalidProperties[] = "'quantity' can't be null";
+        }
+        if ($this->container['total'] === null) {
+            $invalidProperties[] = "'total' can't be null";
+        }
+        if ($this->container['service_name'] === null) {
+            $invalidProperties[] = "'service_name' can't be null";
+        }
+        $allowedValues = $this->getServiceTypeAllowableValues();
+        if (!is_null($this->container['service_type']) && !in_array($this->container['service_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'service_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['product_title'] === null) {
+            $invalidProperties[] = "'product_title' can't be null";
+        }
+        if ($this->container['article_number'] === null) {
+            $invalidProperties[] = "'article_number' can't be null";
+        }
+        if ($this->container['promotion'] === null) {
+            $invalidProperties[] = "'promotion' can't be null";
+        }
+        if ($this->container['service_position_items'] === null) {
+            $invalidProperties[] = "'service_position_items' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets unit_price
+     *
+     * @return AllOfServicePositionInfoReceiptsV2UnitPrice
+     */
+    public function getUnitPrice()
+    {
+        return $this->container['unit_price'];
+    }
+
+    /**
+     * Sets unit_price
+     *
+     * @param AllOfServicePositionInfoReceiptsV2UnitPrice $unit_price Price of service per item.
+     *
+     * @return $this
+     */
+    public function setUnitPrice($unit_price)
+    {
+        $this->container['unit_price'] = $unit_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_rate
+     *
+     * @return float
+     */
+    public function getVatRate()
+    {
+        return $this->container['vat_rate'];
+    }
+
+    /**
+     * Sets vat_rate
+     *
+     * @param float $vat_rate VAT rate for the specific service
+     *
+     * @return $this
+     */
+    public function setVatRate($vat_rate)
+    {
+        $this->container['vat_rate'] = $vat_rate;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantity
+     *
+     * @return int
+     */
+    public function getQuantity()
+    {
+        return $this->container['quantity'];
+    }
+
+    /**
+     * Sets quantity
+     *
+     * @param int $quantity Number for items which are applicable for service
+     *
+     * @return $this
+     */
+    public function setQuantity($quantity)
+    {
+        $this->container['quantity'] = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     *
+     * @return AllOfServicePositionInfoReceiptsV2Total
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     *
+     * @param AllOfServicePositionInfoReceiptsV2Total $total Total price of this service; i.e unitPrice is multiplied by quantity
+     *
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_name
+     *
+     * @return string
+     */
+    public function getServiceName()
+    {
+        return $this->container['service_name'];
+    }
+
+    /**
+     * Sets service_name
+     *
+     * @param string $service_name Service name
+     *
+     * @return $this
+     */
+    public function setServiceName($service_name)
+    {
+        $this->container['service_name'] = $service_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_type
+     *
+     * @return string
+     */
+    public function getServiceType()
+    {
+        return $this->container['service_type'];
+    }
+
+    /**
+     * Sets service_type
+     *
+     * @param string $service_type service_type
+     *
+     * @return $this
+     */
+    public function setServiceType($service_type)
+    {
+        $allowedValues = $this->getServiceTypeAllowableValues();
+        if (!is_null($service_type) && !in_array($service_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'service_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['service_type'] = $service_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_title
+     *
+     * @return string
+     */
+    public function getProductTitle()
+    {
+        return $this->container['product_title'];
+    }
+
+    /**
+     * Sets product_title
+     *
+     * @param string $product_title Title of the linked product
+     *
+     * @return $this
+     */
+    public function setProductTitle($product_title)
+    {
+        $this->container['product_title'] = $product_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets article_number
+     *
+     * @return string
+     */
+    public function getArticleNumber()
+    {
+        return $this->container['article_number'];
+    }
+
+    /**
+     * Sets article_number
+     *
+     * @param string $article_number Article number of the linked product
+     *
+     * @return $this
+     */
+    public function setArticleNumber($article_number)
+    {
+        $this->container['article_number'] = $article_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets promotion
+     *
+     * @return string
+     */
+    public function getPromotion()
+    {
+        return $this->container['promotion'];
+    }
+
+    /**
+     * Sets promotion
+     *
+     * @param string $promotion Promotion code of the linked product
+     *
+     * @return $this
+     */
+    public function setPromotion($promotion)
+    {
+        $this->container['promotion'] = $promotion;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_position_items
+     *
+     * @return \Otto\Client\Model\ServicePositionItemInfoReceiptsV2[]
+     */
+    public function getServicePositionItems()
+    {
+        return $this->container['service_position_items'];
+    }
+
+    /**
+     * Sets service_position_items
+     *
+     * @param \Otto\Client\Model\ServicePositionItemInfoReceiptsV2[] $service_position_items service_position_items
+     *
+     * @return $this
+     */
+    public function setServicePositionItems($service_position_items)
+    {
+        $this->container['service_position_items'] = $service_position_items;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

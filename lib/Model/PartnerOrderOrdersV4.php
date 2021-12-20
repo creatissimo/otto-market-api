@@ -1,6 +1,7 @@
 <?php
 /**
- * ApiException
+ * PartnerOrderOrdersV4
+ *
  * PHP version 5
  *
  * @category Class
@@ -25,85 +26,613 @@
  * Do not edit the class manually.
  */
 
-namespace Otto\Client;
+namespace Otto\Client\Model;
 
-use \Exception;
+use \ArrayAccess;
+use \Otto\Client\ObjectSerializer;
 
 /**
- * ApiException Class Doc Comment
+ * PartnerOrderOrdersV4 Class Doc Comment
  *
  * @category Class
  * @package  Otto\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class HeaderSelector
+class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess
 {
+    const DISCRIMINATOR = null;
 
     /**
-     * @param string[] $accept
-     * @param string[] $contentTypes
+      * The original name of the model.
+      *
+      * @var string
+      */
+    protected static $swaggerModelName = 'PartnerOrder__Orders-V4';
+
+    /**
+      * Array of property to type mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerTypes = [
+        'sales_order_id' => 'string',
+'order_number' => 'string',
+'order_date' => '\DateTime',
+'last_modified_date' => '\DateTime',
+'position_items' => '\Otto\Client\Model\PositionItemOrdersV4[]',
+'order_lifecycle_information' => '\Otto\Client\Model\OrderLifecycleInformationOrdersV4',
+'initial_delivery_fees' => '\Otto\Client\Model\InitialDeliveryFeeOrdersV4[]',
+'initial_discounts' => '\Otto\Client\Model\InitialDiscountOrdersV4[]',
+'delivery_address' => '\Otto\Client\Model\AddressOrdersV4',
+'invoice_address' => '\Otto\Client\Model\AddressOrdersV4',
+'payment' => '\Otto\Client\Model\PaymentOrdersV4',
+'links' => '\Otto\Client\Model\LinkOrdersV4[]'    ];
+
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      *
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'sales_order_id' => null,
+'order_number' => null,
+'order_date' => 'date-time',
+'last_modified_date' => 'date-time',
+'position_items' => null,
+'order_lifecycle_information' => null,
+'initial_delivery_fees' => null,
+'initial_discounts' => null,
+'delivery_address' => null,
+'invoice_address' => null,
+'payment' => null,
+'links' => null    ];
+
+    /**
+     * Array of property to type mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeaders($accept, $contentTypes)
+    public static function swaggerTypes()
     {
-        $headers = [];
-
-        $accept = $this->selectAcceptHeader($accept);
-        if ($accept !== null) {
-            $headers['Accept'] = $accept;
-        }
-
-        $headers['Content-Type'] = $this->selectContentTypeHeader($contentTypes);
-        return $headers;
+        return self::$swaggerTypes;
     }
 
     /**
-     * @param string[] $accept
+     * Array of property to format mappings. Used for (de)serialization
+     *
      * @return array
      */
-    public function selectHeadersForMultipart($accept)
+    public static function swaggerFormats()
     {
-        $headers = $this->selectHeaders($accept, []);
-
-        unset($headers['Content-Type']);
-        return $headers;
+        return self::$swaggerFormats;
     }
 
     /**
-     * Return the header 'Accept' based on an array of Accept provided
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
      *
-     * @param string[] $accept Array of header
-     *
-     * @return string Accept (e.g. application/json)
+     * @var string[]
      */
-    private function selectAcceptHeader($accept)
+    protected static $attributeMap = [
+        'sales_order_id' => 'salesOrderId',
+'order_number' => 'orderNumber',
+'order_date' => 'orderDate',
+'last_modified_date' => 'lastModifiedDate',
+'position_items' => 'positionItems',
+'order_lifecycle_information' => 'orderLifecycleInformation',
+'initial_delivery_fees' => 'initialDeliveryFees',
+'initial_discounts' => 'initialDiscounts',
+'delivery_address' => 'deliveryAddress',
+'invoice_address' => 'invoiceAddress',
+'payment' => 'payment',
+'links' => 'links'    ];
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @var string[]
+     */
+    protected static $setters = [
+        'sales_order_id' => 'setSalesOrderId',
+'order_number' => 'setOrderNumber',
+'order_date' => 'setOrderDate',
+'last_modified_date' => 'setLastModifiedDate',
+'position_items' => 'setPositionItems',
+'order_lifecycle_information' => 'setOrderLifecycleInformation',
+'initial_delivery_fees' => 'setInitialDeliveryFees',
+'initial_discounts' => 'setInitialDiscounts',
+'delivery_address' => 'setDeliveryAddress',
+'invoice_address' => 'setInvoiceAddress',
+'payment' => 'setPayment',
+'links' => 'setLinks'    ];
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @var string[]
+     */
+    protected static $getters = [
+        'sales_order_id' => 'getSalesOrderId',
+'order_number' => 'getOrderNumber',
+'order_date' => 'getOrderDate',
+'last_modified_date' => 'getLastModifiedDate',
+'position_items' => 'getPositionItems',
+'order_lifecycle_information' => 'getOrderLifecycleInformation',
+'initial_delivery_fees' => 'getInitialDeliveryFees',
+'initial_discounts' => 'getInitialDiscounts',
+'delivery_address' => 'getDeliveryAddress',
+'invoice_address' => 'getInvoiceAddress',
+'payment' => 'getPayment',
+'links' => 'getLinks'    ];
+
+    /**
+     * Array of attributes where the key is the local name,
+     * and the value is the original name
+     *
+     * @return array
+     */
+    public static function attributeMap()
     {
-        if (count($accept) === 0 || (count($accept) === 1 && $accept[0] === '')) {
-            return null;
-        } elseif (preg_grep("/application\/json/i", $accept)) {
-            return 'application/json';
+        return self::$attributeMap;
+    }
+
+    /**
+     * Array of attributes to setter functions (for deserialization of responses)
+     *
+     * @return array
+     */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+     * Array of attributes to getter functions (for serialization of requests)
+     *
+     * @return array
+     */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+     * The original name of the model.
+     *
+     * @return string
+     */
+    public function getModelName()
+    {
+        return self::$swaggerModelName;
+    }
+
+    
+
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
+
+    /**
+     * Constructor
+     *
+     * @param mixed[] $data Associated array of property values
+     *                      initializing the model
+     */
+    public function __construct(array $data = null)
+    {
+        $this->container['sales_order_id'] = isset($data['sales_order_id']) ? $data['sales_order_id'] : null;
+        $this->container['order_number'] = isset($data['order_number']) ? $data['order_number'] : null;
+        $this->container['order_date'] = isset($data['order_date']) ? $data['order_date'] : null;
+        $this->container['last_modified_date'] = isset($data['last_modified_date']) ? $data['last_modified_date'] : null;
+        $this->container['position_items'] = isset($data['position_items']) ? $data['position_items'] : null;
+        $this->container['order_lifecycle_information'] = isset($data['order_lifecycle_information']) ? $data['order_lifecycle_information'] : null;
+        $this->container['initial_delivery_fees'] = isset($data['initial_delivery_fees']) ? $data['initial_delivery_fees'] : null;
+        $this->container['initial_discounts'] = isset($data['initial_discounts']) ? $data['initial_discounts'] : null;
+        $this->container['delivery_address'] = isset($data['delivery_address']) ? $data['delivery_address'] : null;
+        $this->container['invoice_address'] = isset($data['invoice_address']) ? $data['invoice_address'] : null;
+        $this->container['payment'] = isset($data['payment']) ? $data['payment'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+    }
+
+    /**
+     * Show all the invalid properties with reasons.
+     *
+     * @return array invalid properties with reasons
+     */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+
+        if ($this->container['sales_order_id'] === null) {
+            $invalidProperties[] = "'sales_order_id' can't be null";
+        }
+        if ($this->container['order_number'] === null) {
+            $invalidProperties[] = "'order_number' can't be null";
+        }
+        if ($this->container['order_date'] === null) {
+            $invalidProperties[] = "'order_date' can't be null";
+        }
+        if ($this->container['position_items'] === null) {
+            $invalidProperties[] = "'position_items' can't be null";
+        }
+        if ($this->container['order_lifecycle_information'] === null) {
+            $invalidProperties[] = "'order_lifecycle_information' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+
+    /**
+     * Gets sales_order_id
+     *
+     * @return string
+     */
+    public function getSalesOrderId()
+    {
+        return $this->container['sales_order_id'];
+    }
+
+    /**
+     * Sets sales_order_id
+     *
+     * @param string $sales_order_id The id of the corresponding sales order. For one partner the sales order id is unique
+     *
+     * @return $this
+     */
+    public function setSalesOrderId($sales_order_id)
+    {
+        $this->container['sales_order_id'] = $sales_order_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_number
+     *
+     * @return string
+     */
+    public function getOrderNumber()
+    {
+        return $this->container['order_number'];
+    }
+
+    /**
+     * Sets order_number
+     *
+     * @param string $order_number The order number. An unique human readable 10 character(alphanumeric) identifier referring to this order
+     *
+     * @return $this
+     */
+    public function setOrderNumber($order_number)
+    {
+        $this->container['order_number'] = $order_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_date
+     *
+     * @return \DateTime
+     */
+    public function getOrderDate()
+    {
+        return $this->container['order_date'];
+    }
+
+    /**
+     * Sets order_date
+     *
+     * @param \DateTime $order_date The date, when this order has been placed
+     *
+     * @return $this
+     */
+    public function setOrderDate($order_date)
+    {
+        $this->container['order_date'] = $order_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_modified_date
+     *
+     * @return \DateTime
+     */
+    public function getLastModifiedDate()
+    {
+        return $this->container['last_modified_date'];
+    }
+
+    /**
+     * Sets last_modified_date
+     *
+     * @param \DateTime $last_modified_date Last order update date
+     *
+     * @return $this
+     */
+    public function setLastModifiedDate($last_modified_date)
+    {
+        $this->container['last_modified_date'] = $last_modified_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets position_items
+     *
+     * @return \Otto\Client\Model\PositionItemOrdersV4[]
+     */
+    public function getPositionItems()
+    {
+        return $this->container['position_items'];
+    }
+
+    /**
+     * Sets position_items
+     *
+     * @param \Otto\Client\Model\PositionItemOrdersV4[] $position_items The physical position items of this order. Multiple position item can refer to the same product
+     *
+     * @return $this
+     */
+    public function setPositionItems($position_items)
+    {
+        $this->container['position_items'] = $position_items;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_lifecycle_information
+     *
+     * @return \Otto\Client\Model\OrderLifecycleInformationOrdersV4
+     */
+    public function getOrderLifecycleInformation()
+    {
+        return $this->container['order_lifecycle_information'];
+    }
+
+    /**
+     * Sets order_lifecycle_information
+     *
+     * @param \Otto\Client\Model\OrderLifecycleInformationOrdersV4 $order_lifecycle_information order_lifecycle_information
+     *
+     * @return $this
+     */
+    public function setOrderLifecycleInformation($order_lifecycle_information)
+    {
+        $this->container['order_lifecycle_information'] = $order_lifecycle_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets initial_delivery_fees
+     *
+     * @return \Otto\Client\Model\InitialDeliveryFeeOrdersV4[]
+     */
+    public function getInitialDeliveryFees()
+    {
+        return $this->container['initial_delivery_fees'];
+    }
+
+    /**
+     * Sets initial_delivery_fees
+     *
+     * @param \Otto\Client\Model\InitialDeliveryFeeOrdersV4[] $initial_delivery_fees The delivery fees on customer checkout
+     *
+     * @return $this
+     */
+    public function setInitialDeliveryFees($initial_delivery_fees)
+    {
+        $this->container['initial_delivery_fees'] = $initial_delivery_fees;
+
+        return $this;
+    }
+
+    /**
+     * Gets initial_discounts
+     *
+     * @return \Otto\Client\Model\InitialDiscountOrdersV4[]
+     */
+    public function getInitialDiscounts()
+    {
+        return $this->container['initial_discounts'];
+    }
+
+    /**
+     * Sets initial_discounts
+     *
+     * @param \Otto\Client\Model\InitialDiscountOrdersV4[] $initial_discounts The initial discounts on customer checkout
+     *
+     * @return $this
+     */
+    public function setInitialDiscounts($initial_discounts)
+    {
+        $this->container['initial_discounts'] = $initial_discounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_address
+     *
+     * @return \Otto\Client\Model\AddressOrdersV4
+     */
+    public function getDeliveryAddress()
+    {
+        return $this->container['delivery_address'];
+    }
+
+    /**
+     * Sets delivery_address
+     *
+     * @param \Otto\Client\Model\AddressOrdersV4 $delivery_address delivery_address
+     *
+     * @return $this
+     */
+    public function setDeliveryAddress($delivery_address)
+    {
+        $this->container['delivery_address'] = $delivery_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets invoice_address
+     *
+     * @return \Otto\Client\Model\AddressOrdersV4
+     */
+    public function getInvoiceAddress()
+    {
+        return $this->container['invoice_address'];
+    }
+
+    /**
+     * Sets invoice_address
+     *
+     * @param \Otto\Client\Model\AddressOrdersV4 $invoice_address invoice_address
+     *
+     * @return $this
+     */
+    public function setInvoiceAddress($invoice_address)
+    {
+        $this->container['invoice_address'] = $invoice_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment
+     *
+     * @return \Otto\Client\Model\PaymentOrdersV4
+     */
+    public function getPayment()
+    {
+        return $this->container['payment'];
+    }
+
+    /**
+     * Sets payment
+     *
+     * @param \Otto\Client\Model\PaymentOrdersV4 $payment payment
+     *
+     * @return $this
+     */
+    public function setPayment($payment)
+    {
+        $this->container['payment'] = $payment;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \Otto\Client\Model\LinkOrdersV4[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \Otto\Client\Model\LinkOrdersV4[] $links Order related links like the link to fetch the single partner order
+     *
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+    /**
+     * Returns true if offset exists. False otherwise.
+     *
+     * @param integer $offset Offset
+     *
+     * @return boolean
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+     * Gets offset.
+     *
+     * @param integer $offset Offset
+     *
+     * @return mixed
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+     * Sets value based on offset.
+     *
+     * @param integer $offset Offset
+     * @param mixed   $value  Value to be set
+     *
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->container[] = $value;
         } else {
-            return implode(',', $accept);
+            $this->container[$offset] = $value;
         }
     }
 
     /**
-     * Return the content type based on an array of content-type provided
+     * Unsets offset.
      *
-     * @param string[] $contentType Array fo content-type
+     * @param integer $offset Offset
      *
-     * @return string Content-Type (e.g. application/json)
+     * @return void
      */
-    private function selectContentTypeHeader($contentType)
+    public function offsetUnset($offset)
     {
-        if (count($contentType) === 0 || (count($contentType) === 1 && $contentType[0] === '')) {
-            return 'application/json';
-        } elseif (preg_grep("/application\/json/i", $contentType)) {
-            return 'application/json';
+        unset($this->container[$offset]);
+    }
+
+    /**
+     * Gets the string presentation of the object
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
+            $result = json_encode(
+                ObjectSerializer::sanitizeForSerialization($this),
+                JSON_PRETTY_PRINT
+            );
         } else {
-            return implode(',', $contentType);
+            $result = json_encode(ObjectSerializer::sanitizeForSerialization($this));
         }
+
+        return is_string($result) ? $result : 'Error';
     }
 }
-

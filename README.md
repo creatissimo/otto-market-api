@@ -1,17 +1,18 @@
 # OpenAPIClient-php
 
 # Home
-Welcome to OTTO Market API Documentation.  
-At this page you will find all information to use the API for your business.
+Welcome to OTTO Market API Documentation.
+On this page you will find all information on how to use the API for your business.
+Please scroll to the top if you´re looking for the OpenAPI specification to download.
 
-## Become an OTTO Market partner
+## Become an OTTO Market partner (seller)
 Follow these steps:
-- Go to [otto.market](https://www.otto.market)
+- Go visit [otto.market](https://www.otto.market)
 - Inform yourself about our benefits
 - Register as a partner
 - Get access to our partner portal \"OTTO Partner Connect (OPC)\"
-- Deliver all necessary documents and data & sign the contract
-- Go to OPC and request your API user
+- Provide all necessary documents and data & sign the contract
+- Request your API user on OPC
 
 ## Process Workflow
 
@@ -21,24 +22,44 @@ Given below is the overall process workflow of how different services interact w
 
 ## General Changelog
 This changelog will contain information about important changes. Most important things are legal
-issues, version upgrades and not backward compatible changes.  
+issues, version upgrades and not backward compatible changes.
 Newest information will be placed on top of the table.
 
-| Date | Interface | Classification | Description |
-| ---- | --------- | -------------- | ----------- |
-| 2021-11-26 | [Products](../docs#tag/Products-V2) | Sandbox | Version 2 of /products is now available in the sandbox environment.|  
-| 2021-04-30 | [Orders](../Orders/v4/order-interface.yml) | New Version | Version 4 is now live. We plan to go offline with Version 3 (v3) by  2021-10-31 |  
-| 2021-04-06 | [Products](../docs#tag/Products-V2) | New Version | Version 2 is now live. We plan to go offline with Version 1 (v1) earliest by 01.11.2021. |  
-| 2020-04-14 | [Receipts](../Receipts/v2/receipts-interface.yml) | New Version | Version 2 is now live. We plan to go offline with Version 1 (v1) earliest by 14th October,2020. |  
-| 2020-04-20 | [Orders](../Orders/v3/order-interface.yml) | New Version | Version 3 is now live. We plan to go offline with Version 2 (v2) earliest by 01.11.2020. |  
-| 2019-09-01 | [Orders](../Orders/v2/order-interface.html) | New Version | Version 1 will be outdated in some time. Please change to version 2, if it is marked as ready. |  
+| Date       | Interface                           | Classification | Description                                                                                     |
+|------------|-------------------------------------|----------------|-------------------------------------------------------------------------------------------------|
+| 2022-09-22 | [Products](../docs#tagProducts-V3) | New Version     | Version 3 is now live. We plan to go offline with Version 2 (v2) by 2023-03-31 |
+| 2022-05-25 | General | Documentation        | Starting 2022-11-01 redundant domains to access OTTO Market API doc will be decomissioned. Please use access docs using api.otto.market |
+| 2022-03-17 | [Quantities](../docs#tag/Quantities-V2) | Sandbox        | Version 2 of /quantities is now available in the sandbox environment.                       |
+| 2022-01-19 | [Price reductions](../docs#tag/Price-Reductions-V1) | New API        | Added price reduction APIs                                                      |
+| 2021-11-26 | [Products](../docs#tag/Products-V2) | Sandbox        | Version 2 of /products is now available in the sandbox environment.                             |
+| 2021-04-30 | [Orders](../docs#tag/Orders-V4)     | New Version    | Version 4 is now live. We plan to go offline with Version 3 (v3) by  2021-10-31                 |
+| 2021-04-06 | [Products](../docs#tag/Products-V2) | New Version    | Version 2 is now live. We plan to go offline with Version 1 (v1) earliest by 01.11.2021.        |
+| 2020-04-14 | [Receipts](../docs#tag/Receipts-V2) | New Version    | Version 2 is now live. We plan to go offline with Version 1 (v1) earliest by 14th October,2020. |
+| 2020-04-20 | [Orders](../docs#tag/Orders-V4)     | New Version    | Version 3 is now live. We plan to go offline with Version 2 (v2) earliest by 01.11.2020.        |
+| 2019-09-01 | [Orders](../docs#tag/Orders-V4)     | New Version    | Version 1 will be outdated in some time. Please change to version 2, if it is marked as ready.  |
+| 2022-02-28 | [Price Reductions](../docs#tag/Price-Reductions-V1)     | New Version    | Version 1 is now live. |
+
+## Feedback
+
+We are very interested in learning how to enhance our API-Documentation for you and would love to hear from you!
+[Send Feedback.](https://forms.office.com/r/cbnr6tVyyg)
 
 ## Get Support
-If you have any questions and remarks or if you need support, please reach out to us via [e-mail](mailto:support@otto.market). We will get back to you as soon as possible.
+If you have any questions, remarks or if you need support, please don't hesitate to contact us and we will get back to you as soon as possible.
 
-# Partner API Developer's Guide
-The Developer's Guide is targeted at developers and people with technical background who are already a partner of OTTO Market or are interested in becoming a partner.
-The aim is to help you as a partner of OTTO Market to connect to and to work with the OTTO Partner API.
+- As a **partner** the quickest way to get support is to open a new ticket in [OTTO Partner Connect](https://account.otto.market/s/ticketanlegen) via the Partner Helpdesk choosing the sub-category \"Technische Schnittstellen\".
+- As a **service provider** please [send an e-mail](mailto:partnerintegration@otto.market) to our OTTO Market team.
+
+## Access to the API
+
+| Environment | Base URL                        |
+|-------------|---------------------------------|
+| Sandbox     | https://sandbox.api.otto.market |
+| Production  | https://api.otto.market         |
+
+# OTTO Market API Developer's Guide
+The Developer's Guide is targeted at developers and people with technical background who are already a partner (seller) of OTTO Market or are interested in becoming a partner.
+The aim is to help you as a partner of OTTO Market to connect to and to work with the OTTO Market API.
 It describes some common implementation patterns and helps you to understand how processes work.
 Detailed information about the concrete interfaces can be accessed by clicking onto the single tabs.
 
@@ -74,6 +95,7 @@ curl -X POST \\
 
 The response of the request will look like the following example.
 The token itself can be extracted from the <code class=\"inline\">access_token</code> value.
+Please use the same access token as long as possible instead of fetching new access tokens over and over again. Whether a token is still valid can be checked using the attribute <code class=\"inline\">refresh_expires_in</code>.
 ```
 {
   \"access_token\": \"eyJhbGciOiJSUzI1NiISInR5cCIgOiAiSldUIiwia2lkIiA6ICJTd3ExRDRvYVBKUFQzMER3dmlZRkVVV2hRaEJtMEdPRlpWVWIwYWEteDBjIn0.eyJqdGkiOiIyMTg5Y2NjNC02NjU5LTQ1YmMtYjliMS1jYTIzMDMxOGQ3NmQiLCJleHAiOjE1ODQ5ODg3NjQsIm5iZiI6MCwiaWF0IjoxNTg0OTg1MTY0LCJpc3MiOiJodHRwczovL2VzYi13cy5vdHRvLmRlL3NlYy1hcGkvYXV0aC9yZWFsbXMvb3R0by1wYXJ0bmVyIiwic3ViIjoiODkwYmZkYjEtMTJkZS00OTY0LWJmMzgtYWQ1NzEyOTc4NjU4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoidG9rZW4tb3R0by1hcGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIzZTA3MTBiMi1iNTdhLTRjYjAtYTUxZC02ZGU2MGE5OTczNTYiLCJhY3IiOiIxIiwic2NvcGUiOiJwdW1iYS1yb2xlcy1hcHAtcG9ydGFsIHBhcnRuZXIgZW1haWwgcHJvZmlsZSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUHJvZHVjdHNfV3JpdGUiLCJSZWNlaXB0c19OYXZpZ2F0aW9uX1JlYWQiLCJTZXBhTWFuZGF0ZXNfQ3VzdG9tZXJTdXBwb3J0X1dyaXRlIiwiQnJhbmRzaG9wX05hdmlnYXRpb25fUmVhZCIsIkNhcnJpZXJBbmRSZXR1cm5fTmF2aWdhdGlvbl9SZWFkIiwiUGFydG5lcl9OYXZpZ2F0aW9uX1JlYWQiLCJTZXJ2aWNlc19OYXZpZ2F0aW9uX1JlYWQiLCJBbmFseXRpY3NfTmF2aWdhdGlvbl9SZWFkIiwiUHJvZHVjdHNfTmF2aWdhdGlvbl9SZWFkIl19LCJuYW1lIjoiVGVzdCBVc2VyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYXBpX3Rlc3QiLCJsb2NhbGUiOiJkZSIsImdpdmVuX25hbWUiOiJUZXN0IiwiZmFtaWx5X25hbWUiOiJVc2VyIiwiZW1haWwiOiJhbmRyZS5lcmtAb3R0by5kZSJ9.Rszr6jXUUGGHzqw2XVo7HcaZ0pHvwYyJdg0olZEwpkz2lNBPejFPDuHK5eUrKEBxOhAsu3zKXwrfcyMWW8iufAbfCEonlDjle7U3NafLT-ITcjiL0wf1oI0D33h37RKmd0KjBXcoZRyvGZEUoItMp1WNGLn0JV8UvSOqDiGeCHvuurLNb91aIIHNMuN8lRQLaOhCKRmKsnxpUOytNcOER0_Z_sbK3x4fWJuaEDLIf6OGmx6TXZQr5e2UnvtOIWpt_JMvnKoJOC2-cPN5MP-PiMKTodi7ajhavUxo7dWyE0eBvc2stMFhjwSJO1KUkGjHdk0PWt-4GNlAdBze3laR2Q\",
@@ -86,6 +108,9 @@ The token itself can be extracted from the <code class=\"inline\">access_token</
   \"scope\": \"pumba-roles-app-portal partner email profile\"
 }
 ```
+#### Best-practice
+
+Use available tokens as long as possible before fetching a new `access_token`. In general new access_tokens should be fetched by using the `refresh_token`. Expiration date of token is indicated by the attribute `expires_in` for access_tokens and `refresh_expires_in` for refresh_tokens. Access tokens should only be fetched using username and password if the `refresh_token` has expired.
 
 ### Use refresh token
 The refresh token can be extracted from the <code
@@ -138,6 +163,39 @@ When you decode the access token you will see information including your email, 
   \"email\": \"example.user@example.org\"
 }
 ```
+### Create Apps
+As an OTTO Partner, if you want to leverage OTTO Market API, follow the below steps.
+1. Login to [OTTO Partner Connect (OPC)](https://portal.otto.market) portal
+2. Navigate to [API access (\"API Zugriff\")](https://portal.otto.market/settings/API).
+   There are two environments, Sandbox & Production.
+3. Choose the environment where you want to create an app in. Create a new app by clicking on the button \"Neue App erstellen\".
+4. Provide an app name and at least one scope your app needs access to and click on the button \"App erstellen\".
+5. Done! Your app was created, and you will be directed to the credentials tab.
+
+Refer [Access Token endpoint](/docs#operation/Developer-V1__createAccessToken) for generating an access token using the client ID and secret from the above step. With this token you can access the OTTO Market API.
+
+**Please note**
+- The number of apps you can create is limited. If you reach this limit but need to create a new app, you have to delete an old one first.
+- The client secret for the app is shown only once. If missed or forgotten, you have to rotate the client secret.
+
+## API Access for Partner cooperating with a Service Provider
+`Note:` *This feature is in beta and not available for all partners. If you want access, get it touch with [OTTO Market Team](mailto:partnerintegration@otto.market)*
+
+If you are cooperating with a Service Provider you will get a link for installing an app of this Service Provider. In order to do so follow the steps below:
+1. Login to [OTTO Partner Connect (OPC)](https://portal.otto.market) portal.
+2. Click on the link you got from the Service Provider (either directly or from e.g. the homepage of this Service Provider).
+3. You will be asked to grant consent that the app is allowed to access the scopes displayed in the consent screen (e.g., products or orders).
+   If you don't grant consent nothing will happen. The app won't be installed and thus won't be able to access your data.
+   `Note:` *In order to install the app you have to grant access to all the specified scopes. Allowing only a part of them is not possible.*
+4. If you grant consent the app is \"installed\" and you can use it. It is now also displayed in the installed apps tab (\"Installierte Apps\") on the [service provider page (\"Dienstleister\")](https://portal.otto.market/settings/Dienstleister)
+
+### Revoke Consent
+
+If you want to revoke your consent you can do so by navigating to the overview of your installed apps (\"Installierte Apps\") on the [service provider page (\"Dienstleister\")](https://portal.otto.market/settings/Dienstleister). Hover over the app name to get the Button for revoking consent (\"Zugriff entziehen\"). When clicking on this button you get a popup window asking you to confirm that you want to revoke your consent. If you do so, the app gets uninstalled meaning it has no longer access to your data and you cannot use it any longer. Of course, you can re-install the app if you want to.
+
+## API Access for Service Providers
+Refer [Developer Program](/docs#section/Developer-Program) section below for more details about authentication and authorization. Once you have authentication and authorization,
+read further for the next steps.
 
 ## Calling an Endpoint
 All endpoints are secured via authorization. You add the HTTP <code class=\"inline\">Authorization</code>
@@ -151,8 +209,10 @@ curl -X GET \\
 The expected result has an HTTP 200 code with a probably empty list.
 
 ## Rate Limiting
-In general requests are limited to 20 requests per second per partner-id as received inside the header.  
-Exceeding the rate limit results in a HTTP 429 \"too many requests\" error.  
+A high volume of calls on API services at any given time would increase server resource consumption. If the load is due to an unauthorized intrusion it would be a chaos. Thus, rate limiting becomes extremely important.
+
+In general authenticated API calls are limited for each partner to 20 requests per second.
+Exceeding the rate limit results in a HTTP 429 \"too many requests\" error.
 For some endpoints the rate limit is lower to ensure the best quality for all API users. Please see below:
 
 |Endpoint path|HTTP method|Max requests per time unit|
@@ -164,22 +224,20 @@ For some endpoints the rate limit is lower to ensure the best quality for all AP
 |/products/marketplace-status|GET|10 per second|
 |/products/categories|GET|10 per second|
 |/products/brands|GET|10 per second|
-
-
-### Need
-A high volume of calls on API services at any given time would increase server resource consumption. If the load is due to an unauthorized intrusion it would be a chaos. Thus, Rate limiting becomes extremely important.
+|/v1/token|POST|10 per second for each IP|
+|other endpoints|POST & GET|20 per second|
 
 ### User Based API Throttling
-A general method of limiting usage of API resource is to allocate a pre-configured static or dynamic quota for a consumer.The API rate limiting is done on the basis of partner-id. A particular partner-id can make 20 requests per second.
+A general method of limiting usage of API resource is to allocate a pre-configured static or dynamic quota for a consumer. The API rate limiting is done on the basis of partner-id. A particular partner-id can make 20 requests per second.
 
-### Best practice
-Don't batch-process if possible (when every partner processes data once every hour, we have a clogged system once every hour and nothing to do the reset of the time).
+### Best Practice
+Please divide your requests over the day and avoid sending all data at once. Make use of the individual limits for the interfaces. This helps preventing our systems from clogging and ensures a flawless experience for everyone.
 
 ## Timeouts and Defaults
-| Name            | Value | Description                                                                                                    |
-|-----------------|-------|----------------------------------------------------------------------------------------------------------------|
-| request timeout | 10s   | The maximum HTTP request timeout for all interfaces                                                            |
-| limit           | 128   | The default for limit query parameter. See Paging. The default limit can be overwritten in specific interfaces.|
+| Name            | Value | Description                                                                                                     |
+|-----------------|-------|-----------------------------------------------------------------------------------------------------------------|
+| request timeout | 10s   | The maximum HTTP request timeout for all interfaces                                                             |
+| limit           | 128   | The default for limit query parameter. See Paging. The default limit can be overwritten in specific interfaces. |
 
 ## Common Patterns
 ### Interface Definition
@@ -191,32 +249,36 @@ described in new or different definition schemes. We are constantly trying to ke
 technically up to date.
 
 ### Versioning
-The OTTO Partner API uses different versions for the single endpoints. The version number is included in the URL path.
+The OTTO Market API uses different versions for the single endpoints. The version number is included in the URL path.
 [Semantic versioning](https://semver.org/) scheme is used, but only the major version. Breaking changes are only introduced in new major versions. API version is required in all urls.
 
 Endpoints may introduce new optional fields at any time in the request and any new fields in the response. The client must skip all unknown fields.
 
 For every endpoint, a changelog exists which displays the latest released changes and the upcoming unreleased changes. Additionally, an overall [Changelog](/) exists with the most exciting changes about the API in general.
+
 ### Supporting old versions
 The OTTO Partner API continues to support old versions of an API for **6 months** from the time of public announcement for the new version of a given API.
-It is recommanded to check regularly. This can be be automated by checking HTTP headers.
+It is recommanded to check regularly. This can be be automated by checking HTTP headers for the attribute `SunsetHeader`, which indicates when versions go offline.
+
+#### Best-practice
+Regurlarly check for the `SunsetHeader` and act as soon as the attribute appears by updating your integration to the new version within the presented time frame.
 
 __example:__
 ```
-Warning: v2 is deprecated. Please migrate to v3  
-Sunset: Sun, 01 Nov 2020 00:00:00 GMT  
-Deprecation: Wed, 11 Nov 2018 23:59:59 GMT  
-Link: <https://api.otto.market/v3/orders>; rel=\"successor-version\"  
+Warning: v2 is deprecated. Please migrate to v3
+Sunset: Sun, 01 Nov 2020 00:00:00 GMT
+Deprecation: Wed, 11 Nov 2018 23:59:59 GMT
+Link: <https://api.otto.market/v3/orders>; rel=\"successor-version\"
 ```
 
 ## Header
 Some common headers should be set by clients:
 
-1. Set the <code class=\"inline\">X-Request-Timestamp</code> header according to the [ISO-8601](https://tools.ietf.org/html/rfc3339#section-5.6) standard. You can use this regex pattern: <code class=\"inline\">^\\d{4}-(0\\d|1[0-2])-([0-2]\\d|3[01])T(2[0-3]|[01]\\d):[0-5]\\d:[0-5]\\d(\\.\\d+)?([+-](2[0-3]|[01]\\d):[0-5]\\d|Z)$</code>
+1. Set the <code class=\"inline\">X-Request-Timestamp</code> header according to the [ISO-8601](https://tools.ietf.org/html/rfc3339#section-5.6) standard. You can use this regex pattern: <code class=\"inline\">^\\d{4}-(0\\d|1[0-2])-([0-2]\\d|3[01])T(2[0-3]|[01]\\d):[0-5]\\d:[0-5]\\d(\\.\\d+)?(\\[+-](2[0-3]|[01]\\d):[0-5]\\d|Z)$</code>
 2. Set <code class=\"inline\">Accept</code> to the desired response format e.g. <code class=\"inline\">application/json</code>
 3. Set the <code class=\"inline\">Content-Type</code> header to define the used format in the request body, only applicable if you send a request body
 
-### HTTP Methods
+## HTTP Methods
 The interfaces describe which HTTP methods are allowed and how to use them.
 Our basic concern is that basically all HTTP Methods are allowed in the [standardized way](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
 Note that these methods should behave as specified by their
@@ -244,19 +306,20 @@ __example:__
 }
 ```
 </details>
+
 ## HTTP Status Codes
 We are using [standardized HTTP status code](https://www.restapitutorial.com/httpstatuscodes.html)
 with a body only if needed (it also just can be empty), but details about that you can find at the
 concrete interface implementation.
 
-| Verb   | Description  |                                                                                                                                                       
+| Verb   | Description                                                                                                                                                                                                                                                                                            |
 |--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | HEAD   | Can be issued against any resource to get just the HTTP header info.                                                                                                                                                                                                                                   |
 | GET    | Used for retrieving resources.                                                                                                                                                                                                                                                                         |
 | POST   | Used for creating resources.                                                                                                                                                                                                                                                                           |
 | PATCH  | Used for updating resources with partial JSON data. For instance, an Issue resource has title and body attributes. A PATCH request may accept one or more of the attributes to update the resource. PATCH is a relatively new and uncommon HTTP verb, so resource endpoints also accept POST requests. |
-| PUT    | Used for replacing resources or collections. For PUT requests with no body attribute, be sure to set the Content-Length header to zero.                                                                                                                                                                 |
-| DELETE | Used for deleting resources.                                                                                                           |                                                                                                                                                               
+| PUT    | Used for replacing resources or collections. For PUT requests with no body attribute, be sure to set the Content-Length header to zero.                                                                                                                                                                |
+| DELETE | Used for deleting resources.                                                                                                                                                                                                                                                                           |
 
 ## Error Message Style
 Error messages are returned as content type \"application/json;charset=utf-8\" in the following format:
@@ -287,25 +350,22 @@ Error messages are returned as content type \"application/json;charset=utf-8\" i
 }
 ```
 
-Field             | Mandatory | Description
------------------ | --------- | -----------
-path              | yes       | called REST path
-title             | yes       | short description of the error
-code              | no        | internal error code (number or enum) of your application / domain (do not use the HTTP status codes)
-detail            | no        | long description of the error, perhaps technical details
-detail-structured | no        | technical details in JSON structure
-jsonpath          | no        | JSON field in request which caused the error
-logref            | no        | reference key to find more stuff in the log (as example traceId)
+| Field            | Mandatory | Description                                                                                          |
+|------------------|-----------|------------------------------------------------------------------------------------------------------|
+| path             | yes       | called REST path                                                                                     |
+| path             | yes       | short description of the error                                                                       |
+| path             | no        | internal error code (number or enum) of your application / domain (do not use the HTTP status codes) |
+| pathl            | no        | long description of the error, perhaps technical details                                             |
+| pathl-structured | no        | technical details in JSON structure                                                                  |
+| pathath          | no        | JSON field in request which caused the error                                                         |
+| pathf            | no        | reference key to find more stuff in the log (as example traceId)                                     |
 
 ## Pagination
-All interfaces return a list with resources (orders, shipments...) and a next link if more
-entries exist. Use the next link to retrieve more entries.
+Interfaces may return a list with resources (orders, shipments...) and a way to navigate these lists. Please pay attention to the response pattern to identify how to handle lists. There are two common ways list handling is implemented. One way to retrieve the next entry of a list is by using links for navigation the entries. The other is by providing list pages to iterate through lists.
 
-For pagination, the basic query parameter \"limit\" (e.g. <code class=\"inline\">?limit=10</code>) can be used
-to define the maximum amount of resulting entities returned per call.
-The interface itself can reduce the limit lower than your client limit.
+For pagination, the basic query parameter \"limit\" (e.g. <code class=\"inline\">?limit=10</code>) can be used to define the maximum amount of resulting entities returned per call. The interface itself can reduce the limit lower than your client limit.
 
-An example entity would be:
+An example entity using links (not pages) to navigate would be:
 ```
 {
   resources: [
@@ -329,7 +389,7 @@ An example entity would be:
 ```
 
 ## Bulk requests
-If you send a bulk request for an API endpoint, it will be processed asynchronously at the backend.
+Attention: When sending bulk requests to any /products API endpoint, it will be processed asynchronously at the backend.
 
 ### Synchronous Answer
 Synchronously will be delivered an endpoint to check the asynchronous processing state.
@@ -345,6 +405,10 @@ HTTP STATUS 202 (Accepted)
 
 ### Check the State of an Endpoint
 The client can follow the <code class=\"inline\">href</code> to check the state of processing.
+
+#### Best-practice:
+As long as the `state = pending` the attribute `pingAfter` dictates when to send a new request.
+
 An example entity would be:
 ```
 {
@@ -395,10 +459,10 @@ Content-Type: application/pdf
 Common fields like time, currency, country codes etc need to follow the standard ISO guidelines unless mentioned otherwise. The fields must report the format they are following on the docs.
 
 ### Some standard formats:
-- Time: Accept in any time zone in ISO 8601 format and always reply in UTC.
+- Time: Accept in any time zone in ISO-8601 format and always reply in UTC.
 
   Example: `YYYY-MM-DD` and `hh:mm:ss.sss`: `2020-03-12` and `22:33:34.400`
-- Currency: ISO 4217.
+- Currency: ISO-4217.
 
   Example: `EUR` for Euros, `GBP` for British Pound Sterling.
 - Country code: ISO-3166-1 alpha-3
@@ -407,26 +471,142 @@ Common fields like time, currency, country codes etc need to follow the standard
 
 # Sandbox
 
-⚠️ we cannot provide the endpoint of quantities in the sandbox environment!
-
-## General
+### General
 **Sandbox is the test environment,**
-used for testing an API connection. It provides all the functionalities of the live OTTOmarket Interface. All actions and orders there are simulated for testing purposes.
+used for testing an API connection. It provides all the functionalities of the live OTTO Market Interface. All actions and orders there are simulated for testing purposes.
 
-The login session and the API key in the sandbox environment are completely separated from the production environment. You may [send us an e-mail](mailto:support@otto.market) to get an API key.
+The login session and the API key in the sandbox environment are completely separated from the production environment.
 
 REST API: **https://sandbox.api.otto.market**
 
-## How-to Test
+## Getting started
 Follow these steps to start testing on our sandbox environment:
 
-1. Make yourself familiar with sandbox functionalities.
-1. Request a sandbox API user from our team via [e-mail](mailto:support@otto.market).
-1. Authenticate to our sandbox environment. See [DevelopersGuide](/docs#section/Partner-API-Developer's-Guide) for further information.
-1. Use our Order generator to create fictional orders. See Technical Advice below to know, which orders are created.
-1. Test the API functionality of your application.
+1.  Make yourself familiar with sandbox functionalities.
+2.  Request a sandbox API user:
+    As a **partner (seller)** the fastest way is to open a new ticket in [OTTO Partner Connect](https://account.otto.market/s/ticketanlegen) through the Partner Helpdesk choosing the sub-category \"Technische Schnittstellen\".
+    As a **service provider** please register in our [OTTO Market Developer Program](https://developer.otto.market/).
+
+3.  Authenticate to our sandbox environment. See [DevelopersGuide](/docs#section/Partner-API-Developer's-Guide) for further information.
+4.  Use our Order generator to create fictional orders. See Technical Advice below to know, which orders are created.
+5.  Test the API functionality of your application.
+
+## Technical Advice
+Please note the following information:
+### Authorization
+For the endpoint like all the other endpoints a valid authorization token has to
+be sent. If you need further information, please consult the [Developers
+Guide](/docs#section/Partner-API-Developer's-Guide).
+
+### GET-Returns Endpoint
+Since there are no real costumers, returns cannot be announced. Hence, the GET endpoint of returns is retrieving an empty string.
+
+### Sandbox Reset
+To prevent data overload, our sandbox and its orders are reset monthly at first Sunday from 6 p.m. to 10 p.m.\\
+Any dynamic data (shipments, returns) is deleted. Old shipments will not be available anymore.\\
+Therefore, you have to create new orders every month.
+
+### Order Generator
+To test your API implementation you can generate test orders only on the sandbox environment by sending an empty POST request to the following generation endpoint:
+
+[https://sandbox.api.otto.market/v4/orders/testorders]()
+
+This will run 8 predefined scenarios on our sandbox. After the POST request, you will receive 6 orders in \"PROCESSABLE\" status with different combinations of positions and items (e.g. standard and freight delivery). You will also receive 1 prepayment order in \"ANNOUNCED\" and 1 order in \"CANCELLED_BY_MARKETPLACE\" status.
+
+The generated orders will contain one or more position items with the following products:
+
+| Product Title                       | EAN           | SKU                   |
+|-------------------------------------|---------------|-----------------------|
+| Smartphone »CallMe 1000«            | 1245780164732 | SmartCM1000-schwarz-1 |
+| Fancy Shirt »Flower«                | 4851278936452 | FancyFlower-m-pi      |
+| Rasenmaeher »Turbo V1«              | 9821393948573 | 0440-Rasen-T-V1       |
+| Spedition Wohnlandschaft 3.tlg.     | 8263748321943 | Sped-Wohn-3-98735     |
+| Spedition Kühlschrank »COOL EXTREM« | 7263000981290 | Sped-Kühl084-kombi    |
+
+Scenarios:
+
+| Scenarios        | Status                   | Comment                                                                                                              |
+|------------------|--------------------------|----------------------------------------------------------------------------------------------------------------------|
+| 1, 2, 3, 4, 7, 8 | PROCESSABLE              | Scenario 4 inclusive discount                                                                                        |
+| 5                | ANNOUNCED                | Order with payment method PREPAYMENT awaiting customer's payment<br>Order includes weeePickup on position item level |
+| 6                | CANCELLED_BY_MARKETPLACE | Order with payment method PREPAYMENT which has been cancelled since the customer didn't pay                          |
+
+Please use the generated orders to test the interaction with Orders, Shipments and Returns.
+
+If you want to create a single scenario you can do that by sending an empty POST to:
+
+[https://sandbox.api.otto.market/v4/orders/testorders/scenario\\{scenarionumber\\}]()
+
+e.g. [https://sandbox.api.otto.market/v4/orders/testorders/scenario1]()
+
+## Best-practice test cases
+
+We´ve come up with mulitple test cases to help you test the basic functionalities needed for each endpoint when offering your service to an OTTO Market Seller.
+The test cases should be tested within the sandbox environment. If you´re interested in feedback from our service provider management you can send screenshots of the test results [here](mailto:partnerintegration@otto.market?subject=[OTTO%20Market%20API]%20Service%20Provider%20test%20cases).
+
+We´re referring to the test orders created using the *test order generator* within the sandbox environment. Please read the section [Order Generator](#order-generator) on how to create test orders.
+
+### Products
+We want to test the successful and incorrect creation of several products as well as the deactivation of the
+products. The successful display of the errors and OTTO categories should also be tested.
+
+1. Download the valid category list over the appropriate endpoint and load it into your mapping interface.
+
+**Attention:** Please remember to show your customer the `featureRelevance` and `relevance` of attributes. `LEGAL` attributes are mandatory.
+
+2. Download the valid brand list over the appropriate endpoint and load it into your system.
+
+3. List a product with 8 SKUs of a valid brand and a valid category.
+
+4. Try listing a product with a wrong brand, a wrong category, an attribute with a wrong name and a wrong value.
+
+5. Please deactivate a SKU from the product created in test case 1 and send us a screenshot of the deactivation display in your
+   system.
+
+### Quantities
+We want to test the successful transfer of inventory to existing SKUs.
+
+6. Please send a positive inventory via the interface for three of the successfully submitted SKUs.
+
+**Attention:** Inventory updates should only be updated when the quanities have changed for a product. That being said a  common best practice is to atleast align the stock keeping system with the OTTO Market once a day. Maybe at night.
+
+### Orders
+We want to test the processes for pulling orders in different statuses using self-generated test orders. The
+cancellation process is also to be tested.
+
+7. Generate the collection of 16 test orders (in 8 scenarios) via the order generator and pull the orders in the status \"PROCESSABLE\".
+
+8. GET the orders in the status \"ANNOUNCED\".
+
+9. Use one of the orders from test scenario 2 and cancel it via the corresponding interface.
+
+10. Use one of the orders from scenario 7 and simply cancel an item from the order using the appropriate interface.
+
+### Shipments
+We want to test the shipping processes and consider the special feature of the returnTrackingKey for
+parcel shipping. Test cases for parcel shipping and forwarding shipping are to be executed.
+
+11. Use one of the orders from scenario 1 and report the items in a shipment as shipped.
+
+12. Use one of the orders from scenario 1 and report two different shipments (two package shipments) for the four items.
+
+13. Use one of the orders from scenario 3 and report the item as shipped in a shipment.
+
+14. Use one of the orders from scenario 8 and report all items in separate shipments as shipped (parcel shipping + freight
+    forwarding shipping)
+
+### Returns
+Finally, the return case should be checked and a return accepted and rejected for an item successfully
+marked as shipped.
+
+15. Use the order marked as shipped from test case 10 and report the items as accepted returns (acceptance).
+
+16. Use the order marked as shipped from test case 12 and report the item as an unaccepted return (rejection).
 
 ## Products: Validation and test cases
+
+We want to test the successful and incorrect creation of several products as well as the deactivation of the products.
+The successful display of product related errors, OTTO categories and brands should also be tested.
 
 ### Validation
 
@@ -434,9 +614,9 @@ Submitted product data is validated in two steps:
 
 **1. Technical validation**
 
-The first technical validation (syntax and required attributes) takes place after you´ve sent product data using a POST request.  
-Read more about uploading products here: OTTO Market API: Create or update your product variations.  
-If your http request was successful (http response state 200), you´ll be provided with four different links (pending, succeeded, failed, unchanged).  
+The first technical validation (syntax and required attributes) takes place after you´ve sent product data using a POST request.
+Read more about uploading products here: OTTO Market API: Create or update your product variations.
+If your http request was successful (http response state 200), you´ll be provided with four different links (pending, succeeded, failed, unchanged).
 Following the links you´ll be able to check which products have been successfully listed, failed, unchanged or are still being processed.
 
 |Status|Explanation|
@@ -448,28 +628,28 @@ Following the links you´ll be able to check which products have been successful
 
 **2. Shop validation**
 
-The second step is the shop validation. Results of the shop validation are retrievable using the marketplace-status endpoint.  
-Please read OTTO Market API: Read the marketplace status on how to use the marketplace status endpoint.  
+The second step is the shop validation. Results of the shop validation are retrievable using the marketplace-status endpoint.
+Please read OTTO Market API: Read the marketplace status on how to use the marketplace status endpoint.
 Submitted product data always has one of the following four marketplace statuses:
 
-|Status |Explanation              |
-|:-------|:-------------------------|
-|Pending|Submitted product data is currently proceeded.|
-|Online|The SKU is displayed at otto.de. You can find the SKU using the shop link. <br />In some cases, additional information will be shown on how to improve the visibility on otto.de.|
-|Restricted|The SKU is not displayed at otto.de because of an error shown within the error’s container.|
-|Inactive|The SKU was set inactive via the active-status endpoint and could be reactivated via the active-status endpoint.|
+| Status     | Explanation                                                                                                                                                                       |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Pending    | Submitted product data is currently proceeded.                                                                                                                                    |
+| Online     | The SKU is displayed at otto.de. You can find the SKU using the shop link. <br />In some cases, additional information will be shown on how to improve the visibility on otto.de. |
+| Restricted | The SKU is not displayed at otto.de because of an error shown within the error’s container.                                                                                       |
+| Inactive   | The SKU was set inactive via the active-status endpoint and could be reactivated via the active-status endpoint.                                                                  |
 
 **Attention:** Since the sandbox is missing a direct shop integration the second validation is simulated.
 
 ### Test cases
 
-To ensure you´re able to test every marketplace status including different errors we´ve added specific EAN´s to our sandbox environment.  
-Below you´ll find predefined test cases to simulate possible cases from the live environment.   
+To ensure you´re able to test every marketplace status including different errors we´ve added specific EAN´s to our sandbox environment.
+Below you´ll find predefined test cases to simulate possible cases from the live environment.
 As mentioned before the different states are retrievable fetching the marketplace status.
 
 **Test case #1: Status Online with poor data quality:**
 
-A product status can be online but still have poor data quality.  
+A product status can be online but still have poor data quality.
 To increase the visibility please add the listed attributes from the error message (“{0}”).
 
 This state can be tested by listing SKU´s using one or more of the following EAN´s:
@@ -482,14 +662,14 @@ This state can be tested by listing SKU´s using one or more of the following EA
 
 You should receive an error message that looks anything like this:
 
-800001 - DATAQUALITY_NOTICE_SIGNIFICANT_ATTRIBUTE_AND_INFORMATION:  
+800001 - DATAQUALITY_NOTICE_SIGNIFICANT_ATTRIBUTE_AND_INFORMATION:
 “Durch die Pflege folgender Attribute kann die Sichtbarkeit des Produktes gesteigert werden: ''{0}''”
 
 **Test case #2: Status Restricted – Brand blocked**
 
 Some brands are reserved for specific sellers. By listing a product with one of those reserved brands you should receive the following error message:
 
-600007- BRAND_BLOCKED and error title: “Die Marke ist gesperrt und darf nicht eingespielt werden.“  
+600007- BRAND_BLOCKED and error title: “Die Marke ist gesperrt und darf nicht eingespielt werden.“
 This state can be tested by listing SKU´s using one or more of the following EAN´s:
 
 - “6250000000065”
@@ -500,18 +680,18 @@ This state can be tested by listing SKU´s using one or more of the following EA
 
 **Test case #3: Status Restricted – EAN already known**
 
-To ensure a great customer experience, product listings using the same EAN are grouped on the OTTO market. This leads to seller competition.  
-By listing a product with a yet unknown EAN a new moin will be generated and must be included in all future updates / listings for that EAN.  
+To ensure a great customer experience, product listings using the same EAN are grouped on the OTTO market. This leads to seller competition.
+By listing a product with a yet unknown EAN a new moin will be generated and must be included in all future updates / listings for that EAN.
 The moin is retrievable via the marketplace status.
 
 By listing a product with an already known EAN you´ll be prompted with the following error message:
 
-700001 - MOIN_ALREADY_KNOWN and the error title:  
-“Diese Variante ist auf dem OTTO Marktplatz bereits bekannt. Um die Variante zum Verkauf anbieten zu können, bestätigen Sie uns bitte den Content,  
+700001 - MOIN_ALREADY_KNOWN and the error title:
+“Diese Variante ist auf dem OTTO Marktplatz bereits bekannt. Um die Variante zum Verkauf anbieten zu können, bestätigen Sie uns bitte den Content,
 indem sie die MOIN beim nächsten Update an uns zurückschicken.“
 
-The error message says that the EAN is already known and can only be sold by including the moin.  
-The moin is retrievable from the marketplace status. Including the moin means you´re agreeing that you´re selling the exact same product which has  
+The error message says that the EAN is already known and can only be sold by including the moin.
+The moin is retrievable from the marketplace status. Including the moin means you´re agreeing that you´re selling the exact same product which has
 initially generated the moin for the EAN you´re trying to sell. If you disagree, please contact support@otto.market.
 
 The listing of a product with an already known EAN is possible by listing SKU´s using one or more of the following EAN´s:
@@ -528,64 +708,279 @@ The listing of a product with an already known EAN is possible by listing SKU´s
 
 **Test case #4: Status Restricted – MOIN incorrect**
 
-It´s possible that you´re trying to submit a product including the moin but the moin has a typo / is wrong in general.  
+It´s possible that you´re trying to submit a product including the moin but the moin has a typo / is wrong in general.
 You´ll receive the following error message then:
 
-700002 – MOIN_INCORRECT and the error title:  
-“Die von Ihnen zu dieser Variante übertragene MOIN entspricht nicht der von uns für diese Variante vergebenen MOIN.  
+700002 – MOIN_INCORRECT and the error title:
+“Die von Ihnen zu dieser Variante übertragene MOIN entspricht nicht der von uns für diese Variante vergebenen MOIN.
 Bitte überprüfen Sie ihre Daten und korrigieren die MOIN entsprechend.“
 
 This is solved by including the correct moin.
 
 
-## Technical Advice
-Please note the following information:
-### Authorization
-For the endpoint like all the other endpoints a valid authorization token has to
-be sent. If you need further information, please consult the [Developers
-Guide](/docs#section/Partner-API-Developer's-Guide).
+# Developer Program
+This section describes how a service provider can integrate with OTTO Market API.
+Our new developer program aims at equipping the service providers with authentication and authorization for accessing the OTTO Market API `on belhaf of the partner`.
 
-### GET-Returns Endpoint
-Since there are no real costumers, returns cannot be announced. Hence, the GET endpoint of returns is retrieving an empty string.
+**Attention: The Developer Program and the functionalities are in closed beta.
+Partners (sellers) and service providers do not have public access yet.**
 
-### Sandbox Reset
-To prevent data overload, our sandbox and its orders are resetted monthly at first Sunday from 6 p.m. to 10 p.m.\\
-Any dynamic data (shipments, returns) is deleted. Old shipments will not be available anymore.\\
-Therefore, you have to create new Orders every month.
+## Registration as Service Provider
+If you are a service provider who needs to access Partner data, you will be required to register with us in our [developer portal](https://developer.otto.market/register).
+During the registration, you need to specify the scopes that you'll need. Find the list of scopes [here](/docs#section/Developer-Program/Scopes).
+You'll receive email notifications for any approval / denial of registration requests.
 
-### Order Generator
-To test your API implementation you can generate test orders only on the sandbox environment by sending an empty POST request to the following generation endpoint:
+Upon successful registration, service provider will be created with private access which can later be changed by raising request in OPC.
+In addition to to the scopes you requested during registration, you can also request for more scopes from the [profile page](https://portal.otto.market/profile/Dienstleisterprofil) in the OTTO Partner Connect portal.
+Requests for additional scopes will also be reviewed by OTTO Market developer team. You'll receive email notifications for approval / denial of additional scopes requests.
 
-[https://sandbox.api.otto.market/v4/orders/testorders]()
+The below diagram depicts the lifecycle of a service provider in OTTO Marketplace:
 
-This will run 8 predefined scenarios on our sandbox. After the POST request, you will receive 6 orders in \"PROCESSABLE\" status with different combinations of positions and items (e.g. standard and freight delivery). You will also receive 1 prepayment orders in \"ANNOUNCED\" and 1 orders in \"CANCELLED_BY_MARKETPLACE\" status.
+<img src=\"/docs/service_provider_lifecycle.jpg\" alt=\"Service provider lifecycle\"/>
 
-The generated orders will contain one or more position items with the following products:
+## Private and Public Access for Service Provider
 
-| Product Title                       | EAN           | SKU                   |
-|-------------------------------------|---------------|-----------------------|
-| Smartphone »CallMe 1000«            | 1245780164732 | SmartCM1000-schwarz-1 |
-| Fancy Shirt »Flower«                | 4851278936452 | FancyFlower-m-pi      |
-| Rasenmaeher »Turbo V1«              | 9821393948573 | 0440-Rasen-T-V1       |
-| Spedition Wohnlandschaft 3.tlg.     | 8263748321943 | Sped-Wohn-3-98735     |
-| Spedition Kühlschrank »COOL EXTREM« | 7263000981290 | Sped-Kühl084-kombi    |
+Once your registration was successful you have private access to the OTTO Partner Connect portal meaning you can create only private apps in Production environment. (Read more about the difference between private and public apps [here](/docs#section/Developer-Program/Private-and-Public-Apps).)
 
-Scenarios:
+### Getting Public Access
 
-| Scenarios        | Status                   | Comment                                                                |
-|------------------|--------------------------|------------------------------------------------------------------------|
-| 1, 2, 3, 4, 7, 8 | PROCESSABLE              | Scenario 4 inclusive discount                                                                       |
-| 5                | ANNOUNCED                | Prepayment Order which is announced (Customer has not paid yet)        |
-| 6                | CANCELLED_BY_MARKETPLACE | Prepayment Order which has been cancelled, because customer didn’t pay |
+If you want to get public access follow the steps below:
 
-Please use the generated orders to test the interaction with Orders, Shipments and Returns.
+1. Login to OTTO Partner Connect portal and navigate to your [profile page (\"Dienstleisterprofil\")](https://portal.otto.market/profile/Dienstleisterprofil)
+2. Check the box at the very bottom stating that you want to get public access
+3. Click on save (\"Speichern\").
+4. Done! Your request will be reviewed by OTTO Market developer team. You'll receive email notifications for approval / denial of your request.
 
-If you want to create a single scenario you can do that by sending an empty POST to:
+*Please note: Once you have public access this cannot be reverted meaning you cannot request only private access!*
 
-[https://sandbox.api.otto.market/v4/orders/testorders/scenario\\{scenarionumber\\}]()
+## Private and Public Apps
 
-e.g. [https://sandbox.api.otto.market/v4/orders/testorders/scenario1]()
+*This applies only for PRODUCTION environment. In Sandbox environment we don't differentiate between public and private apps.*
 
+#### Private Apps
+
+Private apps can be created by private as well as public service providers. If a OTTO Market partner wants to install a private app, an unique app invitation link (\"Einladungslink\") is required.
+
+**Generate an app invitation link**
+You can generate an unique app invitation link for an app by following the steps below:
+
+1. Login to the [OTTO Partner Connect](https://portal.otto.market/profile/Dienstleisterprofil) portal.
+2. Navigate to the [OTTO Market Apps](https://portal.otto.market/app-management/service-provider/apps) page.
+3. Click on the three dots (…) right to the app name for which you want to create an invitation link.
+4. In the dropdown menu select \"Einladungslink generieren\".
+5. A popup window will be displayed. Copy the link from this window - it will not show up again.
+6. Done! You can now share the app invitation link with a OTTO Market partner.
+
+`Note:` You should be aware of the following:
+- After closing the popup window with the invitation link you won't be able to see this exact invitation link again.
+- You can create as much inviation links as you want to.
+- There is no possibility to show all invitation links created for a specific app.
+- Every app invitation link is only valid for 24 hours and can be used only once. (When it is used or expired the link will become invalid and you have to create a new one.)
+- If a partner clicks on the link but don't grant consent the link remains valid (until it is either expired or consent is granted).
+
+#### Public Apps
+
+Public apps can only be created by public service providers. (For getting public access refer to [Getting Public Access](/docs#section/Developer-Program/Getting-Public-Access).)
+In order to install a public app, an universally valid installation link (\"Installationslink\") is required. After creating a public app this link is displayed in the app details page.
+You can share this link whereever you want. But be aware that it is universally valid meaning you cannot control which partner will install your app.
+
+#### Converting a private app into a public app
+
+Only public service providers have the option to convert private apps into public ones. (For getting public access refer to [Getting Public Access](/docs#section/Developer-Program/Getting-Public-Access).)
+
+`Note:` BEFORE CONVERTING an app to public you should be aware of the following:
+- This action CANNOT be undone meaning you cannot convert a public app back to private.
+- This action has no effect on existing installations of your app. This means that every partner who has installed this app before (via an one-time use app invitation link) can still use it. (They don't need to re-install it or do anything.)
+- Every app invitation link you created before converting the app becomes invalid.
+- An universally valid installation link will be generated and displayed on the app details page.
+
+In order to convert your private app into a public app follow the steps below:
+
+1. Login to the [OTTO Partner Connect](https://portal.otto.market/profile/Dienstleisterprofil) portal.
+2. Navigate to the [OTTO Market Apps](https://portal.otto.market/app-management/service-provider/apps) page.
+3. Click on the three dots (…) right to the app name for which you want to create an invitation link.
+4. In the dropdown menu select \"App Typ zu 'Public' ändern\".
+5. A popup window will be displayed asking you to confirm that you want to convert this app to public.
+6. Done! Your app is now public.
+
+## Scopes
+Scopes corresponds to [OAuth scopes](https://oauth.net/2/scope/). They are used for providing fine-grained access control to the OTTO Market APIs.
+
+### Scopes for OTTO Market APIs
+The below table gives mapping of displayed scope names in UI to the scope names to be used for fetching token
+
+| Display Name    | Scope Name (To be used in fetching token) |
+|-----------------|-------------------------------------------|
+| Installation    | installation                              |
+| PartnerId       | partnerId                                 |
+| Developer       | developer                                 |
+| Products        | products                                  |
+| Orders          | orders                                    |
+| Receipts        | receipts                                  |
+| Returns         | returns                                   |
+| Price Reduction | price-reduction                           |
+| Shipments       | shipments                                 |
+| Quantities      | quantities                                |
+
+### Content declaration of available scopes
+
+#### Installation
+The installation interface allows a service provider to get the installation details of a Partner
+
+#### PartnerId
+The partnerId interface allows a service provider, access to the partner's partner id.
+
+#### Developer
+The developer interface allows a service provider to fetch an installation token
+
+#### Products
+
+The product interfaces allow partners to manage their product data in the OTTO Market, which means to send products for publishing on OTTO.de, to view the sent data, and to manage the visibility of the products on otto.de.
+
+Read more about the technical possibilities [here](https://api.otto.market/docs#tag/Products-V2).
+
+#### Quantities
+
+Once the products have been successfully transmitted using the products scope, only the quantities are missing to make the products available to the end customer on otto.de. For this purpose the Quantity Interface allows partners and service providers to update the available quantity for a specific SKU.
+
+Read more about the technical possibilities [here](https://api.otto.market/docs#tag/Quantities-V2).
+
+#### Orders
+
+This interface allows partners and service providers to view orders and associated position items. It also allows to send cancellations on order and position item level.
+
+Read more about the technical possibilities [here](https://api.otto.market/docs#tag/Orders-V4).
+
+#### Shipments
+
+This interface should be used to report that shipments have been handed over to the carrier for final delivery to the customer.
+
+Read more about the technical possibilities [here](https://api.otto.market/docs#tag/Shipments-V1).
+
+#### Returns
+
+This scope enables the user to manage returns. This includes retrieving a list of announced returns, accepting and declining returns.
+
+Read more about the technical possibilities [here](https://api.otto.market/docs#tag/Returns-V2).
+
+#### Receipts
+
+OTTO Market provides receipts to the customers to document financial processes. The scopes enables users to download these documents as a PDF or a JSON.
+
+Read more about the technical possibilities [here](https://api.otto.market/docs#tag/Receipts-V2).
+
+#### Price Reduction
+
+This endpoint enables sellers to apply price reductions to shipped products if the customer is unsatisfied and asks for a partial refund instead of returning the product completely.
+
+Read more about the technical possibilities [here](https://api.otto.market/docs#tag/Price-Reductions-V1).
+
+## Sandbox vs Production
+Sandbox apps are used to test your API in sandbox environment, when you are approved for sandbox by the OTTO Market team. These apps have
+unrestricted scopes access, so you can create sandbox apps for any scope even if you have not yet been approved of it. For creating and testing with sandbox apps,
+please see [Access to Sandbox and Creating Sandbox Apps](/docs#section/Developer-Program/Access-to-Sandbox-and-Creating-Sandbox-Apps).
+
+As the name states, production apps are for production environment. This can be created after you have an approval from OTTO Market team for the
+production environment. Once you have the approval, you can request for public service provider access, to create public apps.
+An OTTO Market Partner has to provide consent, in order for you to access their
+production data. The detailed flow is described in the [Access to Production and Creating Production Apps](/docs#section/Developer-Program/Access-to-Production-and-Creating-Production-Apps) section below.
+
+## Access to Sandbox and Creating Sandbox Apps
+Once your service provider registration request is approved, you can start using [Sandbox Apps](https://portal.otto.market/app-management/sp-sandbox-apps).
+
+### Creating sandbox app
+In create sandbox apps UI, you the following details are required,
+- name
+- [scopes](docs#section/Developer-Program/Scopes) - all possible scopes will be shown
+
+After creation of sandbox app, details like Client ID, Client Secret and Installation ID will be displayed.
+
+_Note: Installation ID will be autogenerated upon creation, this Installation ID will be required for fetching accessToken._
+
+### Accessing Sandbox OTTO Market API
+Using client credential flow, fetch an access token with the scope `developer`
+```shell
+curl --request POST \\
+  --url https://sandbox.api.otto.market/v1/token \\
+  --header 'Content-Type: application/x-www-form-urlencoded' \\
+  --data client_id=<your app's client id> \\
+  --data client_secret=<your app's client secret> \\
+  --data grant_type=client_credentials \\
+  --data scope=developer
+```
+Using this token, fetch Installation access token for sandbox environment. Refer [API docs for fetching installation access token](/docs#operation/Developer-V1__createInstallationAccessToken)
+This installation access token will contain all the requested scopes.
+
+Using this installation access token, you can access the Sandbox OTTO Market API.
+
+## Access to Production and Integration of Production Apps
+Once you are satisfied with everything you have tested in the sandbox, email [OTTO Market](mailto://partnerintegration@otto.market) to get access to Production.
+When approved, you can start creating production apps using [OTTO Market Apps](https://portal.otto.market/app-management/service-provider/apps) in OTTO Partner Connect.
+After getting production access, the service provider can request for public service provider access via OPC to create public apps
+
+### Creating apps
+In create apps UI, you need to provide the following details,
+- unique name
+- homepage URL
+- authorization callback URL - Refer below section for more info
+- [scopes](docs#section/Developer-Program/Scopes) - Only scopes approved for you will be shown
+- app type (only if the service provider has public access)
+
+#### Authorization callback URL
+You will receive two types of callbacks to this URL:
+1. Partner gives consent to your app.
+2. Partner verifies their identity with OTTO for your app.
+
+#### App ID
+A unique app ID which will be used for identifying a service provider app.
+When a partner installs this app, this app ID will be used for fetching the installation details.
+
+#### Installation Link
+This unique, publicly accessible link will be used by OTTO Market partners for installation.
+You can simply use this link as a hyperlink into your website.
+
+#### Client ID & Client Secret
+Credentials to be used for authenticating & authorising your app with OTTO authorisation server for
+fetching installation details of partner
+
+### Installation of app by an OTTO Partner
+<img src=\"/docs/app_installation_flow.jpg\" alt=\"App Installation\"/>
+
+1. Partner navigates to your app's installation link and grants consent for the requested scopes.
+2. On granting consent, partner will be redirected to your app's auth callback URL.
+3. In your callback logic, you have to initiate authorization code flow by redirecting to `/oauth2/auth`
+```
+redirect('https://portal.otto.market/oauth2/auth?response_type=code&client_id=<your client id>&scope=\"installation partnerId\"')
+```
+4. Partner logs in and verifies their identity
+5. On verifying identity, partner will be redirected to your app's auth callback URL with auth code.
+6. Exchange the Authorization Code for an Access Token
+```shell
+curl --request POST \\
+  --url https://portal.otto.market/oauth2/token \\
+  --header 'Content-Type: application/x-www-form-urlencoded' \\
+  --data client_id=<your app's client id> \\
+  --data client_secret=<your app's client secret> \\
+  --data grant_type=authorization_code \\
+  --data code=<auth code given in the redirect>
+```
+7. Using the above token, fetch Installation id. Refer [API docs for fetching installation id](/docs#operation/Developer-V1__getInstallation).
+   It is essential that you store this installation id for fetching an installation access token.
+8. Using client credential flow, fetch an access token with the scope `developer`
+```shell
+curl --request POST \\
+  --url https://api.otto.market/v1/token \\
+  --header 'Content-Type: application/x-www-form-urlencoded' \\
+  --data client_id=<your app's client id> \\
+  --data client_secret=<your app's client secret> \\
+  --data grant_type=client_credentials \\
+  --data scope=developer
+```
+Using this token, fetch Installation access token. Refer [API docs for fetching installation access token](/docs#operation/Developer-V1__createInstallationAccessToken)
+This installation access token will contain all the requested scopes.
+
+### Accessing OTTO Market API
+Using this installation access token, you can access the OTTO Market API on behalf of partner.
 
 
 
@@ -593,10 +988,28 @@ e.g. [https://sandbox.api.otto.market/v4/orders/testorders/scenario1]()
 
 ### Requirements
 
-PHP 7.3 and later.
-Should also work with PHP 8.0 but has not been tested.
+PHP 7.4 and later.
+Should also work with PHP 8.0.
 
-Run `composer require creatissimo/otto-market-api`
+### Composer
+
+To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+    }
+  ],
+  "require": {
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+  }
+}
+```
+
+Then run `composer install`
 
 ### Manual Installation
 
@@ -617,23 +1030,29 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure OAuth2 access token for authorization: onBehalfOfPartner
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
+$apiInstance = new OpenAPI\Client\Api\DeveloperV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sales_order_id = 'sales_order_id_example'; // string | The salesOrderId of the order
-$position_item_id = array('position_item_id_example'); // string[] | The positionItemIds of the order to cancel
+$client_id = 'client_id_example'; // string | identifies the client uniquely
+$client_secret = 'client_secret_example'; // string | secret for the client
+$grant_type = 'grant_type_example'; // string | type of token request. Only supported value is client_credentials
+$scope = 'scope_example'; // string | list of scopes that the client wants to be included in the access token (space separated)
 
 try {
-    $apiInstance->ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_id);
+    $result = $apiInstance->developerV1CreateAccessToken($client_id, $client_secret, $grant_type, $scope);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersV4Api->ordersV4CancelPartnerOrderPositionItems: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DeveloperV1Api->developerV1CreateAccessToken: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -644,36 +1063,63 @@ All URIs are relative to *https://api.otto.market*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OrdersV4Api* | [**ordersV4CancelPartnerOrderPositionItems**](docs/Api/OrdersV4Api.md#ordersv4cancelpartnerorderpositionitems) | **POST** /v4/orders/{salesOrderId}/positionItems/{positionItemId}/cancellation | Cancel specific position items of an order
+*DeveloperV1Api* | [**developerV1CreateAccessToken**](docs/Api/DeveloperV1Api.md#developerv1createaccesstoken) | **POST** /v1/token | Obtain access token from client ID &amp; client Secret
+*DeveloperV1Api* | [**developerV1CreateInstallationAccessToken**](docs/Api/DeveloperV1Api.md#developerv1createinstallationaccesstoken) | **POST** /v1/apps/{appId}/installations/{installationId}/accessToken | Obtain installation access token
+*DeveloperV1Api* | [**developerV1GetInstallation**](docs/Api/DeveloperV1Api.md#developerv1getinstallation) | **GET** /v1/apps/{appId}/installation | Get installation for a service provider app
+*OrdersV4Api* | [**ordersV4CancelPartnerOrderPositionItems**](docs/Api/OrdersV4Api.md#ordersv4cancelpartnerorderpositionitems) | **POST** /v4/orders/{salesOrderId}/positionItems/{positionItemIds}/cancellation | Cancel specific position items of an order
 *OrdersV4Api* | [**ordersV4CancelPartnerOrders**](docs/Api/OrdersV4Api.md#ordersv4cancelpartnerorders) | **POST** /v4/orders/{salesOrderId}/cancellation | Cancel all position items of an order
 *OrdersV4Api* | [**ordersV4FindPartnerOrders**](docs/Api/OrdersV4Api.md#ordersv4findpartnerorders) | **GET** /v4/orders | List of orders filtered by fulfillment state
 *OrdersV4Api* | [**ordersV4GetPartnerOrderByOrderNumber**](docs/Api/OrdersV4Api.md#ordersv4getpartnerorderbyordernumber) | **GET** /v4/orders/{orderNumber} | Get an order via order number
 *OrdersV4Api* | [**ordersV4GetPartnerOrderBySalesOrderId**](docs/Api/OrdersV4Api.md#ordersv4getpartnerorderbysalesorderid) | **GET** /v4/orders/{salesOrderId} | Get an order via sales order id
-*ProductsV2Api* | [**productsV2CreateOrUpdateProductVariations**](docs/Api/ProductsV2Api.md#productsv2createorupdateproductvariations) | **POST** /v2/products | Create or update your product variations and get a process-id to query results. The limit for the number of product variations in one request is 500.
-*ProductsV2Api* | [**productsV2FailedByProcessId**](docs/Api/ProductsV2Api.md#productsv2failedbyprocessid) | **GET** /v2/products/update-tasks/{processUuid}/failed | Request the failed products of the product data delivery with the linked processUuid. The response will contain a list of failed products with associated error details.
-*ProductsV2Api* | [**productsV2GetActiveStatus**](docs/Api/ProductsV2Api.md#productsv2getactivestatus) | **GET** /v2/products/active-status | Read the active status of your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
-*ProductsV2Api* | [**productsV2GetBrands**](docs/Api/ProductsV2Api.md#productsv2getbrands) | **GET** /v2/products/brands | Read the list of brands that are known on the Otto market place.
-*ProductsV2Api* | [**productsV2GetCategoryGroups**](docs/Api/ProductsV2Api.md#productsv2getcategorygroups) | **GET** /v2/products/categories | Read the product categories and associated attributes of the OTTO market place. The total number of results could be limited by specifying query parameters. Generally the resulting product categories values will be paginated. The default page length is 100 product categories per response, the page size limit is 2000. The links specified in the result can be used to page through the total result space.
-*ProductsV2Api* | [**productsV2GetContentChanges**](docs/Api/ProductsV2Api.md#productsv2getcontentchanges) | **GET** /v2/products/{sku}/content-changes | Read the content changes info for a single product variation within a specific time period. The resulting content changes will be paginated. The default page length is 100 entries per response, also the page size limit. The links specified in the result can be used to page through the total result space.
-*ProductsV2Api* | [**productsV2GetContentChanges2**](docs/Api/ProductsV2Api.md#productsv2getcontentchanges2) | **GET** /v2/products/content-changes | Read the content changes for all your product variations within a specific time period. You can also use this endpoint to read the content changes for more than one variation or if the sku value contains slash (&#39;/&#39;) or dot (&#39;.&#39;) characters, so that you cannot use the other endpoint with one dedicated sku value in the path. The resulting content changes will be paginated. The default page length is 100 entries per response, which also is the page size upper limit. The links specified in the result can be used to page through the total result space.
-*ProductsV2Api* | [**productsV2GetMarketPlaceStatus**](docs/Api/ProductsV2Api.md#productsv2getmarketplacestatus) | **GET** /v2/products/{sku}/marketplace-status | Read the marketplace status for a single product variation.
-*ProductsV2Api* | [**productsV2GetMarketPlaceStatusList**](docs/Api/ProductsV2Api.md#productsv2getmarketplacestatuslist) | **GET** /v2/products/marketplace-status | Read the marketplace status for your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
-*ProductsV2Api* | [**productsV2GetPartnerProducts**](docs/Api/ProductsV2Api.md#productsv2getpartnerproducts) | **GET** /v2/products | Read your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
-*ProductsV2Api* | [**productsV2GetProductVariation**](docs/Api/ProductsV2Api.md#productsv2getproductvariation) | **GET** /v2/products/{sku} | Read a single product variation.
+*PriceReductionsV1Api* | [**priceReductionsV1ApplyPriceReduction**](docs/Api/PriceReductionsV1Api.md#pricereductionsv1applypricereduction) | **POST** /v1/price-reductions | Apply price reduction for a positionItemId
+*PriceReductionsV1Api* | [**priceReductionsV1GetAllReductionsForPartner**](docs/Api/PriceReductionsV1Api.md#pricereductionsv1getallreductionsforpartner) | **GET** /v1/price-reductions | Get all priceReductions
+*ProductsV2Api* | [**productsV2CreateOrUpdateProductVariations**](docs/Api/ProductsV2Api.md#productsv2createorupdateproductvariations) | **POST** /v2/products | Create or update product variations
+*ProductsV2Api* | [**productsV2FailedByProcessId**](docs/Api/ProductsV2Api.md#productsv2failedbyprocessid) | **GET** /v2/products/update-tasks/{processUuid}/failed | List failed products of a product data delivery
+*ProductsV2Api* | [**productsV2GetActiveStatus**](docs/Api/ProductsV2Api.md#productsv2getactivestatus) | **GET** /v2/products/active-status | Read active status
+*ProductsV2Api* | [**productsV2GetBrands**](docs/Api/ProductsV2Api.md#productsv2getbrands) | **GET** /v2/products/brands | List of allowed brands
+*ProductsV2Api* | [**productsV2GetCategoryGroups**](docs/Api/ProductsV2Api.md#productsv2getcategorygroups) | **GET** /v2/products/categories | Read product categories
+*ProductsV2Api* | [**productsV2GetContentChanges**](docs/Api/ProductsV2Api.md#productsv2getcontentchanges) | **GET** /v2/products/{sku}/content-changes | Read content changes for a single product variation
+*ProductsV2Api* | [**productsV2GetContentChanges2**](docs/Api/ProductsV2Api.md#productsv2getcontentchanges2) | **GET** /v2/products/content-changes | Read content changes within time period
+*ProductsV2Api* | [**productsV2GetMarketPlaceStatus**](docs/Api/ProductsV2Api.md#productsv2getmarketplacestatus) | **GET** /v2/products/{sku}/marketplace-status | Read marketplace status for a single product variation
+*ProductsV2Api* | [**productsV2GetMarketPlaceStatusList**](docs/Api/ProductsV2Api.md#productsv2getmarketplacestatuslist) | **GET** /v2/products/marketplace-status | Read marketplace status of product variations
+*ProductsV2Api* | [**productsV2GetPartnerProducts**](docs/Api/ProductsV2Api.md#productsv2getpartnerproducts) | **GET** /v2/products | Read product variations
+*ProductsV2Api* | [**productsV2GetProductVariation**](docs/Api/ProductsV2Api.md#productsv2getproductvariation) | **GET** /v2/products/{sku} | Read a single product variation
 *ProductsV2Api* | [**productsV2GetProductVariationPrice**](docs/Api/ProductsV2Api.md#productsv2getproductvariationprice) | **GET** /v2/products/{sku}/prices | Read product variations prices
 *ProductsV2Api* | [**productsV2GetProductVariationPrices**](docs/Api/ProductsV2Api.md#productsv2getproductvariationprices) | **GET** /v2/products/prices | Read product variations prices
-*ProductsV2Api* | [**productsV2GetVariationActiveStatus**](docs/Api/ProductsV2Api.md#productsv2getvariationactivestatus) | **GET** /v2/products/{sku}/active-status | Read the active status of a single product variation. Replaces corresponding online-status endpoint which now is marked as deprecated.
-*ProductsV2Api* | [**productsV2ProgressByProcessId**](docs/Api/ProductsV2Api.md#productsv2progressbyprocessid) | **GET** /v2/products/update-tasks/{processUuid} | Request the results of a product data delivery. The response will contain the links for the different parts of the result: products successfully created or updated, products with failures, products which did not contain any changes compared to the last sent version.
-*ProductsV2Api* | [**productsV2SucceededByProcessId**](docs/Api/ProductsV2Api.md#productsv2succeededbyprocessid) | **GET** /v2/products/update-tasks/{processUuid}/succeeded | Request the succeeded products of the product data delivery with the linked processUuid. The response will contain a list of successfully delivered products.
-*ProductsV2Api* | [**productsV2UnchangedByProcessId**](docs/Api/ProductsV2Api.md#productsv2unchangedbyprocessid) | **GET** /v2/products/update-tasks/{processUuid}/unchanged | Request the unchanged products of the product data delivery with the linked processUuid. The response will contain a list of unchanged products.
-*ProductsV2Api* | [**productsV2UpdateActiveStatus**](docs/Api/ProductsV2Api.md#productsv2updateactivestatus) | **POST** /v2/products/active-status | Update the active status of your product variations and get a process-id to query results.
+*ProductsV2Api* | [**productsV2GetVariationActiveStatus**](docs/Api/ProductsV2Api.md#productsv2getvariationactivestatus) | **GET** /v2/products/{sku}/active-status | Read the active status of a single product variation
+*ProductsV2Api* | [**productsV2ProgressByProcessId**](docs/Api/ProductsV2Api.md#productsv2progressbyprocessid) | **GET** /v2/products/update-tasks/{processUuid} | Request the results of a product data delivery
+*ProductsV2Api* | [**productsV2SucceededByProcessId**](docs/Api/ProductsV2Api.md#productsv2succeededbyprocessid) | **GET** /v2/products/update-tasks/{processUuid}/succeeded | List succeeded products of a product data delivery
+*ProductsV2Api* | [**productsV2UnchangedByProcessId**](docs/Api/ProductsV2Api.md#productsv2unchangedbyprocessid) | **GET** /v2/products/update-tasks/{processUuid}/unchanged | List unchanged products of a product data delivery
+*ProductsV2Api* | [**productsV2UpdateActiveStatus**](docs/Api/ProductsV2Api.md#productsv2updateactivestatus) | **POST** /v2/products/active-status | Update active status
 *ProductsV2Api* | [**productsV2UpdateProductVariationPrices**](docs/Api/ProductsV2Api.md#productsv2updateproductvariationprices) | **POST** /v2/products/prices | Update product variation prices
-*QuantitiesV2Api* | [**quantitiesV2GetAvailableQuantities**](docs/Api/QuantitiesV2Api.md#quantitiesv2getavailablequantities) | **GET** /v2/quantities | Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
+*ProductsV3Api* | [**productsV3CreateOrUpdateProductVariations**](docs/Api/ProductsV3Api.md#productsv3createorupdateproductvariations) | **POST** /v3/products | Create or update product variations
+*ProductsV3Api* | [**productsV3FailedByProcessId**](docs/Api/ProductsV3Api.md#productsv3failedbyprocessid) | **GET** /v3/products/update-tasks/{processUuid}/failed | List failed products of a product data delivery
+*ProductsV3Api* | [**productsV3GetActiveStatus**](docs/Api/ProductsV3Api.md#productsv3getactivestatus) | **GET** /v3/products/active-status | Read active status
+*ProductsV3Api* | [**productsV3GetBrands**](docs/Api/ProductsV3Api.md#productsv3getbrands) | **GET** /v3/products/brands | List of allowed brands
+*ProductsV3Api* | [**productsV3GetCategoryGroups**](docs/Api/ProductsV3Api.md#productsv3getcategorygroups) | **GET** /v3/products/categories | Read product categories
+*ProductsV3Api* | [**productsV3GetContentChanges**](docs/Api/ProductsV3Api.md#productsv3getcontentchanges) | **GET** /v3/products/{sku}/content-changes | Read content changes for a single product variation
+*ProductsV3Api* | [**productsV3GetContentChanges2**](docs/Api/ProductsV3Api.md#productsv3getcontentchanges2) | **GET** /v3/products/content-changes | Read content changes within time period
+*ProductsV3Api* | [**productsV3GetMarketPlaceStatus**](docs/Api/ProductsV3Api.md#productsv3getmarketplacestatus) | **GET** /v3/products/{sku}/marketplace-status | Read marketplace status for a single product variation
+*ProductsV3Api* | [**productsV3GetMarketPlaceStatusList**](docs/Api/ProductsV3Api.md#productsv3getmarketplacestatuslist) | **GET** /v3/products/marketplace-status | Read marketplace status of product variations
+*ProductsV3Api* | [**productsV3GetPartnerProducts**](docs/Api/ProductsV3Api.md#productsv3getpartnerproducts) | **GET** /v3/products | Read product variations
+*ProductsV3Api* | [**productsV3GetProductVariation**](docs/Api/ProductsV3Api.md#productsv3getproductvariation) | **GET** /v3/products/{sku} | Read a single product variation
+*ProductsV3Api* | [**productsV3GetProductVariationPrice**](docs/Api/ProductsV3Api.md#productsv3getproductvariationprice) | **GET** /v3/products/{sku}/prices | Read a single product variation price
+*ProductsV3Api* | [**productsV3GetProductVariationPrices**](docs/Api/ProductsV3Api.md#productsv3getproductvariationprices) | **GET** /v3/products/prices | Read product variations prices
+*ProductsV3Api* | [**productsV3GetVariationActiveStatus**](docs/Api/ProductsV3Api.md#productsv3getvariationactivestatus) | **GET** /v3/products/{sku}/active-status | Read the active status of a single product variation
+*ProductsV3Api* | [**productsV3ProgressByProcessId**](docs/Api/ProductsV3Api.md#productsv3progressbyprocessid) | **GET** /v3/products/update-tasks/{processUuid} | Request the results of a product data delivery
+*ProductsV3Api* | [**productsV3SucceededByProcessId**](docs/Api/ProductsV3Api.md#productsv3succeededbyprocessid) | **GET** /v3/products/update-tasks/{processUuid}/succeeded | List succeeded products of a product data delivery
+*ProductsV3Api* | [**productsV3UnchangedByProcessId**](docs/Api/ProductsV3Api.md#productsv3unchangedbyprocessid) | **GET** /v3/products/update-tasks/{processUuid}/unchanged | List unchanged products of a product data delivery
+*ProductsV3Api* | [**productsV3UpdateActiveStatus**](docs/Api/ProductsV3Api.md#productsv3updateactivestatus) | **POST** /v3/products/active-status | Update active status
+*ProductsV3Api* | [**productsV3UpdateProductVariationPrices**](docs/Api/ProductsV3Api.md#productsv3updateproductvariationprices) | **POST** /v3/products/prices | Update product variation prices
+*QuantitiesV2Api* | [**quantitiesV2GetAvailableQuantities**](docs/Api/QuantitiesV2Api.md#quantitiesv2getavailablequantities) | **GET** /v2/quantities | Get available quantities for a specific Partner (Upto 200 per request).
 *QuantitiesV2Api* | [**quantitiesV2GetAvailableQuantityBySku**](docs/Api/QuantitiesV2Api.md#quantitiesv2getavailablequantitybysku) | **GET** /v2/quantities/{sku} | Get available quantity for a specific Sku
 *QuantitiesV2Api* | [**quantitiesV2StoreAvailableQuantitiesUsingPOST**](docs/Api/QuantitiesV2Api.md#quantitiesv2storeavailablequantitiesusingpost) | **POST** /v2/quantities | Update the available quantity for a specific SKU (up to 200 SKUs per request)
 *ReceiptsV2Api* | [**receiptsV2GetReceiptPdfUsingGET3**](docs/Api/ReceiptsV2Api.md#receiptsv2getreceiptpdfusingget3) | **GET** /v2/receipts/{receiptNumber}.pdf | Get the PDF document of a specific receipt by receipt number.
 *ReceiptsV2Api* | [**receiptsV2GetReceiptUsingGET5**](docs/Api/ReceiptsV2Api.md#receiptsv2getreceiptusingget5) | **GET** /v2/receipts/{receiptNumber} | Get a specific receipt for the given receipt number as JSON object
 *ReceiptsV2Api* | [**receiptsV2GetReceiptsUsingGET5**](docs/Api/ReceiptsV2Api.md#receiptsv2getreceiptsusingget5) | **GET** /v2/receipts | Get all receipts as list of JSON objects
+*ReceiptsV3Api* | [**receiptsV3GetReceiptPdfUsingGET3**](docs/Api/ReceiptsV3Api.md#receiptsv3getreceiptpdfusingget3) | **GET** /v3/receipts/{receiptNumber}.pdf | Get the PDF document of a specific receipt by receipt number.
+*ReceiptsV3Api* | [**receiptsV3GetReceiptUsingGET5**](docs/Api/ReceiptsV3Api.md#receiptsv3getreceiptusingget5) | **GET** /v3/receipts/{receiptNumber} | Get a specific receipt for the given receipt number as JSON object
+*ReceiptsV3Api* | [**receiptsV3GetReceiptsUsingGET5**](docs/Api/ReceiptsV3Api.md#receiptsv3getreceiptsusingget5) | **GET** /v3/receipts | Get all receipts as list of JSON objects
 *ReturnsV2Api* | [**returnsV2GetPositionItemsForUsingGETV2**](docs/Api/ReturnsV2Api.md#returnsv2getpositionitemsforusinggetv2) | **GET** /v2/returns | Get all the items filtered on return status
 *ReturnsV2Api* | [**returnsV2ReceiveAcceptedReturnsV2UsingPOSTV2**](docs/Api/ReturnsV2Api.md#returnsv2receiveacceptedreturnsv2usingpostv2) | **POST** /v2/returns/acceptance | Accept the return for a sent position item (up to 200 items per request)
 *ReturnsV2Api* | [**returnsV2ReceiveRejectedReturnsV2UsingPOSTV2**](docs/Api/ReturnsV2Api.md#returnsv2receiverejectedreturnsv2usingpostv2) | **POST** /v2/returns/rejection | Reject the return for a sent position item (up to 200 items per request)
@@ -681,20 +1127,28 @@ Class | Method | HTTP request | Description
 *ShipmentsV1Api* | [**shipmentsV1AppendPositionItemsUsingPOST**](docs/Api/ShipmentsV1Api.md#shipmentsv1appendpositionitemsusingpost) | **POST** /v1/shipments/{shipmentId}/positionitems | Correct an existing shipment (add sent items) by shipment ID.
 *ShipmentsV1Api* | [**shipmentsV1CreatedAndSentShipmentUsingPOST**](docs/Api/ShipmentsV1Api.md#shipmentsv1createdandsentshipmentusingpost) | **POST** /v1/shipments | Create a shipment and mark the position items as sent.
 *ShipmentsV1Api* | [**shipmentsV1ListShipmentsUsingGET**](docs/Api/ShipmentsV1Api.md#shipmentsv1listshipmentsusingget) | **GET** /v1/shipments | Retrieve shipments.
-*ShipmentsV1Api* | [**shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET**](docs/Api/ShipmentsV1Api.md#shipmentsv1shipmentbycarrierandtrackingnumberusingget) | **GET** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber} | Retrieve shipment by shipment ID.
-*ShipmentsV1Api* | [**shipmentsV1ShipmentUsingGET**](docs/Api/ShipmentsV1Api.md#shipmentsv1shipmentusingget) | **GET** /v1/shipments/{shipmentId} | Retrieve a shipment and its position items.
+*ShipmentsV1Api* | [**shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET**](docs/Api/ShipmentsV1Api.md#shipmentsv1shipmentbycarrierandtrackingnumberusingget) | **GET** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber} | Retrieve shipment by carrier and tracking number.
+*ShipmentsV1Api* | [**shipmentsV1ShipmentUsingGET**](docs/Api/ShipmentsV1Api.md#shipmentsv1shipmentusingget) | **GET** /v1/shipments/{shipmentId} | Retrieve shipment by shipment ID.
 
 ## Models
 
+- [APIErrorResponsePriceReductionsV1](docs/Model/APIErrorResponsePriceReductionsV1.md)
+- [APIResponsePriceReductionsV1](docs/Model/APIResponsePriceReductionsV1.md)
 - [AcceptedPartnerReturnV2ReturnsV2](docs/Model/AcceptedPartnerReturnV2ReturnsV2.md)
+- [AcceptedPriceReductionResponsePriceReductionsV1](docs/Model/AcceptedPriceReductionResponsePriceReductionsV1.md)
 - [AcceptedReturnMultiStatusResponseReturnsV2](docs/Model/AcceptedReturnMultiStatusResponseReturnsV2.md)
 - [AcceptedStatusData](docs/Model/AcceptedStatusData.md)
 - [AcceptedStatusDataReturnsV2](docs/Model/AcceptedStatusDataReturnsV2.md)
 - [ActiveStatusListRequestProductsV2](docs/Model/ActiveStatusListRequestProductsV2.md)
+- [ActiveStatusListRequestProductsV3](docs/Model/ActiveStatusListRequestProductsV3.md)
 - [ActiveStatusListResponseProductsV2](docs/Model/ActiveStatusListResponseProductsV2.md)
+- [ActiveStatusListResponseProductsV3](docs/Model/ActiveStatusListResponseProductsV3.md)
 - [ActiveStatusProductsV2](docs/Model/ActiveStatusProductsV2.md)
+- [ActiveStatusProductsV3](docs/Model/ActiveStatusProductsV3.md)
 - [AdditionalRequirementProductsV2](docs/Model/AdditionalRequirementProductsV2.md)
+- [AdditionalRequirementProductsV3](docs/Model/AdditionalRequirementProductsV3.md)
 - [AddressOrdersV4](docs/Model/AddressOrdersV4.md)
+- [AddressReceiptsV3](docs/Model/AddressReceiptsV3.md)
 - [AddressShipmentsV1](docs/Model/AddressShipmentsV1.md)
 - [AmountOrdersV4](docs/Model/AmountOrdersV4.md)
 - [AnnouncedStatusData](docs/Model/AnnouncedStatusData.md)
@@ -703,8 +1157,12 @@ Class | Method | HTTP request | Description
 - [ApiErrorResponseV2QuantitiesV2](docs/Model/ApiErrorResponseV2QuantitiesV2.md)
 - [ApiErrorReturnsV2](docs/Model/ApiErrorReturnsV2.md)
 - [ApiErrorV2QuantitiesV2](docs/Model/ApiErrorV2QuantitiesV2.md)
+- [AppInstallationAccessTokenResponseDeveloperV1](docs/Model/AppInstallationAccessTokenResponseDeveloperV1.md)
+- [AppInstallationResponseDeveloperV1](docs/Model/AppInstallationResponseDeveloperV1.md)
 - [AttributeDefinitionProductsV2](docs/Model/AttributeDefinitionProductsV2.md)
+- [AttributeDefinitionProductsV3](docs/Model/AttributeDefinitionProductsV3.md)
 - [AttributeProductsV2](docs/Model/AttributeProductsV2.md)
+- [AttributeProductsV3](docs/Model/AttributeProductsV3.md)
 - [AvailableQuantityRequestDTOV2QuantitiesV2](docs/Model/AvailableQuantityRequestDTOV2QuantitiesV2.md)
 - [AvailableQuantityResponseDTOV2QuantitiesV2](docs/Model/AvailableQuantityResponseDTOV2QuantitiesV2.md)
 - [AvailableQuantityResponseV2QuantitiesV2](docs/Model/AvailableQuantityResponseV2QuantitiesV2.md)
@@ -713,79 +1171,162 @@ Class | Method | HTTP request | Description
 - [BadRequestAddPositionItemByShipmentIdShipmentsV1](docs/Model/BadRequestAddPositionItemByShipmentIdShipmentsV1.md)
 - [BadRequestAddPositionItemByTrackingNumberShipmentsV1](docs/Model/BadRequestAddPositionItemByTrackingNumberShipmentsV1.md)
 - [BadRequestShipmentsV1](docs/Model/BadRequestShipmentsV1.md)
+- [BrandListResponseProductsV3](docs/Model/BrandListResponseProductsV3.md)
 - [BrandProductsV2](docs/Model/BrandProductsV2.md)
+- [BrandProductsV3](docs/Model/BrandProductsV3.md)
 - [CategoryGroupProductsV2](docs/Model/CategoryGroupProductsV2.md)
+- [CategoryGroupProductsV3](docs/Model/CategoryGroupProductsV3.md)
 - [CategoryGroupsProductsV2](docs/Model/CategoryGroupsProductsV2.md)
+- [CategoryGroupsProductsV3](docs/Model/CategoryGroupsProductsV3.md)
+- [ClientCredentialResponseDeveloperV1](docs/Model/ClientCredentialResponseDeveloperV1.md)
 - [ConditionProductsV2](docs/Model/ConditionProductsV2.md)
+- [ConditionProductsV3](docs/Model/ConditionProductsV3.md)
 - [ConflictAddPositionItemByShipmentIdShipmentsV1](docs/Model/ConflictAddPositionItemByShipmentIdShipmentsV1.md)
 - [ConflictAddPositionItemByTrackingNumberShipmentsV1](docs/Model/ConflictAddPositionItemByTrackingNumberShipmentsV1.md)
+- [ConflictPositionItemIdPriceReductionsV1](docs/Model/ConflictPositionItemIdPriceReductionsV1.md)
 - [ConflictShipmentsV1](docs/Model/ConflictShipmentsV1.md)
 - [ContentChangeProductsV2](docs/Model/ContentChangeProductsV2.md)
+- [ContentChangeProductsV3](docs/Model/ContentChangeProductsV3.md)
 - [ContentChangesApiResultProductsV2](docs/Model/ContentChangesApiResultProductsV2.md)
+- [ContentChangesApiResultProductsV3](docs/Model/ContentChangesApiResultProductsV3.md)
+- [ContentChangesLinkProductsV3](docs/Model/ContentChangesLinkProductsV3.md)
 - [CreateShipmentRequestShipmentsV1](docs/Model/CreateShipmentRequestShipmentsV1.md)
 - [CreateShipmentResponseShipmentsV1](docs/Model/CreateShipmentResponseShipmentsV1.md)
 - [CustomerReceiptsV2](docs/Model/CustomerReceiptsV2.md)
+- [CustomerReceiptsV3](docs/Model/CustomerReceiptsV3.md)
 - [DeliveryAddressReceiptsV2](docs/Model/DeliveryAddressReceiptsV2.md)
+- [DeliveryCostsReceiptsV3](docs/Model/DeliveryCostsReceiptsV3.md)
 - [DeliveryProductsV2](docs/Model/DeliveryProductsV2.md)
+- [DeliveryProductsV3](docs/Model/DeliveryProductsV3.md)
+- [DetailsReceiptsV3](docs/Model/DetailsReceiptsV3.md)
+- [DimensionOrdersV4](docs/Model/DimensionOrdersV4.md)
 - [DiscountDetailsReceiptsV2](docs/Model/DiscountDetailsReceiptsV2.md)
 - [ErrorDescriptionShipmentsV1](docs/Model/ErrorDescriptionShipmentsV1.md)
+- [ForbiddenApplyPriceReductionPriceReductionsV1](docs/Model/ForbiddenApplyPriceReductionPriceReductionsV1.md)
+- [ForbiddenGetPriceReductionPriceReductionsV1](docs/Model/ForbiddenGetPriceReductionPriceReductionsV1.md)
 - [ForbiddenGetShipmentByShipmentIdShipmentsV1](docs/Model/ForbiddenGetShipmentByShipmentIdShipmentsV1.md)
 - [ForbiddenGetShipmentByTrackingNumberShipmentsV1](docs/Model/ForbiddenGetShipmentByTrackingNumberShipmentsV1.md)
 - [InitialDeliveryFeeOrdersV4](docs/Model/InitialDeliveryFeeOrdersV4.md)
 - [InitialDiscountOrdersV4](docs/Model/InitialDiscountOrdersV4.md)
 - [InternalServerErrorAddPositionItemByShipmentIdShipmentsV1](docs/Model/InternalServerErrorAddPositionItemByShipmentIdShipmentsV1.md)
 - [InternalServerErrorAddPositionItemByTrackingNumberShipmentsV1](docs/Model/InternalServerErrorAddPositionItemByTrackingNumberShipmentsV1.md)
+- [InternalServerErrorApplyPriceReductionPriceReductionsV1](docs/Model/InternalServerErrorApplyPriceReductionPriceReductionsV1.md)
 - [InternalServerErrorGetShipmentByShipmentIdShipmentsV1](docs/Model/InternalServerErrorGetShipmentByShipmentIdShipmentsV1.md)
 - [InternalServerErrorGetShipmentByTrackingNumberShipmentsV1](docs/Model/InternalServerErrorGetShipmentByTrackingNumberShipmentsV1.md)
 - [InternalServerErrorGetShipmentListShipmentsV1](docs/Model/InternalServerErrorGetShipmentListShipmentsV1.md)
 - [InternalServerErrorShipmentsV1](docs/Model/InternalServerErrorShipmentsV1.md)
+- [ItemPartialRefundPositionsReceiptsV3](docs/Model/ItemPartialRefundPositionsReceiptsV3.md)
+- [ItemPositionsReceiptsV3](docs/Model/ItemPositionsReceiptsV3.md)
 - [LineItemReceiptsV2](docs/Model/LineItemReceiptsV2.md)
+- [LineItemReceiptsV2PriceToPay](docs/Model/LineItemReceiptsV2PriceToPay.md)
+- [LineItemReceiptsV2Total](docs/Model/LineItemReceiptsV2Total.md)
+- [LineItemReceiptsV2TotalDiscount](docs/Model/LineItemReceiptsV2TotalDiscount.md)
+- [LineItemReceiptsV2UnitPrice](docs/Model/LineItemReceiptsV2UnitPrice.md)
+- [LineItemsReceiptsV3](docs/Model/LineItemsReceiptsV3.md)
 - [LinkOrdersV4](docs/Model/LinkOrdersV4.md)
+- [LinkPriceReductionsV1](docs/Model/LinkPriceReductionsV1.md)
 - [LinkProductsV2](docs/Model/LinkProductsV2.md)
+- [LinkProductsV3](docs/Model/LinkProductsV3.md)
 - [LinkQuantitiesV2](docs/Model/LinkQuantitiesV2.md)
 - [LinkReceiptsV2](docs/Model/LinkReceiptsV2.md)
+- [LinkReceiptsV3](docs/Model/LinkReceiptsV3.md)
 - [LinkReturnsV2](docs/Model/LinkReturnsV2.md)
 - [LinkShipmentsV1](docs/Model/LinkShipmentsV1.md)
+- [LinkedItemDetailsReceiptsV3](docs/Model/LinkedItemDetailsReceiptsV3.md)
 - [LogisticsProductsV2](docs/Model/LogisticsProductsV2.md)
+- [LogisticsProductsV3](docs/Model/LogisticsProductsV3.md)
 - [MarketPlaceStatusApiResultProductsV2](docs/Model/MarketPlaceStatusApiResultProductsV2.md)
+- [MarketPlaceStatusApiResultProductsV3](docs/Model/MarketPlaceStatusApiResultProductsV3.md)
 - [MarketPlaceStatusErrorProductsV2](docs/Model/MarketPlaceStatusErrorProductsV2.md)
+- [MarketPlaceStatusErrorProductsV3](docs/Model/MarketPlaceStatusErrorProductsV3.md)
 - [MarketPlaceStatusInformationProductsV2](docs/Model/MarketPlaceStatusInformationProductsV2.md)
+- [MarketPlaceStatusInformationProductsV3](docs/Model/MarketPlaceStatusInformationProductsV3.md)
 - [MarketPlaceStatusLinkProductsV2](docs/Model/MarketPlaceStatusLinkProductsV2.md)
+- [MarketPlaceStatusLinkProductsV3](docs/Model/MarketPlaceStatusLinkProductsV3.md)
 - [MarketPlaceStatusProductsV2](docs/Model/MarketPlaceStatusProductsV2.md)
+- [MarketPlaceStatusProductsV3](docs/Model/MarketPlaceStatusProductsV3.md)
+- [MaxOrderQuantityProductsV3](docs/Model/MaxOrderQuantityProductsV3.md)
 - [MediaAssetProductsV2](docs/Model/MediaAssetProductsV2.md)
+- [MediaAssetProductsV3](docs/Model/MediaAssetProductsV3.md)
 - [MisdirectedStatusData](docs/Model/MisdirectedStatusData.md)
 - [MisdirectedStatusDataReturnsV2](docs/Model/MisdirectedStatusDataReturnsV2.md)
+- [MonetaryAmount](docs/Model/MonetaryAmount.md)
+- [MonetaryAmount1](docs/Model/MonetaryAmount1.md)
+- [MonetaryAmount2](docs/Model/MonetaryAmount2.md)
+- [MonetaryAmount3](docs/Model/MonetaryAmount3.md)
+- [MonetaryAmount4](docs/Model/MonetaryAmount4.md)
+- [MonetaryAmount5](docs/Model/MonetaryAmount5.md)
+- [MonetaryAmount6](docs/Model/MonetaryAmount6.md)
+- [MonetaryAmount7](docs/Model/MonetaryAmount7.md)
+- [MonetaryAmount8](docs/Model/MonetaryAmount8.md)
+- [MonetaryAmount9](docs/Model/MonetaryAmount9.md)
 - [MonetaryAmountProductsV2](docs/Model/MonetaryAmountProductsV2.md)
+- [MonetaryAmountProductsV3](docs/Model/MonetaryAmountProductsV3.md)
 - [NormPriceInfoProductsV2](docs/Model/NormPriceInfoProductsV2.md)
+- [NormPriceInfoProductsV3](docs/Model/NormPriceInfoProductsV3.md)
 - [NotFoundAddPositionItemByShipmentIdShipmentsV1](docs/Model/NotFoundAddPositionItemByShipmentIdShipmentsV1.md)
 - [NotFoundAddPositionItemByTrackingNumberShipmentsV1](docs/Model/NotFoundAddPositionItemByTrackingNumberShipmentsV1.md)
 - [NotFoundGetShipmentByShipmentIdShipmentsV1](docs/Model/NotFoundGetShipmentByShipmentIdShipmentsV1.md)
 - [NotFoundGetShipmentByTrackingNumberShipmentsV1](docs/Model/NotFoundGetShipmentByTrackingNumberShipmentsV1.md)
+- [NotFoundPositionItemIdPriceReductionsV1](docs/Model/NotFoundPositionItemIdPriceReductionsV1.md)
+- [NotFoundPriceReductionForPositionItemIdPriceReductionsV1](docs/Model/NotFoundPriceReductionForPositionItemIdPriceReductionsV1.md)
 - [OrderLifecycleInformationOrdersV4](docs/Model/OrderLifecycleInformationOrdersV4.md)
+- [OrderProductsV3](docs/Model/OrderProductsV3.md)
 - [PackingUnitProductsV2](docs/Model/PackingUnitProductsV2.md)
+- [PackingUnitProductsV3](docs/Model/PackingUnitProductsV3.md)
 - [PartialRefundReceiptsV2](docs/Model/PartialRefundReceiptsV2.md)
+- [PartialRefundReceiptsV2PartialRefundAmount](docs/Model/PartialRefundReceiptsV2PartialRefundAmount.md)
 - [PartnerOrderListOrdersV4](docs/Model/PartnerOrderListOrdersV4.md)
 - [PartnerOrderOrdersV4](docs/Model/PartnerOrderOrdersV4.md)
+- [PartnerPriceReductionRequestPriceReductionsV1](docs/Model/PartnerPriceReductionRequestPriceReductionsV1.md)
+- [PartnerPriceReductionRequestPriceReductionsV1PriceReduction](docs/Model/PartnerPriceReductionRequestPriceReductionsV1PriceReduction.md)
 - [PartnerReceiptsV2](docs/Model/PartnerReceiptsV2.md)
+- [PartnerReceiptsV3](docs/Model/PartnerReceiptsV3.md)
 - [PayloadTooLargeApiErrorResponseV2QuantitiesV2](docs/Model/PayloadTooLargeApiErrorResponseV2QuantitiesV2.md)
 - [PaymentOrdersV4](docs/Model/PaymentOrdersV4.md)
+- [PaymentReceiptsV3](docs/Model/PaymentReceiptsV3.md)
 - [PositionItemListReturnsV2](docs/Model/PositionItemListReturnsV2.md)
 - [PositionItemOrdersV4](docs/Model/PositionItemOrdersV4.md)
 - [PositionItemReturnsV2](docs/Model/PositionItemReturnsV2.md)
 - [PositionItemShipmentsV1](docs/Model/PositionItemShipmentsV1.md)
 - [PriceApiResultProductsV2](docs/Model/PriceApiResultProductsV2.md)
+- [PriceApiResultProductsV3](docs/Model/PriceApiResultProductsV3.md)
+- [PriceModificationReceiptsV3](docs/Model/PriceModificationReceiptsV3.md)
+- [PriceReceiptsV3](docs/Model/PriceReceiptsV3.md)
+- [PriceReceiptsV3Gross](docs/Model/PriceReceiptsV3Gross.md)
+- [PriceReceiptsV3Net](docs/Model/PriceReceiptsV3Net.md)
+- [PriceReceiptsV3Tax](docs/Model/PriceReceiptsV3Tax.md)
+- [PriceReductionDetailPriceReductionsV1](docs/Model/PriceReductionDetailPriceReductionsV1.md)
+- [PriceReductionDetailPriceReductionsV1PriceReduction](docs/Model/PriceReductionDetailPriceReductionsV1PriceReduction.md)
+- [PriceReductionResponsePriceReductionsV1](docs/Model/PriceReductionResponsePriceReductionsV1.md)
+- [PriceReductionResponsePriceReductionsV1InvoicePrice](docs/Model/PriceReductionResponsePriceReductionsV1InvoicePrice.md)
+- [PriceReductionResponsePriceReductionsV1TotalPriceReduction](docs/Model/PriceReductionResponsePriceReductionsV1TotalPriceReduction.md)
+- [PriceReductionsResponsePriceReductionsV1](docs/Model/PriceReductionsResponsePriceReductionsV1.md)
 - [PricingProductsV2](docs/Model/PricingProductsV2.md)
+- [PricingProductsV3](docs/Model/PricingProductsV3.md)
 - [ProductDescriptionProductsV2](docs/Model/ProductDescriptionProductsV2.md)
+- [ProductDescriptionProductsV3](docs/Model/ProductDescriptionProductsV3.md)
 - [ProductOrdersV4](docs/Model/ProductOrdersV4.md)
 - [ProductProcessProgressProductsV2](docs/Model/ProductProcessProgressProductsV2.md)
+- [ProductProcessProgressProductsV3](docs/Model/ProductProcessProgressProductsV3.md)
 - [ProductProcessResultLinkProductsV2](docs/Model/ProductProcessResultLinkProductsV2.md)
+- [ProductProcessResultLinkProductsV3](docs/Model/ProductProcessResultLinkProductsV3.md)
 - [ProductProcessResultProductsV2](docs/Model/ProductProcessResultProductsV2.md)
+- [ProductProcessResultProductsV3](docs/Model/ProductProcessResultProductsV3.md)
 - [ProductProcessTaskErrorProductsV2](docs/Model/ProductProcessTaskErrorProductsV2.md)
+- [ProductProcessTaskErrorProductsV3](docs/Model/ProductProcessTaskErrorProductsV3.md)
 - [ProductProcessTaskResultProductsV2](docs/Model/ProductProcessTaskResultProductsV2.md)
+- [ProductProcessTaskResultProductsV3](docs/Model/ProductProcessTaskResultProductsV3.md)
 - [ProductVariationApiResultProductsV2](docs/Model/ProductVariationApiResultProductsV2.md)
+- [ProductVariationApiResultProductsV3](docs/Model/ProductVariationApiResultProductsV3.md)
 - [ProductVariationProductsV2](docs/Model/ProductVariationProductsV2.md)
+- [ProductVariationProductsV3](docs/Model/ProductVariationProductsV3.md)
 - [ReceiptReceiptsV2](docs/Model/ReceiptReceiptsV2.md)
+- [ReceiptReceiptsV3](docs/Model/ReceiptReceiptsV3.md)
+- [ReceiptReceiptsV3AmountDue](docs/Model/ReceiptReceiptsV3AmountDue.md)
+- [ReceiptReceiptsV3TotalsGrossAmount](docs/Model/ReceiptReceiptsV3TotalsGrossAmount.md)
 - [ReceiptsListReceiptsV2](docs/Model/ReceiptsListReceiptsV2.md)
+- [ReceiptsListReceiptsV3](docs/Model/ReceiptsListReceiptsV3.md)
 - [RejectedPartnerReturnV2ReturnsV2](docs/Model/RejectedPartnerReturnV2ReturnsV2.md)
 - [RejectedPositionItemReturnsV2](docs/Model/RejectedPositionItemReturnsV2.md)
 - [RejectedReturnMultiStatusResponseReturnsV2](docs/Model/RejectedReturnMultiStatusResponseReturnsV2.md)
@@ -796,24 +1337,46 @@ Class | Method | HTTP request | Description
 - [ReturnTrackingKeyShipmentsV1](docs/Model/ReturnTrackingKeyShipmentsV1.md)
 - [ReturnedPositionItemReturnsV2](docs/Model/ReturnedPositionItemReturnsV2.md)
 - [SaleProductsV2](docs/Model/SaleProductsV2.md)
+- [SaleProductsV3](docs/Model/SaleProductsV3.md)
 - [ServicePositionInfoReceiptsV2](docs/Model/ServicePositionInfoReceiptsV2.md)
+- [ServicePositionInfoReceiptsV2Total](docs/Model/ServicePositionInfoReceiptsV2Total.md)
+- [ServicePositionInfoReceiptsV2UnitPrice](docs/Model/ServicePositionInfoReceiptsV2UnitPrice.md)
 - [ServicePositionItemInfoReceiptsV2](docs/Model/ServicePositionItemInfoReceiptsV2.md)
+- [ServicePositionReceiptsV3](docs/Model/ServicePositionReceiptsV3.md)
+- [ServiceRelationsReceiptsV3](docs/Model/ServiceRelationsReceiptsV3.md)
 - [ShipmentListShipmentsV1](docs/Model/ShipmentListShipmentsV1.md)
 - [ShipmentShipmentsV1](docs/Model/ShipmentShipmentsV1.md)
+- [ShipmentStateShipmentsV1](docs/Model/ShipmentStateShipmentsV1.md)
 - [ShipmentWithMinimumDetailsShipmentsV1](docs/Model/ShipmentWithMinimumDetailsShipmentsV1.md)
 - [ShippingCostReceiptsV2](docs/Model/ShippingCostReceiptsV2.md)
 - [ShippingFeeReceiptsV2](docs/Model/ShippingFeeReceiptsV2.md)
+- [ShippingFeeReceiptsV2Price](docs/Model/ShippingFeeReceiptsV2Price.md)
 - [SkuPricingProductsV2](docs/Model/SkuPricingProductsV2.md)
+- [SkuPricingProductsV3](docs/Model/SkuPricingProductsV3.md)
 - [TotalReceiptsV2](docs/Model/TotalReceiptsV2.md)
+- [TotalReceiptsV2AmountDue](docs/Model/TotalReceiptsV2AmountDue.md)
+- [TotalReceiptsV2Gross](docs/Model/TotalReceiptsV2Gross.md)
+- [TotalReceiptsV2Net](docs/Model/TotalReceiptsV2Net.md)
+- [TotalReceiptsV2VatValue](docs/Model/TotalReceiptsV2VatValue.md)
 - [TrackingInfoOrdersV4](docs/Model/TrackingInfoOrdersV4.md)
 - [TrackingKeyShipmentsV1](docs/Model/TrackingKeyShipmentsV1.md)
 - [UpdateQuantityMultiStatusResponseQuantitiesV2](docs/Model/UpdateQuantityMultiStatusResponseQuantitiesV2.md)
 
 ## Authorization
 
-### JWT
+### bearerAuth
 
 - **Type**: Bearer authentication (JWT)
+
+
+### onBehalfOfPartner
+
+- **Type**: `OAuth`
+- **Flow**: `accessCode`
+- **Authorization URL**: `https://portal.otto.market/oauth2/auth`
+- **Scopes**: 
+    - **installation**: read installation details of a partner
+    - **partnerId**: read Otto partner id
 
 ## Tests
 

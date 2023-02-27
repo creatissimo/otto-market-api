@@ -1,12 +1,12 @@
 # OpenAPI\Client\ReceiptsV2Api
 
-All URIs are relative to https://api.otto.market.
+All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**receiptsV2GetReceiptPdfUsingGET3()**](ReceiptsV2Api.md#receiptsV2GetReceiptPdfUsingGET3) | **GET** /v2/receipts/{receiptNumber}.pdf | Get the PDF document of a specific receipt by receipt number.
-[**receiptsV2GetReceiptUsingGET5()**](ReceiptsV2Api.md#receiptsV2GetReceiptUsingGET5) | **GET** /v2/receipts/{receiptNumber} | Get a specific receipt for the given receipt number as JSON object
-[**receiptsV2GetReceiptsUsingGET5()**](ReceiptsV2Api.md#receiptsV2GetReceiptsUsingGET5) | **GET** /v2/receipts | Get all receipts as list of JSON objects
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**receiptsV2GetReceiptPdfUsingGET3()**](ReceiptsV2Api.md#receiptsV2GetReceiptPdfUsingGET3) | **GET** /v2/receipts/{receiptNumber}.pdf | Get the PDF document of a specific receipt by receipt number. |
+| [**receiptsV2GetReceiptUsingGET5()**](ReceiptsV2Api.md#receiptsV2GetReceiptUsingGET5) | **GET** /v2/receipts/{receiptNumber} | Get a specific receipt for the given receipt number as JSON object |
+| [**receiptsV2GetReceiptsUsingGET5()**](ReceiptsV2Api.md#receiptsV2GetReceiptsUsingGET5) | **GET** /v2/receipts | Get all receipts as list of JSON objects |
 
 
 ## `receiptsV2GetReceiptPdfUsingGET3()`
@@ -24,7 +24,7 @@ Get the PDF document of a specific receipt by receipt number.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -45,9 +45,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **receipt_number** | **string**| ReceiptNumber |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **receipt_number** | **string**| ReceiptNumber | |
 
 ### Return type
 
@@ -55,7 +55,7 @@ void (empty response body)
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -81,7 +81,7 @@ Get a specific receipt for the given receipt number as JSON object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -103,9 +103,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **receipt_number** | **string**| ReceiptNumber |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **receipt_number** | **string**| ReceiptNumber | |
 
 ### Return type
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -141,7 +141,7 @@ The receipts will be sorted based on creationDate, latest one comes first. This 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -166,12 +166,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **int**| Page size to limit the number of receipts returned in the response | [optional] [default to 128]
- **page** | **int**| Page number to fetch. This parameter is required to fetch data for specific page number | [optional] [default to 1]
- **type** | **string**| Search for receipts filtered by receipt type | [optional]
- **sales_order_id** | **string**| Search for receipts filtered by sales order Id | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| Page size to limit the number of receipts returned in the response | [optional] [default to 128] |
+| **page** | **int**| Page number to fetch. This parameter is required to fetch data for specific page number | [optional] [default to 1] |
+| **type** | **string**| Search for receipts filtered by receipt type | [optional] |
+| **sales_order_id** | **string**| Search for receipts filtered by sales order Id | [optional] |
 
 ### Return type
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

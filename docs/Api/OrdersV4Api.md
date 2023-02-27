@@ -1,20 +1,20 @@
 # OpenAPI\Client\OrdersV4Api
 
-All URIs are relative to https://api.otto.market.
+All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ordersV4CancelPartnerOrderPositionItems()**](OrdersV4Api.md#ordersV4CancelPartnerOrderPositionItems) | **POST** /v4/orders/{salesOrderId}/positionItems/{positionItemId}/cancellation | Cancel specific position items of an order
-[**ordersV4CancelPartnerOrders()**](OrdersV4Api.md#ordersV4CancelPartnerOrders) | **POST** /v4/orders/{salesOrderId}/cancellation | Cancel all position items of an order
-[**ordersV4FindPartnerOrders()**](OrdersV4Api.md#ordersV4FindPartnerOrders) | **GET** /v4/orders | List of orders filtered by fulfillment state
-[**ordersV4GetPartnerOrderByOrderNumber()**](OrdersV4Api.md#ordersV4GetPartnerOrderByOrderNumber) | **GET** /v4/orders/{orderNumber} | Get an order via order number
-[**ordersV4GetPartnerOrderBySalesOrderId()**](OrdersV4Api.md#ordersV4GetPartnerOrderBySalesOrderId) | **GET** /v4/orders/{salesOrderId} | Get an order via sales order id
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**ordersV4CancelPartnerOrderPositionItems()**](OrdersV4Api.md#ordersV4CancelPartnerOrderPositionItems) | **POST** /v4/orders/{salesOrderId}/positionItems/{positionItemIds}/cancellation | Cancel specific position items of an order |
+| [**ordersV4CancelPartnerOrders()**](OrdersV4Api.md#ordersV4CancelPartnerOrders) | **POST** /v4/orders/{salesOrderId}/cancellation | Cancel all position items of an order |
+| [**ordersV4FindPartnerOrders()**](OrdersV4Api.md#ordersV4FindPartnerOrders) | **GET** /v4/orders | List of orders filtered by fulfillment state |
+| [**ordersV4GetPartnerOrderByOrderNumber()**](OrdersV4Api.md#ordersV4GetPartnerOrderByOrderNumber) | **GET** /v4/orders/{orderNumber} | Get an order via order number |
+| [**ordersV4GetPartnerOrderBySalesOrderId()**](OrdersV4Api.md#ordersV4GetPartnerOrderBySalesOrderId) | **GET** /v4/orders/{salesOrderId} | Get an order via sales order id |
 
 
 ## `ordersV4CancelPartnerOrderPositionItems()`
 
 ```php
-ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_id)
+ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_ids)
 ```
 
 Cancel specific position items of an order
@@ -28,7 +28,7 @@ Allows to cancel specific position items of an order by salesOrderId and positio
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -39,10 +39,10 @@ $apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
     $config
 );
 $sales_order_id = 'sales_order_id_example'; // string | The salesOrderId of the order
-$position_item_id = array('position_item_id_example'); // string[] | The positionItemIds of the order to cancel
+$position_item_ids = array('position_item_ids_example'); // string[] | The positionItemIds of the order to cancel
 
 try {
-    $apiInstance->ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_id);
+    $apiInstance->ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_ids);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersV4Api->ordersV4CancelPartnerOrderPositionItems: ', $e->getMessage(), PHP_EOL;
 }
@@ -50,10 +50,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sales_order_id** | **string**| The salesOrderId of the order |
- **position_item_id** | [**string[]**](../Model/string.md)| The positionItemIds of the order to cancel |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sales_order_id** | **string**| The salesOrderId of the order | |
+| **position_item_ids** | [**string[]**](../Model/string.md)| The positionItemIds of the order to cancel | |
 
 ### Return type
 
@@ -61,7 +61,7 @@ void (empty response body)
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -89,7 +89,7 @@ Allows to cancel all position items of one or more orders by salesOrderId.<br>No
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -110,9 +110,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sales_order_id** | [**string[]**](../Model/string.md)| The salesOrderIds of the orders to cancel |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sales_order_id** | [**string[]**](../Model/string.md)| The salesOrderIds of the orders to cancel | |
 
 ### Return type
 
@@ -120,7 +120,7 @@ void (empty response body)
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -148,7 +148,7 @@ Retrieve orders sorted by order date from oldest to newest. The number of return
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -178,17 +178,17 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **from_date** | **string**| Defines earliest change date (ISO 8601) the returned orders should have | [optional]
- **from_order_date** | **string**| Only orders newer than the date specified (ISO 8601) will be returned | [optional]
- **to_order_date** | **string**| Only orders older than the date specified (ISO 8601) will be returned | [optional]
- **fulfillment_status** | **string**| &lt;br&gt;ANNOUNCED: Orders with at least one position item in state ANNOUNCED&lt;br&gt;PROCESSABLE: Orders with at least one position item in state PROCESSABLE and none in ANNOUNCED&lt;br&gt;SENT: Orders with at least one position item in state SENT and none in either ANNOUNCED or PROCESSABLE&lt;br&gt;RETURNED: Orders with at least one position item in state RETURNED and none in either ANNOUNCED, PROCESSABLE, or SENT&lt;br&gt;CANCELLED_BY_PARTNER: Orders with at least one position item in state CANCELLED_BY_PARTNER&lt;br&gt;CANCELLED_BY_MARKETPLACE: Orders with at least one position item in state CANCELLED_BY_MARKETPLACE&lt;br&gt;&lt;br&gt;If no state is provided, orders in all possible states are returned.&lt;br&gt;Several values can be passed; it will return a combination of these states without duplicates. Also see parameter &#39;mode&#39;.&lt;br&gt;&lt;br&gt;Example: ?fulfillmentStatus&#x3D;PROCESSABLE&amp;fulfillmentStatus&#x3D;CANCELLED_BY_MARKETPLACE | [optional]
- **limit** | **int**| The maximum amount of orders to return | [optional] [default to 128]
- **order_direction** | **string**| Sort result by &#39;orderColumnType&#39; in ASCending or DESCending order | [optional] [default to &#39;ASC&#39;]
- **order_column_type** | **string**| The column on which to apply &#39;orderDirection&#39; parameter | [optional] [default to &#39;ORDER_LIFECYCLE_DATE&#39;]
- **mode** | **string**| In search mode AT_LEAST_ONE orders with at least one  position item in given &#39;fulfillmentStatus&#39; will always be returned | [optional] [default to &#39;BUCKET&#39;]
- **nextcursor** | **string**| Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#39;limit&#39;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **from_date** | **string**| Defines earliest change date (ISO 8601) the returned orders should have | [optional] |
+| **from_order_date** | **string**| Only orders newer than the date specified (ISO 8601) will be returned | [optional] |
+| **to_order_date** | **string**| Only orders older than the date specified (ISO 8601) will be returned | [optional] |
+| **fulfillment_status** | **string**| &lt;br&gt;ANNOUNCED: Orders with at least one position item in state ANNOUNCED&lt;br&gt;PROCESSABLE: Orders with at least one position item in state PROCESSABLE and none in ANNOUNCED&lt;br&gt;SENT: Orders with at least one position item in state SENT and none in either ANNOUNCED or PROCESSABLE&lt;br&gt;RETURNED: Orders with at least one position item in state RETURNED and none in either ANNOUNCED, PROCESSABLE, or SENT&lt;br&gt;CANCELLED_BY_PARTNER: Orders with at least one position item in state CANCELLED_BY_PARTNER&lt;br&gt;CANCELLED_BY_MARKETPLACE: Orders with at least one position item in state CANCELLED_BY_MARKETPLACE&lt;br&gt;&lt;br&gt;If no state is provided, orders in all possible states are returned.&lt;br&gt;Several values can be passed; it will return a combination of these states without duplicates. Also see parameter &#39;mode&#39;.&lt;br&gt;&lt;br&gt;Example: ?fulfillmentStatus&#x3D;PROCESSABLE&amp;fulfillmentStatus&#x3D;CANCELLED_BY_MARKETPLACE | [optional] |
+| **limit** | **int**| The maximum amount of orders to return | [optional] [default to 128] |
+| **order_direction** | **string**| Sort result by &#39;orderColumnType&#39; in ASCending or DESCending order | [optional] [default to &#39;ASC&#39;] |
+| **order_column_type** | **string**| The column on which to apply &#39;orderDirection&#39; parameter | [optional] [default to &#39;ORDER_LIFECYCLE_DATE&#39;] |
+| **mode** | **string**| In search mode AT_LEAST_ONE orders with at least one  position item in given &#39;fulfillmentStatus&#39; will always be returned | [optional] [default to &#39;BUCKET&#39;] |
+| **nextcursor** | **string**| Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#39;limit&#39;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link | [optional] |
 
 ### Return type
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -224,7 +224,7 @@ Fetch a single order by its unique order number.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -246,9 +246,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_number** | **string**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_number** | **string**|  | |
 
 ### Return type
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -284,7 +284,7 @@ Fetch a single order by its unique sales order id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -306,9 +306,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sales_order_id** | **string**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sales_order_id** | **string**|  | |
 
 ### Return type
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

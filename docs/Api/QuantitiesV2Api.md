@@ -1,21 +1,21 @@
 # OpenAPI\Client\QuantitiesV2Api
 
-All URIs are relative to https://api.otto.market.
+All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**quantitiesV2GetAvailableQuantities()**](QuantitiesV2Api.md#quantitiesV2GetAvailableQuantities) | **GET** /v2/quantities | Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
-[**quantitiesV2GetAvailableQuantityBySku()**](QuantitiesV2Api.md#quantitiesV2GetAvailableQuantityBySku) | **GET** /v2/quantities/{sku} | Get available quantity for a specific Sku
-[**quantitiesV2StoreAvailableQuantitiesUsingPOST()**](QuantitiesV2Api.md#quantitiesV2StoreAvailableQuantitiesUsingPOST) | **POST** /v2/quantities | Update the available quantity for a specific SKU (up to 200 SKUs per request)
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**quantitiesV2GetAvailableQuantities()**](QuantitiesV2Api.md#quantitiesV2GetAvailableQuantities) | **GET** /v2/quantities | Get available quantities for a specific Partner (Upto 200 per request). |
+| [**quantitiesV2GetAvailableQuantityBySku()**](QuantitiesV2Api.md#quantitiesV2GetAvailableQuantityBySku) | **GET** /v2/quantities/{sku} | Get available quantity for a specific Sku |
+| [**quantitiesV2StoreAvailableQuantitiesUsingPOST()**](QuantitiesV2Api.md#quantitiesV2StoreAvailableQuantitiesUsingPOST) | **POST** /v2/quantities | Update the available quantity for a specific SKU (up to 200 SKUs per request) |
 
 
 ## `quantitiesV2GetAvailableQuantities()`
 
 ```php
-quantitiesV2GetAvailableQuantities($limit, $page): \OpenAPI\Client\Model\AvailableQuantityResponseV2QuantitiesV2
+quantitiesV2GetAvailableQuantities($limit, $page, $cursor): \OpenAPI\Client\Model\AvailableQuantityResponseV2QuantitiesV2
 ```
 
-Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
+Get available quantities for a specific Partner (Upto 200 per request).
 
 Retrieve available quantities sorted by sku name in ascending.The maximum number of returned quantities is limited to 200.
 
@@ -26,7 +26,7 @@ Retrieve available quantities sorted by sku name in ascending.The maximum number
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -38,9 +38,10 @@ $apiInstance = new OpenAPI\Client\Api\QuantitiesV2Api(
 );
 $limit = 200; // int | The maximum number of available quantities to be returned in each response.
 $page = 0; // int | Page number (0..N)
+$cursor = c2t1NDM=; // string | Cursor for paging requests. If a cursor is provided, the only other request parameter being considered is 'limit'. The cursor value is the last evaluted sku in the request response (Needs to be a valid sku value)
 
 try {
-    $result = $apiInstance->quantitiesV2GetAvailableQuantities($limit, $page);
+    $result = $apiInstance->quantitiesV2GetAvailableQuantities($limit, $page, $cursor);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuantitiesV2Api->quantitiesV2GetAvailableQuantities: ', $e->getMessage(), PHP_EOL;
@@ -49,10 +50,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **int**| The maximum number of available quantities to be returned in each response. | [optional] [default to 200]
- **page** | **int**| Page number (0..N) | [optional] [default to 0]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| The maximum number of available quantities to be returned in each response. | [optional] [default to 200] |
+| **page** | **int**| Page number (0..N) | [optional] [default to 0] |
+| **cursor** | **string**| Cursor for paging requests. If a cursor is provided, the only other request parameter being considered is &#39;limit&#39;. The cursor value is the last evaluted sku in the request response (Needs to be a valid sku value) | [optional] |
 
 ### Return type
 
@@ -60,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -88,7 +90,7 @@ Fetch a single available quantity by its unique sku name.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -110,9 +112,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| The sku for the available quantity |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| The sku for the available quantity | |
 
 ### Return type
 
@@ -120,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -146,7 +148,7 @@ Update the available quantity for a specific SKU (up to 200 SKUs per request)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -168,9 +170,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **available_quantity_request_dtov2_quantities_v2** | [**\OpenAPI\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[]**](../Model/AvailableQuantityRequestDTOV2QuantitiesV2.md)| availableQuantityRequestDTO |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **available_quantity_request_dtov2_quantities_v2** | [**\OpenAPI\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[]**](../Model/AvailableQuantityRequestDTOV2QuantitiesV2.md)| availableQuantityRequestDTO | |
 
 ### Return type
 
@@ -178,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

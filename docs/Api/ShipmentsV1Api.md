@@ -1,15 +1,15 @@
 # OpenAPI\Client\ShipmentsV1Api
 
-All URIs are relative to https://api.otto.market.
+All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST()**](ShipmentsV1Api.md#shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST) | **POST** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber}/positionitems | Correct an existing shipment (add sent items) by carrier and tracking number.
-[**shipmentsV1AppendPositionItemsUsingPOST()**](ShipmentsV1Api.md#shipmentsV1AppendPositionItemsUsingPOST) | **POST** /v1/shipments/{shipmentId}/positionitems | Correct an existing shipment (add sent items) by shipment ID.
-[**shipmentsV1CreatedAndSentShipmentUsingPOST()**](ShipmentsV1Api.md#shipmentsV1CreatedAndSentShipmentUsingPOST) | **POST** /v1/shipments | Create a shipment and mark the position items as sent.
-[**shipmentsV1ListShipmentsUsingGET()**](ShipmentsV1Api.md#shipmentsV1ListShipmentsUsingGET) | **GET** /v1/shipments | Retrieve shipments.
-[**shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET()**](ShipmentsV1Api.md#shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET) | **GET** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber} | Retrieve shipment by shipment ID.
-[**shipmentsV1ShipmentUsingGET()**](ShipmentsV1Api.md#shipmentsV1ShipmentUsingGET) | **GET** /v1/shipments/{shipmentId} | Retrieve a shipment and its position items.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST()**](ShipmentsV1Api.md#shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST) | **POST** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber}/positionitems | Correct an existing shipment (add sent items) by carrier and tracking number. |
+| [**shipmentsV1AppendPositionItemsUsingPOST()**](ShipmentsV1Api.md#shipmentsV1AppendPositionItemsUsingPOST) | **POST** /v1/shipments/{shipmentId}/positionitems | Correct an existing shipment (add sent items) by shipment ID. |
+| [**shipmentsV1CreatedAndSentShipmentUsingPOST()**](ShipmentsV1Api.md#shipmentsV1CreatedAndSentShipmentUsingPOST) | **POST** /v1/shipments | Create a shipment and mark the position items as sent. |
+| [**shipmentsV1ListShipmentsUsingGET()**](ShipmentsV1Api.md#shipmentsV1ListShipmentsUsingGET) | **GET** /v1/shipments | Retrieve shipments. |
+| [**shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET()**](ShipmentsV1Api.md#shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET) | **GET** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber} | Retrieve shipment by carrier and tracking number. |
+| [**shipmentsV1ShipmentUsingGET()**](ShipmentsV1Api.md#shipmentsV1ShipmentUsingGET) | **GET** /v1/shipments/{shipmentId} | Retrieve shipment by shipment ID. |
 
 
 ## `shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST()`
@@ -29,7 +29,7 @@ This endpoint allows to update an existing shipment with new position items. Not
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -52,11 +52,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier** | **string**| The carrier of the shipment. |
- **tracking_number** | **string**| The tracking number of the shipment assigned by the carrier. |
- **position_item_shipments_v1** | [**\OpenAPI\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| The position items included in shipment. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **carrier** | **string**| The carrier of the shipment. | |
+| **tracking_number** | **string**| The tracking number of the shipment assigned by the carrier. | |
+| **position_item_shipments_v1** | [**\OpenAPI\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| The position items included in shipment. | |
 
 ### Return type
 
@@ -64,7 +64,7 @@ void (empty response body)
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -92,7 +92,7 @@ This endpoint allows to update an existing shipment with new position items. Not
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -114,10 +114,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **shipment_id** | **string**| Internal shipment identifier assigned by OTTO Market. |
- **position_item_shipments_v1** | [**\OpenAPI\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| positionItems |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **shipment_id** | **string**| Internal shipment identifier assigned by OTTO Market. | |
+| **position_item_shipments_v1** | [**\OpenAPI\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| positionItems | |
 
 ### Return type
 
@@ -125,7 +125,7 @@ void (empty response body)
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -153,7 +153,7 @@ This endpoint should be used to create a shipment with a list of position items.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -175,9 +175,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **create_shipment_request_shipments_v1** | [**\OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1**](../Model/CreateShipmentRequestShipmentsV1.md)| request |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **create_shipment_request_shipments_v1** | [**\OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1**](../Model/CreateShipmentRequestShipmentsV1.md)| request | |
 
 ### Return type
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -213,7 +213,7 @@ This endpoint can be used to retrieve the shipments for a given authorized partn
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -237,11 +237,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **datefrom** | **string**| Shipments created from this date onwards for the given authorized partner will be returned. The date is considered as UTC. |
- **limit** | **int**| The maximum number of shipments to be returned in each response. | [optional] [default to 25]
- **next** | **string**| The cursor which points to the next shipment that should be queried. It is used to paginate the results. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datefrom** | **string**| Shipments created from this date onwards for the given authorized partner will be returned. The date is considered as UTC. | |
+| **limit** | **int**| The maximum number of shipments to be returned in each response. | [optional] [default to 25] |
+| **next** | **string**| The cursor which points to the next shipment that should be queried. It is used to paginate the results. | [optional] |
 
 ### Return type
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET($carrier, $tracking_number): \OpenAPI\Client\Model\ShipmentShipmentsV1
 ```
 
-Retrieve shipment by shipment ID.
+Retrieve shipment by carrier and tracking number.
 
 This endpoint can be used to retrieve a shipment by carrier and tracking number.
 
@@ -277,7 +277,7 @@ This endpoint can be used to retrieve a shipment by carrier and tracking number.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -300,10 +300,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier** | **string**| The carrier of the shipment. |
- **tracking_number** | **string**| The tracking number of the shipment assigned by the carrier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **carrier** | **string**| The carrier of the shipment. | |
+| **tracking_number** | **string**| The tracking number of the shipment assigned by the carrier. | |
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 shipmentsV1ShipmentUsingGET($shipment_id): \OpenAPI\Client\Model\ShipmentShipmentsV1
 ```
 
-Retrieve a shipment and its position items.
+Retrieve shipment by shipment ID.
 
 This endpoint can be used to retrieve a shipment by OTTO internal shipment ID.
 
@@ -339,7 +339,7 @@ This endpoint can be used to retrieve a shipment by OTTO internal shipment ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -361,9 +361,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **shipment_id** | **string**| Internal shipment identifier assigned by OTTO Market. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **shipment_id** | **string**| Internal shipment identifier assigned by OTTO Market. | |
 
 ### Return type
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

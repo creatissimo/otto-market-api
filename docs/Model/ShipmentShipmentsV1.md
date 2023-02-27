@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **ship_date** | **string** |  | [optional]
 **ship_from_address** | [**\OpenAPI\Client\Model\AddressShipmentsV1**](AddressShipmentsV1.md) |  | [optional]
 **position_items** | [**\OpenAPI\Client\Model\PositionItemShipmentsV1[]**](PositionItemShipmentsV1.md) | The position items included in the shipment. | [optional]
+**states** | [**\OpenAPI\Client\Model\ShipmentStateShipmentsV1[]**](ShipmentStateShipmentsV1.md) | The history of tracking states of the shipment | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

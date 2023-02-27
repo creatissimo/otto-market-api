@@ -15,10 +15,11 @@ Name | Type | Description | Notes
 **order_date** | **\DateTime** | Date and time when the corresponding order was placed. |
 **shipment_date** | **\DateTime** | Date and time when the position items handed over to the carrier for delivery to the customer. Only available for purchase receipts. | [optional]
 **payment_method** | **string** | Payment method used by the customer to pay for this order. |
+**payment_provider** | **string** | Possible values can be \&quot;OTTOPAYMENTS\&quot; or \&quot;PLAZA\&quot;, where \&quot;PLAZA\&quot; means it can be Computop for \&quot;Kreditkarte\&quot; or otherwise it is Ratepay. | [optional]
 **partner** | [**\OpenAPI\Client\Model\PartnerReceiptsV2**](PartnerReceiptsV2.md) |  |
 **customer** | [**\OpenAPI\Client\Model\CustomerReceiptsV2**](CustomerReceiptsV2.md) |  |
 **delivery_address** | [**\OpenAPI\Client\Model\DeliveryAddressReceiptsV2**](DeliveryAddressReceiptsV2.md) |  | [optional]
-**line_items** | [**\OpenAPI\Client\Model\LineItemReceiptsV2[]**](LineItemReceiptsV2.md) | List of specific position item ids of the order billed or reimbursed.In case of &#39;refund receipt for shipping costs only&#39; the list can be empty. | [optional]
+**line_items** | [**\OpenAPI\Client\Model\LineItemReceiptsV2[]**](LineItemReceiptsV2.md) | List of specific position item ids of the order billed or reimbursed.In case of service only purchase/refund receipt and shipping cost only refund receipt, the list can be empty. | [optional]
 **service_positions** | [**\OpenAPI\Client\Model\ServicePositionInfoReceiptsV2[]**](ServicePositionInfoReceiptsV2.md) |  | [optional]
 **shipping_cost** | [**\OpenAPI\Client\Model\ShippingCostReceiptsV2**](ShippingCostReceiptsV2.md) |  | [optional]
 **total** | [**\OpenAPI\Client\Model\TotalReceiptsV2**](TotalReceiptsV2.md) |  |

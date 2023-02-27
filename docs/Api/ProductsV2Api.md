@@ -1,28 +1,28 @@
 # OpenAPI\Client\ProductsV2Api
 
-All URIs are relative to https://api.otto.market.
+All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**productsV2CreateOrUpdateProductVariations()**](ProductsV2Api.md#productsV2CreateOrUpdateProductVariations) | **POST** /v2/products | Create or update your product variations and get a process-id to query results. The limit for the number of product variations in one request is 500.
-[**productsV2FailedByProcessId()**](ProductsV2Api.md#productsV2FailedByProcessId) | **GET** /v2/products/update-tasks/{processUuid}/failed | Request the failed products of the product data delivery with the linked processUuid. The response will contain a list of failed products with associated error details.
-[**productsV2GetActiveStatus()**](ProductsV2Api.md#productsV2GetActiveStatus) | **GET** /v2/products/active-status | Read the active status of your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
-[**productsV2GetBrands()**](ProductsV2Api.md#productsV2GetBrands) | **GET** /v2/products/brands | Read the list of brands that are known on the Otto market place.
-[**productsV2GetCategoryGroups()**](ProductsV2Api.md#productsV2GetCategoryGroups) | **GET** /v2/products/categories | Read the product categories and associated attributes of the OTTO market place. The total number of results could be limited by specifying query parameters. Generally the resulting product categories values will be paginated. The default page length is 100 product categories per response, the page size limit is 2000. The links specified in the result can be used to page through the total result space.
-[**productsV2GetContentChanges()**](ProductsV2Api.md#productsV2GetContentChanges) | **GET** /v2/products/{sku}/content-changes | Read the content changes info for a single product variation within a specific time period. The resulting content changes will be paginated. The default page length is 100 entries per response, also the page size limit. The links specified in the result can be used to page through the total result space.
-[**productsV2GetContentChanges2()**](ProductsV2Api.md#productsV2GetContentChanges2) | **GET** /v2/products/content-changes | Read the content changes for all your product variations within a specific time period. You can also use this endpoint to read the content changes for more than one variation or if the sku value contains slash (&#39;/&#39;) or dot (&#39;.&#39;) characters, so that you cannot use the other endpoint with one dedicated sku value in the path. The resulting content changes will be paginated. The default page length is 100 entries per response, which also is the page size upper limit. The links specified in the result can be used to page through the total result space.
-[**productsV2GetMarketPlaceStatus()**](ProductsV2Api.md#productsV2GetMarketPlaceStatus) | **GET** /v2/products/{sku}/marketplace-status | Read the marketplace status for a single product variation.
-[**productsV2GetMarketPlaceStatusList()**](ProductsV2Api.md#productsV2GetMarketPlaceStatusList) | **GET** /v2/products/marketplace-status | Read the marketplace status for your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
-[**productsV2GetPartnerProducts()**](ProductsV2Api.md#productsV2GetPartnerProducts) | **GET** /v2/products | Read your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
-[**productsV2GetProductVariation()**](ProductsV2Api.md#productsV2GetProductVariation) | **GET** /v2/products/{sku} | Read a single product variation.
-[**productsV2GetProductVariationPrice()**](ProductsV2Api.md#productsV2GetProductVariationPrice) | **GET** /v2/products/{sku}/prices | Read product variations prices
-[**productsV2GetProductVariationPrices()**](ProductsV2Api.md#productsV2GetProductVariationPrices) | **GET** /v2/products/prices | Read product variations prices
-[**productsV2GetVariationActiveStatus()**](ProductsV2Api.md#productsV2GetVariationActiveStatus) | **GET** /v2/products/{sku}/active-status | Read the active status of a single product variation. Replaces corresponding online-status endpoint which now is marked as deprecated.
-[**productsV2ProgressByProcessId()**](ProductsV2Api.md#productsV2ProgressByProcessId) | **GET** /v2/products/update-tasks/{processUuid} | Request the results of a product data delivery. The response will contain the links for the different parts of the result: products successfully created or updated, products with failures, products which did not contain any changes compared to the last sent version.
-[**productsV2SucceededByProcessId()**](ProductsV2Api.md#productsV2SucceededByProcessId) | **GET** /v2/products/update-tasks/{processUuid}/succeeded | Request the succeeded products of the product data delivery with the linked processUuid. The response will contain a list of successfully delivered products.
-[**productsV2UnchangedByProcessId()**](ProductsV2Api.md#productsV2UnchangedByProcessId) | **GET** /v2/products/update-tasks/{processUuid}/unchanged | Request the unchanged products of the product data delivery with the linked processUuid. The response will contain a list of unchanged products.
-[**productsV2UpdateActiveStatus()**](ProductsV2Api.md#productsV2UpdateActiveStatus) | **POST** /v2/products/active-status | Update the active status of your product variations and get a process-id to query results.
-[**productsV2UpdateProductVariationPrices()**](ProductsV2Api.md#productsV2UpdateProductVariationPrices) | **POST** /v2/products/prices | Update product variation prices
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**productsV2CreateOrUpdateProductVariations()**](ProductsV2Api.md#productsV2CreateOrUpdateProductVariations) | **POST** /v2/products | Create or update product variations |
+| [**productsV2FailedByProcessId()**](ProductsV2Api.md#productsV2FailedByProcessId) | **GET** /v2/products/update-tasks/{processUuid}/failed | List failed products of a product data delivery |
+| [**productsV2GetActiveStatus()**](ProductsV2Api.md#productsV2GetActiveStatus) | **GET** /v2/products/active-status | Read active status |
+| [**productsV2GetBrands()**](ProductsV2Api.md#productsV2GetBrands) | **GET** /v2/products/brands | List of allowed brands |
+| [**productsV2GetCategoryGroups()**](ProductsV2Api.md#productsV2GetCategoryGroups) | **GET** /v2/products/categories | Read product categories |
+| [**productsV2GetContentChanges()**](ProductsV2Api.md#productsV2GetContentChanges) | **GET** /v2/products/{sku}/content-changes | Read content changes for a single product variation |
+| [**productsV2GetContentChanges2()**](ProductsV2Api.md#productsV2GetContentChanges2) | **GET** /v2/products/content-changes | Read content changes within time period |
+| [**productsV2GetMarketPlaceStatus()**](ProductsV2Api.md#productsV2GetMarketPlaceStatus) | **GET** /v2/products/{sku}/marketplace-status | Read marketplace status for a single product variation |
+| [**productsV2GetMarketPlaceStatusList()**](ProductsV2Api.md#productsV2GetMarketPlaceStatusList) | **GET** /v2/products/marketplace-status | Read marketplace status of product variations |
+| [**productsV2GetPartnerProducts()**](ProductsV2Api.md#productsV2GetPartnerProducts) | **GET** /v2/products | Read product variations |
+| [**productsV2GetProductVariation()**](ProductsV2Api.md#productsV2GetProductVariation) | **GET** /v2/products/{sku} | Read a single product variation |
+| [**productsV2GetProductVariationPrice()**](ProductsV2Api.md#productsV2GetProductVariationPrice) | **GET** /v2/products/{sku}/prices | Read product variations prices |
+| [**productsV2GetProductVariationPrices()**](ProductsV2Api.md#productsV2GetProductVariationPrices) | **GET** /v2/products/prices | Read product variations prices |
+| [**productsV2GetVariationActiveStatus()**](ProductsV2Api.md#productsV2GetVariationActiveStatus) | **GET** /v2/products/{sku}/active-status | Read the active status of a single product variation |
+| [**productsV2ProgressByProcessId()**](ProductsV2Api.md#productsV2ProgressByProcessId) | **GET** /v2/products/update-tasks/{processUuid} | Request the results of a product data delivery |
+| [**productsV2SucceededByProcessId()**](ProductsV2Api.md#productsV2SucceededByProcessId) | **GET** /v2/products/update-tasks/{processUuid}/succeeded | List succeeded products of a product data delivery |
+| [**productsV2UnchangedByProcessId()**](ProductsV2Api.md#productsV2UnchangedByProcessId) | **GET** /v2/products/update-tasks/{processUuid}/unchanged | List unchanged products of a product data delivery |
+| [**productsV2UpdateActiveStatus()**](ProductsV2Api.md#productsV2UpdateActiveStatus) | **POST** /v2/products/active-status | Update active status |
+| [**productsV2UpdateProductVariationPrices()**](ProductsV2Api.md#productsV2UpdateProductVariationPrices) | **POST** /v2/products/prices | Update product variation prices |
 
 
 ## `productsV2CreateOrUpdateProductVariations()`
@@ -31,7 +31,9 @@ Method | HTTP request | Description
 productsV2CreateOrUpdateProductVariations($x_request_timestamp, $product_variation_products_v2): \OpenAPI\Client\Model\ProductProcessProgressProductsV2
 ```
 
-Create or update your product variations and get a process-id to query results. The limit for the number of product variations in one request is 500.
+Create or update product variations
+
+Returns a process-id to query results. The limit for the number of product variations in one request is 500.
 
 ### Example
 
@@ -40,7 +42,7 @@ Create or update your product variations and get a process-id to query results. 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -63,10 +65,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_timestamp** | **\DateTime**| Holds the client side update request timestamp | [optional]
- **product_variation_products_v2** | [**\OpenAPI\Client\Model\ProductVariationProductsV2[]**](../Model/ProductVariationProductsV2.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_timestamp** | **\DateTime**| Holds the client side update request timestamp | [optional] |
+| **product_variation_products_v2** | [**\OpenAPI\Client\Model\ProductVariationProductsV2[]**](../Model/ProductVariationProductsV2.md)|  | [optional] |
 
 ### Return type
 
@@ -74,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -91,6 +93,8 @@ Name | Type | Description  | Notes
 productsV2FailedByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessResultProductsV2
 ```
 
+List failed products of a product data delivery
+
 Request the failed products of the product data delivery with the linked processUuid. The response will contain a list of failed products with associated error details.
 
 ### Example
@@ -100,7 +104,7 @@ Request the failed products of the product data delivery with the linked process
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -122,9 +126,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **process_uuid** | **string**| search for the failed products of a product data delivery identified by its processUuid. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **process_uuid** | **string**| search for the failed products of a product data delivery identified by its processUuid. | |
 
 ### Return type
 
@@ -132,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -149,7 +153,9 @@ Name | Type | Description  | Notes
 productsV2GetActiveStatus($sku, $product_reference, $category, $brand, $page, $limit): \OpenAPI\Client\Model\ActiveStatusListResponseProductsV2
 ```
 
-Read the active status of your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
+Read active status
+
+The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
 
 ### Example
 
@@ -158,7 +164,7 @@ Read the active status of your product variations. The total number of results c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -185,14 +191,14 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional]
- **product_reference** | **string**| search for product variations by their productReference value | [optional]
- **category** | **string**| search for product variations by their category value | [optional]
- **brand** | **string**| search for product variations by their brand value | [optional]
- **page** | **int**|  | [optional]
- **limit** | **int**| proposed limit for the number of active status values per response page (at most 100) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional] |
+| **product_reference** | **string**| search for product variations by their productReference value | [optional] |
+| **category** | **string**| search for product variations by their category value | [optional] |
+| **brand** | **string**| search for product variations by their brand value | [optional] |
+| **page** | **int**|  | [optional] |
+| **limit** | **int**| proposed limit for the number of active status values per response page (at most 100) | [optional] |
 
 ### Return type
 
@@ -200,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -217,6 +223,8 @@ Name | Type | Description  | Notes
 productsV2GetBrands(): \OpenAPI\Client\Model\BrandProductsV2[]
 ```
 
+List of allowed brands
+
 Read the list of brands that are known on the Otto market place.
 
 ### Example
@@ -226,7 +234,7 @@ Read the list of brands that are known on the Otto market place.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -255,7 +263,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -272,7 +280,9 @@ This endpoint does not need any parameter.
 productsV2GetCategoryGroups($page, $limit): \OpenAPI\Client\Model\CategoryGroupsProductsV2
 ```
 
-Read the product categories and associated attributes of the OTTO market place. The total number of results could be limited by specifying query parameters. Generally the resulting product categories values will be paginated. The default page length is 100 product categories per response, the page size limit is 2000. The links specified in the result can be used to page through the total result space.
+Read product categories
+
+Returns product categories and associated attributes of the OTTO market place. The total number of results could be limited by specifying query parameters. Generally the resulting product categories values will be paginated. The default page length is 100 product categories per response, the page size limit is 2000. The links specified in the result can be used to page through the total result space.
 
 ### Example
 
@@ -281,7 +291,7 @@ Read the product categories and associated attributes of the OTTO market place. 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -304,10 +314,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**|  | [optional]
- **limit** | **int**| proposed limit for the number of product categories per response page  (at most 2000) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **page** | **int**|  | [optional] |
+| **limit** | **int**| proposed limit for the number of product categories per response page  (at most 2000) | [optional] |
 
 ### Return type
 
@@ -315,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -332,7 +342,9 @@ Name | Type | Description  | Notes
 productsV2GetContentChanges($sku, $from_date, $page, $limit): \OpenAPI\Client\Model\ContentChangesApiResultProductsV2
 ```
 
-Read the content changes info for a single product variation within a specific time period. The resulting content changes will be paginated. The default page length is 100 entries per response, also the page size limit. The links specified in the result can be used to page through the total result space.
+Read content changes for a single product variation
+
+Returns the content changes info for a single product variation within a specific time period. The resulting content changes will be paginated. The default page length is 100 entries per response, also the page size limit. The links specified in the result can be used to page through the total result space.
 
 ### Example
 
@@ -341,7 +353,7 @@ Read the content changes info for a single product variation within a specific t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -366,12 +378,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for a product variation by its SKU value |
- **from_date** | **\DateTime**| search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result. | [optional]
- **page** | **int**|  | [optional]
- **limit** | **int**| proposed limit for the number of entries per response page (at most 100) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for a product variation by its SKU value | |
+| **from_date** | **\DateTime**| search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result. | [optional] |
+| **page** | **int**|  | [optional] |
+| **limit** | **int**| proposed limit for the number of entries per response page (at most 100) | [optional] |
 
 ### Return type
 
@@ -379,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -396,6 +408,8 @@ Name | Type | Description  | Notes
 productsV2GetContentChanges2($sku, $from_date, $page, $limit): \OpenAPI\Client\Model\ContentChangesApiResultProductsV2
 ```
 
+Read content changes within time period
+
 Read the content changes for all your product variations within a specific time period. You can also use this endpoint to read the content changes for more than one variation or if the sku value contains slash ('/') or dot ('.') characters, so that you cannot use the other endpoint with one dedicated sku value in the path. The resulting content changes will be paginated. The default page length is 100 entries per response, which also is the page size upper limit. The links specified in the result can be used to page through the total result space.
 
 ### Example
@@ -405,7 +419,7 @@ Read the content changes for all your product variations within a specific time 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -430,12 +444,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | [**string[]**](../Model/string.md)| search for product variations by their sku value. Use this to query for multiple variations or if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. You may separate multiple sku values by comma or state each one with a &amp;sku&#x3D; in front of the value. Please note that if you like to query for a single variation whose value contains a comma you have to add one empty &amp;sku&#x3D; at the end of the query string or use the other endpoint. | [optional]
- **from_date** | **\DateTime**| search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result. | [optional]
- **page** | **int**|  | [optional]
- **limit** | **int**| proposed limit for the number of content changes per response page (at most 100) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | [**string[]**](../Model/string.md)| search for product variations by their sku value. Use this to query for multiple variations or if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. You may separate multiple sku values by comma or state each one with a &amp;sku&#x3D; in front of the value. Please note that if you like to query for a single variation whose value contains a comma you have to add one empty &amp;sku&#x3D; at the end of the query string or use the other endpoint. | [optional] |
+| **from_date** | **\DateTime**| search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result. | [optional] |
+| **page** | **int**|  | [optional] |
+| **limit** | **int**| proposed limit for the number of content changes per response page (at most 100) | [optional] |
 
 ### Return type
 
@@ -443,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -460,7 +474,9 @@ Name | Type | Description  | Notes
 productsV2GetMarketPlaceStatus($sku): \OpenAPI\Client\Model\MarketPlaceStatusProductsV2
 ```
 
-Read the marketplace status for a single product variation.
+Read marketplace status for a single product variation
+
+Returns marketplace status for a single product variation by SKU.
 
 ### Example
 
@@ -469,7 +485,7 @@ Read the marketplace status for a single product variation.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -491,9 +507,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for a marketplace status by its SKU value |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for a marketplace status by its SKU value | |
 
 ### Return type
 
@@ -501,7 +517,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -518,7 +534,9 @@ Name | Type | Description  | Notes
 productsV2GetMarketPlaceStatusList($sku, $product_reference, $category, $brand, $from_date, $page, $limit, $market_place_status): \OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV2
 ```
 
-Read the marketplace status for your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
+Read marketplace status of product variations
+
+The total number of results could be limited by specifying query parameters. Generally the resulting marketplace status will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
 
 ### Example
 
@@ -527,7 +545,7 @@ Read the marketplace status for your product variations. The total number of res
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -556,16 +574,16 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional]
- **product_reference** | **string**| search marketplace status by the productReference value of the related product variations | [optional]
- **category** | **string**| search marketplace status by the category value of the related product variations | [optional]
- **brand** | **string**| search marketplace status by the brand value of the related product variations | [optional]
- **from_date** | **\DateTime**| search marketplace status for a time range starting with the given date (in ISO8601, like &#39;2021-10-09T07:52:19.820Z&#39; or &#39;2021-10-09T07:52:19.820+01:00&#39;) | [optional]
- **page** | **int**| page to load | [optional]
- **limit** | **int**| proposed limit for the number of marketplace status per response page (at most 1000) | [optional]
- **market_place_status** | [**string[]**](../Model/string.md)| only include items that match any of the provided status | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional] |
+| **product_reference** | **string**| search marketplace status by the productReference value of the related product variations | [optional] |
+| **category** | **string**| search marketplace status by the category value of the related product variations | [optional] |
+| **brand** | **string**| search marketplace status by the brand value of the related product variations | [optional] |
+| **from_date** | **\DateTime**| search marketplace status for a time range starting with the given date (in ISO8601, like &#39;2021-10-09T07:52:19.820Z&#39; or &#39;2021-10-09T07:52:19.820+01:00&#39;) | [optional] |
+| **page** | **int**| page to load | [optional] |
+| **limit** | **int**| proposed limit for the number of marketplace status per response page (at most 1000) | [optional] |
+| **market_place_status** | [**string[]**](../Model/string.md)| only include items that match any of the provided status | [optional] |
 
 ### Return type
 
@@ -573,7 +591,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -590,7 +608,9 @@ Name | Type | Description  | Notes
 productsV2GetPartnerProducts($sku, $product_reference, $category, $brand, $page, $limit): \OpenAPI\Client\Model\ProductVariationApiResultProductsV2
 ```
 
-Read your product variations. The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
+Read product variations
+
+The total number of results could be limited by specifying query parameters. Generally the resulting product variations will be paginated. The default page length is 100 product variations per response, also the page size limit. The links specified in the result can be used to page through the total result space.
 
 ### Example
 
@@ -599,7 +619,7 @@ Read your product variations. The total number of results could be limited by sp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -626,14 +646,14 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional]
- **product_reference** | **string**| search for product variations by their productReference value | [optional]
- **category** | **string**| search for product variations by their category value | [optional]
- **brand** | **string**| search for product variations by their brand value | [optional]
- **page** | **int**|  | [optional]
- **limit** | **int**| proposed limit for the number of products per response page (at most 100) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional] |
+| **product_reference** | **string**| search for product variations by their productReference value | [optional] |
+| **category** | **string**| search for product variations by their category value | [optional] |
+| **brand** | **string**| search for product variations by their brand value | [optional] |
+| **page** | **int**|  | [optional] |
+| **limit** | **int**| proposed limit for the number of products per response page (at most 100) | [optional] |
 
 ### Return type
 
@@ -641,7 +661,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -658,7 +678,9 @@ Name | Type | Description  | Notes
 productsV2GetProductVariation($sku): \OpenAPI\Client\Model\ProductVariationProductsV2
 ```
 
-Read a single product variation.
+Read a single product variation
+
+Returns a single product variation by SKU.
 
 ### Example
 
@@ -667,7 +689,7 @@ Read a single product variation.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -689,9 +711,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for a product variation by its SKU value |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for a product variation by its SKU value | |
 
 ### Return type
 
@@ -699,7 +721,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -727,7 +749,7 @@ Read the price data of a single product variation.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -749,9 +771,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for a product variation by its SKU value |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for a product variation by its SKU value | |
 
 ### Return type
 
@@ -759,7 +781,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -787,7 +809,7 @@ Read your product variations prices. The total number of results could be limite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -814,14 +836,14 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional]
- **product_reference** | **string**| search for product variations by their productReference value | [optional]
- **category** | **string**| search for product variations by their category value | [optional]
- **brand** | **string**| search for product variations by their brand value | [optional]
- **page** | **int**|  | [optional]
- **limit** | **int**| proposed limit for the number of products per response page (at most 100) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for product variations by their sku value. Use this if your sku values contain slash (&#39;/&#39;) or dot (&#39;.&#39;) characters. | [optional] |
+| **product_reference** | **string**| search for product variations by their productReference value | [optional] |
+| **category** | **string**| search for product variations by their category value | [optional] |
+| **brand** | **string**| search for product variations by their brand value | [optional] |
+| **page** | **int**|  | [optional] |
+| **limit** | **int**| proposed limit for the number of products per response page (at most 100) | [optional] |
 
 ### Return type
 
@@ -829,7 +851,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -846,7 +868,9 @@ Name | Type | Description  | Notes
 productsV2GetVariationActiveStatus($sku): \OpenAPI\Client\Model\ActiveStatusProductsV2
 ```
 
-Read the active status of a single product variation. Replaces corresponding online-status endpoint which now is marked as deprecated.
+Read the active status of a single product variation
+
+Returns active status of the requested product variation by SKU.
 
 ### Example
 
@@ -855,7 +879,7 @@ Read the active status of a single product variation. Replaces corresponding onl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -877,9 +901,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **string**| search for a product variation by its SKU value |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sku** | **string**| search for a product variation by its SKU value | |
 
 ### Return type
 
@@ -887,7 +911,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -904,7 +928,9 @@ Name | Type | Description  | Notes
 productsV2ProgressByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessProgressProductsV2
 ```
 
-Request the results of a product data delivery. The response will contain the links for the different parts of the result: products successfully created or updated, products with failures, products which did not contain any changes compared to the last sent version.
+Request the results of a product data delivery
+
+The response will contain the links for the different parts of the result: products successfully created or updated, products with failures, products which did not contain any changes compared to the last sent version.
 
 ### Example
 
@@ -913,7 +939,7 @@ Request the results of a product data delivery. The response will contain the li
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -935,9 +961,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **process_uuid** | **string**| search for a product data delivery result by its processUuid. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **process_uuid** | **string**| search for a product data delivery result by its processUuid. | |
 
 ### Return type
 
@@ -945,7 +971,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -962,6 +988,8 @@ Name | Type | Description  | Notes
 productsV2SucceededByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessResultProductsV2
 ```
 
+List succeeded products of a product data delivery
+
 Request the succeeded products of the product data delivery with the linked processUuid. The response will contain a list of successfully delivered products.
 
 ### Example
@@ -971,7 +999,7 @@ Request the succeeded products of the product data delivery with the linked proc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -993,9 +1021,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **process_uuid** | **string**| search for the succeeded products of a product data delivery identified by its processUuid. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **process_uuid** | **string**| search for the succeeded products of a product data delivery identified by its processUuid. | |
 
 ### Return type
 
@@ -1003,7 +1031,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1020,6 +1048,8 @@ Name | Type | Description  | Notes
 productsV2UnchangedByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessResultProductsV2
 ```
 
+List unchanged products of a product data delivery
+
 Request the unchanged products of the product data delivery with the linked processUuid. The response will contain a list of unchanged products.
 
 ### Example
@@ -1029,7 +1059,7 @@ Request the unchanged products of the product data delivery with the linked proc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1051,9 +1081,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **process_uuid** | **string**| search for the unchanged products of a product data delivery identified by its processUuid. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **process_uuid** | **string**| search for the unchanged products of a product data delivery identified by its processUuid. | |
 
 ### Return type
 
@@ -1061,7 +1091,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1078,7 +1108,9 @@ Name | Type | Description  | Notes
 productsV2UpdateActiveStatus($x_request_timestamp, $active_status_list_request_products_v2): \OpenAPI\Client\Model\ProductProcessProgressProductsV2
 ```
 
-Update the active status of your product variations and get a process-id to query results.
+Update active status
+
+Returns a process-id to query results. The limit for the number of product active statuses in one request is 500.
 
 ### Example
 
@@ -1087,7 +1119,7 @@ Update the active status of your product variations and get a process-id to quer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1110,10 +1142,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional]
- **active_status_list_request_products_v2** | [**\OpenAPI\Client\Model\ActiveStatusListRequestProductsV2**](../Model/ActiveStatusListRequestProductsV2.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
+| **active_status_list_request_products_v2** | [**\OpenAPI\Client\Model\ActiveStatusListRequestProductsV2**](../Model/ActiveStatusListRequestProductsV2.md)|  | [optional] |
 
 ### Return type
 
@@ -1121,7 +1153,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1149,7 +1181,7 @@ Update your product variation prices and get a process-id to query results. The 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer (JWT) authorization: JWT
+// Configure Bearer (JWT) authorization: bearerAuth
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1172,10 +1204,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_timestamp** | **\DateTime**| Holds the client side update request timestamp | [optional]
- **sku_pricing_products_v2** | [**\OpenAPI\Client\Model\SkuPricingProductsV2[]**](../Model/SkuPricingProductsV2.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_timestamp** | **\DateTime**| Holds the client side update request timestamp | [optional] |
+| **sku_pricing_products_v2** | [**\OpenAPI\Client\Model\SkuPricingProductsV2[]**](../Model/SkuPricingProductsV2.md)|  | [optional] |
 
 ### Return type
 
@@ -1183,7 +1215,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

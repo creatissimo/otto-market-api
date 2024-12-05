@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ServicePositionReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description List of billed B2C services and insurances.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,11 +63,11 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
         'expected_performance_period' => 'string',
         'service_name' => 'string',
         'service_position_item_ids' => 'string[]',
-        'linked_item_details' => '\OpenAPI\Client\Model\LinkedItemDetailsReceiptsV3',
+        'linked_item_details' => '\Otto\Client\Model\LinkedItemDetailsReceiptsV3',
         'quantity' => 'int',
-        'unit_price' => '\OpenAPI\Client\Model\PriceReceiptsV3',
-        'position_sum' => '\OpenAPI\Client\Model\PriceReceiptsV3',
-        'price_modifications' => '\OpenAPI\Client\Model\PriceModificationReceiptsV3[]',
+        'unit_price' => '\Otto\Client\Model\PriceReceiptsV3',
+        'position_sum' => '\Otto\Client\Model\PriceReceiptsV3',
+        'price_modifications' => '\Otto\Client\Model\PriceModificationReceiptsV3[]',
         'insurance_period' => 'int'
     ];
 
@@ -550,7 +550,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets linked_item_details
      *
-     * @return \OpenAPI\Client\Model\LinkedItemDetailsReceiptsV3|null
+     * @return \Otto\Client\Model\LinkedItemDetailsReceiptsV3|null
      */
     public function getLinkedItemDetails()
     {
@@ -560,7 +560,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets linked_item_details
      *
-     * @param \OpenAPI\Client\Model\LinkedItemDetailsReceiptsV3|null $linked_item_details linked_item_details
+     * @param \Otto\Client\Model\LinkedItemDetailsReceiptsV3|null $linked_item_details linked_item_details
      *
      * @return self
      */
@@ -604,7 +604,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets unit_price
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getUnitPrice()
     {
@@ -614,7 +614,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets unit_price
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $unit_price unit_price
+     * @param \Otto\Client\Model\PriceReceiptsV3 $unit_price unit_price
      *
      * @return self
      */
@@ -631,7 +631,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets position_sum
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getPositionSum()
     {
@@ -641,7 +641,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets position_sum
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $position_sum position_sum
+     * @param \Otto\Client\Model\PriceReceiptsV3 $position_sum position_sum
      *
      * @return self
      */
@@ -658,7 +658,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets price_modifications
      *
-     * @return \OpenAPI\Client\Model\PriceModificationReceiptsV3[]
+     * @return \Otto\Client\Model\PriceModificationReceiptsV3[]
      */
     public function getPriceModifications()
     {
@@ -668,7 +668,7 @@ class ServicePositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets price_modifications
      *
-     * @param \OpenAPI\Client\Model\PriceModificationReceiptsV3[] $price_modifications List of additional fees and reductions represented as price modifications. </br>Currently we only know reductions. </br>If there are no entries the list is displayed as empty
+     * @param \Otto\Client\Model\PriceModificationReceiptsV3[] $price_modifications List of additional fees and reductions represented as price modifications. </br>Currently we only know reductions. </br>If there are no entries the list is displayed as empty
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ApiErrorResponseV3ReturnsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ApiErrorResponseV3ReturnsV3 implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ApiErrorV3ReturnsV3[]'
+        'errors' => '\Otto\Client\Model\ApiErrorV3ReturnsV3[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ApiErrorResponseV3ReturnsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ApiErrorV3ReturnsV3[]|null
+     * @return \Otto\Client\Model\ApiErrorV3ReturnsV3[]|null
      */
     public function getErrors()
     {
@@ -302,7 +302,7 @@ class ApiErrorResponseV3ReturnsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ApiErrorV3ReturnsV3[]|null $errors List of all the items received from partner
+     * @param \Otto\Client\Model\ApiErrorV3ReturnsV3[]|null $errors List of all the items received from partner
      *
      * @return self
      */

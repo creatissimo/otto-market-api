@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * SaleProductsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class SaleProductsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sale_price' => '\OpenAPI\Client\Model\MonetaryAmountProductsV3',
+        'sale_price' => '\Otto\Client\Model\MonetaryAmountProductsV3',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime'
     ];
@@ -306,7 +306,7 @@ class SaleProductsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets sale_price
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountProductsV3|null
+     * @return \Otto\Client\Model\MonetaryAmountProductsV3|null
      */
     public function getSalePrice()
     {
@@ -316,7 +316,7 @@ class SaleProductsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sale_price
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountProductsV3|null $sale_price sale_price
+     * @param \Otto\Client\Model\MonetaryAmountProductsV3|null $sale_price sale_price
      *
      * @return self
      */

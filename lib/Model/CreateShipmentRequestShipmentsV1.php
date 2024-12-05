@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CreateShipmentRequestShipmentsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tracking_key' => '\OpenAPI\Client\Model\TrackingKeyShipmentsV1',
+        'tracking_key' => '\Otto\Client\Model\TrackingKeyShipmentsV1',
         'ship_date' => '\DateTime',
-        'ship_from_address' => '\OpenAPI\Client\Model\AddressShipmentsV1',
-        'position_items' => '\OpenAPI\Client\Model\PositionItemShipmentsV1[]'
+        'ship_from_address' => '\Otto\Client\Model\AddressShipmentsV1',
+        'position_items' => '\Otto\Client\Model\PositionItemShipmentsV1[]'
     ];
 
     /**
@@ -329,7 +329,7 @@ class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Gets tracking_key
      *
-     * @return \OpenAPI\Client\Model\TrackingKeyShipmentsV1
+     * @return \Otto\Client\Model\TrackingKeyShipmentsV1
      */
     public function getTrackingKey()
     {
@@ -339,7 +339,7 @@ class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Sets tracking_key
      *
-     * @param \OpenAPI\Client\Model\TrackingKeyShipmentsV1 $tracking_key tracking_key
+     * @param \Otto\Client\Model\TrackingKeyShipmentsV1 $tracking_key tracking_key
      *
      * @return self
      */
@@ -383,7 +383,7 @@ class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Gets ship_from_address
      *
-     * @return \OpenAPI\Client\Model\AddressShipmentsV1
+     * @return \Otto\Client\Model\AddressShipmentsV1
      */
     public function getShipFromAddress()
     {
@@ -393,7 +393,7 @@ class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Sets ship_from_address
      *
-     * @param \OpenAPI\Client\Model\AddressShipmentsV1 $ship_from_address ship_from_address
+     * @param \Otto\Client\Model\AddressShipmentsV1 $ship_from_address ship_from_address
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Gets position_items
      *
-     * @return \OpenAPI\Client\Model\PositionItemShipmentsV1[]
+     * @return \Otto\Client\Model\PositionItemShipmentsV1[]
      */
     public function getPositionItems()
     {
@@ -420,7 +420,7 @@ class CreateShipmentRequestShipmentsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Sets position_items
      *
-     * @param \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_items The position items included in shipment.
+     * @param \Otto\Client\Model\PositionItemShipmentsV1[] $position_items The position items included in shipment.
      *
      * @return self
      */

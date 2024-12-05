@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PartnerOrderOrdersV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,17 +57,17 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'delivery_address' => '\OpenAPI\Client\Model\AddressOrdersV4',
-        'initial_delivery_fees' => '\OpenAPI\Client\Model\InitialDeliveryFeeOrdersV4[]',
-        'initial_discounts' => '\OpenAPI\Client\Model\InitialDiscountOrdersV4[]',
-        'invoice_address' => '\OpenAPI\Client\Model\AddressOrdersV4',
+        'delivery_address' => '\Otto\Client\Model\AddressOrdersV4',
+        'initial_delivery_fees' => '\Otto\Client\Model\InitialDeliveryFeeOrdersV4[]',
+        'initial_discounts' => '\Otto\Client\Model\InitialDiscountOrdersV4[]',
+        'invoice_address' => '\Otto\Client\Model\AddressOrdersV4',
         'last_modified_date' => '\DateTime',
-        'links' => '\OpenAPI\Client\Model\LinkOrdersV4[]',
+        'links' => '\Otto\Client\Model\LinkOrdersV4[]',
         'order_date' => '\DateTime',
-        'order_lifecycle_information' => '\OpenAPI\Client\Model\OrderLifecycleInformationOrdersV4',
+        'order_lifecycle_information' => '\Otto\Client\Model\OrderLifecycleInformationOrdersV4',
         'order_number' => 'string',
-        'payment' => '\OpenAPI\Client\Model\PaymentOrdersV4',
-        'position_items' => '\OpenAPI\Client\Model\PositionItemOrdersV4[]',
+        'payment' => '\Otto\Client\Model\PaymentOrdersV4',
+        'position_items' => '\Otto\Client\Model\PositionItemOrdersV4[]',
         'sales_order_id' => 'string',
         'suspected_fraud_case' => 'bool'
     ];
@@ -391,7 +391,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets delivery_address
      *
-     * @return \OpenAPI\Client\Model\AddressOrdersV4|null
+     * @return \Otto\Client\Model\AddressOrdersV4|null
      */
     public function getDeliveryAddress()
     {
@@ -401,7 +401,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets delivery_address
      *
-     * @param \OpenAPI\Client\Model\AddressOrdersV4|null $delivery_address delivery_address
+     * @param \Otto\Client\Model\AddressOrdersV4|null $delivery_address delivery_address
      *
      * @return self
      */
@@ -418,7 +418,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets initial_delivery_fees
      *
-     * @return \OpenAPI\Client\Model\InitialDeliveryFeeOrdersV4[]|null
+     * @return \Otto\Client\Model\InitialDeliveryFeeOrdersV4[]|null
      */
     public function getInitialDeliveryFees()
     {
@@ -428,7 +428,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets initial_delivery_fees
      *
-     * @param \OpenAPI\Client\Model\InitialDeliveryFeeOrdersV4[]|null $initial_delivery_fees The delivery fees on customer checkout
+     * @param \Otto\Client\Model\InitialDeliveryFeeOrdersV4[]|null $initial_delivery_fees The delivery fees on customer checkout
      *
      * @return self
      */
@@ -445,7 +445,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets initial_discounts
      *
-     * @return \OpenAPI\Client\Model\InitialDiscountOrdersV4[]|null
+     * @return \Otto\Client\Model\InitialDiscountOrdersV4[]|null
      */
     public function getInitialDiscounts()
     {
@@ -455,7 +455,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets initial_discounts
      *
-     * @param \OpenAPI\Client\Model\InitialDiscountOrdersV4[]|null $initial_discounts The initial discounts on customer checkout
+     * @param \Otto\Client\Model\InitialDiscountOrdersV4[]|null $initial_discounts The initial discounts on customer checkout
      *
      * @return self
      */
@@ -472,7 +472,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets invoice_address
      *
-     * @return \OpenAPI\Client\Model\AddressOrdersV4|null
+     * @return \Otto\Client\Model\AddressOrdersV4|null
      */
     public function getInvoiceAddress()
     {
@@ -482,7 +482,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets invoice_address
      *
-     * @param \OpenAPI\Client\Model\AddressOrdersV4|null $invoice_address invoice_address
+     * @param \Otto\Client\Model\AddressOrdersV4|null $invoice_address invoice_address
      *
      * @return self
      */
@@ -526,7 +526,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkOrdersV4[]|null
+     * @return \Otto\Client\Model\LinkOrdersV4[]|null
      */
     public function getLinks()
     {
@@ -536,7 +536,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkOrdersV4[]|null $links Order related links like the link to fetch the single partner order
+     * @param \Otto\Client\Model\LinkOrdersV4[]|null $links Order related links like the link to fetch the single partner order
      *
      * @return self
      */
@@ -580,7 +580,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets order_lifecycle_information
      *
-     * @return \OpenAPI\Client\Model\OrderLifecycleInformationOrdersV4
+     * @return \Otto\Client\Model\OrderLifecycleInformationOrdersV4
      */
     public function getOrderLifecycleInformation()
     {
@@ -590,7 +590,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets order_lifecycle_information
      *
-     * @param \OpenAPI\Client\Model\OrderLifecycleInformationOrdersV4 $order_lifecycle_information order_lifecycle_information
+     * @param \Otto\Client\Model\OrderLifecycleInformationOrdersV4 $order_lifecycle_information order_lifecycle_information
      *
      * @return self
      */
@@ -634,7 +634,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets payment
      *
-     * @return \OpenAPI\Client\Model\PaymentOrdersV4|null
+     * @return \Otto\Client\Model\PaymentOrdersV4|null
      */
     public function getPayment()
     {
@@ -644,7 +644,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets payment
      *
-     * @param \OpenAPI\Client\Model\PaymentOrdersV4|null $payment payment
+     * @param \Otto\Client\Model\PaymentOrdersV4|null $payment payment
      *
      * @return self
      */
@@ -661,7 +661,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets position_items
      *
-     * @return \OpenAPI\Client\Model\PositionItemOrdersV4[]
+     * @return \Otto\Client\Model\PositionItemOrdersV4[]
      */
     public function getPositionItems()
     {
@@ -671,7 +671,7 @@ class PartnerOrderOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets position_items
      *
-     * @param \OpenAPI\Client\Model\PositionItemOrdersV4[] $position_items The physical position items of this order. Multiple position item can refer to the same product
+     * @param \Otto\Client\Model\PositionItemOrdersV4[] $position_items The physical position items of this order. Multiple position item can refer to the same product
      *
      * @return self
      */

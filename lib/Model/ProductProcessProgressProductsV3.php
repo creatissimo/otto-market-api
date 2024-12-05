@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductProcessProgressProductsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class ProductProcessProgressProductsV3 implements ModelInterface, ArrayAccess, \
         'failed' => 'int',
         'unchanged' => 'int',
         'ping_after' => '\DateTime',
-        'links' => '\OpenAPI\Client\Model\ProductProcessResultLinkProductsV3[]'
+        'links' => '\Otto\Client\Model\ProductProcessResultLinkProductsV3[]'
     ];
 
     /**
@@ -598,7 +598,7 @@ class ProductProcessProgressProductsV3 implements ModelInterface, ArrayAccess, \
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\ProductProcessResultLinkProductsV3[]|null
+     * @return \Otto\Client\Model\ProductProcessResultLinkProductsV3[]|null
      */
     public function getLinks()
     {
@@ -608,7 +608,7 @@ class ProductProcessProgressProductsV3 implements ModelInterface, ArrayAccess, \
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\ProductProcessResultLinkProductsV3[]|null $links a list of links that can be used to access detailed information about the process result
+     * @param \Otto\Client\Model\ProductProcessResultLinkProductsV3[]|null $links a list of links that can be used to access detailed information about the process result
      *
      * @return self
      */

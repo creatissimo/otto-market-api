@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * InternalServerErrorShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @description An internal server error occurred.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class InternalServerErrorShipmentsV1 implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ErrorDescriptionShipmentsV1'
+        'errors' => '\Otto\Client\Model\ErrorDescriptionShipmentsV1'
     ];
 
     /**
@@ -293,7 +293,7 @@ class InternalServerErrorShipmentsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ErrorDescriptionShipmentsV1|null
+     * @return \Otto\Client\Model\ErrorDescriptionShipmentsV1|null
      */
     public function getErrors()
     {
@@ -303,7 +303,7 @@ class InternalServerErrorShipmentsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ErrorDescriptionShipmentsV1|null $errors errors
+     * @param \Otto\Client\Model\ErrorDescriptionShipmentsV1|null $errors errors
      *
      * @return self
      */

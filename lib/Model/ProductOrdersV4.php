@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductOrdersV4 Class Doc Comment
  *
  * @category Class
  * @description Product
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ProductOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'article_number' => 'string',
-        'dimensions' => '\OpenAPI\Client\Model\DimensionOrdersV4[]',
+        'dimensions' => '\Otto\Client\Model\DimensionOrdersV4[]',
         'ean' => 'string',
         'product_title' => 'string',
         'shop_url' => 'string',
@@ -374,7 +374,7 @@ class ProductOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dimensions
      *
-     * @return \OpenAPI\Client\Model\DimensionOrdersV4[]|null
+     * @return \Otto\Client\Model\DimensionOrdersV4[]|null
      */
     public function getDimensions()
     {
@@ -384,7 +384,7 @@ class ProductOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dimensions
      *
-     * @param \OpenAPI\Client\Model\DimensionOrdersV4[]|null $dimensions List of dimensions that are individual for each product type
+     * @param \Otto\Client\Model\DimensionOrdersV4[]|null $dimensions List of dimensions that are individual for each product type
      *
      * @return self
      */

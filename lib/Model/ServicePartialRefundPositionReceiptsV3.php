@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ServicePartialRefundPositionReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description List of billed partial refunds of services.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class ServicePartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAcc
         'service_type' => 'string',
         'service_name' => 'string',
         'service_position_item_ids' => 'string[]',
-        'partial_refund_amount' => '\OpenAPI\Client\Model\PriceReceiptsV3',
+        'partial_refund_amount' => '\Otto\Client\Model\PriceReceiptsV3',
         'insurance_period' => 'int'
     ];
 
@@ -470,7 +470,7 @@ class ServicePartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAcc
     /**
      * Gets partial_refund_amount
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3|null
+     * @return \Otto\Client\Model\PriceReceiptsV3|null
      */
     public function getPartialRefundAmount()
     {
@@ -480,7 +480,7 @@ class ServicePartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAcc
     /**
      * Sets partial_refund_amount
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3|null $partial_refund_amount partial_refund_amount
+     * @param \Otto\Client\Model\PriceReceiptsV3|null $partial_refund_amount partial_refund_amount
      *
      * @return self
      */

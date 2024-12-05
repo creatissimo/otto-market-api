@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ConflictPositionItemIdPriceReductionsV1 Class Doc Comment
  *
  * @category Class
  * @description PositionItemId is not shipped or returned.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ConflictPositionItemIdPriceReductionsV1 implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\APIErrorResponsePriceReductionsV1'
+        'errors' => '\Otto\Client\Model\APIErrorResponsePriceReductionsV1'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ConflictPositionItemIdPriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\APIErrorResponsePriceReductionsV1|null
+     * @return \Otto\Client\Model\APIErrorResponsePriceReductionsV1|null
      */
     public function getErrors()
     {
@@ -303,7 +303,7 @@ class ConflictPositionItemIdPriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\APIErrorResponsePriceReductionsV1|null $errors errors
+     * @param \Otto\Client\Model\APIErrorResponsePriceReductionsV1|null $errors errors
      *
      * @return self
      */

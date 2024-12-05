@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * GetAllProductDeliveryInfoResponseAvailabilityV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class GetAllProductDeliveryInfoResponseAvailabilityV1 implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]',
-        'links' => '\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1Links'
+        'results' => '\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]',
+        'links' => '\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1Links'
     ];
 
     /**
@@ -302,7 +302,7 @@ class GetAllProductDeliveryInfoResponseAvailabilityV1 implements ModelInterface,
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]
+     * @return \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]
      */
     public function getResults()
     {
@@ -312,7 +312,7 @@ class GetAllProductDeliveryInfoResponseAvailabilityV1 implements ModelInterface,
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[] $results List of maximum 200 sku-shipping profiles. Returns a cursor field if there are more than 200 sku-shipping profiles mapping to get the next results.
+     * @param \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[] $results List of maximum 200 sku-shipping profiles. Returns a cursor field if there are more than 200 sku-shipping profiles mapping to get the next results.
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class GetAllProductDeliveryInfoResponseAvailabilityV1 implements ModelInterface,
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1Links|null
+     * @return \Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1Links|null
      */
     public function getLinks()
     {
@@ -339,7 +339,7 @@ class GetAllProductDeliveryInfoResponseAvailabilityV1 implements ModelInterface,
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1Links|null $links links
+     * @param \Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1Links|null $links links
      *
      * @return self
      */

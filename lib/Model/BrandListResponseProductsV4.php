@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * BrandListResponseProductsV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class BrandListResponseProductsV4 implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'brands' => '\OpenAPI\Client\Model\BrandProductsV4[]',
-        'links' => '\OpenAPI\Client\Model\BrandListLinkProductsV4[]'
+        'brands' => '\Otto\Client\Model\BrandProductsV4[]',
+        'links' => '\Otto\Client\Model\BrandListLinkProductsV4[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class BrandListResponseProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets brands
      *
-     * @return \OpenAPI\Client\Model\BrandProductsV4[]|null
+     * @return \Otto\Client\Model\BrandProductsV4[]|null
      */
     public function getBrands()
     {
@@ -309,7 +309,7 @@ class BrandListResponseProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets brands
      *
-     * @param \OpenAPI\Client\Model\BrandProductsV4[]|null $brands brands
+     * @param \Otto\Client\Model\BrandProductsV4[]|null $brands brands
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class BrandListResponseProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\BrandListLinkProductsV4[]|null
+     * @return \Otto\Client\Model\BrandListLinkProductsV4[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class BrandListResponseProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\BrandListLinkProductsV4[]|null $links a list of links that can be used for pagination (among others).
+     * @param \Otto\Client\Model\BrandListLinkProductsV4[]|null $links a list of links that can be used for pagination (among others).
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ApiErrorResponseV2QuantitiesV2 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ApiErrorResponseV2QuantitiesV2 implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[]'
+        'errors' => '\Otto\Client\Model\ApiErrorV2QuantitiesV2[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class ApiErrorResponseV2QuantitiesV2 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[]
+     * @return \Otto\Client\Model\ApiErrorV2QuantitiesV2[]
      */
     public function getErrors()
     {
@@ -305,7 +305,7 @@ class ApiErrorResponseV2QuantitiesV2 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[] $errors list of errors
+     * @param \Otto\Client\Model\ApiErrorV2QuantitiesV2[] $errors list of errors
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AnnouncedStatusDataReturnsV3 Class Doc Comment
  *
  * @category Class
  * @description Details specific to a &#39;announced&#39; return status.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class AnnouncedStatusDataReturnsV3 implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'return_tracking_key' => '\OpenAPI\Client\Model\ReturnTrackingKeyReturnsV3'
+        'return_tracking_key' => '\Otto\Client\Model\ReturnTrackingKeyReturnsV3'
     ];
 
     /**
@@ -293,7 +293,7 @@ class AnnouncedStatusDataReturnsV3 implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets return_tracking_key
      *
-     * @return \OpenAPI\Client\Model\ReturnTrackingKeyReturnsV3|null
+     * @return \Otto\Client\Model\ReturnTrackingKeyReturnsV3|null
      */
     public function getReturnTrackingKey()
     {
@@ -303,7 +303,7 @@ class AnnouncedStatusDataReturnsV3 implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets return_tracking_key
      *
-     * @param \OpenAPI\Client\Model\ReturnTrackingKeyReturnsV3|null $return_tracking_key return_tracking_key
+     * @param \Otto\Client\Model\ReturnTrackingKeyReturnsV3|null $return_tracking_key return_tracking_key
      *
      * @return self
      */

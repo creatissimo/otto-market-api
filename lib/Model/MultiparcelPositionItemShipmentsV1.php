@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * MultiparcelPositionItemShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @description A single position item.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class MultiparcelPositionItemShipmentsV1 implements ModelInterface, ArrayAccess,
     protected static $openAPITypes = [
         'position_item_id' => 'string',
         'sales_order_id' => 'string',
-        'return_tracking_key' => '\OpenAPI\Client\Model\MultiparcelReturnTrackingKeyShipmentsV1'
+        'return_tracking_key' => '\Otto\Client\Model\MultiparcelReturnTrackingKeyShipmentsV1'
     ];
 
     /**
@@ -370,7 +370,7 @@ class MultiparcelPositionItemShipmentsV1 implements ModelInterface, ArrayAccess,
     /**
      * Gets return_tracking_key
      *
-     * @return \OpenAPI\Client\Model\MultiparcelReturnTrackingKeyShipmentsV1
+     * @return \Otto\Client\Model\MultiparcelReturnTrackingKeyShipmentsV1
      */
     public function getReturnTrackingKey()
     {
@@ -380,7 +380,7 @@ class MultiparcelPositionItemShipmentsV1 implements ModelInterface, ArrayAccess,
     /**
      * Sets return_tracking_key
      *
-     * @param \OpenAPI\Client\Model\MultiparcelReturnTrackingKeyShipmentsV1 $return_tracking_key return_tracking_key
+     * @param \Otto\Client\Model\MultiparcelReturnTrackingKeyShipmentsV1 $return_tracking_key return_tracking_key
      *
      * @return self
      */

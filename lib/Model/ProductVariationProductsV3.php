@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductVariationProductsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,13 +64,13 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
         'mpn' => 'string',
         'moin' => 'string',
         'release_date' => '\DateTime',
-        'product_description' => '\OpenAPI\Client\Model\ProductDescriptionProductsV3',
-        'media_assets' => '\OpenAPI\Client\Model\MediaAssetProductsV3[]',
-        'order' => '\OpenAPI\Client\Model\OrderProductsV3',
-        'delivery' => '\OpenAPI\Client\Model\DeliveryProductsV3',
-        'pricing' => '\OpenAPI\Client\Model\PricingProductsV3',
-        'logistics' => '\OpenAPI\Client\Model\LogisticsProductsV3',
-        'product_safety' => '\OpenAPI\Client\Model\ProductSafetyProductsV3'
+        'product_description' => '\Otto\Client\Model\ProductDescriptionProductsV3',
+        'media_assets' => '\Otto\Client\Model\MediaAssetProductsV3[]',
+        'order' => '\Otto\Client\Model\OrderProductsV3',
+        'delivery' => '\Otto\Client\Model\DeliveryProductsV3',
+        'pricing' => '\Otto\Client\Model\PricingProductsV3',
+        'logistics' => '\Otto\Client\Model\LogisticsProductsV3',
+        'product_safety' => '\Otto\Client\Model\ProductSafetyProductsV3'
     ];
 
     /**
@@ -593,7 +593,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets product_description
      *
-     * @return \OpenAPI\Client\Model\ProductDescriptionProductsV3
+     * @return \Otto\Client\Model\ProductDescriptionProductsV3
      */
     public function getProductDescription()
     {
@@ -603,7 +603,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets product_description
      *
-     * @param \OpenAPI\Client\Model\ProductDescriptionProductsV3 $product_description product_description
+     * @param \Otto\Client\Model\ProductDescriptionProductsV3 $product_description product_description
      *
      * @return self
      */
@@ -620,7 +620,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets media_assets
      *
-     * @return \OpenAPI\Client\Model\MediaAssetProductsV3[]
+     * @return \Otto\Client\Model\MediaAssetProductsV3[]
      */
     public function getMediaAssets()
     {
@@ -630,7 +630,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets media_assets
      *
-     * @param \OpenAPI\Client\Model\MediaAssetProductsV3[] $media_assets A list of media assets describing this product variation. Currently these may only be static images of the types JPG or PNG with a RGB color space. Furthermore the images have to have a minimum size of 500 x 1000 pixel and a maximum width of 4500 pixel.
+     * @param \Otto\Client\Model\MediaAssetProductsV3[] $media_assets A list of media assets describing this product variation. Currently these may only be static images of the types JPG or PNG with a RGB color space. Furthermore the images have to have a minimum size of 500 x 1000 pixel and a maximum width of 4500 pixel.
      *
      * @return self
      */
@@ -647,7 +647,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets order
      *
-     * @return \OpenAPI\Client\Model\OrderProductsV3|null
+     * @return \Otto\Client\Model\OrderProductsV3|null
      */
     public function getOrder()
     {
@@ -657,7 +657,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets order
      *
-     * @param \OpenAPI\Client\Model\OrderProductsV3|null $order order
+     * @param \Otto\Client\Model\OrderProductsV3|null $order order
      *
      * @return self
      */
@@ -674,7 +674,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets delivery
      *
-     * @return \OpenAPI\Client\Model\DeliveryProductsV3
+     * @return \Otto\Client\Model\DeliveryProductsV3
      */
     public function getDelivery()
     {
@@ -684,7 +684,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets delivery
      *
-     * @param \OpenAPI\Client\Model\DeliveryProductsV3 $delivery delivery
+     * @param \Otto\Client\Model\DeliveryProductsV3 $delivery delivery
      *
      * @return self
      */
@@ -701,7 +701,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets pricing
      *
-     * @return \OpenAPI\Client\Model\PricingProductsV3
+     * @return \Otto\Client\Model\PricingProductsV3
      */
     public function getPricing()
     {
@@ -711,7 +711,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets pricing
      *
-     * @param \OpenAPI\Client\Model\PricingProductsV3 $pricing pricing
+     * @param \Otto\Client\Model\PricingProductsV3 $pricing pricing
      *
      * @return self
      */
@@ -728,7 +728,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets logistics
      *
-     * @return \OpenAPI\Client\Model\LogisticsProductsV3|null
+     * @return \Otto\Client\Model\LogisticsProductsV3|null
      */
     public function getLogistics()
     {
@@ -738,7 +738,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets logistics
      *
-     * @param \OpenAPI\Client\Model\LogisticsProductsV3|null $logistics logistics
+     * @param \Otto\Client\Model\LogisticsProductsV3|null $logistics logistics
      *
      * @return self
      */
@@ -755,7 +755,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets product_safety
      *
-     * @return \OpenAPI\Client\Model\ProductSafetyProductsV3|null
+     * @return \Otto\Client\Model\ProductSafetyProductsV3|null
      */
     public function getProductSafety()
     {
@@ -765,7 +765,7 @@ class ProductVariationProductsV3 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets product_safety
      *
-     * @param \OpenAPI\Client\Model\ProductSafetyProductsV3|null $product_safety product_safety
+     * @param \Otto\Client\Model\ProductSafetyProductsV3|null $product_safety product_safety
      *
      * @return self
      */

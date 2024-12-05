@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ShipmentShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @description A shipment with full details.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,11 +60,11 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'shipment_id' => 'string',
         'creation_date' => 'string',
-        'tracking_key' => '\OpenAPI\Client\Model\TrackingKeyShipmentsV1',
+        'tracking_key' => '\Otto\Client\Model\TrackingKeyShipmentsV1',
         'ship_date' => 'string',
-        'ship_from_address' => '\OpenAPI\Client\Model\AddressShipmentsV1',
-        'position_items' => '\OpenAPI\Client\Model\PositionItemShipmentsV1[]',
-        'states' => '\OpenAPI\Client\Model\ShipmentStateShipmentsV1[]'
+        'ship_from_address' => '\Otto\Client\Model\AddressShipmentsV1',
+        'position_items' => '\Otto\Client\Model\PositionItemShipmentsV1[]',
+        'states' => '\Otto\Client\Model\ShipmentStateShipmentsV1[]'
     ];
 
     /**
@@ -397,7 +397,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets tracking_key
      *
-     * @return \OpenAPI\Client\Model\TrackingKeyShipmentsV1|null
+     * @return \Otto\Client\Model\TrackingKeyShipmentsV1|null
      */
     public function getTrackingKey()
     {
@@ -407,7 +407,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets tracking_key
      *
-     * @param \OpenAPI\Client\Model\TrackingKeyShipmentsV1|null $tracking_key tracking_key
+     * @param \Otto\Client\Model\TrackingKeyShipmentsV1|null $tracking_key tracking_key
      *
      * @return self
      */
@@ -451,7 +451,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets ship_from_address
      *
-     * @return \OpenAPI\Client\Model\AddressShipmentsV1|null
+     * @return \Otto\Client\Model\AddressShipmentsV1|null
      */
     public function getShipFromAddress()
     {
@@ -461,7 +461,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets ship_from_address
      *
-     * @param \OpenAPI\Client\Model\AddressShipmentsV1|null $ship_from_address ship_from_address
+     * @param \Otto\Client\Model\AddressShipmentsV1|null $ship_from_address ship_from_address
      *
      * @return self
      */
@@ -478,7 +478,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets position_items
      *
-     * @return \OpenAPI\Client\Model\PositionItemShipmentsV1[]|null
+     * @return \Otto\Client\Model\PositionItemShipmentsV1[]|null
      */
     public function getPositionItems()
     {
@@ -488,7 +488,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets position_items
      *
-     * @param \OpenAPI\Client\Model\PositionItemShipmentsV1[]|null $position_items The position items included in the shipment.
+     * @param \Otto\Client\Model\PositionItemShipmentsV1[]|null $position_items The position items included in the shipment.
      *
      * @return self
      */
@@ -510,7 +510,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets states
      *
-     * @return \OpenAPI\Client\Model\ShipmentStateShipmentsV1[]|null
+     * @return \Otto\Client\Model\ShipmentStateShipmentsV1[]|null
      */
     public function getStates()
     {
@@ -520,7 +520,7 @@ class ShipmentShipmentsV1 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets states
      *
-     * @param \OpenAPI\Client\Model\ShipmentStateShipmentsV1[]|null $states The history of tracking states of the shipment
+     * @param \Otto\Client\Model\ShipmentStateShipmentsV1[]|null $states The history of tracking states of the shipment
      *
      * @return self
      */

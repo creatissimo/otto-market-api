@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * InitialDeliveryFeeOrdersV4 Class Doc Comment
  *
  * @category Class
  * @description InitialDeliveryFee
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class InitialDeliveryFeeOrdersV4 implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'delivery_fee_amount' => '\OpenAPI\Client\Model\AmountOrdersV4',
+        'delivery_fee_amount' => '\Otto\Client\Model\AmountOrdersV4',
         'name' => 'string',
         'position_item_ids' => 'string[]',
         'vat_rate' => 'float'
@@ -326,7 +326,7 @@ class InitialDeliveryFeeOrdersV4 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets delivery_fee_amount
      *
-     * @return \OpenAPI\Client\Model\AmountOrdersV4
+     * @return \Otto\Client\Model\AmountOrdersV4
      */
     public function getDeliveryFeeAmount()
     {
@@ -336,7 +336,7 @@ class InitialDeliveryFeeOrdersV4 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets delivery_fee_amount
      *
-     * @param \OpenAPI\Client\Model\AmountOrdersV4 $delivery_fee_amount delivery_fee_amount
+     * @param \Otto\Client\Model\AmountOrdersV4 $delivery_fee_amount delivery_fee_amount
      *
      * @return self
      */

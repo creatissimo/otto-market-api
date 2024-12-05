@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * MarketPlaceStatusApiResultProductsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class MarketPlaceStatusApiResultProductsV3 implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'market_place_status' => '\OpenAPI\Client\Model\MarketPlaceStatusProductsV3[]',
-        'links' => '\OpenAPI\Client\Model\MarketPlaceStatusApiLinkProductsV3[]'
+        'market_place_status' => '\Otto\Client\Model\MarketPlaceStatusProductsV3[]',
+        'links' => '\Otto\Client\Model\MarketPlaceStatusApiLinkProductsV3[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class MarketPlaceStatusApiResultProductsV3 implements ModelInterface, ArrayAcces
     /**
      * Gets market_place_status
      *
-     * @return \OpenAPI\Client\Model\MarketPlaceStatusProductsV3[]|null
+     * @return \Otto\Client\Model\MarketPlaceStatusProductsV3[]|null
      */
     public function getMarketPlaceStatus()
     {
@@ -309,7 +309,7 @@ class MarketPlaceStatusApiResultProductsV3 implements ModelInterface, ArrayAcces
     /**
      * Sets market_place_status
      *
-     * @param \OpenAPI\Client\Model\MarketPlaceStatusProductsV3[]|null $market_place_status market_place_status
+     * @param \Otto\Client\Model\MarketPlaceStatusProductsV3[]|null $market_place_status market_place_status
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class MarketPlaceStatusApiResultProductsV3 implements ModelInterface, ArrayAcces
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\MarketPlaceStatusApiLinkProductsV3[]|null
+     * @return \Otto\Client\Model\MarketPlaceStatusApiLinkProductsV3[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class MarketPlaceStatusApiResultProductsV3 implements ModelInterface, ArrayAcces
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\MarketPlaceStatusApiLinkProductsV3[]|null $links a list of links that can be used for pagination.
+     * @param \Otto\Client\Model\MarketPlaceStatusApiLinkProductsV3[]|null $links a list of links that can be used for pagination.
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ShipmentWithMinimumDetailsShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @description A shipment with a reduced number of fields.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class ShipmentWithMinimumDetailsShipmentsV1 implements ModelInterface, ArrayAcce
     protected static $openAPITypes = [
         'creation_date' => 'string',
         'shipment_id' => 'string',
-        'tracking_key' => '\OpenAPI\Client\Model\TrackingKeyShipmentsV1',
-        'states' => '\OpenAPI\Client\Model\ShipmentStateShipmentsV1[]'
+        'tracking_key' => '\Otto\Client\Model\TrackingKeyShipmentsV1',
+        'states' => '\Otto\Client\Model\ShipmentStateShipmentsV1[]'
     ];
 
     /**
@@ -372,7 +372,7 @@ class ShipmentWithMinimumDetailsShipmentsV1 implements ModelInterface, ArrayAcce
     /**
      * Gets tracking_key
      *
-     * @return \OpenAPI\Client\Model\TrackingKeyShipmentsV1|null
+     * @return \Otto\Client\Model\TrackingKeyShipmentsV1|null
      */
     public function getTrackingKey()
     {
@@ -382,7 +382,7 @@ class ShipmentWithMinimumDetailsShipmentsV1 implements ModelInterface, ArrayAcce
     /**
      * Sets tracking_key
      *
-     * @param \OpenAPI\Client\Model\TrackingKeyShipmentsV1|null $tracking_key tracking_key
+     * @param \Otto\Client\Model\TrackingKeyShipmentsV1|null $tracking_key tracking_key
      *
      * @return self
      */
@@ -399,7 +399,7 @@ class ShipmentWithMinimumDetailsShipmentsV1 implements ModelInterface, ArrayAcce
     /**
      * Gets states
      *
-     * @return \OpenAPI\Client\Model\ShipmentStateShipmentsV1[]|null
+     * @return \Otto\Client\Model\ShipmentStateShipmentsV1[]|null
      */
     public function getStates()
     {
@@ -409,7 +409,7 @@ class ShipmentWithMinimumDetailsShipmentsV1 implements ModelInterface, ArrayAcce
     /**
      * Sets states
      *
-     * @param \OpenAPI\Client\Model\ShipmentStateShipmentsV1[]|null $states The history of tracking states of the shipment
+     * @param \Otto\Client\Model\ShipmentStateShipmentsV1[]|null $states The history of tracking states of the shipment
      *
      * @return self
      */

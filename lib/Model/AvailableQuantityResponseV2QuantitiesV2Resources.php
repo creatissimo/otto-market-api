@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AvailableQuantityResponseV2QuantitiesV2Resources Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class AvailableQuantityResponseV2QuantitiesV2Resources implements ModelInterface
       * @var string[]
       */
     protected static $openAPITypes = [
-        'variations' => '\OpenAPI\Client\Model\AvailableQuantityResponseDTOV2QuantitiesV2[]'
+        'variations' => '\Otto\Client\Model\AvailableQuantityResponseDTOV2QuantitiesV2[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class AvailableQuantityResponseV2QuantitiesV2Resources implements ModelInterface
     /**
      * Gets variations
      *
-     * @return \OpenAPI\Client\Model\AvailableQuantityResponseDTOV2QuantitiesV2[]
+     * @return \Otto\Client\Model\AvailableQuantityResponseDTOV2QuantitiesV2[]
      */
     public function getVariations()
     {
@@ -305,7 +305,7 @@ class AvailableQuantityResponseV2QuantitiesV2Resources implements ModelInterface
     /**
      * Sets variations
      *
-     * @param \OpenAPI\Client\Model\AvailableQuantityResponseDTOV2QuantitiesV2[] $variations variations
+     * @param \Otto\Client\Model\AvailableQuantityResponseDTOV2QuantitiesV2[] $variations variations
      *
      * @return self
      */

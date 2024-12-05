@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * OrderProductsV3 Class Doc Comment
  *
  * @category Class
  * @description A Container holding order constraints
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class OrderProductsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'max_order_quantity' => '\OpenAPI\Client\Model\MaxOrderQuantityProductsV3'
+        'max_order_quantity' => '\Otto\Client\Model\MaxOrderQuantityProductsV3'
     ];
 
     /**
@@ -293,7 +293,7 @@ class OrderProductsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets max_order_quantity
      *
-     * @return \OpenAPI\Client\Model\MaxOrderQuantityProductsV3|null
+     * @return \Otto\Client\Model\MaxOrderQuantityProductsV3|null
      */
     public function getMaxOrderQuantity()
     {
@@ -303,7 +303,7 @@ class OrderProductsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets max_order_quantity
      *
-     * @param \OpenAPI\Client\Model\MaxOrderQuantityProductsV3|null $max_order_quantity max_order_quantity
+     * @param \Otto\Client\Model\MaxOrderQuantityProductsV3|null $max_order_quantity max_order_quantity
      *
      * @return self
      */

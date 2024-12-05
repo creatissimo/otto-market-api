@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PositionItemListReturnsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class PositionItemListReturnsV3 implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'position_items' => '\OpenAPI\Client\Model\PositionItemReturnsV3[]',
-        'links' => '\OpenAPI\Client\Model\LinkReturnsV3[]'
+        'position_items' => '\Otto\Client\Model\PositionItemReturnsV3[]',
+        'links' => '\Otto\Client\Model\LinkReturnsV3[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class PositionItemListReturnsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets position_items
      *
-     * @return \OpenAPI\Client\Model\PositionItemReturnsV3[]|null
+     * @return \Otto\Client\Model\PositionItemReturnsV3[]|null
      */
     public function getPositionItems()
     {
@@ -309,7 +309,7 @@ class PositionItemListReturnsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets position_items
      *
-     * @param \OpenAPI\Client\Model\PositionItemReturnsV3[]|null $position_items The list of queried items.
+     * @param \Otto\Client\Model\PositionItemReturnsV3[]|null $position_items The list of queried items.
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class PositionItemListReturnsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkReturnsV3[]|null
+     * @return \Otto\Client\Model\LinkReturnsV3[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class PositionItemListReturnsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkReturnsV3[]|null $links Links related to the list. E.g. the link to the successive list used during paging.
+     * @param \Otto\Client\Model\LinkReturnsV3[]|null $links Links related to the list. E.g. the link to the successive list used during paging.
      *
      * @return self
      */

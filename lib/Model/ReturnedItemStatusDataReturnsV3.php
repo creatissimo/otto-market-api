@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReturnedItemStatusDataReturnsV3 Class Doc Comment
  *
  * @category Class
  * @description UnionType: One of  ReturnAnnounced, Misdirected Return, Accepted Return, Rejected Return. This type is never returned to the client only the subtypes are
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ReturnedItemStatusDataReturnsV3 implements ModelInterface, ArrayAccess, \J
     protected static $openAPITypes = [
         'condition' => 'string',
         'reason' => 'string',
-        'return_tracking_key' => '\OpenAPI\Client\Model\ReturnTrackingKeyReturnsV3',
+        'return_tracking_key' => '\Otto\Client\Model\ReturnTrackingKeyReturnsV3',
         'order_number' => 'string',
         'otto_warehouse_id' => 'string'
     ];
@@ -422,7 +422,7 @@ class ReturnedItemStatusDataReturnsV3 implements ModelInterface, ArrayAccess, \J
     /**
      * Gets return_tracking_key
      *
-     * @return \OpenAPI\Client\Model\ReturnTrackingKeyReturnsV3|null
+     * @return \Otto\Client\Model\ReturnTrackingKeyReturnsV3|null
      */
     public function getReturnTrackingKey()
     {
@@ -432,7 +432,7 @@ class ReturnedItemStatusDataReturnsV3 implements ModelInterface, ArrayAccess, \J
     /**
      * Sets return_tracking_key
      *
-     * @param \OpenAPI\Client\Model\ReturnTrackingKeyReturnsV3|null $return_tracking_key return_tracking_key
+     * @param \Otto\Client\Model\ReturnTrackingKeyReturnsV3|null $return_tracking_key return_tracking_key
      *
      * @return self
      */

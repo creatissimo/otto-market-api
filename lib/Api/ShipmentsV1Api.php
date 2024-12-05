@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * ShipmentsV1Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -147,10 +147,10 @@ class ShipmentsV1Api
      *
      * @param  string $carrier The carrier of the shipment. (required)
      * @param  string $tracking_number The tracking number of the shipment assigned by the carrier. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -166,10 +166,10 @@ class ShipmentsV1Api
      *
      * @param  string $carrier The carrier of the shipment. (required)
      * @param  string $tracking_number The tracking number of the shipment assigned by the carrier. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -207,7 +207,7 @@ class ShipmentsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BadRequestAddPositionItemByTrackingNumberShipmentsV1',
+                        '\Otto\Client\Model\BadRequestAddPositionItemByTrackingNumberShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -223,7 +223,7 @@ class ShipmentsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundAddPositionItemByTrackingNumberShipmentsV1',
+                        '\Otto\Client\Model\NotFoundAddPositionItemByTrackingNumberShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class ShipmentsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConflictAddPositionItemByTrackingNumberShipmentsV1',
+                        '\Otto\Client\Model\ConflictAddPositionItemByTrackingNumberShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class ShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorAddPositionItemByTrackingNumberShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorAddPositionItemByTrackingNumberShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class ShipmentsV1Api
      *
      * @param  string $carrier The carrier of the shipment. (required)
      * @param  string $tracking_number The tracking number of the shipment assigned by the carrier. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -279,7 +279,7 @@ class ShipmentsV1Api
      *
      * @param  string $carrier The carrier of the shipment. (required)
      * @param  string $tracking_number The tracking number of the shipment assigned by the carrier. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -318,7 +318,7 @@ class ShipmentsV1Api
      *
      * @param  string $carrier The carrier of the shipment. (required)
      * @param  string $tracking_number The tracking number of the shipment assigned by the carrier. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 The position items included in shipment. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -446,10 +446,10 @@ class ShipmentsV1Api
      * Correct an existing shipment (add sent items) by shipment ID.
      *
      * @param  string $shipment_id Internal shipment identifier assigned by OTTO Market. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -464,10 +464,10 @@ class ShipmentsV1Api
      * Correct an existing shipment (add sent items) by shipment ID.
      *
      * @param  string $shipment_id Internal shipment identifier assigned by OTTO Market. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -505,7 +505,7 @@ class ShipmentsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BadRequestAddPositionItemByShipmentIdShipmentsV1',
+                        '\Otto\Client\Model\BadRequestAddPositionItemByShipmentIdShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -521,7 +521,7 @@ class ShipmentsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundAddPositionItemByShipmentIdShipmentsV1',
+                        '\Otto\Client\Model\NotFoundAddPositionItemByShipmentIdShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -529,7 +529,7 @@ class ShipmentsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConflictAddPositionItemByShipmentIdShipmentsV1',
+                        '\Otto\Client\Model\ConflictAddPositionItemByShipmentIdShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,7 +537,7 @@ class ShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorAddPositionItemByShipmentIdShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorAddPositionItemByShipmentIdShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class ShipmentsV1Api
      * Correct an existing shipment (add sent items) by shipment ID.
      *
      * @param  string $shipment_id Internal shipment identifier assigned by OTTO Market. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -575,7 +575,7 @@ class ShipmentsV1Api
      * Correct an existing shipment (add sent items) by shipment ID.
      *
      * @param  string $shipment_id Internal shipment identifier assigned by OTTO Market. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -613,7 +613,7 @@ class ShipmentsV1Api
      * Create request for operation 'shipmentsV1AppendPositionItemsUsingPOST'
      *
      * @param  string $shipment_id Internal shipment identifier assigned by OTTO Market. (required)
-     * @param  \OpenAPI\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
+     * @param  \Otto\Client\Model\PositionItemShipmentsV1[] $position_item_shipments_v1 positionItems (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1AppendPositionItemsUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -725,12 +725,12 @@ class ShipmentsV1Api
      *
      * Create a multiparcel shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1|\OpenAPI\Client\Model\BadRequestShipmentsV1|mixed|\OpenAPI\Client\Model\ConflictMultiparcelShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorMultiparcelShipmentsV1
+     * @return \Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1|\Otto\Client\Model\BadRequestShipmentsV1|mixed|\Otto\Client\Model\ConflictMultiparcelShipmentsV1|\Otto\Client\Model\InternalServerErrorMultiparcelShipmentsV1
      */
     public function shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST($multiparcel_create_shipment_request_shipments_v1, string $contentType = self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'][0])
     {
@@ -743,12 +743,12 @@ class ShipmentsV1Api
      *
      * Create a multiparcel shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1|\OpenAPI\Client\Model\BadRequestShipmentsV1|mixed|\OpenAPI\Client\Model\ConflictMultiparcelShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorMultiparcelShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1|\Otto\Client\Model\BadRequestShipmentsV1|mixed|\Otto\Client\Model\ConflictMultiparcelShipmentsV1|\Otto\Client\Model\InternalServerErrorMultiparcelShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOSTWithHttpInfo($multiparcel_create_shipment_request_shipments_v1, string $contentType = self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'][0])
     {
@@ -779,11 +779,11 @@ class ShipmentsV1Api
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -801,16 +801,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BadRequestShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\BadRequestShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BadRequestShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\BadRequestShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -828,7 +828,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BadRequestShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\BadRequestShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -860,11 +860,11 @@ class ShipmentsV1Api
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\OpenAPI\Client\Model\ConflictMultiparcelShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ConflictMultiparcelShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ConflictMultiparcelShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\ConflictMultiparcelShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -882,16 +882,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ConflictMultiparcelShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ConflictMultiparcelShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\InternalServerErrorMultiparcelShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\InternalServerErrorMultiparcelShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InternalServerErrorMultiparcelShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\InternalServerErrorMultiparcelShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -909,7 +909,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InternalServerErrorMultiparcelShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\InternalServerErrorMultiparcelShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -928,7 +928,7 @@ class ShipmentsV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1';
+            $returnType = '\Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -961,7 +961,7 @@ class ShipmentsV1Api
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1',
+                        '\Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -969,7 +969,7 @@ class ShipmentsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BadRequestShipmentsV1',
+                        '\Otto\Client\Model\BadRequestShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -985,7 +985,7 @@ class ShipmentsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConflictMultiparcelShipmentsV1',
+                        '\Otto\Client\Model\ConflictMultiparcelShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -993,7 +993,7 @@ class ShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorMultiparcelShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorMultiparcelShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1008,7 +1008,7 @@ class ShipmentsV1Api
      *
      * Create a multiparcel shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1029,7 +1029,7 @@ class ShipmentsV1Api
      *
      * Create a multiparcel shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1037,7 +1037,7 @@ class ShipmentsV1Api
      */
     public function shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOSTAsyncWithHttpInfo($multiparcel_create_shipment_request_shipments_v1, string $contentType = self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1';
+        $returnType = '\Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1';
         $request = $this->shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOSTRequest($multiparcel_create_shipment_request_shipments_v1, $contentType);
 
         return $this->client
@@ -1079,7 +1079,7 @@ class ShipmentsV1Api
     /**
      * Create request for operation 'shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'
      *
-     * @param  \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] $multiparcel_create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1179,12 +1179,12 @@ class ShipmentsV1Api
      *
      * Create a shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1|\OpenAPI\Client\Model\BadRequestShipmentsV1|mixed|\OpenAPI\Client\Model\ConflictShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorShipmentsV1
+     * @return \Otto\Client\Model\CreateShipmentResponseShipmentsV1|\Otto\Client\Model\BadRequestShipmentsV1|mixed|\Otto\Client\Model\ConflictShipmentsV1|\Otto\Client\Model\InternalServerErrorShipmentsV1
      */
     public function shipmentsV1CreatedAndSentShipmentUsingPOST($create_shipment_request_shipments_v1, string $contentType = self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'][0])
     {
@@ -1197,12 +1197,12 @@ class ShipmentsV1Api
      *
      * Create a shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1|\OpenAPI\Client\Model\BadRequestShipmentsV1|mixed|\OpenAPI\Client\Model\ConflictShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\CreateShipmentResponseShipmentsV1|\Otto\Client\Model\BadRequestShipmentsV1|mixed|\Otto\Client\Model\ConflictShipmentsV1|\Otto\Client\Model\InternalServerErrorShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsV1CreatedAndSentShipmentUsingPOSTWithHttpInfo($create_shipment_request_shipments_v1, string $contentType = self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'][0])
     {
@@ -1233,11 +1233,11 @@ class ShipmentsV1Api
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\CreateShipmentResponseShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\CreateShipmentResponseShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1255,16 +1255,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\CreateShipmentResponseShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BadRequestShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\BadRequestShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BadRequestShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\BadRequestShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1282,7 +1282,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BadRequestShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\BadRequestShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1314,11 +1314,11 @@ class ShipmentsV1Api
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\OpenAPI\Client\Model\ConflictShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ConflictShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ConflictShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\ConflictShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1336,16 +1336,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ConflictShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ConflictShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\InternalServerErrorShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\InternalServerErrorShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InternalServerErrorShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\InternalServerErrorShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1363,7 +1363,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InternalServerErrorShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\InternalServerErrorShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1382,7 +1382,7 @@ class ShipmentsV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1';
+            $returnType = '\Otto\Client\Model\CreateShipmentResponseShipmentsV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1415,7 +1415,7 @@ class ShipmentsV1Api
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1',
+                        '\Otto\Client\Model\CreateShipmentResponseShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1423,7 +1423,7 @@ class ShipmentsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BadRequestShipmentsV1',
+                        '\Otto\Client\Model\BadRequestShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1439,7 +1439,7 @@ class ShipmentsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConflictShipmentsV1',
+                        '\Otto\Client\Model\ConflictShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1447,7 +1447,7 @@ class ShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1462,7 +1462,7 @@ class ShipmentsV1Api
      *
      * Create a shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1483,7 +1483,7 @@ class ShipmentsV1Api
      *
      * Create a shipment and mark the position items as sent.
      *
-     * @param  \OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1491,7 +1491,7 @@ class ShipmentsV1Api
      */
     public function shipmentsV1CreatedAndSentShipmentUsingPOSTAsyncWithHttpInfo($create_shipment_request_shipments_v1, string $contentType = self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1';
+        $returnType = '\Otto\Client\Model\CreateShipmentResponseShipmentsV1';
         $request = $this->shipmentsV1CreatedAndSentShipmentUsingPOSTRequest($create_shipment_request_shipments_v1, $contentType);
 
         return $this->client
@@ -1533,7 +1533,7 @@ class ShipmentsV1Api
     /**
      * Create request for operation 'shipmentsV1CreatedAndSentShipmentUsingPOST'
      *
-     * @param  \OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
+     * @param  \Otto\Client\Model\CreateShipmentRequestShipmentsV1 $create_shipment_request_shipments_v1 request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1CreatedAndSentShipmentUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1635,9 +1635,9 @@ class ShipmentsV1Api
      * @param  string $next The cursor which points to the next shipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ListShipmentsUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ShipmentListShipmentsV1|mixed|\OpenAPI\Client\Model\InternalServerErrorGetShipmentListShipmentsV1
+     * @return \Otto\Client\Model\ShipmentListShipmentsV1|mixed|\Otto\Client\Model\InternalServerErrorGetShipmentListShipmentsV1
      */
     public function shipmentsV1ListShipmentsUsingGET($datefrom, $limit = 25, $next = null, string $contentType = self::contentTypes['shipmentsV1ListShipmentsUsingGET'][0])
     {
@@ -1655,9 +1655,9 @@ class ShipmentsV1Api
      * @param  string $next The cursor which points to the next shipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ListShipmentsUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ShipmentListShipmentsV1|mixed|\OpenAPI\Client\Model\InternalServerErrorGetShipmentListShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ShipmentListShipmentsV1|mixed|\Otto\Client\Model\InternalServerErrorGetShipmentListShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsV1ListShipmentsUsingGETWithHttpInfo($datefrom, $limit = 25, $next = null, string $contentType = self::contentTypes['shipmentsV1ListShipmentsUsingGET'][0])
     {
@@ -1688,11 +1688,11 @@ class ShipmentsV1Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ShipmentListShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ShipmentListShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ShipmentListShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\ShipmentListShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1710,7 +1710,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ShipmentListShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ShipmentListShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1742,11 +1742,11 @@ class ShipmentsV1Api
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\InternalServerErrorGetShipmentListShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\InternalServerErrorGetShipmentListShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InternalServerErrorGetShipmentListShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\InternalServerErrorGetShipmentListShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1764,7 +1764,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InternalServerErrorGetShipmentListShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\InternalServerErrorGetShipmentListShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1783,7 +1783,7 @@ class ShipmentsV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ShipmentListShipmentsV1';
+            $returnType = '\Otto\Client\Model\ShipmentListShipmentsV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1816,7 +1816,7 @@ class ShipmentsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ShipmentListShipmentsV1',
+                        '\Otto\Client\Model\ShipmentListShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1832,7 +1832,7 @@ class ShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorGetShipmentListShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetShipmentListShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1880,7 +1880,7 @@ class ShipmentsV1Api
      */
     public function shipmentsV1ListShipmentsUsingGETAsyncWithHttpInfo($datefrom, $limit = 25, $next = null, string $contentType = self::contentTypes['shipmentsV1ListShipmentsUsingGET'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ShipmentListShipmentsV1';
+        $returnType = '\Otto\Client\Model\ShipmentListShipmentsV1';
         $request = $this->shipmentsV1ListShipmentsUsingGETRequest($datefrom, $limit, $next, $contentType);
 
         return $this->client
@@ -2053,9 +2053,9 @@ class ShipmentsV1Api
      * @param  string $tracking_number The tracking number of the shipment assigned by the carrier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ShipmentShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1|\OpenAPI\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1
+     * @return \Otto\Client\Model\ShipmentShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1|\Otto\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1|\Otto\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1
      */
     public function shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET($carrier, $tracking_number, string $contentType = self::contentTypes['shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET'][0])
     {
@@ -2072,9 +2072,9 @@ class ShipmentsV1Api
      * @param  string $tracking_number The tracking number of the shipment assigned by the carrier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ShipmentShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1|\OpenAPI\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ShipmentShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1|\Otto\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1|\Otto\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGETWithHttpInfo($carrier, $tracking_number, string $contentType = self::contentTypes['shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET'][0])
     {
@@ -2105,11 +2105,11 @@ class ShipmentsV1Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ShipmentShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ShipmentShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ShipmentShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\ShipmentShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2127,7 +2127,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ShipmentShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ShipmentShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2159,11 +2159,11 @@ class ShipmentsV1Api
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2181,16 +2181,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2208,16 +2208,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2235,7 +2235,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2254,7 +2254,7 @@ class ShipmentsV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ShipmentShipmentsV1';
+            $returnType = '\Otto\Client\Model\ShipmentShipmentsV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2287,7 +2287,7 @@ class ShipmentsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ShipmentShipmentsV1',
+                        '\Otto\Client\Model\ShipmentShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2303,7 +2303,7 @@ class ShipmentsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1',
+                        '\Otto\Client\Model\ForbiddenGetShipmentByTrackingNumberShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2311,7 +2311,7 @@ class ShipmentsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1',
+                        '\Otto\Client\Model\NotFoundGetShipmentByTrackingNumberShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2319,7 +2319,7 @@ class ShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetShipmentByTrackingNumberShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2365,7 +2365,7 @@ class ShipmentsV1Api
      */
     public function shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGETAsyncWithHttpInfo($carrier, $tracking_number, string $contentType = self::contentTypes['shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ShipmentShipmentsV1';
+        $returnType = '\Otto\Client\Model\ShipmentShipmentsV1';
         $request = $this->shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGETRequest($carrier, $tracking_number, $contentType);
 
         return $this->client
@@ -2524,9 +2524,9 @@ class ShipmentsV1Api
      * @param  string $shipment_id Internal shipment identifier assigned by OTTO Market. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ShipmentUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ShipmentShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1|\OpenAPI\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1
+     * @return \Otto\Client\Model\ShipmentShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1|\Otto\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1|\Otto\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1
      */
     public function shipmentsV1ShipmentUsingGET($shipment_id, string $contentType = self::contentTypes['shipmentsV1ShipmentUsingGET'][0])
     {
@@ -2542,9 +2542,9 @@ class ShipmentsV1Api
      * @param  string $shipment_id Internal shipment identifier assigned by OTTO Market. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ShipmentUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ShipmentShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1|\OpenAPI\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ShipmentShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1|\Otto\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1|\Otto\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsV1ShipmentUsingGETWithHttpInfo($shipment_id, string $contentType = self::contentTypes['shipmentsV1ShipmentUsingGET'][0])
     {
@@ -2575,11 +2575,11 @@ class ShipmentsV1Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ShipmentShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ShipmentShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ShipmentShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\ShipmentShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2597,7 +2597,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ShipmentShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ShipmentShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2629,11 +2629,11 @@ class ShipmentsV1Api
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2651,16 +2651,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2678,16 +2678,16 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1' !== 'string') {
+                        if ('\Otto\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2705,7 +2705,7 @@ class ShipmentsV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2724,7 +2724,7 @@ class ShipmentsV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ShipmentShipmentsV1';
+            $returnType = '\Otto\Client\Model\ShipmentShipmentsV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2757,7 +2757,7 @@ class ShipmentsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ShipmentShipmentsV1',
+                        '\Otto\Client\Model\ShipmentShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2773,7 +2773,7 @@ class ShipmentsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1',
+                        '\Otto\Client\Model\ForbiddenGetShipmentByShipmentIdShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2781,7 +2781,7 @@ class ShipmentsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1',
+                        '\Otto\Client\Model\NotFoundGetShipmentByShipmentIdShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2789,7 +2789,7 @@ class ShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetShipmentByShipmentIdShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2833,7 +2833,7 @@ class ShipmentsV1Api
      */
     public function shipmentsV1ShipmentUsingGETAsyncWithHttpInfo($shipment_id, string $contentType = self::contentTypes['shipmentsV1ShipmentUsingGET'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ShipmentShipmentsV1';
+        $returnType = '\Otto\Client\Model\ShipmentShipmentsV1';
         $request = $this->shipmentsV1ShipmentUsingGETRequest($shipment_id, $contentType);
 
         return $this->client

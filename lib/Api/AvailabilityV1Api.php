@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * AvailabilityV1Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -148,9 +148,9 @@ class AvailabilityV1Api
      * @param  string $cursor Cursor for paging requests. If a cursor is provided, the only other request parameter being considered is &#39;limit&#39;. The cursor value is the last evaluted sku in the request response (Needs to be a valid sku value) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetAvailableQuantities'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1
+     * @return \Otto\Client\Model\AvailableQuantityResponseAvailabilityV1
      */
     public function availabilityV1GetAvailableQuantities($authorization, $limit = 200, $page = 0, $cursor = null, string $contentType = self::contentTypes['availabilityV1GetAvailableQuantities'][0])
     {
@@ -169,9 +169,9 @@ class AvailabilityV1Api
      * @param  string $cursor Cursor for paging requests. If a cursor is provided, the only other request parameter being considered is &#39;limit&#39;. The cursor value is the last evaluted sku in the request response (Needs to be a valid sku value) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetAvailableQuantities'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\AvailableQuantityResponseAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function availabilityV1GetAvailableQuantitiesWithHttpInfo($authorization, $limit = 200, $page = 0, $cursor = null, string $contentType = self::contentTypes['availabilityV1GetAvailableQuantities'][0])
     {
@@ -202,11 +202,11 @@ class AvailabilityV1Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,7 +224,7 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -243,7 +243,7 @@ class AvailabilityV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1';
+            $returnType = '\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -276,7 +276,7 @@ class AvailabilityV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1',
+                        '\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -326,7 +326,7 @@ class AvailabilityV1Api
      */
     public function availabilityV1GetAvailableQuantitiesAsyncWithHttpInfo($authorization, $limit = 200, $page = 0, $cursor = null, string $contentType = self::contentTypes['availabilityV1GetAvailableQuantities'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1';
+        $returnType = '\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1';
         $request = $this->availabilityV1GetAvailableQuantitiesRequest($authorization, $limit, $page, $cursor, $contentType);
 
         return $this->client
@@ -499,9 +499,9 @@ class AvailabilityV1Api
      * @param  string $sku The sku for the available quantity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetAvailableQuantityBySku'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1
+     * @return \Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1
      */
     public function availabilityV1GetAvailableQuantityBySku($authorization, $sku, string $contentType = self::contentTypes['availabilityV1GetAvailableQuantityBySku'][0])
     {
@@ -518,9 +518,9 @@ class AvailabilityV1Api
      * @param  string $sku The sku for the available quantity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetAvailableQuantityBySku'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function availabilityV1GetAvailableQuantityBySkuWithHttpInfo($authorization, $sku, string $contentType = self::contentTypes['availabilityV1GetAvailableQuantityBySku'][0])
     {
@@ -551,11 +551,11 @@ class AvailabilityV1Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -573,7 +573,7 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -592,7 +592,7 @@ class AvailabilityV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1';
+            $returnType = '\Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -625,7 +625,7 @@ class AvailabilityV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1',
+                        '\Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -671,7 +671,7 @@ class AvailabilityV1Api
      */
     public function availabilityV1GetAvailableQuantityBySkuAsyncWithHttpInfo($authorization, $sku, string $contentType = self::contentTypes['availabilityV1GetAvailableQuantityBySku'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1';
+        $returnType = '\Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1';
         $request = $this->availabilityV1GetAvailableQuantityBySkuRequest($authorization, $sku, $contentType);
 
         return $this->client
@@ -827,9 +827,9 @@ class AvailabilityV1Api
      * @param  string $sku the sku in string format (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetDeliveryInformationBySKU'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForNotFoundAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1
+     * @return \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1|\Otto\Client\Model\APIErrorResponseForNotFoundAvailabilityV1|\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1
      */
     public function availabilityV1GetDeliveryInformationBySKU($authorization, $sku, string $contentType = self::contentTypes['availabilityV1GetDeliveryInformationBySKU'][0])
     {
@@ -846,9 +846,9 @@ class AvailabilityV1Api
      * @param  string $sku the sku in string format (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetDeliveryInformationBySKU'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForNotFoundAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1|\Otto\Client\Model\APIErrorResponseForNotFoundAvailabilityV1|\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function availabilityV1GetDeliveryInformationBySKUWithHttpInfo($authorization, $sku, string $contentType = self::contentTypes['availabilityV1GetDeliveryInformationBySKU'][0])
     {
@@ -879,11 +879,11 @@ class AvailabilityV1Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -901,16 +901,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\APIErrorResponseForNotFoundAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\APIErrorResponseForNotFoundAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\APIErrorResponseForNotFoundAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\APIErrorResponseForNotFoundAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -928,16 +928,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\APIErrorResponseForNotFoundAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\APIErrorResponseForNotFoundAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -955,7 +955,7 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -974,7 +974,7 @@ class AvailabilityV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1';
+            $returnType = '\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1007,7 +1007,7 @@ class AvailabilityV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1',
+                        '\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1015,7 +1015,7 @@ class AvailabilityV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForNotFoundAvailabilityV1',
+                        '\Otto\Client\Model\APIErrorResponseForNotFoundAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1023,7 +1023,7 @@ class AvailabilityV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1',
+                        '\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1069,7 +1069,7 @@ class AvailabilityV1Api
      */
     public function availabilityV1GetDeliveryInformationBySKUAsyncWithHttpInfo($authorization, $sku, string $contentType = self::contentTypes['availabilityV1GetDeliveryInformationBySKU'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1';
+        $returnType = '\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1';
         $request = $this->availabilityV1GetDeliveryInformationBySKURequest($authorization, $sku, $contentType);
 
         return $this->client
@@ -1226,9 +1226,9 @@ class AvailabilityV1Api
      * @param  string $cursor Cursor for paging requests. If a cursor is provided, the only other request parameter being considered is &#39;limit&#39;. &lt;br&gt;&lt;br&gt; Note:The cursor value must remain unchanged from the previous request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetProductDeliveryInformation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1
+     * @return \Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1|\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1
      */
     public function availabilityV1GetProductDeliveryInformation($authorization, $limit = 200, $cursor = null, string $contentType = self::contentTypes['availabilityV1GetProductDeliveryInformation'][0])
     {
@@ -1246,9 +1246,9 @@ class AvailabilityV1Api
      * @param  string $cursor Cursor for paging requests. If a cursor is provided, the only other request parameter being considered is &#39;limit&#39;. &lt;br&gt;&lt;br&gt; Note:The cursor value must remain unchanged from the previous request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1GetProductDeliveryInformation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1|\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function availabilityV1GetProductDeliveryInformationWithHttpInfo($authorization, $limit = 200, $cursor = null, string $contentType = self::contentTypes['availabilityV1GetProductDeliveryInformation'][0])
     {
@@ -1279,11 +1279,11 @@ class AvailabilityV1Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1301,16 +1301,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1328,7 +1328,7 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1347,7 +1347,7 @@ class AvailabilityV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1';
+            $returnType = '\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1380,7 +1380,7 @@ class AvailabilityV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1',
+                        '\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1388,7 +1388,7 @@ class AvailabilityV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1',
+                        '\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1436,7 +1436,7 @@ class AvailabilityV1Api
      */
     public function availabilityV1GetProductDeliveryInformationAsyncWithHttpInfo($authorization, $limit = 200, $cursor = null, string $contentType = self::contentTypes['availabilityV1GetProductDeliveryInformation'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1';
+        $returnType = '\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1';
         $request = $this->availabilityV1GetProductDeliveryInformationRequest($authorization, $limit, $cursor, $contentType);
 
         return $this->client
@@ -1595,12 +1595,12 @@ class AvailabilityV1Api
      * update quantities (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreAvailableQuantitiesUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\OpenAPI\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1|\OpenAPI\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1|\OpenAPI\Client\Model\ApiErrorResponseAvailabilityV1
+     * @return object|\Otto\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1|\Otto\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1|\Otto\Client\Model\ApiErrorResponseAvailabilityV1
      */
     public function availabilityV1StoreAvailableQuantitiesUsingPOST($authorization, $available_quantity_request_dto_availability_v1, string $contentType = self::contentTypes['availabilityV1StoreAvailableQuantitiesUsingPOST'][0])
     {
@@ -1614,12 +1614,12 @@ class AvailabilityV1Api
      * update quantities (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreAvailableQuantitiesUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\OpenAPI\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1|\OpenAPI\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1|\OpenAPI\Client\Model\ApiErrorResponseAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Otto\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1|\Otto\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1|\Otto\Client\Model\ApiErrorResponseAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function availabilityV1StoreAvailableQuantitiesUsingPOSTWithHttpInfo($authorization, $available_quantity_request_dto_availability_v1, string $contentType = self::contentTypes['availabilityV1StoreAvailableQuantitiesUsingPOST'][0])
     {
@@ -1677,11 +1677,11 @@ class AvailabilityV1Api
                         $response->getHeaders()
                     ];
                 case 207:
-                    if ('\OpenAPI\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1699,16 +1699,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 413:
-                    if ('\OpenAPI\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1726,16 +1726,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1753,7 +1753,7 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1813,7 +1813,7 @@ class AvailabilityV1Api
                 case 207:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1',
+                        '\Otto\Client\Model\UpdateQuantityMultiStatusResponseAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1821,7 +1821,7 @@ class AvailabilityV1Api
                 case 413:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1',
+                        '\Otto\Client\Model\PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1829,7 +1829,7 @@ class AvailabilityV1Api
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseAvailabilityV1',
+                        '\Otto\Client\Model\ApiErrorResponseAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1845,7 +1845,7 @@ class AvailabilityV1Api
      * update quantities (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreAvailableQuantitiesUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1867,7 +1867,7 @@ class AvailabilityV1Api
      * update quantities (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreAvailableQuantitiesUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1918,7 +1918,7 @@ class AvailabilityV1Api
      * Create request for operation 'availabilityV1StoreAvailableQuantitiesUsingPOST'
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
+     * @param  \Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] $available_quantity_request_dto_availability_v1 availableQuantityRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreAvailableQuantitiesUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2027,12 +2027,12 @@ class AvailabilityV1Api
      * update product delivery information (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
+     * @param  \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response|\OpenAPI\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForBadRequestAvailabilityV1|\OpenAPI\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1
+     * @return \Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response|\Otto\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1|\Otto\Client\Model\APIErrorResponseForBadRequestAvailabilityV1|\Otto\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1|\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1
      */
     public function availabilityV1StoreProductDeliveryInformationUsingPOST($authorization, $product_delivery_information_request_dto_availability_v1, string $contentType = self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'][0])
     {
@@ -2046,12 +2046,12 @@ class AvailabilityV1Api
      * update product delivery information (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
+     * @param  \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response|\OpenAPI\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForBadRequestAvailabilityV1|\OpenAPI\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1|\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response|\Otto\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1|\Otto\Client\Model\APIErrorResponseForBadRequestAvailabilityV1|\Otto\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1|\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function availabilityV1StoreProductDeliveryInformationUsingPOSTWithHttpInfo($authorization, $product_delivery_information_request_dto_availability_v1, string $contentType = self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'][0])
     {
@@ -2082,11 +2082,11 @@ class AvailabilityV1Api
 
             switch($statusCode) {
                 case 202:
-                    if ('\OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response' !== 'string') {
+                        if ('\Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2104,16 +2104,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 207:
-                    if ('\OpenAPI\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2131,16 +2131,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\APIErrorResponseForBadRequestAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\APIErrorResponseForBadRequestAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\APIErrorResponseForBadRequestAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\APIErrorResponseForBadRequestAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2158,16 +2158,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\APIErrorResponseForBadRequestAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\APIErrorResponseForBadRequestAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 413:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2185,16 +2185,16 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' !== 'string') {
+                        if ('\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2212,7 +2212,7 @@ class AvailabilityV1Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2231,7 +2231,7 @@ class AvailabilityV1Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response';
+            $returnType = '\Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2264,7 +2264,7 @@ class AvailabilityV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response',
+                        '\Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2272,7 +2272,7 @@ class AvailabilityV1Api
                 case 207:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1',
+                        '\Otto\Client\Model\ProductDeliveryInformationMultiStatusResponseAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2280,7 +2280,7 @@ class AvailabilityV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForBadRequestAvailabilityV1',
+                        '\Otto\Client\Model\APIErrorResponseForBadRequestAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2288,7 +2288,7 @@ class AvailabilityV1Api
                 case 413:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1',
+                        '\Otto\Client\Model\ApiErrorResponseForPayloadTooLargeAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2296,7 +2296,7 @@ class AvailabilityV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForInternalServerAvailabilityV1',
+                        '\Otto\Client\Model\APIErrorResponseForInternalServerAvailabilityV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2312,7 +2312,7 @@ class AvailabilityV1Api
      * update product delivery information (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
+     * @param  \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2334,7 +2334,7 @@ class AvailabilityV1Api
      * update product delivery information (up to 200 SKUs per request)
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
+     * @param  \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2342,7 +2342,7 @@ class AvailabilityV1Api
      */
     public function availabilityV1StoreProductDeliveryInformationUsingPOSTAsyncWithHttpInfo($authorization, $product_delivery_information_request_dto_availability_v1, string $contentType = self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response';
+        $returnType = '\Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response';
         $request = $this->availabilityV1StoreProductDeliveryInformationUsingPOSTRequest($authorization, $product_delivery_information_request_dto_availability_v1, $contentType);
 
         return $this->client
@@ -2385,7 +2385,7 @@ class AvailabilityV1Api
      * Create request for operation 'availabilityV1StoreProductDeliveryInformationUsingPOST'
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
+     * @param  \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $product_delivery_information_request_dto_availability_v1 productDeliveryInformationRequestDTO (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['availabilityV1StoreProductDeliveryInformationUsingPOST'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

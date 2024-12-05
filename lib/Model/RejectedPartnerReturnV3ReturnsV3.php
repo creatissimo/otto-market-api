@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * RejectedPartnerReturnV3ReturnsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class RejectedPartnerReturnV3ReturnsV3 implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'position_items' => '\OpenAPI\Client\Model\RejectedPositionItemReturnsV3[]'
+        'position_items' => '\Otto\Client\Model\RejectedPositionItemReturnsV3[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class RejectedPartnerReturnV3ReturnsV3 implements ModelInterface, ArrayAccess, \
     /**
      * Gets position_items
      *
-     * @return \OpenAPI\Client\Model\RejectedPositionItemReturnsV3[]
+     * @return \Otto\Client\Model\RejectedPositionItemReturnsV3[]
      */
     public function getPositionItems()
     {
@@ -305,7 +305,7 @@ class RejectedPartnerReturnV3ReturnsV3 implements ModelInterface, ArrayAccess, \
     /**
      * Sets position_items
      *
-     * @param \OpenAPI\Client\Model\RejectedPositionItemReturnsV3[] $position_items List of all the items received from partner
+     * @param \Otto\Client\Model\RejectedPositionItemReturnsV3[] $position_items List of all the items received from partner
      *
      * @return self
      */

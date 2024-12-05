@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ItemPartialRefundPositionReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description List of billed partial refunds of items. &lt;/br&gt;This list is only used in context of receiptType PARTIAL_REFUND. &lt;/br&gt;If there are no entries the lists is displayed as empty
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,14 +58,14 @@ class ItemPartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'partial_refund_details' => '\OpenAPI\Client\Model\PartialRefundDetailsReceiptsV3',
+        'partial_refund_details' => '\Otto\Client\Model\PartialRefundDetailsReceiptsV3',
         'line_number' => 'int',
         'sku' => 'string',
         'article_number' => 'string',
         'product_title' => 'string',
         'variation_attributes' => 'string',
         'position_item_ids' => 'string[]',
-        'partial_refund_amount' => '\OpenAPI\Client\Model\PriceReceiptsV3'
+        'partial_refund_amount' => '\Otto\Client\Model\PriceReceiptsV3'
     ];
 
     /**
@@ -354,7 +354,7 @@ class ItemPartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAccess
     /**
      * Gets partial_refund_details
      *
-     * @return \OpenAPI\Client\Model\PartialRefundDetailsReceiptsV3|null
+     * @return \Otto\Client\Model\PartialRefundDetailsReceiptsV3|null
      */
     public function getPartialRefundDetails()
     {
@@ -364,7 +364,7 @@ class ItemPartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAccess
     /**
      * Sets partial_refund_details
      *
-     * @param \OpenAPI\Client\Model\PartialRefundDetailsReceiptsV3|null $partial_refund_details partial_refund_details
+     * @param \Otto\Client\Model\PartialRefundDetailsReceiptsV3|null $partial_refund_details partial_refund_details
      *
      * @return self
      */
@@ -543,7 +543,7 @@ class ItemPartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAccess
     /**
      * Gets partial_refund_amount
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getPartialRefundAmount()
     {
@@ -553,7 +553,7 @@ class ItemPartialRefundPositionReceiptsV3 implements ModelInterface, ArrayAccess
     /**
      * Sets partial_refund_amount
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $partial_refund_amount partial_refund_amount
+     * @param \Otto\Client\Model\PriceReceiptsV3 $partial_refund_amount partial_refund_amount
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * SkuPricingProductsV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class SkuPricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'sku' => 'string',
-        'standard_price' => '\OpenAPI\Client\Model\MonetaryAmountProductsV4',
-        'sale' => '\OpenAPI\Client\Model\SaleProductsV4'
+        'standard_price' => '\Otto\Client\Model\MonetaryAmountProductsV4',
+        'sale' => '\Otto\Client\Model\SaleProductsV4'
     ];
 
     /**
@@ -339,7 +339,7 @@ class SkuPricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets standard_price
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountProductsV4
+     * @return \Otto\Client\Model\MonetaryAmountProductsV4
      */
     public function getStandardPrice()
     {
@@ -349,7 +349,7 @@ class SkuPricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets standard_price
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountProductsV4 $standard_price standard_price
+     * @param \Otto\Client\Model\MonetaryAmountProductsV4 $standard_price standard_price
      *
      * @return self
      */
@@ -366,7 +366,7 @@ class SkuPricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets sale
      *
-     * @return \OpenAPI\Client\Model\SaleProductsV4|null
+     * @return \Otto\Client\Model\SaleProductsV4|null
      */
     public function getSale()
     {
@@ -376,7 +376,7 @@ class SkuPricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets sale
      *
-     * @param \OpenAPI\Client\Model\SaleProductsV4|null $sale sale
+     * @param \Otto\Client\Model\SaleProductsV4|null $sale sale
      *
      * @return self
      */

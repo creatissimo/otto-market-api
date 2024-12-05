@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * LineItemsReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Line items for which settlement is made.  ATTENTION: * In previous version this name was used for  itemPositions only. Now there is a substructure that cares about all billing object of a receipt * The object is currently define by mistake as required, we will change it in future as it’s possible that we introduce new receiptTypes without lineItems. For current receiptTypes PURCHASE, PARTIAL_REFUND and REFUND lineItems will always exists.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,11 +58,11 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_positions' => '\OpenAPI\Client\Model\ItemPositionReceiptsV3[]',
-        'item_partial_refund_positions' => '\OpenAPI\Client\Model\ItemPartialRefundPositionReceiptsV3[]',
-        'service_positions' => '\OpenAPI\Client\Model\ServicePositionReceiptsV3[]',
-        'service_partial_refund_positions' => '\OpenAPI\Client\Model\ServicePartialRefundPositionReceiptsV3[]',
-        'delivery_costs' => '\OpenAPI\Client\Model\DeliveryCostReceiptsV3[]',
+        'item_positions' => '\Otto\Client\Model\ItemPositionReceiptsV3[]',
+        'item_partial_refund_positions' => '\Otto\Client\Model\ItemPartialRefundPositionReceiptsV3[]',
+        'service_positions' => '\Otto\Client\Model\ServicePositionReceiptsV3[]',
+        'service_partial_refund_positions' => '\Otto\Client\Model\ServicePartialRefundPositionReceiptsV3[]',
+        'delivery_costs' => '\Otto\Client\Model\DeliveryCostReceiptsV3[]',
         'delivery_fee_partial_refund_positions' => 'object[]'
     ];
 
@@ -346,7 +346,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets item_positions
      *
-     * @return \OpenAPI\Client\Model\ItemPositionReceiptsV3[]
+     * @return \Otto\Client\Model\ItemPositionReceiptsV3[]
      */
     public function getItemPositions()
     {
@@ -356,7 +356,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets item_positions
      *
-     * @param \OpenAPI\Client\Model\ItemPositionReceiptsV3[] $item_positions List of billed items, if exists. </br>This list is only used in context of receiptType PURCHASE or REFUND. </br>If there are no entries the lists is displayed as empty
+     * @param \Otto\Client\Model\ItemPositionReceiptsV3[] $item_positions List of billed items, if exists. </br>This list is only used in context of receiptType PURCHASE or REFUND. </br>If there are no entries the lists is displayed as empty
      *
      * @return self
      */
@@ -373,7 +373,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets item_partial_refund_positions
      *
-     * @return \OpenAPI\Client\Model\ItemPartialRefundPositionReceiptsV3[]
+     * @return \Otto\Client\Model\ItemPartialRefundPositionReceiptsV3[]
      */
     public function getItemPartialRefundPositions()
     {
@@ -383,7 +383,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets item_partial_refund_positions
      *
-     * @param \OpenAPI\Client\Model\ItemPartialRefundPositionReceiptsV3[] $item_partial_refund_positions List of billed partial refunds of items. </br>This list is only used in context of receiptType PARTIAL_REFUND. </br>If there are no entries the lists is displayed as empty
+     * @param \Otto\Client\Model\ItemPartialRefundPositionReceiptsV3[] $item_partial_refund_positions List of billed partial refunds of items. </br>This list is only used in context of receiptType PARTIAL_REFUND. </br>If there are no entries the lists is displayed as empty
      *
      * @return self
      */
@@ -400,7 +400,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets service_positions
      *
-     * @return \OpenAPI\Client\Model\ServicePositionReceiptsV3[]
+     * @return \Otto\Client\Model\ServicePositionReceiptsV3[]
      */
     public function getServicePositions()
     {
@@ -410,7 +410,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets service_positions
      *
-     * @param \OpenAPI\Client\Model\ServicePositionReceiptsV3[] $service_positions List of billed B2C services, if exists for this receipt. </br>This list is only used in context of receiptType PURCHASE or REFUND. </br>If there are no entries the lists is displayed as empty
+     * @param \Otto\Client\Model\ServicePositionReceiptsV3[] $service_positions List of billed B2C services, if exists for this receipt. </br>This list is only used in context of receiptType PURCHASE or REFUND. </br>If there are no entries the lists is displayed as empty
      *
      * @return self
      */
@@ -427,7 +427,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets service_partial_refund_positions
      *
-     * @return \OpenAPI\Client\Model\ServicePartialRefundPositionReceiptsV3[]
+     * @return \Otto\Client\Model\ServicePartialRefundPositionReceiptsV3[]
      */
     public function getServicePartialRefundPositions()
     {
@@ -437,7 +437,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets service_partial_refund_positions
      *
-     * @param \OpenAPI\Client\Model\ServicePartialRefundPositionReceiptsV3[] $service_partial_refund_positions List of billed partial refunds of services.
+     * @param \Otto\Client\Model\ServicePartialRefundPositionReceiptsV3[] $service_partial_refund_positions List of billed partial refunds of services.
      *
      * @return self
      */
@@ -454,7 +454,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets delivery_costs
      *
-     * @return \OpenAPI\Client\Model\DeliveryCostReceiptsV3[]
+     * @return \Otto\Client\Model\DeliveryCostReceiptsV3[]
      */
     public function getDeliveryCosts()
     {
@@ -464,7 +464,7 @@ class LineItemsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets delivery_costs
      *
-     * @param \OpenAPI\Client\Model\DeliveryCostReceiptsV3[] $delivery_costs List of billed logistic costs, if exists for this receipt. </br>This list is only used in context of receiptType PURCHASE or REFUND. </br>If there are no entries the lists is displayed as empty
+     * @param \Otto\Client\Model\DeliveryCostReceiptsV3[] $delivery_costs List of billed logistic costs, if exists for this receipt. </br>This list is only used in context of receiptType PURCHASE or REFUND. </br>If there are no entries the lists is displayed as empty
      *
      * @return self
      */

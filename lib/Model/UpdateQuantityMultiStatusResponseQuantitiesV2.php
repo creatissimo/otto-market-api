@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * UpdateQuantityMultiStatusResponseQuantitiesV2 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class UpdateQuantityMultiStatusResponseQuantitiesV2 implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[]',
-        'errors' => '\OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[]'
+        'results' => '\Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[]',
+        'errors' => '\Otto\Client\Model\ApiErrorV2QuantitiesV2[]'
     ];
 
     /**
@@ -302,7 +302,7 @@ class UpdateQuantityMultiStatusResponseQuantitiesV2 implements ModelInterface, A
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[]
+     * @return \Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[]
      */
     public function getResults()
     {
@@ -312,7 +312,7 @@ class UpdateQuantityMultiStatusResponseQuantitiesV2 implements ModelInterface, A
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[] $results List of all the skus with available quantity
+     * @param \Otto\Client\Model\AvailableQuantityRequestDTOV2QuantitiesV2[] $results List of all the skus with available quantity
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class UpdateQuantityMultiStatusResponseQuantitiesV2 implements ModelInterface, A
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[]|null
+     * @return \Otto\Client\Model\ApiErrorV2QuantitiesV2[]|null
      */
     public function getErrors()
     {
@@ -339,7 +339,7 @@ class UpdateQuantityMultiStatusResponseQuantitiesV2 implements ModelInterface, A
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[]|null $errors errors
+     * @param \Otto\Client\Model\ApiErrorV2QuantitiesV2[]|null $errors errors
      *
      * @return self
      */

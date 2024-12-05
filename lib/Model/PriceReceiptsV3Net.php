@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceReceiptsV3Net Class Doc Comment
  *
  * @category Class
  * @description Calculated net value &lt;/br&gt; This information is not reliably provided for older receipts.This information is not reliably provided for older receipts for all Price objects.. In the beginning we only provides this value for receipt.totals.  &lt;/br&gt;In receipts generated after the 01-01-2023 data should always be set in all Price objects.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PartnerOrderListOrdersV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class PartnerOrderListOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\OpenAPI\Client\Model\LinkOrdersV4[]',
-        'resources' => '\OpenAPI\Client\Model\PartnerOrderOrdersV4[]'
+        'links' => '\Otto\Client\Model\LinkOrdersV4[]',
+        'resources' => '\Otto\Client\Model\PartnerOrderOrdersV4[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class PartnerOrderListOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkOrdersV4[]|null
+     * @return \Otto\Client\Model\LinkOrdersV4[]|null
      */
     public function getLinks()
     {
@@ -309,7 +309,7 @@ class PartnerOrderListOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkOrdersV4[]|null $links Links related to the list. E.g. the link to the successive list used during paging.
+     * @param \Otto\Client\Model\LinkOrdersV4[]|null $links Links related to the list. E.g. the link to the successive list used during paging.
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class PartnerOrderListOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets resources
      *
-     * @return \OpenAPI\Client\Model\PartnerOrderOrdersV4[]|null
+     * @return \Otto\Client\Model\PartnerOrderOrdersV4[]|null
      */
     public function getResources()
     {
@@ -336,7 +336,7 @@ class PartnerOrderListOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets resources
      *
-     * @param \OpenAPI\Client\Model\PartnerOrderOrdersV4[]|null $resources The list of queried resources. In this case partner orders.
+     * @param \Otto\Client\Model\PartnerOrderOrdersV4[]|null $resources The list of queried resources. In this case partner orders.
      *
      * @return self
      */

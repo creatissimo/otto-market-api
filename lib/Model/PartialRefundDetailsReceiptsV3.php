@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PartialRefundDetailsReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Additional information about the granted partial refund to this item.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class PartialRefundDetailsReceiptsV3 implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'benefit' => '\OpenAPI\Client\Model\BenefitReceiptsV3'
+        'benefit' => '\Otto\Client\Model\BenefitReceiptsV3'
     ];
 
     /**
@@ -293,7 +293,7 @@ class PartialRefundDetailsReceiptsV3 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets benefit
      *
-     * @return \OpenAPI\Client\Model\BenefitReceiptsV3|null
+     * @return \Otto\Client\Model\BenefitReceiptsV3|null
      */
     public function getBenefit()
     {
@@ -303,7 +303,7 @@ class PartialRefundDetailsReceiptsV3 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets benefit
      *
-     * @param \OpenAPI\Client\Model\BenefitReceiptsV3|null $benefit benefit
+     * @param \Otto\Client\Model\BenefitReceiptsV3|null $benefit benefit
      *
      * @return self
      */

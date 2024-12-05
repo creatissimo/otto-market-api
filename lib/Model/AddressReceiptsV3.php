@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AddressReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description There are different definitions of Address objects in Receipt structure: * **invoiceAddress** -  Address of the customer to be billed * **deliveryAddress** - Address of the recipient entered by the customer when placing the order. Recipient can be a person or a pickup point.&lt;/br&gt;Only available on receipts of receiptType PURCHASE.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

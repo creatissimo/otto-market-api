@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceReductionResponsePriceReductionsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
         'sales_order_id' => 'string',
         'total_price_reduction' => 'object',
         'invoice_price' => 'object',
-        'price_reductions' => '\OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1[]',
+        'price_reductions' => '\Otto\Client\Model\PriceReductionDetailPriceReductionsV1[]',
         'position_item_id' => 'string'
     ];
 
@@ -401,7 +401,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Gets price_reductions
      *
-     * @return \OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1[]|null
+     * @return \Otto\Client\Model\PriceReductionDetailPriceReductionsV1[]|null
      */
     public function getPriceReductions()
     {
@@ -411,7 +411,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Sets price_reductions
      *
-     * @param \OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1[]|null $price_reductions all price reductions applied for an item
+     * @param \Otto\Client\Model\PriceReductionDetailPriceReductionsV1[]|null $price_reductions all price reductions applied for an item
      *
      * @return self
      */

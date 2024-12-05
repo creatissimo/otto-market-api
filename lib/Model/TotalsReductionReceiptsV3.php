@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * TotalsReductionReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Reduction amounts on total value of receipts (currently it includes voucher reduction)
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'details' => '\OpenAPI\Client\Model\TotalsReductionDetailsReceiptsV3',
+        'details' => '\Otto\Client\Model\TotalsReductionDetailsReceiptsV3',
         'gross' => 'object'
     ];
 
@@ -372,7 +372,7 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\TotalsReductionDetailsReceiptsV3|null
+     * @return \Otto\Client\Model\TotalsReductionDetailsReceiptsV3|null
      */
     public function getDetails()
     {
@@ -382,7 +382,7 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\TotalsReductionDetailsReceiptsV3|null $details details
+     * @param \Otto\Client\Model\TotalsReductionDetailsReceiptsV3|null $details details
      *
      * @return self
      */

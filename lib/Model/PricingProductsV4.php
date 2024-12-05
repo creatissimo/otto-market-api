@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PricingProductsV4 Class Doc Comment
  *
  * @category Class
  * @description this container holds attributes for the different price types, currency and tax related information
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,11 +58,11 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'standard_price' => '\OpenAPI\Client\Model\MonetaryAmountProductsV4',
+        'standard_price' => '\Otto\Client\Model\MonetaryAmountProductsV4',
         'vat' => 'string',
-        'msrp' => '\OpenAPI\Client\Model\MonetaryAmountProductsV4',
-        'sale' => '\OpenAPI\Client\Model\SaleProductsV4',
-        'norm_price_info' => '\OpenAPI\Client\Model\NormPriceInfoProductsV4'
+        'msrp' => '\Otto\Client\Model\MonetaryAmountProductsV4',
+        'sale' => '\Otto\Client\Model\SaleProductsV4',
+        'norm_price_info' => '\Otto\Client\Model\NormPriceInfoProductsV4'
     ];
 
     /**
@@ -353,7 +353,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets standard_price
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountProductsV4
+     * @return \Otto\Client\Model\MonetaryAmountProductsV4
      */
     public function getStandardPrice()
     {
@@ -363,7 +363,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets standard_price
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountProductsV4 $standard_price standard_price
+     * @param \Otto\Client\Model\MonetaryAmountProductsV4 $standard_price standard_price
      *
      * @return self
      */
@@ -417,7 +417,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets msrp
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountProductsV4|null
+     * @return \Otto\Client\Model\MonetaryAmountProductsV4|null
      */
     public function getMsrp()
     {
@@ -427,7 +427,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets msrp
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountProductsV4|null $msrp msrp
+     * @param \Otto\Client\Model\MonetaryAmountProductsV4|null $msrp msrp
      *
      * @return self
      */
@@ -444,7 +444,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets sale
      *
-     * @return \OpenAPI\Client\Model\SaleProductsV4|null
+     * @return \Otto\Client\Model\SaleProductsV4|null
      */
     public function getSale()
     {
@@ -454,7 +454,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets sale
      *
-     * @param \OpenAPI\Client\Model\SaleProductsV4|null $sale sale
+     * @param \Otto\Client\Model\SaleProductsV4|null $sale sale
      *
      * @return self
      */
@@ -471,7 +471,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets norm_price_info
      *
-     * @return \OpenAPI\Client\Model\NormPriceInfoProductsV4|null
+     * @return \Otto\Client\Model\NormPriceInfoProductsV4|null
      */
     public function getNormPriceInfo()
     {
@@ -481,7 +481,7 @@ class PricingProductsV4 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets norm_price_info
      *
-     * @param \OpenAPI\Client\Model\NormPriceInfoProductsV4|null $norm_price_info norm_price_info
+     * @param \Otto\Client\Model\NormPriceInfoProductsV4|null $norm_price_info norm_price_info
      *
      * @return self
      */

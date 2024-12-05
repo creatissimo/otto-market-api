@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AvailableQuantityResponseV2QuantitiesV2 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class AvailableQuantityResponseV2QuantitiesV2 implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'resources' => '\OpenAPI\Client\Model\AvailableQuantityResponseV2QuantitiesV2Resources',
-        'links' => '\OpenAPI\Client\Model\LinkQuantitiesV2[]'
+        'resources' => '\Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2Resources',
+        'links' => '\Otto\Client\Model\LinkQuantitiesV2[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class AvailableQuantityResponseV2QuantitiesV2 implements ModelInterface, ArrayAc
     /**
      * Gets resources
      *
-     * @return \OpenAPI\Client\Model\AvailableQuantityResponseV2QuantitiesV2Resources
+     * @return \Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2Resources
      */
     public function getResources()
     {
@@ -315,7 +315,7 @@ class AvailableQuantityResponseV2QuantitiesV2 implements ModelInterface, ArrayAc
     /**
      * Sets resources
      *
-     * @param \OpenAPI\Client\Model\AvailableQuantityResponseV2QuantitiesV2Resources $resources resources
+     * @param \Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2Resources $resources resources
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class AvailableQuantityResponseV2QuantitiesV2 implements ModelInterface, ArrayAc
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkQuantitiesV2[]
+     * @return \Otto\Client\Model\LinkQuantitiesV2[]
      */
     public function getLinks()
     {
@@ -342,7 +342,7 @@ class AvailableQuantityResponseV2QuantitiesV2 implements ModelInterface, ArrayAc
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkQuantitiesV2[] $links contains links to prev, self and next page url's
+     * @param \Otto\Client\Model\LinkQuantitiesV2[] $links contains links to prev, self and next page url's
      *
      * @return self
      */

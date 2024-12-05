@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * APIErrorResponsePriceReductionsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class APIErrorResponsePriceReductionsV1 implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\APIResponsePriceReductionsV1[]'
+        'errors' => '\Otto\Client\Model\APIResponsePriceReductionsV1[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class APIErrorResponsePriceReductionsV1 implements ModelInterface, ArrayAccess, 
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\APIResponsePriceReductionsV1[]|null
+     * @return \Otto\Client\Model\APIResponsePriceReductionsV1[]|null
      */
     public function getErrors()
     {
@@ -302,7 +302,7 @@ class APIErrorResponsePriceReductionsV1 implements ModelInterface, ArrayAccess, 
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\APIResponsePriceReductionsV1[]|null $errors errors
+     * @param \Otto\Client\Model\APIResponsePriceReductionsV1[]|null $errors errors
      *
      * @return self
      */

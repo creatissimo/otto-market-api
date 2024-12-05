@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Costs of an object There are different definitions of Price objects in Receipt structure:   * **unitPrice** - Original price for quantity a line item object   * **positionSum** - Price for quantity x unitPrice of a line item object minus reductions of all sub priceModification objects, if exist   * **partialRefundAmount** - Granted reduction by the partner on line item object   * **priceModificationAmount** - Total reduction for the super ordinated line item object. If the line item object has a quantity, this is already been taken into account in this amount.   * **priceToPay** - Price for quantity one minus all instant reductions like partner discount ... when selling (excl. earlier partial refunds).&lt;/br&gt;Only available on receipts of receiptType PURCHASE.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

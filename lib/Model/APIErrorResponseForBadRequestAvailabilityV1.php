@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * APIErrorResponseForBadRequestAvailabilityV1 Class Doc Comment
  *
  * @category Class
  * @description Describes the error details
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class APIErrorResponseForBadRequestAvailabilityV1 implements ModelInterface, Arr
         'type' => 'string',
         'title' => 'string',
         'status' => 'float',
-        'validation_errors' => '\OpenAPI\Client\Model\ErrorForUnknownSkuAvailabilityV1[]'
+        'validation_errors' => '\Otto\Client\Model\ErrorForUnknownSkuAvailabilityV1[]'
     ];
 
     /**
@@ -407,7 +407,7 @@ class APIErrorResponseForBadRequestAvailabilityV1 implements ModelInterface, Arr
     /**
      * Gets validation_errors
      *
-     * @return \OpenAPI\Client\Model\ErrorForUnknownSkuAvailabilityV1[]
+     * @return \Otto\Client\Model\ErrorForUnknownSkuAvailabilityV1[]
      */
     public function getValidationErrors()
     {
@@ -417,7 +417,7 @@ class APIErrorResponseForBadRequestAvailabilityV1 implements ModelInterface, Arr
     /**
      * Sets validation_errors
      *
-     * @param \OpenAPI\Client\Model\ErrorForUnknownSkuAvailabilityV1[] $validation_errors validation_errors
+     * @param \Otto\Client\Model\ErrorForUnknownSkuAvailabilityV1[] $validation_errors validation_errors
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PayloadTooLargeApiErrorResponseV2QuantitiesV2 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class PayloadTooLargeApiErrorResponseV2QuantitiesV2 implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[]'
+        'errors' => '\Otto\Client\Model\ApiErrorV2QuantitiesV2[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class PayloadTooLargeApiErrorResponseV2QuantitiesV2 implements ModelInterface, A
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[]
+     * @return \Otto\Client\Model\ApiErrorV2QuantitiesV2[]
      */
     public function getErrors()
     {
@@ -305,7 +305,7 @@ class PayloadTooLargeApiErrorResponseV2QuantitiesV2 implements ModelInterface, A
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ApiErrorV2QuantitiesV2[] $errors type of error
+     * @param \Otto\Client\Model\ApiErrorV2QuantitiesV2[] $errors type of error
      *
      * @return self
      */

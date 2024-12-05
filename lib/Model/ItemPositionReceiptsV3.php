@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ItemPositionReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description List of billed items, if exists. &lt;/br&gt;This list is only used in context of receiptType PURCHASE or REFUND. &lt;/br&gt;If there are no entries the lists is displayed as empty
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,10 +66,10 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
         'variation_attributes' => 'string',
         'position_item_ids' => 'string[]',
         'quantity' => 'int',
-        'unit_price' => '\OpenAPI\Client\Model\PriceReceiptsV3',
-        'price_to_pay_per_position_items' => '\OpenAPI\Client\Model\PriceToPayPerPositionItemReceiptsV3[]',
-        'position_sum' => '\OpenAPI\Client\Model\PriceReceiptsV3',
-        'price_modifications' => '\OpenAPI\Client\Model\PriceModificationReceiptsV3[]'
+        'unit_price' => '\Otto\Client\Model\PriceReceiptsV3',
+        'price_to_pay_per_position_items' => '\Otto\Client\Model\PriceToPayPerPositionItemReceiptsV3[]',
+        'position_sum' => '\Otto\Client\Model\PriceReceiptsV3',
+        'price_modifications' => '\Otto\Client\Model\PriceModificationReceiptsV3[]'
     ];
 
     /**
@@ -607,7 +607,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets unit_price
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getUnitPrice()
     {
@@ -617,7 +617,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets unit_price
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $unit_price unit_price
+     * @param \Otto\Client\Model\PriceReceiptsV3 $unit_price unit_price
      *
      * @return self
      */
@@ -634,7 +634,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets price_to_pay_per_position_items
      *
-     * @return \OpenAPI\Client\Model\PriceToPayPerPositionItemReceiptsV3[]|null
+     * @return \Otto\Client\Model\PriceToPayPerPositionItemReceiptsV3[]|null
      */
     public function getPriceToPayPerPositionItems()
     {
@@ -644,7 +644,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets price_to_pay_per_position_items
      *
-     * @param \OpenAPI\Client\Model\PriceToPayPerPositionItemReceiptsV3[]|null $price_to_pay_per_position_items Price of each unit of the item i.e., price of each positionItemId.</br>It will be available only for PURCHASE receipt
+     * @param \Otto\Client\Model\PriceToPayPerPositionItemReceiptsV3[]|null $price_to_pay_per_position_items Price of each unit of the item i.e., price of each positionItemId.</br>It will be available only for PURCHASE receipt
      *
      * @return self
      */
@@ -661,7 +661,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets position_sum
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getPositionSum()
     {
@@ -671,7 +671,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets position_sum
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $position_sum position_sum
+     * @param \Otto\Client\Model\PriceReceiptsV3 $position_sum position_sum
      *
      * @return self
      */
@@ -688,7 +688,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets price_modifications
      *
-     * @return \OpenAPI\Client\Model\PriceModificationReceiptsV3[]
+     * @return \Otto\Client\Model\PriceModificationReceiptsV3[]
      */
     public function getPriceModifications()
     {
@@ -698,7 +698,7 @@ class ItemPositionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets price_modifications
      *
-     * @param \OpenAPI\Client\Model\PriceModificationReceiptsV3[] $price_modifications List of additional fees and reductions represented as price modifications. </br>Currently we only know reductions. </br>If there are no entries the list is displayed as empty
+     * @param \Otto\Client\Model\PriceModificationReceiptsV3[] $price_modifications List of additional fees and reductions represented as price modifications. </br>Currently we only know reductions. </br>If there are no entries the list is displayed as empty
      *
      * @return self
      */

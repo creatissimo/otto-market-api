@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * ReceiptsV3Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,7 +136,7 @@ class ReceiptsV3Api
      * @param  string $receipt_number ReceiptNumber (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['receiptsV3GetReceiptPdfUsingGET3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -153,7 +153,7 @@ class ReceiptsV3Api
      * @param  string $receipt_number ReceiptNumber (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['receiptsV3GetReceiptPdfUsingGET3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -357,9 +357,9 @@ class ReceiptsV3Api
      * @param  string $receipt_number ReceiptNumber (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['receiptsV3GetReceiptUsingGET5'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReceiptReceiptsV3
+     * @return \Otto\Client\Model\ReceiptReceiptsV3
      */
     public function receiptsV3GetReceiptUsingGET5($receipt_number, string $contentType = self::contentTypes['receiptsV3GetReceiptUsingGET5'][0])
     {
@@ -375,9 +375,9 @@ class ReceiptsV3Api
      * @param  string $receipt_number ReceiptNumber (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['receiptsV3GetReceiptUsingGET5'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReceiptReceiptsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReceiptReceiptsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function receiptsV3GetReceiptUsingGET5WithHttpInfo($receipt_number, string $contentType = self::contentTypes['receiptsV3GetReceiptUsingGET5'][0])
     {
@@ -408,11 +408,11 @@ class ReceiptsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReceiptReceiptsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ReceiptReceiptsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReceiptReceiptsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ReceiptReceiptsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -430,7 +430,7 @@ class ReceiptsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReceiptReceiptsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ReceiptReceiptsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -449,7 +449,7 @@ class ReceiptsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReceiptReceiptsV3';
+            $returnType = '\Otto\Client\Model\ReceiptReceiptsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -482,7 +482,7 @@ class ReceiptsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReceiptReceiptsV3',
+                        '\Otto\Client\Model\ReceiptReceiptsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -526,7 +526,7 @@ class ReceiptsV3Api
      */
     public function receiptsV3GetReceiptUsingGET5AsyncWithHttpInfo($receipt_number, string $contentType = self::contentTypes['receiptsV3GetReceiptUsingGET5'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReceiptReceiptsV3';
+        $returnType = '\Otto\Client\Model\ReceiptReceiptsV3';
         $request = $this->receiptsV3GetReceiptUsingGET5Request($receipt_number, $contentType);
 
         return $this->client
@@ -675,9 +675,9 @@ class ReceiptsV3Api
      * @param  string $next Cursor to fetch next receipts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['receiptsV3GetReceiptsUsingGET5'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReceiptsListReceiptsV3
+     * @return \Otto\Client\Model\ReceiptsListReceiptsV3
      */
     public function receiptsV3GetReceiptsUsingGET5($limit = 128, $page = 1, $receipt_types = null, $from = null, $to = null, $sales_order_id = null, $next = null, string $contentType = self::contentTypes['receiptsV3GetReceiptsUsingGET5'][0])
     {
@@ -699,9 +699,9 @@ class ReceiptsV3Api
      * @param  string $next Cursor to fetch next receipts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['receiptsV3GetReceiptsUsingGET5'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReceiptsListReceiptsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReceiptsListReceiptsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function receiptsV3GetReceiptsUsingGET5WithHttpInfo($limit = 128, $page = 1, $receipt_types = null, $from = null, $to = null, $sales_order_id = null, $next = null, string $contentType = self::contentTypes['receiptsV3GetReceiptsUsingGET5'][0])
     {
@@ -732,11 +732,11 @@ class ReceiptsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReceiptsListReceiptsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ReceiptsListReceiptsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReceiptsListReceiptsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ReceiptsListReceiptsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -754,7 +754,7 @@ class ReceiptsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReceiptsListReceiptsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ReceiptsListReceiptsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -773,7 +773,7 @@ class ReceiptsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReceiptsListReceiptsV3';
+            $returnType = '\Otto\Client\Model\ReceiptsListReceiptsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -806,7 +806,7 @@ class ReceiptsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReceiptsListReceiptsV3',
+                        '\Otto\Client\Model\ReceiptsListReceiptsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -862,7 +862,7 @@ class ReceiptsV3Api
      */
     public function receiptsV3GetReceiptsUsingGET5AsyncWithHttpInfo($limit = 128, $page = 1, $receipt_types = null, $from = null, $to = null, $sales_order_id = null, $next = null, string $contentType = self::contentTypes['receiptsV3GetReceiptsUsingGET5'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReceiptsListReceiptsV3';
+        $returnType = '\Otto\Client\Model\ReceiptsListReceiptsV3';
         $request = $this->receiptsV3GetReceiptsUsingGET5Request($limit, $page, $receipt_types, $from, $to, $sales_order_id, $next, $contentType);
 
         return $this->client

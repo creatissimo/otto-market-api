@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * ProductsV3Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -182,12 +182,12 @@ class ProductsV3Api
      * Create or update product variations
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 product_variation_products_v3 (optional)
+     * @param  \Otto\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 product_variation_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductProcessProgressProductsV3
+     * @return \Otto\Client\Model\ProductProcessProgressProductsV3
      */
     public function productsV3CreateOrUpdateProductVariations($x_request_timestamp = null, $product_variation_products_v3 = null, string $contentType = self::contentTypes['productsV3CreateOrUpdateProductVariations'][0])
     {
@@ -201,12 +201,12 @@ class ProductsV3Api
      * Create or update product variations
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
+     * @param  \Otto\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3CreateOrUpdateProductVariationsWithHttpInfo($x_request_timestamp = null, $product_variation_products_v3 = null, string $contentType = self::contentTypes['productsV3CreateOrUpdateProductVariations'][0])
     {
@@ -237,11 +237,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 202:
-                    if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -259,7 +259,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductProcessProgressProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductProcessProgressProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -278,7 +278,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+            $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -311,7 +311,7 @@ class ProductsV3Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductProcessProgressProductsV3',
+                        '\Otto\Client\Model\ProductProcessProgressProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -327,7 +327,7 @@ class ProductsV3Api
      * Create or update product variations
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
+     * @param  \Otto\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -349,7 +349,7 @@ class ProductsV3Api
      * Create or update product variations
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
+     * @param  \Otto\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -357,7 +357,7 @@ class ProductsV3Api
      */
     public function productsV3CreateOrUpdateProductVariationsAsyncWithHttpInfo($x_request_timestamp = null, $product_variation_products_v3 = null, string $contentType = self::contentTypes['productsV3CreateOrUpdateProductVariations'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+        $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
         $request = $this->productsV3CreateOrUpdateProductVariationsRequest($x_request_timestamp, $product_variation_products_v3, $contentType);
 
         return $this->client
@@ -400,7 +400,7 @@ class ProductsV3Api
      * Create request for operation 'productsV3CreateOrUpdateProductVariations'
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
+     * @param  \Otto\Client\Model\ProductVariationProductsV3[] $product_variation_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -499,9 +499,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for the failed products of a product data delivery identified by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3FailedByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductProcessResultProductsV3
+     * @return \Otto\Client\Model\ProductProcessResultProductsV3
      */
     public function productsV3FailedByProcessId($process_uuid, string $contentType = self::contentTypes['productsV3FailedByProcessId'][0])
     {
@@ -517,9 +517,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for the failed products of a product data delivery identified by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3FailedByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductProcessResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductProcessResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3FailedByProcessIdWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3FailedByProcessId'][0])
     {
@@ -550,11 +550,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductProcessResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductProcessResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductProcessResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductProcessResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -572,7 +572,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductProcessResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductProcessResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -591,7 +591,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductProcessResultProductsV3';
+            $returnType = '\Otto\Client\Model\ProductProcessResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -624,7 +624,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductProcessResultProductsV3',
+                        '\Otto\Client\Model\ProductProcessResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -668,7 +668,7 @@ class ProductsV3Api
      */
     public function productsV3FailedByProcessIdAsyncWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3FailedByProcessId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductProcessResultProductsV3';
+        $returnType = '\Otto\Client\Model\ProductProcessResultProductsV3';
         $request = $this->productsV3FailedByProcessIdRequest($process_uuid, $contentType);
 
         return $this->client
@@ -816,9 +816,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of active status values per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetActiveStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ActiveStatusListResponseProductsV3
+     * @return \Otto\Client\Model\ActiveStatusListResponseProductsV3
      */
     public function productsV3GetActiveStatus($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetActiveStatus'][0])
     {
@@ -839,9 +839,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of active status values per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetActiveStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ActiveStatusListResponseProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ActiveStatusListResponseProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetActiveStatusWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetActiveStatus'][0])
     {
@@ -872,11 +872,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ActiveStatusListResponseProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ActiveStatusListResponseProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ActiveStatusListResponseProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ActiveStatusListResponseProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -894,7 +894,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ActiveStatusListResponseProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ActiveStatusListResponseProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -913,7 +913,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ActiveStatusListResponseProductsV3';
+            $returnType = '\Otto\Client\Model\ActiveStatusListResponseProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -946,7 +946,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ActiveStatusListResponseProductsV3',
+                        '\Otto\Client\Model\ActiveStatusListResponseProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1000,7 +1000,7 @@ class ProductsV3Api
      */
     public function productsV3GetActiveStatusAsyncWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetActiveStatus'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ActiveStatusListResponseProductsV3';
+        $returnType = '\Otto\Client\Model\ActiveStatusListResponseProductsV3';
         $request = $this->productsV3GetActiveStatusRequest($sku, $product_reference, $category, $brand_id, $page, $limit, $contentType);
 
         return $this->client
@@ -1198,9 +1198,9 @@ class ProductsV3Api
      * @param  int $limit limit (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetBrands'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BrandListResponseProductsV3
+     * @return \Otto\Client\Model\BrandListResponseProductsV3
      */
     public function productsV3GetBrands($if_match = null, $if_none_match = null, $if_modified_since = null, $if_unmodified_since = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetBrands'][0])
     {
@@ -1221,9 +1221,9 @@ class ProductsV3Api
      * @param  int $limit (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetBrands'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BrandListResponseProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\BrandListResponseProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetBrandsWithHttpInfo($if_match = null, $if_none_match = null, $if_modified_since = null, $if_unmodified_since = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetBrands'][0])
     {
@@ -1254,11 +1254,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BrandListResponseProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\BrandListResponseProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BrandListResponseProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\BrandListResponseProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1276,7 +1276,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BrandListResponseProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\BrandListResponseProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1295,7 +1295,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\BrandListResponseProductsV3';
+            $returnType = '\Otto\Client\Model\BrandListResponseProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1328,7 +1328,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BrandListResponseProductsV3',
+                        '\Otto\Client\Model\BrandListResponseProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1382,7 +1382,7 @@ class ProductsV3Api
      */
     public function productsV3GetBrandsAsyncWithHttpInfo($if_match = null, $if_none_match = null, $if_modified_since = null, $if_unmodified_since = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetBrands'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BrandListResponseProductsV3';
+        $returnType = '\Otto\Client\Model\BrandListResponseProductsV3';
         $request = $this->productsV3GetBrandsRequest($if_match, $if_none_match, $if_modified_since, $if_unmodified_since, $page, $limit, $contentType);
 
         return $this->client
@@ -1557,9 +1557,9 @@ class ProductsV3Api
      * @param  string $category read a single category (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetCategoryGroups'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CategoryGroupsProductsV3
+     * @return \Otto\Client\Model\CategoryGroupsProductsV3
      */
     public function productsV3GetCategoryGroups($page = null, $limit = null, $category = null, string $contentType = self::contentTypes['productsV3GetCategoryGroups'][0])
     {
@@ -1577,9 +1577,9 @@ class ProductsV3Api
      * @param  string $category read a single category (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetCategoryGroups'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CategoryGroupsProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\CategoryGroupsProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetCategoryGroupsWithHttpInfo($page = null, $limit = null, $category = null, string $contentType = self::contentTypes['productsV3GetCategoryGroups'][0])
     {
@@ -1610,11 +1610,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CategoryGroupsProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\CategoryGroupsProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CategoryGroupsProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\CategoryGroupsProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1632,7 +1632,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CategoryGroupsProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\CategoryGroupsProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1651,7 +1651,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\CategoryGroupsProductsV3';
+            $returnType = '\Otto\Client\Model\CategoryGroupsProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1684,7 +1684,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CategoryGroupsProductsV3',
+                        '\Otto\Client\Model\CategoryGroupsProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1732,7 +1732,7 @@ class ProductsV3Api
      */
     public function productsV3GetCategoryGroupsAsyncWithHttpInfo($page = null, $limit = null, $category = null, string $contentType = self::contentTypes['productsV3GetCategoryGroups'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CategoryGroupsProductsV3';
+        $returnType = '\Otto\Client\Model\CategoryGroupsProductsV3';
         $request = $this->productsV3GetCategoryGroupsRequest($page, $limit, $category, $contentType);
 
         return $this->client
@@ -1895,9 +1895,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of entries per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetContentChanges'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContentChangesApiResultProductsV3
+     * @return \Otto\Client\Model\ContentChangesApiResultProductsV3
      */
     public function productsV3GetContentChanges($sku, $from_date = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetContentChanges'][0])
     {
@@ -1916,9 +1916,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of entries per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetContentChanges'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContentChangesApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ContentChangesApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetContentChangesWithHttpInfo($sku, $from_date = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetContentChanges'][0])
     {
@@ -1949,11 +1949,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContentChangesApiResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ContentChangesApiResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContentChangesApiResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ContentChangesApiResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1971,7 +1971,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ContentChangesApiResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1990,7 +1990,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3';
+            $returnType = '\Otto\Client\Model\ContentChangesApiResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2023,7 +2023,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3',
+                        '\Otto\Client\Model\ContentChangesApiResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2073,7 +2073,7 @@ class ProductsV3Api
      */
     public function productsV3GetContentChangesAsyncWithHttpInfo($sku, $from_date = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetContentChanges'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3';
+        $returnType = '\Otto\Client\Model\ContentChangesApiResultProductsV3';
         $request = $this->productsV3GetContentChangesRequest($sku, $from_date, $page, $limit, $contentType);
 
         return $this->client
@@ -2252,9 +2252,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of content changes per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetContentChanges2'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContentChangesApiResultProductsV3
+     * @return \Otto\Client\Model\ContentChangesApiResultProductsV3
      */
     public function productsV3GetContentChanges2($sku = null, $from_date = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetContentChanges2'][0])
     {
@@ -2273,9 +2273,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of content changes per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetContentChanges2'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContentChangesApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ContentChangesApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetContentChanges2WithHttpInfo($sku = null, $from_date = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetContentChanges2'][0])
     {
@@ -2306,11 +2306,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContentChangesApiResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ContentChangesApiResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContentChangesApiResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ContentChangesApiResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2328,7 +2328,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ContentChangesApiResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2347,7 +2347,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3';
+            $returnType = '\Otto\Client\Model\ContentChangesApiResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2380,7 +2380,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3',
+                        '\Otto\Client\Model\ContentChangesApiResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2430,7 +2430,7 @@ class ProductsV3Api
      */
     public function productsV3GetContentChanges2AsyncWithHttpInfo($sku = null, $from_date = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetContentChanges2'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContentChangesApiResultProductsV3';
+        $returnType = '\Otto\Client\Model\ContentChangesApiResultProductsV3';
         $request = $this->productsV3GetContentChanges2Request($sku, $from_date, $page, $limit, $contentType);
 
         return $this->client
@@ -2601,9 +2601,9 @@ class ProductsV3Api
      * @param  string $sku search for a marketplace status by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetMarketPlaceStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MarketPlaceStatusProductsV3
+     * @return \Otto\Client\Model\MarketPlaceStatusProductsV3
      */
     public function productsV3GetMarketPlaceStatus($sku, string $contentType = self::contentTypes['productsV3GetMarketPlaceStatus'][0])
     {
@@ -2619,9 +2619,9 @@ class ProductsV3Api
      * @param  string $sku search for a marketplace status by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetMarketPlaceStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MarketPlaceStatusProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\MarketPlaceStatusProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetMarketPlaceStatusWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetMarketPlaceStatus'][0])
     {
@@ -2652,11 +2652,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MarketPlaceStatusProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\MarketPlaceStatusProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MarketPlaceStatusProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\MarketPlaceStatusProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2674,7 +2674,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MarketPlaceStatusProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\MarketPlaceStatusProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2693,7 +2693,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\MarketPlaceStatusProductsV3';
+            $returnType = '\Otto\Client\Model\MarketPlaceStatusProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2726,7 +2726,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MarketPlaceStatusProductsV3',
+                        '\Otto\Client\Model\MarketPlaceStatusProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2770,7 +2770,7 @@ class ProductsV3Api
      */
     public function productsV3GetMarketPlaceStatusAsyncWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetMarketPlaceStatus'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MarketPlaceStatusProductsV3';
+        $returnType = '\Otto\Client\Model\MarketPlaceStatusProductsV3';
         $request = $this->productsV3GetMarketPlaceStatusRequest($sku, $contentType);
 
         return $this->client
@@ -2921,9 +2921,9 @@ class ProductsV3Api
      * @param  string $sort_order Define the sort order of the resulting entries. Available values are &#39;desc&#39; for &#39;newest lastModified first&#39; and &#39;asc&#39; for &#39;oldest lastModified first&#39; - default is &#39;desc&#39; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetMarketPlaceStatusList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3
+     * @return \Otto\Client\Model\MarketPlaceStatusApiResultProductsV3
      */
     public function productsV3GetMarketPlaceStatusList($sku = null, $product_reference = null, $category = null, $brand_id = null, $from_date = null, $page = null, $limit = null, $market_place_status = null, $sort_order = null, string $contentType = self::contentTypes['productsV3GetMarketPlaceStatusList'][0])
     {
@@ -2947,9 +2947,9 @@ class ProductsV3Api
      * @param  string $sort_order Define the sort order of the resulting entries. Available values are &#39;desc&#39; for &#39;newest lastModified first&#39; and &#39;asc&#39; for &#39;oldest lastModified first&#39; - default is &#39;desc&#39; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetMarketPlaceStatusList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\MarketPlaceStatusApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetMarketPlaceStatusListWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $from_date = null, $page = null, $limit = null, $market_place_status = null, $sort_order = null, string $contentType = self::contentTypes['productsV3GetMarketPlaceStatusList'][0])
     {
@@ -2980,11 +2980,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\MarketPlaceStatusApiResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\MarketPlaceStatusApiResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3002,7 +3002,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\MarketPlaceStatusApiResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3021,7 +3021,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3';
+            $returnType = '\Otto\Client\Model\MarketPlaceStatusApiResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3054,7 +3054,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3',
+                        '\Otto\Client\Model\MarketPlaceStatusApiResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3114,7 +3114,7 @@ class ProductsV3Api
      */
     public function productsV3GetMarketPlaceStatusListAsyncWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $from_date = null, $page = null, $limit = null, $market_place_status = null, $sort_order = null, string $contentType = self::contentTypes['productsV3GetMarketPlaceStatusList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3';
+        $returnType = '\Otto\Client\Model\MarketPlaceStatusApiResultProductsV3';
         $request = $this->productsV3GetMarketPlaceStatusListRequest($sku, $product_reference, $category, $brand_id, $from_date, $page, $limit, $market_place_status, $sort_order, $contentType);
 
         return $this->client
@@ -3345,9 +3345,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of products per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetPartnerProducts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductVariationApiResultProductsV3
+     * @return \Otto\Client\Model\ProductVariationApiResultProductsV3
      */
     public function productsV3GetPartnerProducts($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetPartnerProducts'][0])
     {
@@ -3368,9 +3368,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of products per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetPartnerProducts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductVariationApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductVariationApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetPartnerProductsWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetPartnerProducts'][0])
     {
@@ -3401,11 +3401,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductVariationApiResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductVariationApiResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductVariationApiResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductVariationApiResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3423,7 +3423,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductVariationApiResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductVariationApiResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3442,7 +3442,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductVariationApiResultProductsV3';
+            $returnType = '\Otto\Client\Model\ProductVariationApiResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3475,7 +3475,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductVariationApiResultProductsV3',
+                        '\Otto\Client\Model\ProductVariationApiResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3529,7 +3529,7 @@ class ProductsV3Api
      */
     public function productsV3GetPartnerProductsAsyncWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetPartnerProducts'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductVariationApiResultProductsV3';
+        $returnType = '\Otto\Client\Model\ProductVariationApiResultProductsV3';
         $request = $this->productsV3GetPartnerProductsRequest($sku, $product_reference, $category, $brand_id, $page, $limit, $contentType);
 
         return $this->client
@@ -3722,9 +3722,9 @@ class ProductsV3Api
      * @param  string $sku search for a product variation by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetProductVariation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductVariationProductsV3
+     * @return \Otto\Client\Model\ProductVariationProductsV3
      */
     public function productsV3GetProductVariation($sku, string $contentType = self::contentTypes['productsV3GetProductVariation'][0])
     {
@@ -3740,9 +3740,9 @@ class ProductsV3Api
      * @param  string $sku search for a product variation by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetProductVariation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductVariationProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductVariationProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetProductVariationWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetProductVariation'][0])
     {
@@ -3773,11 +3773,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductVariationProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductVariationProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductVariationProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductVariationProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3795,7 +3795,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductVariationProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductVariationProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3814,7 +3814,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductVariationProductsV3';
+            $returnType = '\Otto\Client\Model\ProductVariationProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3847,7 +3847,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductVariationProductsV3',
+                        '\Otto\Client\Model\ProductVariationProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3891,7 +3891,7 @@ class ProductsV3Api
      */
     public function productsV3GetProductVariationAsyncWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetProductVariation'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductVariationProductsV3';
+        $returnType = '\Otto\Client\Model\ProductVariationProductsV3';
         $request = $this->productsV3GetProductVariationRequest($sku, $contentType);
 
         return $this->client
@@ -4034,9 +4034,9 @@ class ProductsV3Api
      * @param  string $sku search for a product variation by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetProductVariationPrice'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SkuPricingProductsV3
+     * @return \Otto\Client\Model\SkuPricingProductsV3
      */
     public function productsV3GetProductVariationPrice($sku, string $contentType = self::contentTypes['productsV3GetProductVariationPrice'][0])
     {
@@ -4052,9 +4052,9 @@ class ProductsV3Api
      * @param  string $sku search for a product variation by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetProductVariationPrice'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SkuPricingProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\SkuPricingProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetProductVariationPriceWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetProductVariationPrice'][0])
     {
@@ -4085,11 +4085,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SkuPricingProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\SkuPricingProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SkuPricingProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\SkuPricingProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4107,7 +4107,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SkuPricingProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\SkuPricingProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4126,7 +4126,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\SkuPricingProductsV3';
+            $returnType = '\Otto\Client\Model\SkuPricingProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4159,7 +4159,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SkuPricingProductsV3',
+                        '\Otto\Client\Model\SkuPricingProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4203,7 +4203,7 @@ class ProductsV3Api
      */
     public function productsV3GetProductVariationPriceAsyncWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetProductVariationPrice'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SkuPricingProductsV3';
+        $returnType = '\Otto\Client\Model\SkuPricingProductsV3';
         $request = $this->productsV3GetProductVariationPriceRequest($sku, $contentType);
 
         return $this->client
@@ -4351,9 +4351,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of products per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetProductVariationPrices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PriceApiResultProductsV3
+     * @return \Otto\Client\Model\PriceApiResultProductsV3
      */
     public function productsV3GetProductVariationPrices($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetProductVariationPrices'][0])
     {
@@ -4374,9 +4374,9 @@ class ProductsV3Api
      * @param  int $limit proposed limit for the number of products per response page (at most 100) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetProductVariationPrices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PriceApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PriceApiResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetProductVariationPricesWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetProductVariationPrices'][0])
     {
@@ -4407,11 +4407,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PriceApiResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\PriceApiResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PriceApiResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\PriceApiResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4429,7 +4429,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PriceApiResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\PriceApiResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4448,7 +4448,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PriceApiResultProductsV3';
+            $returnType = '\Otto\Client\Model\PriceApiResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4481,7 +4481,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PriceApiResultProductsV3',
+                        '\Otto\Client\Model\PriceApiResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4535,7 +4535,7 @@ class ProductsV3Api
      */
     public function productsV3GetProductVariationPricesAsyncWithHttpInfo($sku = null, $product_reference = null, $category = null, $brand_id = null, $page = null, $limit = null, string $contentType = self::contentTypes['productsV3GetProductVariationPrices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PriceApiResultProductsV3';
+        $returnType = '\Otto\Client\Model\PriceApiResultProductsV3';
         $request = $this->productsV3GetProductVariationPricesRequest($sku, $product_reference, $category, $brand_id, $page, $limit, $contentType);
 
         return $this->client
@@ -4728,9 +4728,9 @@ class ProductsV3Api
      * @param  string $sku search for a product variation by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetVariationActiveStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ActiveStatusProductsV3
+     * @return \Otto\Client\Model\ActiveStatusProductsV3
      */
     public function productsV3GetVariationActiveStatus($sku, string $contentType = self::contentTypes['productsV3GetVariationActiveStatus'][0])
     {
@@ -4746,9 +4746,9 @@ class ProductsV3Api
      * @param  string $sku search for a product variation by its SKU value (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3GetVariationActiveStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ActiveStatusProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ActiveStatusProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3GetVariationActiveStatusWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetVariationActiveStatus'][0])
     {
@@ -4779,11 +4779,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ActiveStatusProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ActiveStatusProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ActiveStatusProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ActiveStatusProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4801,7 +4801,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ActiveStatusProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ActiveStatusProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4820,7 +4820,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ActiveStatusProductsV3';
+            $returnType = '\Otto\Client\Model\ActiveStatusProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4853,7 +4853,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ActiveStatusProductsV3',
+                        '\Otto\Client\Model\ActiveStatusProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4897,7 +4897,7 @@ class ProductsV3Api
      */
     public function productsV3GetVariationActiveStatusAsyncWithHttpInfo($sku, string $contentType = self::contentTypes['productsV3GetVariationActiveStatus'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ActiveStatusProductsV3';
+        $returnType = '\Otto\Client\Model\ActiveStatusProductsV3';
         $request = $this->productsV3GetVariationActiveStatusRequest($sku, $contentType);
 
         return $this->client
@@ -5040,9 +5040,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for a product data delivery result by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3ProgressByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductProcessProgressProductsV3
+     * @return \Otto\Client\Model\ProductProcessProgressProductsV3
      */
     public function productsV3ProgressByProcessId($process_uuid, string $contentType = self::contentTypes['productsV3ProgressByProcessId'][0])
     {
@@ -5058,9 +5058,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for a product data delivery result by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3ProgressByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3ProgressByProcessIdWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3ProgressByProcessId'][0])
     {
@@ -5091,11 +5091,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5113,7 +5113,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductProcessProgressProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductProcessProgressProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5132,7 +5132,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+            $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5165,7 +5165,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductProcessProgressProductsV3',
+                        '\Otto\Client\Model\ProductProcessProgressProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5209,7 +5209,7 @@ class ProductsV3Api
      */
     public function productsV3ProgressByProcessIdAsyncWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3ProgressByProcessId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+        $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
         $request = $this->productsV3ProgressByProcessIdRequest($process_uuid, $contentType);
 
         return $this->client
@@ -5352,9 +5352,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for the succeeded products of a product data delivery identified by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3SucceededByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductProcessResultProductsV3
+     * @return \Otto\Client\Model\ProductProcessResultProductsV3
      */
     public function productsV3SucceededByProcessId($process_uuid, string $contentType = self::contentTypes['productsV3SucceededByProcessId'][0])
     {
@@ -5370,9 +5370,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for the succeeded products of a product data delivery identified by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3SucceededByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductProcessResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductProcessResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3SucceededByProcessIdWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3SucceededByProcessId'][0])
     {
@@ -5403,11 +5403,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductProcessResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductProcessResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductProcessResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductProcessResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5425,7 +5425,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductProcessResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductProcessResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5444,7 +5444,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductProcessResultProductsV3';
+            $returnType = '\Otto\Client\Model\ProductProcessResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5477,7 +5477,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductProcessResultProductsV3',
+                        '\Otto\Client\Model\ProductProcessResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5521,7 +5521,7 @@ class ProductsV3Api
      */
     public function productsV3SucceededByProcessIdAsyncWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3SucceededByProcessId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductProcessResultProductsV3';
+        $returnType = '\Otto\Client\Model\ProductProcessResultProductsV3';
         $request = $this->productsV3SucceededByProcessIdRequest($process_uuid, $contentType);
 
         return $this->client
@@ -5664,9 +5664,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for the unchanged products of a product data delivery identified by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UnchangedByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductProcessResultProductsV3
+     * @return \Otto\Client\Model\ProductProcessResultProductsV3
      */
     public function productsV3UnchangedByProcessId($process_uuid, string $contentType = self::contentTypes['productsV3UnchangedByProcessId'][0])
     {
@@ -5682,9 +5682,9 @@ class ProductsV3Api
      * @param  string $process_uuid search for the unchanged products of a product data delivery identified by its processUuid. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UnchangedByProcessId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductProcessResultProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductProcessResultProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3UnchangedByProcessIdWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3UnchangedByProcessId'][0])
     {
@@ -5715,11 +5715,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductProcessResultProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductProcessResultProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductProcessResultProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductProcessResultProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5737,7 +5737,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductProcessResultProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductProcessResultProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5756,7 +5756,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductProcessResultProductsV3';
+            $returnType = '\Otto\Client\Model\ProductProcessResultProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5789,7 +5789,7 @@ class ProductsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductProcessResultProductsV3',
+                        '\Otto\Client\Model\ProductProcessResultProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5833,7 +5833,7 @@ class ProductsV3Api
      */
     public function productsV3UnchangedByProcessIdAsyncWithHttpInfo($process_uuid, string $contentType = self::contentTypes['productsV3UnchangedByProcessId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductProcessResultProductsV3';
+        $returnType = '\Otto\Client\Model\ProductProcessResultProductsV3';
         $request = $this->productsV3UnchangedByProcessIdRequest($process_uuid, $contentType);
 
         return $this->client
@@ -5974,12 +5974,12 @@ class ProductsV3Api
      * Update active status
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 active_status_list_request_products_v3 (optional)
+     * @param  \Otto\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 active_status_list_request_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateActiveStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductProcessProgressProductsV3
+     * @return \Otto\Client\Model\ProductProcessProgressProductsV3
      */
     public function productsV3UpdateActiveStatus($x_request_timestamp = null, $active_status_list_request_products_v3 = null, string $contentType = self::contentTypes['productsV3UpdateActiveStatus'][0])
     {
@@ -5993,12 +5993,12 @@ class ProductsV3Api
      * Update active status
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
+     * @param  \Otto\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateActiveStatus'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3UpdateActiveStatusWithHttpInfo($x_request_timestamp = null, $active_status_list_request_products_v3 = null, string $contentType = self::contentTypes['productsV3UpdateActiveStatus'][0])
     {
@@ -6029,11 +6029,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 202:
-                    if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6051,7 +6051,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductProcessProgressProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductProcessProgressProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6070,7 +6070,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+            $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6103,7 +6103,7 @@ class ProductsV3Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductProcessProgressProductsV3',
+                        '\Otto\Client\Model\ProductProcessProgressProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6119,7 +6119,7 @@ class ProductsV3Api
      * Update active status
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
+     * @param  \Otto\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateActiveStatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6141,7 +6141,7 @@ class ProductsV3Api
      * Update active status
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
+     * @param  \Otto\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateActiveStatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6149,7 +6149,7 @@ class ProductsV3Api
      */
     public function productsV3UpdateActiveStatusAsyncWithHttpInfo($x_request_timestamp = null, $active_status_list_request_products_v3 = null, string $contentType = self::contentTypes['productsV3UpdateActiveStatus'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+        $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
         $request = $this->productsV3UpdateActiveStatusRequest($x_request_timestamp, $active_status_list_request_products_v3, $contentType);
 
         return $this->client
@@ -6192,7 +6192,7 @@ class ProductsV3Api
      * Create request for operation 'productsV3UpdateActiveStatus'
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
+     * @param  \Otto\Client\Model\ActiveStatusListRequestProductsV3 $active_status_list_request_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateActiveStatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6289,12 +6289,12 @@ class ProductsV3Api
      * Update product variation prices
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 sku_pricing_products_v3 (optional)
+     * @param  \Otto\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 sku_pricing_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateProductVariationPrices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductProcessProgressProductsV3
+     * @return \Otto\Client\Model\ProductProcessProgressProductsV3
      */
     public function productsV3UpdateProductVariationPrices($x_request_timestamp = null, $sku_pricing_products_v3 = null, string $contentType = self::contentTypes['productsV3UpdateProductVariationPrices'][0])
     {
@@ -6308,12 +6308,12 @@ class ProductsV3Api
      * Update product variation prices
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
+     * @param  \Otto\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateProductVariationPrices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ProductProcessProgressProductsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function productsV3UpdateProductVariationPricesWithHttpInfo($x_request_timestamp = null, $sku_pricing_products_v3 = null, string $contentType = self::contentTypes['productsV3UpdateProductVariationPrices'][0])
     {
@@ -6344,11 +6344,11 @@ class ProductsV3Api
 
             switch($statusCode) {
                 case 202:
-                    if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ProductProcessProgressProductsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6366,7 +6366,7 @@ class ProductsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductProcessProgressProductsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ProductProcessProgressProductsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6385,7 +6385,7 @@ class ProductsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+            $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6418,7 +6418,7 @@ class ProductsV3Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductProcessProgressProductsV3',
+                        '\Otto\Client\Model\ProductProcessProgressProductsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6434,7 +6434,7 @@ class ProductsV3Api
      * Update product variation prices
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
+     * @param  \Otto\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateProductVariationPrices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6456,7 +6456,7 @@ class ProductsV3Api
      * Update product variation prices
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
+     * @param  \Otto\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateProductVariationPrices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6464,7 +6464,7 @@ class ProductsV3Api
      */
     public function productsV3UpdateProductVariationPricesAsyncWithHttpInfo($x_request_timestamp = null, $sku_pricing_products_v3 = null, string $contentType = self::contentTypes['productsV3UpdateProductVariationPrices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductProcessProgressProductsV3';
+        $returnType = '\Otto\Client\Model\ProductProcessProgressProductsV3';
         $request = $this->productsV3UpdateProductVariationPricesRequest($x_request_timestamp, $sku_pricing_products_v3, $contentType);
 
         return $this->client
@@ -6507,7 +6507,7 @@ class ProductsV3Api
      * Create request for operation 'productsV3UpdateProductVariationPrices'
      *
      * @param  string $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
-     * @param  \OpenAPI\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
+     * @param  \Otto\Client\Model\SkuPricingProductsV3[] $sku_pricing_products_v3 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV3UpdateProductVariationPrices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

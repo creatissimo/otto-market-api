@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * ReturnsV3Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,9 +138,9 @@ class ReturnsV3Api
      * @param  string $status Return status for which items are being queried for (case-insensitive) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3GetPositionItemsForUsingGETV3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PositionItemListReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3
+     * @return \Otto\Client\Model\PositionItemListReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3
      */
     public function returnsV3GetPositionItemsForUsingGETV3($limit = 10, $page = 1, $status = null, string $contentType = self::contentTypes['returnsV3GetPositionItemsForUsingGETV3'][0])
     {
@@ -158,9 +158,9 @@ class ReturnsV3Api
      * @param  string $status Return status for which items are being queried for (case-insensitive) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3GetPositionItemsForUsingGETV3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PositionItemListReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PositionItemListReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsV3GetPositionItemsForUsingGETV3WithHttpInfo($limit = 10, $page = 1, $status = null, string $contentType = self::contentTypes['returnsV3GetPositionItemsForUsingGETV3'][0])
     {
@@ -191,11 +191,11 @@ class ReturnsV3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PositionItemListReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\PositionItemListReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PositionItemListReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\PositionItemListReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -213,16 +213,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PositionItemListReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\PositionItemListReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -240,16 +240,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -267,16 +267,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -294,16 +294,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -321,7 +321,7 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -340,7 +340,7 @@ class ReturnsV3Api
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PositionItemListReturnsV3';
+            $returnType = '\Otto\Client\Model\PositionItemListReturnsV3';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -373,7 +373,7 @@ class ReturnsV3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PositionItemListReturnsV3',
+                        '\Otto\Client\Model\PositionItemListReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -381,7 +381,7 @@ class ReturnsV3Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -389,7 +389,7 @@ class ReturnsV3Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -397,7 +397,7 @@ class ReturnsV3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -405,7 +405,7 @@ class ReturnsV3Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -453,7 +453,7 @@ class ReturnsV3Api
      */
     public function returnsV3GetPositionItemsForUsingGETV3AsyncWithHttpInfo($limit = 10, $page = 1, $status = null, string $contentType = self::contentTypes['returnsV3GetPositionItemsForUsingGETV3'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PositionItemListReturnsV3';
+        $returnType = '\Otto\Client\Model\PositionItemListReturnsV3';
         $request = $this->returnsV3GetPositionItemsForUsingGETV3Request($limit, $page, $status, $contentType);
 
         return $this->client
@@ -610,12 +610,12 @@ class ReturnsV3Api
      *
      * Accept the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
+     * @param  \Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\OpenAPI\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3
+     * @return object|\Otto\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3
      */
     public function returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3($accepted_partner_return_v3_returns_v3, string $contentType = self::contentTypes['returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'][0])
     {
@@ -628,12 +628,12 @@ class ReturnsV3Api
      *
      * Accept the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
+     * @param  \Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\OpenAPI\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Otto\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3WithHttpInfo($accepted_partner_return_v3_returns_v3, string $contentType = self::contentTypes['returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'][0])
     {
@@ -691,11 +691,11 @@ class ReturnsV3Api
                         $response->getHeaders()
                     ];
                 case 207:
-                    if ('\OpenAPI\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -713,16 +713,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -740,16 +740,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 413:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -767,16 +767,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -794,16 +794,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -821,7 +821,7 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -881,7 +881,7 @@ class ReturnsV3Api
                 case 207:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3',
+                        '\Otto\Client\Model\AcceptedReturnMultiStatusResponseReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -889,7 +889,7 @@ class ReturnsV3Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -897,7 +897,7 @@ class ReturnsV3Api
                 case 413:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -905,7 +905,7 @@ class ReturnsV3Api
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -913,7 +913,7 @@ class ReturnsV3Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -928,7 +928,7 @@ class ReturnsV3Api
      *
      * Accept the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
+     * @param  \Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -949,7 +949,7 @@ class ReturnsV3Api
      *
      * Accept the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
+     * @param  \Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -999,7 +999,7 @@ class ReturnsV3Api
     /**
      * Create request for operation 'returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'
      *
-     * @param  \OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
+     * @param  \Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3 $accepted_partner_return_v3_returns_v3 acceptedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1096,12 +1096,12 @@ class ReturnsV3Api
      *
      * Reject the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
+     * @param  \Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\OpenAPI\Client\Model\RejectedReturnMultiStatusResponseReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3
+     * @return object|\Otto\Client\Model\RejectedReturnMultiStatusResponseReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3
      */
     public function returnsV3ReceiveRejectedReturnsV3UsingPOSTV3($rejected_partner_return_v3_returns_v3, string $contentType = self::contentTypes['returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'][0])
     {
@@ -1114,12 +1114,12 @@ class ReturnsV3Api
      *
      * Reject the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
+     * @param  \Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\OpenAPI\Client\Model\RejectedReturnMultiStatusResponseReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3|\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Otto\Client\Model\RejectedReturnMultiStatusResponseReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3|\Otto\Client\Model\ApiErrorResponseV3ReturnsV3, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsV3ReceiveRejectedReturnsV3UsingPOSTV3WithHttpInfo($rejected_partner_return_v3_returns_v3, string $contentType = self::contentTypes['returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'][0])
     {
@@ -1177,11 +1177,11 @@ class ReturnsV3Api
                         $response->getHeaders()
                     ];
                 case 207:
-                    if ('\OpenAPI\Client\Model\RejectedReturnMultiStatusResponseReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\RejectedReturnMultiStatusResponseReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RejectedReturnMultiStatusResponseReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\RejectedReturnMultiStatusResponseReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1199,16 +1199,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RejectedReturnMultiStatusResponseReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\RejectedReturnMultiStatusResponseReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1226,16 +1226,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 413:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1253,16 +1253,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1280,16 +1280,16 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
+                    if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
+                        if ('\Otto\Client\Model\ApiErrorResponseV3ReturnsV3' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1307,7 +1307,7 @@ class ReturnsV3Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3', []),
+                        ObjectSerializer::deserialize($content, '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1367,7 +1367,7 @@ class ReturnsV3Api
                 case 207:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RejectedReturnMultiStatusResponseReturnsV3',
+                        '\Otto\Client\Model\RejectedReturnMultiStatusResponseReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1375,7 +1375,7 @@ class ReturnsV3Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1383,7 +1383,7 @@ class ReturnsV3Api
                 case 413:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1391,7 +1391,7 @@ class ReturnsV3Api
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1399,7 +1399,7 @@ class ReturnsV3Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiErrorResponseV3ReturnsV3',
+                        '\Otto\Client\Model\ApiErrorResponseV3ReturnsV3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1414,7 +1414,7 @@ class ReturnsV3Api
      *
      * Reject the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
+     * @param  \Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1435,7 +1435,7 @@ class ReturnsV3Api
      *
      * Reject the return for a sent position item (up to 200 items per request)
      *
-     * @param  \OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
+     * @param  \Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1485,7 +1485,7 @@ class ReturnsV3Api
     /**
      * Create request for operation 'returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'
      *
-     * @param  \OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
+     * @param  \Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3 $rejected_partner_return_v3_returns_v3 rejectedPartnerReturn (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsV3ReceiveRejectedReturnsV3UsingPOSTV3'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

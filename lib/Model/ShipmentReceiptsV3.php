@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,14 +29,14 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ShipmentReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Shipment details. &lt;/br&gt; Only provided on receipts of receiptType PURCHASE containing items. &lt;/br&gt; This information is not reliably provided for receipts before 01.03.2024.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ShipmentReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ship_from_address' => '\OpenAPI\Client\Model\AddressInformationReceiptsV3'
+        'ship_from_address' => '\Otto\Client\Model\AddressInformationReceiptsV3'
     ];
 
     /**
@@ -296,7 +296,7 @@ class ShipmentReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets ship_from_address
      *
-     * @return \OpenAPI\Client\Model\AddressInformationReceiptsV3
+     * @return \Otto\Client\Model\AddressInformationReceiptsV3
      */
     public function getShipFromAddress()
     {
@@ -306,7 +306,7 @@ class ShipmentReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets ship_from_address
      *
-     * @param \OpenAPI\Client\Model\AddressInformationReceiptsV3 $ship_from_address ship_from_address
+     * @param \Otto\Client\Model\AddressInformationReceiptsV3 $ship_from_address ship_from_address
      *
      * @return self
      */

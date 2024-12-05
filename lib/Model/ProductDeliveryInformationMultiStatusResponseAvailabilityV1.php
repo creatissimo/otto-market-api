@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductDeliveryInformationMultiStatusResponseAvailabilityV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]',
-        'errors' => '\OpenAPI\Client\Model\ErrorDetailsForMultiStatusAvailabilityV1'
+        'results' => '\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]',
+        'errors' => '\Otto\Client\Model\ErrorDetailsForMultiStatusAvailabilityV1'
     ];
 
     /**
@@ -302,7 +302,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]
+     * @return \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]
      */
     public function getResults()
     {
@@ -312,7 +312,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[] $results List of all the skus with its shipping profile id and processing time
+     * @param \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[] $results List of all the skus with its shipping profile id and processing time
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ErrorDetailsForMultiStatusAvailabilityV1|null
+     * @return \Otto\Client\Model\ErrorDetailsForMultiStatusAvailabilityV1|null
      */
     public function getErrors()
     {
@@ -339,7 +339,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ErrorDetailsForMultiStatusAvailabilityV1|null $errors errors
+     * @param \Otto\Client\Model\ErrorDetailsForMultiStatusAvailabilityV1|null $errors errors
      *
      * @return self
      */

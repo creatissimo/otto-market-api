@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReceiptsListReceiptsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ReceiptsListReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'resources' => '\OpenAPI\Client\Model\ReceiptReceiptsV3[]',
-        'links' => '\OpenAPI\Client\Model\LinkReceiptsV3[]'
+        'resources' => '\Otto\Client\Model\ReceiptReceiptsV3[]',
+        'links' => '\Otto\Client\Model\LinkReceiptsV3[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ReceiptsListReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets resources
      *
-     * @return \OpenAPI\Client\Model\ReceiptReceiptsV3[]|null
+     * @return \Otto\Client\Model\ReceiptReceiptsV3[]|null
      */
     public function getResources()
     {
@@ -309,7 +309,7 @@ class ReceiptsListReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets resources
      *
-     * @param \OpenAPI\Client\Model\ReceiptReceiptsV3[]|null $resources The list of queried resources. In this case partner receipts.
+     * @param \Otto\Client\Model\ReceiptReceiptsV3[]|null $resources The list of queried resources. In this case partner receipts.
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ReceiptsListReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkReceiptsV3[]|null
+     * @return \Otto\Client\Model\LinkReceiptsV3[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class ReceiptsListReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkReceiptsV3[]|null $links Links related to the list. E.g. the link to the successive list used during paging.
+     * @param \Otto\Client\Model\LinkReceiptsV3[]|null $links Links related to the list. E.g. the link to the successive list used during paging.
      *
      * @return self
      */

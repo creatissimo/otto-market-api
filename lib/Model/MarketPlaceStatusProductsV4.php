@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -29,13 +29,13 @@
 namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * MarketPlaceStatusProductsV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,9 +60,9 @@ class MarketPlaceStatusProductsV4 implements ModelInterface, ArrayAccess, \JsonS
         'sku' => 'string',
         'moin' => 'string',
         'status' => 'string',
-        'errors' => '\OpenAPI\Client\Model\MarketPlaceStatusErrorProductsV4[]',
-        'information' => '\OpenAPI\Client\Model\MarketPlaceStatusInformationProductsV4[]',
-        'links' => '\OpenAPI\Client\Model\MarketPlaceStatusLinkProductsV4[]',
+        'errors' => '\Otto\Client\Model\MarketPlaceStatusErrorProductsV4[]',
+        'information' => '\Otto\Client\Model\MarketPlaceStatusInformationProductsV4[]',
+        'links' => '\Otto\Client\Model\MarketPlaceStatusLinkProductsV4[]',
         'last_modified' => '\DateTime'
     ];
 
@@ -455,7 +455,7 @@ class MarketPlaceStatusProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\MarketPlaceStatusErrorProductsV4[]|null
+     * @return \Otto\Client\Model\MarketPlaceStatusErrorProductsV4[]|null
      */
     public function getErrors()
     {
@@ -465,7 +465,7 @@ class MarketPlaceStatusProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\MarketPlaceStatusErrorProductsV4[]|null $errors errors that occurred when processing the variation
+     * @param \Otto\Client\Model\MarketPlaceStatusErrorProductsV4[]|null $errors errors that occurred when processing the variation
      *
      * @return self
      */
@@ -482,7 +482,7 @@ class MarketPlaceStatusProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets information
      *
-     * @return \OpenAPI\Client\Model\MarketPlaceStatusInformationProductsV4[]|null
+     * @return \Otto\Client\Model\MarketPlaceStatusInformationProductsV4[]|null
      */
     public function getInformation()
     {
@@ -492,7 +492,7 @@ class MarketPlaceStatusProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets information
      *
-     * @param \OpenAPI\Client\Model\MarketPlaceStatusInformationProductsV4[]|null $information information for product optimization on the OTTO market place
+     * @param \Otto\Client\Model\MarketPlaceStatusInformationProductsV4[]|null $information information for product optimization on the OTTO market place
      *
      * @return self
      */
@@ -509,7 +509,7 @@ class MarketPlaceStatusProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\MarketPlaceStatusLinkProductsV4[]|null
+     * @return \Otto\Client\Model\MarketPlaceStatusLinkProductsV4[]|null
      */
     public function getLinks()
     {
@@ -519,7 +519,7 @@ class MarketPlaceStatusProductsV4 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\MarketPlaceStatusLinkProductsV4[]|null $links contains the link to the partner variation data and to the product in OTTO shop
+     * @param \Otto\Client\Model\MarketPlaceStatusLinkProductsV4[]|null $links contains the link to the partner variation data and to the product in OTTO shop
      *
      * @return self
      */

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **house_number** | **string** | The house number |
 **last_name** | **string** | The lastName |
 **phone_number** | **string** | The phone number | [optional]
-**salutation** | **string** | The salutation |
+**salutation** | **string** | The salutation (MR, MS, COMPANY, UNKNOWN) |
 **street** | **string** | The street |
 **title** | **string** | The title | [optional]
 **zip_code** | **string** | The zipCode |

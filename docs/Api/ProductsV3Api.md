@@ -52,7 +52,7 @@ $apiInstance = new OpenAPI\Client\Api\ProductsV3Api(
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_timestamp = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Holds the client side update request timestamp
+$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
 $product_variation_products_v3 = array(new \OpenAPI\Client\Model\ProductVariationProductsV3()); // \OpenAPI\Client\Model\ProductVariationProductsV3[]
 
 try {
@@ -67,7 +67,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **x_request_timestamp** | **\DateTime**| Holds the client side update request timestamp | [optional] |
+| **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
 | **product_variation_products_v3** | [**\OpenAPI\Client\Model\ProductVariationProductsV3[]**](../Model/ProductVariationProductsV3.md)|  | [optional] |
 
 ### Return type
@@ -155,7 +155,7 @@ productsV3GetActiveStatus($sku, $product_reference, $category, $brand_id, $page,
 
 Read active status
 
-The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space. Replaces corresponding online-status endpoint which now is marked as deprecated.
+The total number of results could be limited by specifying query parameters. Generally the resulting active status values will be paginated. The default page length is 100 active status entries per response, also the page size limit. The links specified in the result can be used to page through the total result space.
 
 ### Example
 
@@ -290,7 +290,7 @@ try {
 ## `productsV3GetCategoryGroups()`
 
 ```php
-productsV3GetCategoryGroups($page, $limit): \OpenAPI\Client\Model\CategoryGroupsProductsV3
+productsV3GetCategoryGroups($page, $limit, $category): \OpenAPI\Client\Model\CategoryGroupsProductsV3
 ```
 
 Read product categories
@@ -316,9 +316,10 @@ $apiInstance = new OpenAPI\Client\Api\ProductsV3Api(
 );
 $page = 56; // int | the number (starting with 0) of the page, that should be delivered.
 $limit = 56; // int | proposed limit for the number of product categories per response page  (at most 2000)
+$category = 'category_example'; // string | read a single category
 
 try {
-    $result = $apiInstance->productsV3GetCategoryGroups($page, $limit);
+    $result = $apiInstance->productsV3GetCategoryGroups($page, $limit, $category);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsV3Api->productsV3GetCategoryGroups: ', $e->getMessage(), PHP_EOL;
@@ -331,6 +332,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **page** | **int**| the number (starting with 0) of the page, that should be delivered. | [optional] |
 | **limit** | **int**| proposed limit for the number of product categories per response page  (at most 2000) | [optional] |
+| **category** | **string**| read a single category | [optional] |
 
 ### Return type
 
@@ -377,7 +379,7 @@ $apiInstance = new OpenAPI\Client\Api\ProductsV3Api(
     $config
 );
 $sku = 'sku_example'; // string | search for a product variation by its SKU value
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result.
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | search for content changes from this ISO8601 date on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result.
 $page = 56; // int
 $limit = 56; // int | proposed limit for the number of entries per response page (at most 100)
 
@@ -394,7 +396,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sku** | **string**| search for a product variation by its SKU value | |
-| **from_date** | **\DateTime**| search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result. | [optional] |
+| **from_date** | **\DateTime**| search for content changes from this ISO8601 date on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result. | [optional] |
 | **page** | **int**|  | [optional] |
 | **limit** | **int**| proposed limit for the number of entries per response page (at most 100) | [optional] |
 
@@ -443,7 +445,7 @@ $apiInstance = new OpenAPI\Client\Api\ProductsV3Api(
     $config
 );
 $sku = array('sku_example'); // string[] | search for product variations by their sku value. Use this to query for multiple variations or if your sku values contain slash ('/') or dot ('.') characters. You may separate multiple sku values by comma or state each one with a &sku= in front of the value. Please note that if you like to query for a single variation whose value contains a comma you have to add one empty &sku= at the end of the query string or use the other endpoint.
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result.
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | search for content changes from this time on. The maxmimum and default value is 28 days before now. Future values can be specified, but lead to an empty result.
 $page = 56; // int
 $limit = 56; // int | proposed limit for the number of content changes per response page (at most 100)
 
@@ -544,7 +546,7 @@ try {
 ## `productsV3GetMarketPlaceStatusList()`
 
 ```php
-productsV3GetMarketPlaceStatusList($sku, $product_reference, $category, $brand_id, $from_date, $page, $limit, $market_place_status): \OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3
+productsV3GetMarketPlaceStatusList($sku, $product_reference, $category, $brand_id, $from_date, $page, $limit, $market_place_status, $sort_order): \OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV3
 ```
 
 Read marketplace status of product variations
@@ -572,13 +574,14 @@ $sku = 'sku_example'; // string | search for product variations by their sku val
 $product_reference = 'product_reference_example'; // string | search marketplace status by the productReference value of the related product variations
 $category = 'category_example'; // string | search marketplace status by the category value of the related product variations
 $brand_id = 'brand_id_example'; // string | search marketplace status by the brand ID value of the related product variations
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | search marketplace status for a time range starting with the given date (in ISO8601, like '2021-10-09T07:52:19.820Z' or '2021-10-09T07:52:19.820+01:00')
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | search marketplace status for a time range starting with the given date (in ISO8601, like '2021-10-09T07:52:19.820Z' or '2021-10-09T07:52:19.820+01:00')
 $page = 56; // int | page to load
 $limit = 56; // int | proposed limit for the number of marketplace status per response page (at most 1000)
 $market_place_status = array('market_place_status_example'); // string[] | only include items that match any of the provided status
+$sort_order = 'sort_order_example'; // string | Define the sort order of the resulting entries. Available values are 'desc' for 'newest lastModified first' and 'asc' for 'oldest lastModified first' - default is 'desc'
 
 try {
-    $result = $apiInstance->productsV3GetMarketPlaceStatusList($sku, $product_reference, $category, $brand_id, $from_date, $page, $limit, $market_place_status);
+    $result = $apiInstance->productsV3GetMarketPlaceStatusList($sku, $product_reference, $category, $brand_id, $from_date, $page, $limit, $market_place_status, $sort_order);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsV3Api->productsV3GetMarketPlaceStatusList: ', $e->getMessage(), PHP_EOL;
@@ -597,6 +600,7 @@ try {
 | **page** | **int**| page to load | [optional] |
 | **limit** | **int**| proposed limit for the number of marketplace status per response page (at most 1000) | [optional] |
 | **market_place_status** | [**string[]**](../Model/string.md)| only include items that match any of the provided status | [optional] |
+| **sort_order** | **string**| Define the sort order of the resulting entries. Available values are &#39;desc&#39; for &#39;newest lastModified first&#39; and &#39;asc&#39; for &#39;oldest lastModified first&#39; - default is &#39;desc&#39; | [optional] |
 
 ### Return type
 
@@ -1204,7 +1208,7 @@ $apiInstance = new OpenAPI\Client\Api\ProductsV3Api(
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_timestamp = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Holds the client side update request timestamp
+$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
 $sku_pricing_products_v3 = array(new \OpenAPI\Client\Model\SkuPricingProductsV3()); // \OpenAPI\Client\Model\SkuPricingProductsV3[]
 
 try {
@@ -1219,7 +1223,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **x_request_timestamp** | **\DateTime**| Holds the client side update request timestamp | [optional] |
+| **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
 | **sku_pricing_products_v3** | [**\OpenAPI\Client\Model\SkuPricingProductsV3[]**](../Model/SkuPricingProductsV3.md)|  | [optional] |
 
 ### Return type

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sku** | **string** | The standard price as defined by the partner. |
+**sku** | **string** | Partner-unique identifier for a product variation provided by the partner. |
 **standard_price** | [**\OpenAPI\Client\Model\MonetaryAmountProductsV3**](MonetaryAmountProductsV3.md) |  |
 **sale** | [**\OpenAPI\Client\Model\SaleProductsV3**](SaleProductsV3.md) |  | [optional]
 

@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **errors** | [**\OpenAPI\Client\Model\MarketPlaceStatusErrorProductsV3[]**](MarketPlaceStatusErrorProductsV3.md) | errors that occurred when processing the variation | [optional]
 **information** | [**\OpenAPI\Client\Model\MarketPlaceStatusInformationProductsV3[]**](MarketPlaceStatusInformationProductsV3.md) | information for product optimization on the OTTO market place | [optional]
 **links** | [**\OpenAPI\Client\Model\MarketPlaceStatusLinkProductsV3[]**](MarketPlaceStatusLinkProductsV3.md) | contains the link to the partner variation data and to the product in OTTO shop | [optional]
-**last_modified** | **\DateTime** | last change of the marketplace status | [optional]
+**last_modified** | **\DateTime** | last change of the marketplace status as ISO8601 date | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

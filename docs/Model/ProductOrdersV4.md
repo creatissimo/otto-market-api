@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **dimensions** | [**\OpenAPI\Client\Model\DimensionOrdersV4[]**](DimensionOrdersV4.md) | List of dimensions that are individual for each product type | [optional]
 **ean** | **string** | EAN number of this product | [optional]
 **product_title** | **string** | The title of this product |
+**shop_url** | **string** | Shop link for the product | [optional]
 **sku** | **string** | The external identifier of the variation, uniquely identifies a variation in partner cataloq |
 **vat_rate** | **float** | The VAT rate for ordered products and shipping costs |
 

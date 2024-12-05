@@ -127,7 +127,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json;charset=UTF-8`, `application/json`
+- **Accept**: `application/json;charset=UTF-8`, `text/html`, `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -185,7 +185,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json;charset=UTF-8`
-- **Accept**: `application/json;charset=UTF-8`
+- **Accept**: `application/json;charset=UTF-8`, `text/html`, `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

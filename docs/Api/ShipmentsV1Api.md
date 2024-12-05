@@ -6,6 +6,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 | ------------- | ------------- | ------------- |
 | [**shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST()**](ShipmentsV1Api.md#shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST) | **POST** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber}/positionitems | Correct an existing shipment (add sent items) by carrier and tracking number. |
 | [**shipmentsV1AppendPositionItemsUsingPOST()**](ShipmentsV1Api.md#shipmentsV1AppendPositionItemsUsingPOST) | **POST** /v1/shipments/{shipmentId}/positionitems | Correct an existing shipment (add sent items) by shipment ID. |
+| [**shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST()**](ShipmentsV1Api.md#shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST) | **POST** /v1/multiparcel-shipments | Create a multiparcel shipment and mark the position items as sent. |
 | [**shipmentsV1CreatedAndSentShipmentUsingPOST()**](ShipmentsV1Api.md#shipmentsV1CreatedAndSentShipmentUsingPOST) | **POST** /v1/shipments | Create a shipment and mark the position items as sent. |
 | [**shipmentsV1ListShipmentsUsingGET()**](ShipmentsV1Api.md#shipmentsV1ListShipmentsUsingGET) | **GET** /v1/shipments | Retrieve shipments. |
 | [**shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET()**](ShipmentsV1Api.md#shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET) | **GET** /v1/shipments/carriers/{carrier}/trackingnumbers/{trackingNumber} | Retrieve shipment by carrier and tracking number. |
@@ -136,6 +137,66 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST()`
+
+```php
+shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST($multiparcel_create_shipment_request_shipments_v1): \OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1
+```
+
+Create a multiparcel shipment and mark the position items as sent.
+
+This endpoint is designed for creating multiparcel shipments when a single article (position item) is sent in multiple shipments, each with its own tracking key.<br><br> Multiparcel shipments can only be created for items with delivery type PARCEL. The typical use case involves 2 to 3 shipments for one article (e.g., furniture that cannot be sent in a single parcel).<br><br> Position items that are not sent in multiple shipments should not be reported using this endpoint.<br><br> Creating a multiparcel shipment confirms that the position item has been handed over to the carrier for final delivery to the customer. At this point, the position item is marked as \"SENT\" in OTTO Market, which triggers the generation of a purchase receipt.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$multiparcel_create_shipment_request_shipments_v1 = array(new \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1()); // \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] | request
+
+try {
+    $result = $apiInstance->shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST($multiparcel_create_shipment_request_shipments_v1);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ShipmentsV1Api->shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **multiparcel_create_shipment_request_shipments_v1** | [**\OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[]**](../Model/MultiparcelCreateShipmentRequestShipmentsV1.md)| request | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1**](../Model/CreateMultiparcelShipmentResponseShipmentsV1.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `shipmentsV1CreatedAndSentShipmentUsingPOST()`
 
 ```php
@@ -223,7 +284,7 @@ $apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
     new GuzzleHttp\Client(),
     $config
 );
-$datefrom = 'datefrom_example'; // string | Shipments created from this date onwards for the given authorized partner will be returned. The date is considered as UTC.
+$datefrom = 'datefrom_example'; // string | Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (`YYYY-MM-DD`), which will be inferred to be in UTC time, or an ISO date time (`YYYY-MM-DD'T'HH:mm:ss.SSSXXX`).  For example, `2024-01-10` would be interpreted the same as `2024-01-10T00:00:00Z`.
 $limit = 25; // int | The maximum number of shipments to be returned in each response.
 $next = 'next_example'; // string | The cursor which points to the next shipment that should be queried. It is used to paginate the results.
 
@@ -239,7 +300,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datefrom** | **string**| Shipments created from this date onwards for the given authorized partner will be returned. The date is considered as UTC. | |
+| **datefrom** | **string**| Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. | |
 | **limit** | **int**| The maximum number of shipments to be returned in each response. | [optional] [default to 25] |
 | **next** | **string**| The cursor which points to the next shipment that should be queried. It is used to paginate the results. | [optional] |
 

@@ -127,7 +127,7 @@ try {
 ## `receiptsV3GetReceiptsUsingGET5()`
 
 ```php
-receiptsV3GetReceiptsUsingGET5($limit, $page, $receipt_types, $from, $to, $sales_order_id): \OpenAPI\Client\Model\ReceiptsListReceiptsV3
+receiptsV3GetReceiptsUsingGET5($limit, $page, $receipt_types, $from, $to, $sales_order_id, $next): \OpenAPI\Client\Model\ReceiptsListReceiptsV3
 ```
 
 Get all receipts as list of JSON objects
@@ -152,14 +152,15 @@ $apiInstance = new OpenAPI\Client\Api\ReceiptsV3Api(
     $config
 );
 $limit = 128; // int | Page size to limit the number of receipts returned in the response
-$page = 1; // int | Page number to fetch. This parameter is required to fetch data for specific page number
+$page = 1; // int | Page number to fetch. This parameter is required to fetch data for specific page number. </br>This field is deprecated, please use `next` parameter
 $receipt_types = array('receipt_types_example'); // string[] | Search for receipts filtered by multiple receipt types
 $from = 2022-08-01; // \DateTime | Search for receipts to filter starting from (yyyy-mm-dd)
 $to = 2022-08-31; // \DateTime | Search for receipts to filter until (yyyy-mm-dd)
 $sales_order_id = f23eb274-a8a2-4721-a7bc-0d9aa1b11940; // string | Search for receipts filtered by sales order Id
+$next = eyJjcmVhdGlvbkRhdGUiOjE2ODU2OTE1NjUuMTk4MDAwMDAwLCJyZWNlaXB0TnVtYmVyIjoiRS1ERS0xMTg0NzU2OTAtMjAyMy0zNTgxMyJ9; // string | Cursor to fetch next receipts
 
 try {
-    $result = $apiInstance->receiptsV3GetReceiptsUsingGET5($limit, $page, $receipt_types, $from, $to, $sales_order_id);
+    $result = $apiInstance->receiptsV3GetReceiptsUsingGET5($limit, $page, $receipt_types, $from, $to, $sales_order_id, $next);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReceiptsV3Api->receiptsV3GetReceiptsUsingGET5: ', $e->getMessage(), PHP_EOL;
@@ -171,11 +172,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **limit** | **int**| Page size to limit the number of receipts returned in the response | [optional] [default to 128] |
-| **page** | **int**| Page number to fetch. This parameter is required to fetch data for specific page number | [optional] [default to 1] |
+| **page** | **int**| Page number to fetch. This parameter is required to fetch data for specific page number. &lt;/br&gt;This field is deprecated, please use &#x60;next&#x60; parameter | [optional] [default to 1] |
 | **receipt_types** | [**string[]**](../Model/string.md)| Search for receipts filtered by multiple receipt types | [optional] |
 | **from** | **\DateTime**| Search for receipts to filter starting from (yyyy-mm-dd) | [optional] |
 | **to** | **\DateTime**| Search for receipts to filter until (yyyy-mm-dd) | [optional] |
 | **sales_order_id** | **string**| Search for receipts filtered by sales order Id | [optional] |
+| **next** | **string**| Cursor to fetch next receipts | [optional] |
 
 ### Return type
 

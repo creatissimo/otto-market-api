@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **payment** | [**\OpenAPI\Client\Model\PaymentOrdersV4**](PaymentOrdersV4.md) |  | [optional]
 **position_items** | [**\OpenAPI\Client\Model\PositionItemOrdersV4[]**](PositionItemOrdersV4.md) | The physical position items of this order. Multiple position item can refer to the same product |
 **sales_order_id** | **string** | The id of the corresponding sales order. For one partner the sales order id is unique |
+**suspected_fraud_case** | **bool** | Order is suspected fraud case or not | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

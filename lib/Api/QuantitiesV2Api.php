@@ -144,7 +144,7 @@ class QuantitiesV2Api
      */
     public function quantitiesV2GetAvailableQuantities($limit = 200, $page = 0, $cursor = null, string $contentType = self::contentTypes['quantitiesV2GetAvailableQuantities'][0])
     {
-        list($response) = $this->quantitiesV2GetAvailableQuantitiesWithHttpInfo($limit, $page, $cursor, $contentType);
+        [$response] = $this->quantitiesV2GetAvailableQuantitiesWithHttpInfo($limit, $page, $cursor, $contentType);
         return $response;
     }
 
@@ -195,20 +195,24 @@ class QuantitiesV2Api
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
+                        if(!empty($content)) {
+                            if ('\Otto\Client\Model\AvailableQuantityResponseV2QuantitiesV2' !== 'string') {
+                                try {
+                                    $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                                } catch (\JsonException $exception) {
+                                    throw new ApiException(
+                                        sprintf(
+                                            'Error JSON decoding server response (%s)',
+                                            $request->getUri()
+                                        ),
+                                        $statusCode,
+                                        $response->getHeaders(),
+                                        $content
+                                    );
+                                }
                             }
+                        } else {
+                            $content = null;
                         }
                     }
 
@@ -479,7 +483,7 @@ class QuantitiesV2Api
      */
     public function quantitiesV2GetAvailableQuantityBySku($sku, string $contentType = self::contentTypes['quantitiesV2GetAvailableQuantityBySku'][0])
     {
-        list($response) = $this->quantitiesV2GetAvailableQuantityBySkuWithHttpInfo($sku, $contentType);
+        [$response] = $this->quantitiesV2GetAvailableQuantityBySkuWithHttpInfo($sku, $contentType);
         return $response;
     }
 
@@ -791,7 +795,7 @@ class QuantitiesV2Api
      */
     public function quantitiesV2StoreAvailableQuantitiesUsingPOST($available_quantity_request_dtov2_quantities_v2, string $contentType = self::contentTypes['quantitiesV2StoreAvailableQuantitiesUsingPOST'][0])
     {
-        list($response) = $this->quantitiesV2StoreAvailableQuantitiesUsingPOSTWithHttpInfo($available_quantity_request_dtov2_quantities_v2, $contentType);
+        [$response] = $this->quantitiesV2StoreAvailableQuantitiesUsingPOSTWithHttpInfo($available_quantity_request_dtov2_quantities_v2, $contentType);
         return $response;
     }
 

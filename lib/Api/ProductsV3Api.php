@@ -6033,20 +6033,24 @@ class ProductsV3Api
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Otto\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
+                        if(!empty($content)) {
+                            if ('\Otto\Client\Model\ProductProcessProgressProductsV3' !== 'string') {
+                                try {
+                                    $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                                } catch (\JsonException $exception) {
+                                    throw new ApiException(
+                                        sprintf(
+                                            'Error JSON decoding server response (%s)',
+                                            $request->getUri()
+                                        ),
+                                        $statusCode,
+                                        $response->getHeaders(),
+                                        $content
+                                    );
+                                }
                             }
+                        } else {
+                            $content = null;
                         }
                     }
 

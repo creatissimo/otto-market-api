@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductDeliveryInformationMultiStatusResponseAvailabilityV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]',
-        'errors' => '\OpenAPI\Client\Model\QuantityApiErrorAvailabilityV1[]'
+        'results' => '\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]',
+        'errors' => '\Otto\Client\Model\QuantityApiErrorAvailabilityV1[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]
+     * @return \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[]
      */
     public function getResults()
     {
@@ -315,7 +315,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[] $results List of all the skus with its shipping profile id and processing time
+     * @param \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1[] $results List of all the skus with its shipping profile id and processing time
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\QuantityApiErrorAvailabilityV1[]
+     * @return \Otto\Client\Model\QuantityApiErrorAvailabilityV1[]
      */
     public function getErrors()
     {
@@ -342,7 +342,7 @@ class ProductDeliveryInformationMultiStatusResponseAvailabilityV1 implements Mod
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\QuantityApiErrorAvailabilityV1[] $errors Describes the error details
+     * @param \Otto\Client\Model\QuantityApiErrorAvailabilityV1[] $errors Describes the error details
      *
      * @return self
      */

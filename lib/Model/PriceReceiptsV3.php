@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Costs of an object There are different definitions of Price objects in Receipt structure:   * **unitPrice** - Original price for quantity a line item object   * **positionSum** - Price for quantity x unitPrice of a line item object minus reductions of all sub priceModification objects, if exist   * **partialRefundAmount** - Granted reduction by the partner on line item object   * **priceModificationAmount** - Total reduction for the super ordinated line item object. If the line item object has a quantity, this is already been taken into account in this amount.   * **priceToPay** - Price for quantity one minus all instant reductions like partner discount ... when selling (excl. earlier partial refunds).&lt;/br&gt;Only available on receipts of receiptType PURCHASE.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,9 +60,9 @@ class PriceReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'tax_type' => 'string',
         'tax_rate' => 'string',
-        'gross' => '\OpenAPI\Client\Model\PriceReceiptsV3Gross',
-        'net' => '\OpenAPI\Client\Model\PriceReceiptsV3Net',
-        'tax' => '\OpenAPI\Client\Model\PriceReceiptsV3Tax'
+        'gross' => '\Otto\Client\Model\PriceReceiptsV3Gross',
+        'net' => '\Otto\Client\Model\PriceReceiptsV3Net',
+        'tax' => '\Otto\Client\Model\PriceReceiptsV3Tax'
     ];
 
     /**
@@ -418,7 +418,7 @@ class PriceReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets gross
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3Gross
+     * @return \Otto\Client\Model\PriceReceiptsV3Gross
      */
     public function getGross()
     {
@@ -428,7 +428,7 @@ class PriceReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets gross
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3Gross $gross gross
+     * @param \Otto\Client\Model\PriceReceiptsV3Gross $gross gross
      *
      * @return self
      */
@@ -445,7 +445,7 @@ class PriceReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets net
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3Net|null
+     * @return \Otto\Client\Model\PriceReceiptsV3Net|null
      */
     public function getNet()
     {
@@ -455,7 +455,7 @@ class PriceReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets net
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3Net|null $net net
+     * @param \Otto\Client\Model\PriceReceiptsV3Net|null $net net
      *
      * @return self
      */
@@ -472,7 +472,7 @@ class PriceReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tax
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3Tax|null
+     * @return \Otto\Client\Model\PriceReceiptsV3Tax|null
      */
     public function getTax()
     {
@@ -482,7 +482,7 @@ class PriceReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tax
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3Tax|null $tax tax
+     * @param \Otto\Client\Model\PriceReceiptsV3Tax|null $tax tax
      *
      * @return self
      */

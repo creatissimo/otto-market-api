@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @description The partner does not have the required permissions.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1 implements Mod
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ErrorDescriptionReturnShipmentsV1'
+        'errors' => '\Otto\Client\Model\ErrorDescriptionReturnShipmentsV1'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1 implements Mod
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ErrorDescriptionReturnShipmentsV1|null
+     * @return \Otto\Client\Model\ErrorDescriptionReturnShipmentsV1|null
      */
     public function getErrors()
     {
@@ -303,7 +303,7 @@ class ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1 implements Mod
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ErrorDescriptionReturnShipmentsV1|null $errors errors
+     * @param \Otto\Client\Model\ErrorDescriptionReturnShipmentsV1|null $errors errors
      *
      * @return self
      */

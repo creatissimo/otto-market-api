@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * DeliveryCostReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description List of billed logistic costs, if exists for this receipt. &lt;/br&gt;This list is only used in context of receiptType PURCHASE or REFUND. &lt;/br&gt;If there are no entries the lists is displayed as empty
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,9 +60,9 @@ class DeliveryCostReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPITypes = [
         'line_number' => 'int',
         'delivery_cost_type' => 'string',
-        'unit_price' => '\OpenAPI\Client\Model\PriceReceiptsV3',
-        'position_sum' => '\OpenAPI\Client\Model\PriceReceiptsV3',
-        'price_modifications' => '\OpenAPI\Client\Model\PriceModificationReceiptsV3[]'
+        'unit_price' => '\Otto\Client\Model\PriceReceiptsV3',
+        'position_sum' => '\Otto\Client\Model\PriceReceiptsV3',
+        'price_modifications' => '\Otto\Client\Model\PriceModificationReceiptsV3[]'
     ];
 
     /**
@@ -421,7 +421,7 @@ class DeliveryCostReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets unit_price
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getUnitPrice()
     {
@@ -431,7 +431,7 @@ class DeliveryCostReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets unit_price
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $unit_price unit_price
+     * @param \Otto\Client\Model\PriceReceiptsV3 $unit_price unit_price
      *
      * @return self
      */
@@ -448,7 +448,7 @@ class DeliveryCostReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets position_sum
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getPositionSum()
     {
@@ -458,7 +458,7 @@ class DeliveryCostReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets position_sum
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $position_sum position_sum
+     * @param \Otto\Client\Model\PriceReceiptsV3 $position_sum position_sum
      *
      * @return self
      */
@@ -475,7 +475,7 @@ class DeliveryCostReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets price_modifications
      *
-     * @return \OpenAPI\Client\Model\PriceModificationReceiptsV3[]
+     * @return \Otto\Client\Model\PriceModificationReceiptsV3[]
      */
     public function getPriceModifications()
     {
@@ -485,7 +485,7 @@ class DeliveryCostReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets price_modifications
      *
-     * @param \OpenAPI\Client\Model\PriceModificationReceiptsV3[] $price_modifications List of additional fees and reductions represented as price modifications. </br>If there are no price modifications, an empty list is displayed
+     * @param \Otto\Client\Model\PriceModificationReceiptsV3[] $price_modifications List of additional fees and reductions represented as price modifications. </br>If there are no price modifications, an empty list is displayed
      *
      * @return self
      */

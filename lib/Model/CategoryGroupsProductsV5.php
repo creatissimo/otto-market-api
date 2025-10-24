@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CategoryGroupsProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class CategoryGroupsProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'category_groups' => '\OpenAPI\Client\Model\CategoryGroupProductsV5[]',
-        'links' => '\OpenAPI\Client\Model\CategoryGroupsLinkProductsV5[]'
+        'category_groups' => '\Otto\Client\Model\CategoryGroupProductsV5[]',
+        'links' => '\Otto\Client\Model\CategoryGroupsLinkProductsV5[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class CategoryGroupsProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets category_groups
      *
-     * @return \OpenAPI\Client\Model\CategoryGroupProductsV5[]|null
+     * @return \Otto\Client\Model\CategoryGroupProductsV5[]|null
      */
     public function getCategoryGroups()
     {
@@ -309,7 +309,7 @@ class CategoryGroupsProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets category_groups
      *
-     * @param \OpenAPI\Client\Model\CategoryGroupProductsV5[]|null $category_groups a list of the category groups defined on the OTTO market place.
+     * @param \Otto\Client\Model\CategoryGroupProductsV5[]|null $category_groups a list of the category groups defined on the OTTO market place.
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class CategoryGroupsProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\CategoryGroupsLinkProductsV5[]|null
+     * @return \Otto\Client\Model\CategoryGroupsLinkProductsV5[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class CategoryGroupsProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\CategoryGroupsLinkProductsV5[]|null $links a list of links that can be used for pagination (among others).
+     * @param \Otto\Client\Model\CategoryGroupsLinkProductsV5[]|null $links a list of links that can be used for pagination (among others).
      *
      * @return self
      */

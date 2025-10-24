@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace Otto\Client\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Shipment details. &lt;/br&gt; Only provided on receipts of receiptType PURCHASE containing items. &lt;/br&gt; This information is not reliably provided for receipts before 01.03.2024.
- * @package     OpenAPI\Client
+ * @package     Otto\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

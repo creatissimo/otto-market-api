@@ -1,4 +1,4 @@
-# OpenAPI\Client\ReturnsV3Api
+# Otto\Client\ReturnsV3Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 ## `returnsV3GetPositionItemsForUsingGETV3()`
 
 ```php
-returnsV3GetPositionItemsForUsingGETV3($limit, $page, $status): \OpenAPI\Client\Model\PositionItemListReturnsV3
+returnsV3GetPositionItemsForUsingGETV3($limit, $page, $status): \Otto\Client\Model\PositionItemListReturnsV3
 ```
 
 Get all the items filtered on return status
@@ -27,10 +27,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsV3Api(
+$apiInstance = new Otto\Client\Api\ReturnsV3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PositionItemListReturnsV3**](../Model/PositionItemListReturnsV3.md)
+[**\Otto\Client\Model\PositionItemListReturnsV3**](../Model/PositionItemListReturnsV3.md)
 
 ### Authorization
 
@@ -89,16 +89,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsV3Api(
+$apiInstance = new Otto\Client\Api\ReturnsV3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$accepted_partner_return_v3_returns_v3 = new \OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3(); // \OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3 | acceptedPartnerReturn
+$accepted_partner_return_v3_returns_v3 = new \Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3(); // \Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3 | acceptedPartnerReturn
 
 try {
     $result = $apiInstance->returnsV3ReceiveAcceptedReturnsV3UsingPOSTV3($accepted_partner_return_v3_returns_v3);
@@ -112,7 +112,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **accepted_partner_return_v3_returns_v3** | [**\OpenAPI\Client\Model\AcceptedPartnerReturnV3ReturnsV3**](../Model/AcceptedPartnerReturnV3ReturnsV3.md)| acceptedPartnerReturn | |
+| **accepted_partner_return_v3_returns_v3** | [**\Otto\Client\Model\AcceptedPartnerReturnV3ReturnsV3**](../Model/AcceptedPartnerReturnV3ReturnsV3.md)| acceptedPartnerReturn | |
 
 ### Return type
 
@@ -147,16 +147,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsV3Api(
+$apiInstance = new Otto\Client\Api\ReturnsV3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$rejected_partner_return_v3_returns_v3 = new \OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3(); // \OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3 | rejectedPartnerReturn
+$rejected_partner_return_v3_returns_v3 = new \Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3(); // \Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3 | rejectedPartnerReturn
 
 try {
     $result = $apiInstance->returnsV3ReceiveRejectedReturnsV3UsingPOSTV3($rejected_partner_return_v3_returns_v3);
@@ -170,7 +170,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **rejected_partner_return_v3_returns_v3** | [**\OpenAPI\Client\Model\RejectedPartnerReturnV3ReturnsV3**](../Model/RejectedPartnerReturnV3ReturnsV3.md)| rejectedPartnerReturn | |
+| **rejected_partner_return_v3_returns_v3** | [**\Otto\Client\Model\RejectedPartnerReturnV3ReturnsV3**](../Model/RejectedPartnerReturnV3ReturnsV3.md)| rejectedPartnerReturn | |
 
 ### Return type
 

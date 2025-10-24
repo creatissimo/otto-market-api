@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace Otto\Client\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description The role of an address in the food information context. Allowed values are &#39;FOOD_BUSINESS_OPERATOR&#39; or &#39;FEED_BUSINESS_OPERATOR&#39;.
- * @package     OpenAPI\Client
+ * @package     Otto\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

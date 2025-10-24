@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductProcessResultProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ProductProcessResultProductsV5 implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\ProductProcessTaskResultProductsV5[]'
+        'results' => '\Otto\Client\Model\ProductProcessTaskResultProductsV5[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ProductProcessResultProductsV5 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\ProductProcessTaskResultProductsV5[]|null
+     * @return \Otto\Client\Model\ProductProcessTaskResultProductsV5[]|null
      */
     public function getResults()
     {
@@ -302,7 +302,7 @@ class ProductProcessResultProductsV5 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\ProductProcessTaskResultProductsV5[]|null $results results
+     * @param \Otto\Client\Model\ProductProcessTaskResultProductsV5[]|null $results results
      *
      * @return self
      */

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**discount_amount** | [**\OpenAPI\Client\Model\AmountOrdersV4**](AmountOrdersV4.md) |  |
+**discount_amount** | [**\Otto\Client\Model\AmountOrdersV4**](AmountOrdersV4.md) |  |
 **discount_id** | **string** | The id of this discount |
 **discount_name** | **string** | The name of this discount |
 **name** | **string** | The type of this discount |

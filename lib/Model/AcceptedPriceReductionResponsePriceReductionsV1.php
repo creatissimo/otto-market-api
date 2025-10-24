@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AcceptedPriceReductionResponsePriceReductionsV1 Class Doc Comment
  *
  * @category Class
  * @description Price reduction has been initiated successfully. Please wait for sometime.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class AcceptedPriceReductionResponsePriceReductionsV1 implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\APIResponsePriceReductionsV1'
+        'results' => '\Otto\Client\Model\APIResponsePriceReductionsV1'
     ];
 
     /**
@@ -293,7 +293,7 @@ class AcceptedPriceReductionResponsePriceReductionsV1 implements ModelInterface,
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\APIResponsePriceReductionsV1|null
+     * @return \Otto\Client\Model\APIResponsePriceReductionsV1|null
      */
     public function getResults()
     {
@@ -303,7 +303,7 @@ class AcceptedPriceReductionResponsePriceReductionsV1 implements ModelInterface,
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\APIResponsePriceReductionsV1|null $results results
+     * @param \Otto\Client\Model\APIResponsePriceReductionsV1|null $results results
      *
      * @return self
      */

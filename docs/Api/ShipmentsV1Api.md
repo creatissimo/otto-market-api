@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShipmentsV1Api
+# Otto\Client\ShipmentsV1Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -42,7 +42,7 @@ $apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
 );
 $carrier = 'carrier_example'; // string | The carrier of the shipment.
 $tracking_number = 'tracking_number_example'; // string | The tracking number of the shipment assigned by the carrier.
-$position_item_shipments_v1 = array(new \OpenAPI\Client\Model\PositionItemShipmentsV1()); // \OpenAPI\Client\Model\PositionItemShipmentsV1[] | The position items included in shipment.
+$position_item_shipments_v1 = array(new \Otto\Client\Model\PositionItemShipmentsV1()); // \Otto\Client\Model\PositionItemShipmentsV1[] | The position items included in shipment.
 
 try {
     $apiInstance->shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST($carrier, $tracking_number, $position_item_shipments_v1);
@@ -57,7 +57,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **carrier** | **string**| The carrier of the shipment. | |
 | **tracking_number** | **string**| The tracking number of the shipment assigned by the carrier. | |
-| **position_item_shipments_v1** | [**\OpenAPI\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| The position items included in shipment. | |
+| **position_item_shipments_v1** | [**\Otto\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| The position items included in shipment. | |
 
 ### Return type
 
@@ -94,17 +94,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $shipment_id = 'shipment_id_example'; // string | Internal shipment identifier assigned by OTTO Market.
-$position_item_shipments_v1 = array(new \OpenAPI\Client\Model\PositionItemShipmentsV1()); // \OpenAPI\Client\Model\PositionItemShipmentsV1[] | positionItems
+$position_item_shipments_v1 = array(new \Otto\Client\Model\PositionItemShipmentsV1()); // \Otto\Client\Model\PositionItemShipmentsV1[] | positionItems
 
 try {
     $apiInstance->shipmentsV1AppendPositionItemsUsingPOST($shipment_id, $position_item_shipments_v1);
@@ -118,7 +118,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **shipment_id** | **string**| Internal shipment identifier assigned by OTTO Market. | |
-| **position_item_shipments_v1** | [**\OpenAPI\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| positionItems | |
+| **position_item_shipments_v1** | [**\Otto\Client\Model\PositionItemShipmentsV1[]**](../Model/PositionItemShipmentsV1.md)| positionItems | |
 
 ### Return type
 
@@ -140,7 +140,7 @@ void (empty response body)
 ## `shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST()`
 
 ```php
-shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST($multiparcel_create_shipment_request_shipments_v1): \OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1
+shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST($multiparcel_create_shipment_request_shipments_v1): \Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1
 ```
 
 Create a multiparcel shipment and mark the position items as sent.
@@ -155,16 +155,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$multiparcel_create_shipment_request_shipments_v1 = array(new \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1()); // \OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] | request
+$multiparcel_create_shipment_request_shipments_v1 = array(new \Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1()); // \Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[] | request
 
 try {
     $result = $apiInstance->shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST($multiparcel_create_shipment_request_shipments_v1);
@@ -178,11 +178,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **multiparcel_create_shipment_request_shipments_v1** | [**\OpenAPI\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[]**](../Model/MultiparcelCreateShipmentRequestShipmentsV1.md)| request | |
+| **multiparcel_create_shipment_request_shipments_v1** | [**\Otto\Client\Model\MultiparcelCreateShipmentRequestShipmentsV1[]**](../Model/MultiparcelCreateShipmentRequestShipmentsV1.md)| request | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1**](../Model/CreateMultiparcelShipmentResponseShipmentsV1.md)
+[**\Otto\Client\Model\CreateMultiparcelShipmentResponseShipmentsV1**](../Model/CreateMultiparcelShipmentResponseShipmentsV1.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ try {
 ## `shipmentsV1CreatedAndSentShipmentUsingPOST()`
 
 ```php
-shipmentsV1CreatedAndSentShipmentUsingPOST($create_shipment_request_shipments_v1): \OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1
+shipmentsV1CreatedAndSentShipmentUsingPOST($create_shipment_request_shipments_v1): \Otto\Client\Model\CreateShipmentResponseShipmentsV1
 ```
 
 Create a shipment and mark the position items as sent.
@@ -215,16 +215,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_shipment_request_shipments_v1 = new \OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1(); // \OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1 | request
+$create_shipment_request_shipments_v1 = new \Otto\Client\Model\CreateShipmentRequestShipmentsV1(); // \Otto\Client\Model\CreateShipmentRequestShipmentsV1 | request
 
 try {
     $result = $apiInstance->shipmentsV1CreatedAndSentShipmentUsingPOST($create_shipment_request_shipments_v1);
@@ -238,11 +238,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_shipment_request_shipments_v1** | [**\OpenAPI\Client\Model\CreateShipmentRequestShipmentsV1**](../Model/CreateShipmentRequestShipmentsV1.md)| request | |
+| **create_shipment_request_shipments_v1** | [**\Otto\Client\Model\CreateShipmentRequestShipmentsV1**](../Model/CreateShipmentRequestShipmentsV1.md)| request | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateShipmentResponseShipmentsV1**](../Model/CreateShipmentResponseShipmentsV1.md)
+[**\Otto\Client\Model\CreateShipmentResponseShipmentsV1**](../Model/CreateShipmentResponseShipmentsV1.md)
 
 ### Authorization
 
@@ -260,7 +260,7 @@ try {
 ## `shipmentsV1ListShipmentsUsingGET()`
 
 ```php
-shipmentsV1ListShipmentsUsingGET($datefrom, $limit, $next): \OpenAPI\Client\Model\ShipmentListShipmentsV1
+shipmentsV1ListShipmentsUsingGET($datefrom, $limit, $next): \Otto\Client\Model\ShipmentListShipmentsV1
 ```
 
 Retrieve shipments.
@@ -275,10 +275,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -306,7 +306,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentListShipmentsV1**](../Model/ShipmentListShipmentsV1.md)
+[**\Otto\Client\Model\ShipmentListShipmentsV1**](../Model/ShipmentListShipmentsV1.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ try {
 ## `shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET()`
 
 ```php
-shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET($carrier, $tracking_number): \OpenAPI\Client\Model\ShipmentShipmentsV1
+shipmentsV1ShipmentByCarrierAndTrackingNumberUsingGET($carrier, $tracking_number): \Otto\Client\Model\ShipmentShipmentsV1
 ```
 
 Retrieve shipment by carrier and tracking number.
@@ -339,10 +339,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -368,7 +368,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentShipmentsV1**](../Model/ShipmentShipmentsV1.md)
+[**\Otto\Client\Model\ShipmentShipmentsV1**](../Model/ShipmentShipmentsV1.md)
 
 ### Authorization
 
@@ -386,7 +386,7 @@ try {
 ## `shipmentsV1ShipmentUsingGET()`
 
 ```php
-shipmentsV1ShipmentUsingGET($shipment_id): \OpenAPI\Client\Model\ShipmentShipmentsV1
+shipmentsV1ShipmentUsingGET($shipment_id): \Otto\Client\Model\ShipmentShipmentsV1
 ```
 
 Retrieve shipment by shipment ID.
@@ -401,10 +401,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -428,7 +428,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentShipmentsV1**](../Model/ShipmentShipmentsV1.md)
+[**\Otto\Client\Model\ShipmentShipmentsV1**](../Model/ShipmentShipmentsV1.md)
 
 ### Authorization
 

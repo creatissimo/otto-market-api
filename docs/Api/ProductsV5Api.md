@@ -1,4 +1,4 @@
-# OpenAPI\Client\ProductsV5Api
+# Otto\Client\ProductsV5Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -28,7 +28,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 ## `productsV5CreateOrUpdateProductVariations()`
 
 ```php
-productsV5CreateOrUpdateProductVariations($x_request_timestamp, $product_variation_products_v5): \OpenAPI\Client\Model\ProductProcessProgressProductsV5
+productsV5CreateOrUpdateProductVariations($x_request_timestamp, $product_variation_products_v5): \Otto\Client\Model\ProductProcessProgressProductsV5
 ```
 
 Create or update product variations
@@ -43,17 +43,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
-$product_variation_products_v5 = array(new \OpenAPI\Client\Model\ProductVariationProductsV5()); // \OpenAPI\Client\Model\ProductVariationProductsV5[]
+$product_variation_products_v5 = array(new \Otto\Client\Model\ProductVariationProductsV5()); // \Otto\Client\Model\ProductVariationProductsV5[]
 
 try {
     $result = $apiInstance->productsV5CreateOrUpdateProductVariations($x_request_timestamp, $product_variation_products_v5);
@@ -68,11 +68,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
-| **product_variation_products_v5** | [**\OpenAPI\Client\Model\ProductVariationProductsV5[]**](../Model/ProductVariationProductsV5.md)|  | [optional] |
+| **product_variation_products_v5** | [**\Otto\Client\Model\ProductVariationProductsV5[]**](../Model/ProductVariationProductsV5.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
+[**\Otto\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ try {
 ## `productsV5FailedByProcessId()`
 
 ```php
-productsV5FailedByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessResultProductsV5
+productsV5FailedByProcessId($process_uuid): \Otto\Client\Model\ProductProcessResultProductsV5
 ```
 
 List failed products of a product data delivery
@@ -105,10 +105,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductProcessResultProductsV5**](../Model/ProductProcessResultProductsV5.md)
+[**\Otto\Client\Model\ProductProcessResultProductsV5**](../Model/ProductProcessResultProductsV5.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ try {
 ## `productsV5GetActiveStatus()`
 
 ```php
-productsV5GetActiveStatus($sku, $product_reference, $category, $brand_id, $page, $limit): \OpenAPI\Client\Model\ActiveStatusListResponseProductsV5
+productsV5GetActiveStatus($sku, $product_reference, $category, $brand_id, $page, $limit): \Otto\Client\Model\ActiveStatusListResponseProductsV5
 ```
 
 Read active status
@@ -165,10 +165,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -202,7 +202,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ActiveStatusListResponseProductsV5**](../Model/ActiveStatusListResponseProductsV5.md)
+[**\Otto\Client\Model\ActiveStatusListResponseProductsV5**](../Model/ActiveStatusListResponseProductsV5.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ try {
 ## `productsV5GetBrands()`
 
 ```php
-productsV5GetBrands($if_match, $if_none_match, $if_modified_since, $if_unmodified_since, $page, $limit): \OpenAPI\Client\Model\BrandListResponseProductsV5
+productsV5GetBrands($if_match, $if_none_match, $if_modified_since, $if_unmodified_since, $page, $limit): \Otto\Client\Model\BrandListResponseProductsV5
 ```
 
 List of allowed brands
@@ -235,10 +235,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -272,7 +272,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BrandListResponseProductsV5**](../Model/BrandListResponseProductsV5.md)
+[**\Otto\Client\Model\BrandListResponseProductsV5**](../Model/BrandListResponseProductsV5.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ try {
 ## `productsV5GetCategoryGroups()`
 
 ```php
-productsV5GetCategoryGroups($page, $limit, $category): \OpenAPI\Client\Model\CategoryGroupsProductsV5
+productsV5GetCategoryGroups($page, $limit, $category): \Otto\Client\Model\CategoryGroupsProductsV5
 ```
 
 Read product categories
@@ -305,10 +305,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -336,7 +336,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CategoryGroupsProductsV5**](../Model/CategoryGroupsProductsV5.md)
+[**\Otto\Client\Model\CategoryGroupsProductsV5**](../Model/CategoryGroupsProductsV5.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ try {
 ## `productsV5GetContentChanges()`
 
 ```php
-productsV5GetContentChanges($sku, $from_date, $page, $limit): \OpenAPI\Client\Model\ContentChangesApiResultProductsV5
+productsV5GetContentChanges($sku, $from_date, $page, $limit): \Otto\Client\Model\ContentChangesApiResultProductsV5
 ```
 
 Read content changes for a single product variation
@@ -369,10 +369,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -402,7 +402,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContentChangesApiResultProductsV5**](../Model/ContentChangesApiResultProductsV5.md)
+[**\Otto\Client\Model\ContentChangesApiResultProductsV5**](../Model/ContentChangesApiResultProductsV5.md)
 
 ### Authorization
 
@@ -420,7 +420,7 @@ try {
 ## `productsV5GetContentChanges2()`
 
 ```php
-productsV5GetContentChanges2($sku, $from_date, $page, $limit): \OpenAPI\Client\Model\ContentChangesApiResultProductsV5
+productsV5GetContentChanges2($sku, $from_date, $page, $limit): \Otto\Client\Model\ContentChangesApiResultProductsV5
 ```
 
 Read content changes within time period
@@ -435,10 +435,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -468,7 +468,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContentChangesApiResultProductsV5**](../Model/ContentChangesApiResultProductsV5.md)
+[**\Otto\Client\Model\ContentChangesApiResultProductsV5**](../Model/ContentChangesApiResultProductsV5.md)
 
 ### Authorization
 
@@ -486,7 +486,7 @@ try {
 ## `productsV5GetMarketPlaceStatus()`
 
 ```php
-productsV5GetMarketPlaceStatus($sku): \OpenAPI\Client\Model\MarketPlaceStatusProductsV5
+productsV5GetMarketPlaceStatus($sku): \Otto\Client\Model\MarketPlaceStatusProductsV5
 ```
 
 Read marketplace status for a single product variation
@@ -501,10 +501,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -528,7 +528,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MarketPlaceStatusProductsV5**](../Model/MarketPlaceStatusProductsV5.md)
+[**\Otto\Client\Model\MarketPlaceStatusProductsV5**](../Model/MarketPlaceStatusProductsV5.md)
 
 ### Authorization
 
@@ -546,7 +546,7 @@ try {
 ## `productsV5GetMarketPlaceStatusList()`
 
 ```php
-productsV5GetMarketPlaceStatusList($sku, $product_reference, $category, $brand_id, $from_date, $page, $limit, $market_place_status, $sort_order): \OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV5
+productsV5GetMarketPlaceStatusList($sku, $product_reference, $category, $brand_id, $from_date, $page, $limit, $market_place_status, $sort_order): \Otto\Client\Model\MarketPlaceStatusApiResultProductsV5
 ```
 
 Read marketplace status of product variations
@@ -561,10 +561,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -604,7 +604,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MarketPlaceStatusApiResultProductsV5**](../Model/MarketPlaceStatusApiResultProductsV5.md)
+[**\Otto\Client\Model\MarketPlaceStatusApiResultProductsV5**](../Model/MarketPlaceStatusApiResultProductsV5.md)
 
 ### Authorization
 
@@ -622,7 +622,7 @@ try {
 ## `productsV5GetPartnerProducts()`
 
 ```php
-productsV5GetPartnerProducts($sku, $product_reference, $category, $brand_id, $page, $limit): \OpenAPI\Client\Model\ProductVariationApiResultProductsV5
+productsV5GetPartnerProducts($sku, $product_reference, $category, $brand_id, $page, $limit): \Otto\Client\Model\ProductVariationApiResultProductsV5
 ```
 
 Read product variations
@@ -637,10 +637,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -674,7 +674,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductVariationApiResultProductsV5**](../Model/ProductVariationApiResultProductsV5.md)
+[**\Otto\Client\Model\ProductVariationApiResultProductsV5**](../Model/ProductVariationApiResultProductsV5.md)
 
 ### Authorization
 
@@ -692,7 +692,7 @@ try {
 ## `productsV5GetProductVariation()`
 
 ```php
-productsV5GetProductVariation($sku): \OpenAPI\Client\Model\ProductVariationProductsV5
+productsV5GetProductVariation($sku): \Otto\Client\Model\ProductVariationProductsV5
 ```
 
 Read a single product variation
@@ -707,10 +707,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -734,7 +734,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductVariationProductsV5**](../Model/ProductVariationProductsV5.md)
+[**\Otto\Client\Model\ProductVariationProductsV5**](../Model/ProductVariationProductsV5.md)
 
 ### Authorization
 
@@ -752,7 +752,7 @@ try {
 ## `productsV5GetProductVariationPrice()`
 
 ```php
-productsV5GetProductVariationPrice($sku): \OpenAPI\Client\Model\SkuPricingProductsV5
+productsV5GetProductVariationPrice($sku): \Otto\Client\Model\SkuPricingProductsV5
 ```
 
 Read a single product variation price
@@ -767,10 +767,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -794,7 +794,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SkuPricingProductsV5**](../Model/SkuPricingProductsV5.md)
+[**\Otto\Client\Model\SkuPricingProductsV5**](../Model/SkuPricingProductsV5.md)
 
 ### Authorization
 
@@ -812,7 +812,7 @@ try {
 ## `productsV5GetProductVariationPrices()`
 
 ```php
-productsV5GetProductVariationPrices($sku, $product_reference, $category, $brand_id, $page, $limit): \OpenAPI\Client\Model\PriceApiResultProductsV5
+productsV5GetProductVariationPrices($sku, $product_reference, $category, $brand_id, $page, $limit): \Otto\Client\Model\PriceApiResultProductsV5
 ```
 
 Read product variations prices
@@ -827,10 +827,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -864,7 +864,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceApiResultProductsV5**](../Model/PriceApiResultProductsV5.md)
+[**\Otto\Client\Model\PriceApiResultProductsV5**](../Model/PriceApiResultProductsV5.md)
 
 ### Authorization
 
@@ -882,7 +882,7 @@ try {
 ## `productsV5GetVariationActiveStatus()`
 
 ```php
-productsV5GetVariationActiveStatus($sku): \OpenAPI\Client\Model\ActiveStatusProductsV5
+productsV5GetVariationActiveStatus($sku): \Otto\Client\Model\ActiveStatusProductsV5
 ```
 
 Read the active status of a single product variation
@@ -897,10 +897,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -924,7 +924,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ActiveStatusProductsV5**](../Model/ActiveStatusProductsV5.md)
+[**\Otto\Client\Model\ActiveStatusProductsV5**](../Model/ActiveStatusProductsV5.md)
 
 ### Authorization
 
@@ -942,7 +942,7 @@ try {
 ## `productsV5ProgressByProcessId()`
 
 ```php
-productsV5ProgressByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessProgressProductsV5
+productsV5ProgressByProcessId($process_uuid): \Otto\Client\Model\ProductProcessProgressProductsV5
 ```
 
 Request the results of a product data delivery
@@ -957,10 +957,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -984,7 +984,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
+[**\Otto\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
 
 ### Authorization
 
@@ -1002,7 +1002,7 @@ try {
 ## `productsV5SucceededByProcessId()`
 
 ```php
-productsV5SucceededByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessResultProductsV5
+productsV5SucceededByProcessId($process_uuid): \Otto\Client\Model\ProductProcessResultProductsV5
 ```
 
 List succeeded products of a product data delivery
@@ -1017,10 +1017,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1044,7 +1044,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductProcessResultProductsV5**](../Model/ProductProcessResultProductsV5.md)
+[**\Otto\Client\Model\ProductProcessResultProductsV5**](../Model/ProductProcessResultProductsV5.md)
 
 ### Authorization
 
@@ -1062,7 +1062,7 @@ try {
 ## `productsV5UnchangedByProcessId()`
 
 ```php
-productsV5UnchangedByProcessId($process_uuid): \OpenAPI\Client\Model\ProductProcessResultProductsV5
+productsV5UnchangedByProcessId($process_uuid): \Otto\Client\Model\ProductProcessResultProductsV5
 ```
 
 List unchanged products of a product data delivery
@@ -1077,10 +1077,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1104,7 +1104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductProcessResultProductsV5**](../Model/ProductProcessResultProductsV5.md)
+[**\Otto\Client\Model\ProductProcessResultProductsV5**](../Model/ProductProcessResultProductsV5.md)
 
 ### Authorization
 
@@ -1122,7 +1122,7 @@ try {
 ## `productsV5UpdateActiveStatus()`
 
 ```php
-productsV5UpdateActiveStatus($x_request_timestamp, $active_status_list_request_products_v5): \OpenAPI\Client\Model\ProductProcessProgressProductsV5
+productsV5UpdateActiveStatus($x_request_timestamp, $active_status_list_request_products_v5): \Otto\Client\Model\ProductProcessProgressProductsV5
 ```
 
 Update active status
@@ -1137,17 +1137,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
-$active_status_list_request_products_v5 = new \OpenAPI\Client\Model\ActiveStatusListRequestProductsV5(); // \OpenAPI\Client\Model\ActiveStatusListRequestProductsV5
+$active_status_list_request_products_v5 = new \Otto\Client\Model\ActiveStatusListRequestProductsV5(); // \Otto\Client\Model\ActiveStatusListRequestProductsV5
 
 try {
     $result = $apiInstance->productsV5UpdateActiveStatus($x_request_timestamp, $active_status_list_request_products_v5);
@@ -1162,11 +1162,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
-| **active_status_list_request_products_v5** | [**\OpenAPI\Client\Model\ActiveStatusListRequestProductsV5**](../Model/ActiveStatusListRequestProductsV5.md)|  | [optional] |
+| **active_status_list_request_products_v5** | [**\Otto\Client\Model\ActiveStatusListRequestProductsV5**](../Model/ActiveStatusListRequestProductsV5.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
+[**\Otto\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
 
 ### Authorization
 
@@ -1184,7 +1184,7 @@ try {
 ## `productsV5UpdateProductVariationPrices()`
 
 ```php
-productsV5UpdateProductVariationPrices($x_request_timestamp, $sku_pricing_products_v5): \OpenAPI\Client\Model\ProductProcessProgressProductsV5
+productsV5UpdateProductVariationPrices($x_request_timestamp, $sku_pricing_products_v5): \Otto\Client\Model\ProductProcessProgressProductsV5
 ```
 
 Update product variation prices
@@ -1199,17 +1199,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductsV5Api(
+$apiInstance = new Otto\Client\Api\ProductsV5Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
-$sku_pricing_products_v5 = array(new \OpenAPI\Client\Model\SkuPricingProductsV5()); // \OpenAPI\Client\Model\SkuPricingProductsV5[]
+$sku_pricing_products_v5 = array(new \Otto\Client\Model\SkuPricingProductsV5()); // \Otto\Client\Model\SkuPricingProductsV5[]
 
 try {
     $result = $apiInstance->productsV5UpdateProductVariationPrices($x_request_timestamp, $sku_pricing_products_v5);
@@ -1224,11 +1224,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
-| **sku_pricing_products_v5** | [**\OpenAPI\Client\Model\SkuPricingProductsV5[]**](../Model/SkuPricingProductsV5.md)|  | [optional] |
+| **sku_pricing_products_v5** | [**\Otto\Client\Model\SkuPricingProductsV5[]**](../Model/SkuPricingProductsV5.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
+[**\Otto\Client\Model\ProductProcessProgressProductsV5**](../Model/ProductProcessProgressProductsV5.md)
 
 ### Authorization
 

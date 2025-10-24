@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductVariationApiResultProductsV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ProductVariationApiResultProductsV4 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product_variations' => '\OpenAPI\Client\Model\ProductVariationProductsV4[]',
-        'links' => '\OpenAPI\Client\Model\LinkProductsV4[]'
+        'product_variations' => '\Otto\Client\Model\ProductVariationProductsV4[]',
+        'links' => '\Otto\Client\Model\LinkProductsV4[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ProductVariationApiResultProductsV4 implements ModelInterface, ArrayAccess
     /**
      * Gets product_variations
      *
-     * @return \OpenAPI\Client\Model\ProductVariationProductsV4[]|null
+     * @return \Otto\Client\Model\ProductVariationProductsV4[]|null
      */
     public function getProductVariations()
     {
@@ -309,7 +309,7 @@ class ProductVariationApiResultProductsV4 implements ModelInterface, ArrayAccess
     /**
      * Sets product_variations
      *
-     * @param \OpenAPI\Client\Model\ProductVariationProductsV4[]|null $product_variations product_variations
+     * @param \Otto\Client\Model\ProductVariationProductsV4[]|null $product_variations product_variations
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ProductVariationApiResultProductsV4 implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkProductsV4[]|null
+     * @return \Otto\Client\Model\LinkProductsV4[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class ProductVariationApiResultProductsV4 implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkProductsV4[]|null $links a list of links that can be used for pagination.
+     * @param \Otto\Client\Model\LinkProductsV4[]|null $links a list of links that can be used for pagination.
      *
      * @return self
      */

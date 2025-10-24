@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * FoodInformationProductsV5 Class Doc Comment
  *
  * @category Class
  * @description Should be used for providing information about the food or animal feed business operator of the product.  The affected assortment can be found in this article: https://account.otto.market/s/article/Weitere-Informationen-Sortimente-mit-besonderen-Anforderungen.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class FoodInformationProductsV5 implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'addresses' => '\OpenAPI\Client\Model\FoodInformationAddressProductsV5[]'
+        'addresses' => '\Otto\Client\Model\FoodInformationAddressProductsV5[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class FoodInformationProductsV5 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets addresses
      *
-     * @return \OpenAPI\Client\Model\FoodInformationAddressProductsV5[]|null
+     * @return \Otto\Client\Model\FoodInformationAddressProductsV5[]|null
      */
     public function getAddresses()
     {
@@ -303,7 +303,7 @@ class FoodInformationProductsV5 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets addresses
      *
-     * @param \OpenAPI\Client\Model\FoodInformationAddressProductsV5[]|null $addresses The addresses of the food or animal feed business operator. If an address is maintained, name, address and roles are mandatory.
+     * @param \Otto\Client\Model\FoodInformationAddressProductsV5[]|null $addresses The addresses of the food or animal feed business operator. If an address is maintained, name, address and roles are mandatory.
      *
      * @return self
      */

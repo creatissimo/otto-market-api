@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * SkuPricingProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class SkuPricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'sku' => 'string',
-        'standard_price' => '\OpenAPI\Client\Model\MonetaryAmountProductsV5',
-        'sale' => '\OpenAPI\Client\Model\SaleProductsV5'
+        'standard_price' => '\Otto\Client\Model\MonetaryAmountProductsV5',
+        'sale' => '\Otto\Client\Model\SaleProductsV5'
     ];
 
     /**
@@ -339,7 +339,7 @@ class SkuPricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets standard_price
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountProductsV5
+     * @return \Otto\Client\Model\MonetaryAmountProductsV5
      */
     public function getStandardPrice()
     {
@@ -349,7 +349,7 @@ class SkuPricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets standard_price
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountProductsV5 $standard_price standard_price
+     * @param \Otto\Client\Model\MonetaryAmountProductsV5 $standard_price standard_price
      *
      * @return self
      */
@@ -366,7 +366,7 @@ class SkuPricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets sale
      *
-     * @return \OpenAPI\Client\Model\SaleProductsV5|null
+     * @return \Otto\Client\Model\SaleProductsV5|null
      */
     public function getSale()
     {
@@ -376,7 +376,7 @@ class SkuPricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets sale
      *
-     * @param \OpenAPI\Client\Model\SaleProductsV5|null $sale sale
+     * @param \Otto\Client\Model\SaleProductsV5|null $sale sale
      *
      * @return self
      */

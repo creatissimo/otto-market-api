@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceApiResultProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class PriceApiResultProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'variation_prices' => '\OpenAPI\Client\Model\SkuPricingProductsV5[]',
-        'links' => '\OpenAPI\Client\Model\PriceApiResultLinkProductsV5[]'
+        'variation_prices' => '\Otto\Client\Model\SkuPricingProductsV5[]',
+        'links' => '\Otto\Client\Model\PriceApiResultLinkProductsV5[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class PriceApiResultProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets variation_prices
      *
-     * @return \OpenAPI\Client\Model\SkuPricingProductsV5[]|null
+     * @return \Otto\Client\Model\SkuPricingProductsV5[]|null
      */
     public function getVariationPrices()
     {
@@ -309,7 +309,7 @@ class PriceApiResultProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets variation_prices
      *
-     * @param \OpenAPI\Client\Model\SkuPricingProductsV5[]|null $variation_prices variation_prices
+     * @param \Otto\Client\Model\SkuPricingProductsV5[]|null $variation_prices variation_prices
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class PriceApiResultProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\PriceApiResultLinkProductsV5[]|null
+     * @return \Otto\Client\Model\PriceApiResultLinkProductsV5[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class PriceApiResultProductsV5 implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\PriceApiResultLinkProductsV5[]|null $links a list of links that can be used for pagination.
+     * @param \Otto\Client\Model\PriceApiResultLinkProductsV5[]|null $links a list of links that can be used for pagination.
      *
      * @return self
      */

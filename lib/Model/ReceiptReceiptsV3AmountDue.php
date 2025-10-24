@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReceiptReceiptsV3AmountDue Class Doc Comment
  *
  * @category Class
  * @description The amountDue documents the gross amount a customer still has to pay or will be refunded respectively owes less (the latter decision depends on the chosen payment method) with this receipt. &lt;/br&gt;As in case of receiptType PURCHASE and a prepaid payment method we know for sure that the customer has already paid in advance, so the amount is 0 € otherwise the content is identically with totalsGrossAmount
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

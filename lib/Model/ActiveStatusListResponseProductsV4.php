@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ActiveStatusListResponseProductsV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ActiveStatusListResponseProductsV4 implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => '\OpenAPI\Client\Model\ActiveStatusProductsV4[]',
-        'links' => '\OpenAPI\Client\Model\ActiveStatusListResponseLinkProductsV4[]'
+        'status' => '\Otto\Client\Model\ActiveStatusProductsV4[]',
+        'links' => '\Otto\Client\Model\ActiveStatusListResponseLinkProductsV4[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ActiveStatusListResponseProductsV4 implements ModelInterface, ArrayAccess,
     /**
      * Gets status
      *
-     * @return \OpenAPI\Client\Model\ActiveStatusProductsV4[]|null
+     * @return \Otto\Client\Model\ActiveStatusProductsV4[]|null
      */
     public function getStatus()
     {
@@ -309,7 +309,7 @@ class ActiveStatusListResponseProductsV4 implements ModelInterface, ArrayAccess,
     /**
      * Sets status
      *
-     * @param \OpenAPI\Client\Model\ActiveStatusProductsV4[]|null $status status
+     * @param \Otto\Client\Model\ActiveStatusProductsV4[]|null $status status
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ActiveStatusListResponseProductsV4 implements ModelInterface, ArrayAccess,
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\ActiveStatusListResponseLinkProductsV4[]|null
+     * @return \Otto\Client\Model\ActiveStatusListResponseLinkProductsV4[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class ActiveStatusListResponseProductsV4 implements ModelInterface, ArrayAccess,
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\ActiveStatusListResponseLinkProductsV4[]|null $links a list of links that can be used for pagination (among others).
+     * @param \Otto\Client\Model\ActiveStatusListResponseLinkProductsV4[]|null $links a list of links that can be used for pagination (among others).
      *
      * @return self
      */

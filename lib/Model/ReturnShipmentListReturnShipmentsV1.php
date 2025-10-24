@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReturnShipmentListReturnShipmentsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ReturnShipmentListReturnShipmentsV1 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'links' => '\OpenAPI\Client\Model\LinkReturnShipmentsV1[]',
-        'resources' => '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1[]'
+        'links' => '\Otto\Client\Model\LinkReturnShipmentsV1[]',
+        'resources' => '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ReturnShipmentListReturnShipmentsV1 implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkReturnShipmentsV1[]|null
+     * @return \Otto\Client\Model\LinkReturnShipmentsV1[]|null
      */
     public function getLinks()
     {
@@ -309,7 +309,7 @@ class ReturnShipmentListReturnShipmentsV1 implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkReturnShipmentsV1[]|null $links Contains one single link, which can be used as pointer for Cursor-based pagination.
+     * @param \Otto\Client\Model\LinkReturnShipmentsV1[]|null $links Contains one single link, which can be used as pointer for Cursor-based pagination.
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ReturnShipmentListReturnShipmentsV1 implements ModelInterface, ArrayAccess
     /**
      * Gets resources
      *
-     * @return \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1[]|null
+     * @return \Otto\Client\Model\ReturnShipmentReturnShipmentsV1[]|null
      */
     public function getResources()
     {
@@ -336,7 +336,7 @@ class ReturnShipmentListReturnShipmentsV1 implements ModelInterface, ArrayAccess
     /**
      * Sets resources
      *
-     * @param \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1[]|null $resources resources
+     * @param \Otto\Client\Model\ReturnShipmentReturnShipmentsV1[]|null $resources resources
      *
      * @return self
      */

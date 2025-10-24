@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ErrorWithSuggestionsReturnsWarehouseV2 Class Doc Comment
  *
  * @category Class
  * @description Describes all the errors
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ErrorWithSuggestionsReturnsWarehouseV2 implements ModelInterface, ArrayAcc
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'suggested_addresses' => '\OpenAPI\Client\Model\SuggestedAddressReturnsWarehouseV2[]'
+        'suggested_addresses' => '\Otto\Client\Model\SuggestedAddressReturnsWarehouseV2[]'
     ];
 
     /**
@@ -330,7 +330,7 @@ class ErrorWithSuggestionsReturnsWarehouseV2 implements ModelInterface, ArrayAcc
     /**
      * Gets suggested_addresses
      *
-     * @return \OpenAPI\Client\Model\SuggestedAddressReturnsWarehouseV2[]|null
+     * @return \Otto\Client\Model\SuggestedAddressReturnsWarehouseV2[]|null
      */
     public function getSuggestedAddresses()
     {
@@ -340,7 +340,7 @@ class ErrorWithSuggestionsReturnsWarehouseV2 implements ModelInterface, ArrayAcc
     /**
      * Sets suggested_addresses
      *
-     * @param \OpenAPI\Client\Model\SuggestedAddressReturnsWarehouseV2[]|null $suggested_addresses suggested_addresses
+     * @param \Otto\Client\Model\SuggestedAddressReturnsWarehouseV2[]|null $suggested_addresses suggested_addresses
      *
      * @return self
      */

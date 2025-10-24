@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * LogisticsProductsV5 Class Doc Comment
  *
  * @category Class
  * @description In case of using the logistic service of our marketplace, here you may provide information about the packaging of the goods
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class LogisticsProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'packing_unit_count' => 'int',
-        'packing_units' => '\OpenAPI\Client\Model\PackingUnitProductsV5[]'
+        'packing_units' => '\Otto\Client\Model\PackingUnitProductsV5[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class LogisticsProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets packing_units
      *
-     * @return \OpenAPI\Client\Model\PackingUnitProductsV5[]|null
+     * @return \Otto\Client\Model\PackingUnitProductsV5[]|null
      */
     public function getPackingUnits()
     {
@@ -337,7 +337,7 @@ class LogisticsProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets packing_units
      *
-     * @param \OpenAPI\Client\Model\PackingUnitProductsV5[]|null $packing_units The measurements of the packing units in g and mm.
+     * @param \Otto\Client\Model\PackingUnitProductsV5[]|null $packing_units The measurements of the packing units in g and mm.
      *
      * @return self
      */

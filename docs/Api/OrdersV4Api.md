@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrdersV4Api
+# Otto\Client\OrdersV4Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
+$apiInstance = new Otto\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
+$apiInstance = new Otto\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -134,7 +134,7 @@ void (empty response body)
 ## `ordersV4FindPartnerOrders()`
 
 ```php
-ordersV4FindPartnerOrders($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor): \OpenAPI\Client\Model\PartnerOrderListOrdersV4
+ordersV4FindPartnerOrders($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor): \Otto\Client\Model\PartnerOrderListOrdersV4
 ```
 
 List of orders filtered by fulfillment state
@@ -149,10 +149,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
+$apiInstance = new Otto\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -192,7 +192,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PartnerOrderListOrdersV4**](../Model/PartnerOrderListOrdersV4.md)
+[**\Otto\Client\Model\PartnerOrderListOrdersV4**](../Model/PartnerOrderListOrdersV4.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ try {
 ## `ordersV4GetPartnerOrderByOrderNumber()`
 
 ```php
-ordersV4GetPartnerOrderByOrderNumber($order_number): \OpenAPI\Client\Model\PartnerOrderOrdersV4
+ordersV4GetPartnerOrderByOrderNumber($order_number): \Otto\Client\Model\PartnerOrderOrdersV4
 ```
 
 Get an order via order number
@@ -225,10 +225,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
+$apiInstance = new Otto\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -252,7 +252,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
+[**\Otto\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ try {
 ## `ordersV4GetPartnerOrderBySalesOrderId()`
 
 ```php
-ordersV4GetPartnerOrderBySalesOrderId($sales_order_id): \OpenAPI\Client\Model\PartnerOrderOrdersV4
+ordersV4GetPartnerOrderBySalesOrderId($sales_order_id): \Otto\Client\Model\PartnerOrderOrdersV4
 ```
 
 Get an order via sales order id
@@ -285,10 +285,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
+$apiInstance = new Otto\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -312,7 +312,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
+[**\Otto\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
 
 ### Authorization
 

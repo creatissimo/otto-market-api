@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReceiptReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Collection of all details of a receipt
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -67,20 +67,20 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
         'order_number' => 'string',
         'order_date' => '\DateTime',
         'shipment_date' => '\DateTime',
-        'shipment' => '\OpenAPI\Client\Model\ShipmentReceiptsV3',
+        'shipment' => '\Otto\Client\Model\ShipmentReceiptsV3',
         'linked_receipt_number' => 'string',
         'linked_creation_date' => '\DateTime',
-        'payment' => '\OpenAPI\Client\Model\PaymentReceiptsV3',
-        'partner' => '\OpenAPI\Client\Model\PartnerReceiptsV3',
-        'customer' => '\OpenAPI\Client\Model\CustomerReceiptsV3',
-        'delivery_address' => '\OpenAPI\Client\Model\AddressReceiptsV3',
-        'line_items' => '\OpenAPI\Client\Model\LineItemsReceiptsV3',
-        'totals' => '\OpenAPI\Client\Model\PriceReceiptsV3[]',
+        'payment' => '\Otto\Client\Model\PaymentReceiptsV3',
+        'partner' => '\Otto\Client\Model\PartnerReceiptsV3',
+        'customer' => '\Otto\Client\Model\CustomerReceiptsV3',
+        'delivery_address' => '\Otto\Client\Model\AddressReceiptsV3',
+        'line_items' => '\Otto\Client\Model\LineItemsReceiptsV3',
+        'totals' => '\Otto\Client\Model\PriceReceiptsV3[]',
         'refund_type' => 'string',
         'partial_refund_type' => 'string',
-        'amount_due' => '\OpenAPI\Client\Model\ReceiptReceiptsV3AmountDue',
-        'totals_gross_amount' => '\OpenAPI\Client\Model\ReceiptReceiptsV3TotalsGrossAmount',
-        'totals_reductions' => '\OpenAPI\Client\Model\TotalsReductionReceiptsV3[]'
+        'amount_due' => '\Otto\Client\Model\ReceiptReceiptsV3AmountDue',
+        'totals_gross_amount' => '\Otto\Client\Model\ReceiptReceiptsV3TotalsGrossAmount',
+        'totals_reductions' => '\Otto\Client\Model\TotalsReductionReceiptsV3[]'
     ];
 
     /**
@@ -823,7 +823,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets shipment
      *
-     * @return \OpenAPI\Client\Model\ShipmentReceiptsV3|null
+     * @return \Otto\Client\Model\ShipmentReceiptsV3|null
      */
     public function getShipment()
     {
@@ -833,7 +833,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets shipment
      *
-     * @param \OpenAPI\Client\Model\ShipmentReceiptsV3|null $shipment shipment
+     * @param \Otto\Client\Model\ShipmentReceiptsV3|null $shipment shipment
      *
      * @return self
      */
@@ -904,7 +904,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets payment
      *
-     * @return \OpenAPI\Client\Model\PaymentReceiptsV3
+     * @return \Otto\Client\Model\PaymentReceiptsV3
      */
     public function getPayment()
     {
@@ -914,7 +914,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets payment
      *
-     * @param \OpenAPI\Client\Model\PaymentReceiptsV3 $payment payment
+     * @param \Otto\Client\Model\PaymentReceiptsV3 $payment payment
      *
      * @return self
      */
@@ -931,7 +931,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets partner
      *
-     * @return \OpenAPI\Client\Model\PartnerReceiptsV3
+     * @return \Otto\Client\Model\PartnerReceiptsV3
      */
     public function getPartner()
     {
@@ -941,7 +941,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets partner
      *
-     * @param \OpenAPI\Client\Model\PartnerReceiptsV3 $partner partner
+     * @param \Otto\Client\Model\PartnerReceiptsV3 $partner partner
      *
      * @return self
      */
@@ -958,7 +958,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\CustomerReceiptsV3
+     * @return \Otto\Client\Model\CustomerReceiptsV3
      */
     public function getCustomer()
     {
@@ -968,7 +968,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\CustomerReceiptsV3 $customer customer
+     * @param \Otto\Client\Model\CustomerReceiptsV3 $customer customer
      *
      * @return self
      */
@@ -985,7 +985,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets delivery_address
      *
-     * @return \OpenAPI\Client\Model\AddressReceiptsV3|null
+     * @return \Otto\Client\Model\AddressReceiptsV3|null
      */
     public function getDeliveryAddress()
     {
@@ -995,7 +995,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets delivery_address
      *
-     * @param \OpenAPI\Client\Model\AddressReceiptsV3|null $delivery_address delivery_address
+     * @param \Otto\Client\Model\AddressReceiptsV3|null $delivery_address delivery_address
      *
      * @return self
      */
@@ -1012,7 +1012,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets line_items
      *
-     * @return \OpenAPI\Client\Model\LineItemsReceiptsV3
+     * @return \Otto\Client\Model\LineItemsReceiptsV3
      */
     public function getLineItems()
     {
@@ -1022,7 +1022,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets line_items
      *
-     * @param \OpenAPI\Client\Model\LineItemsReceiptsV3 $line_items line_items
+     * @param \Otto\Client\Model\LineItemsReceiptsV3 $line_items line_items
      *
      * @return self
      */
@@ -1039,7 +1039,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets totals
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3[]
+     * @return \Otto\Client\Model\PriceReceiptsV3[]
      */
     public function getTotals()
     {
@@ -1049,7 +1049,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets totals
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3[] $totals Total amounts of receipt per tax type and tax rate
+     * @param \Otto\Client\Model\PriceReceiptsV3[] $totals Total amounts of receipt per tax type and tax rate
      *
      * @return self
      */
@@ -1140,7 +1140,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets amount_due
      *
-     * @return \OpenAPI\Client\Model\ReceiptReceiptsV3AmountDue
+     * @return \Otto\Client\Model\ReceiptReceiptsV3AmountDue
      */
     public function getAmountDue()
     {
@@ -1150,7 +1150,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets amount_due
      *
-     * @param \OpenAPI\Client\Model\ReceiptReceiptsV3AmountDue $amount_due amount_due
+     * @param \Otto\Client\Model\ReceiptReceiptsV3AmountDue $amount_due amount_due
      *
      * @return self
      */
@@ -1167,7 +1167,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets totals_gross_amount
      *
-     * @return \OpenAPI\Client\Model\ReceiptReceiptsV3TotalsGrossAmount|null
+     * @return \Otto\Client\Model\ReceiptReceiptsV3TotalsGrossAmount|null
      */
     public function getTotalsGrossAmount()
     {
@@ -1177,7 +1177,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets totals_gross_amount
      *
-     * @param \OpenAPI\Client\Model\ReceiptReceiptsV3TotalsGrossAmount|null $totals_gross_amount totals_gross_amount
+     * @param \Otto\Client\Model\ReceiptReceiptsV3TotalsGrossAmount|null $totals_gross_amount totals_gross_amount
      *
      * @return self
      */
@@ -1194,7 +1194,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets totals_reductions
      *
-     * @return \OpenAPI\Client\Model\TotalsReductionReceiptsV3[]|null
+     * @return \Otto\Client\Model\TotalsReductionReceiptsV3[]|null
      */
     public function getTotalsReductions()
     {
@@ -1204,7 +1204,7 @@ class ReceiptReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets totals_reductions
      *
-     * @param \OpenAPI\Client\Model\TotalsReductionReceiptsV3[]|null $totals_reductions Reduction amounts on total value of receipts (currently it includes voucher reduction)
+     * @param \Otto\Client\Model\TotalsReductionReceiptsV3[]|null $totals_reductions Reduction amounts on total value of receipts (currently it includes voucher reduction)
      *
      * @return self
      */

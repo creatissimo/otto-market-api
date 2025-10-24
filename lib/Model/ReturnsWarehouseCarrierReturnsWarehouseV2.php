@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReturnsWarehouseCarrierReturnsWarehouseV2 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ReturnsWarehouseCarrierReturnsWarehouseV2 implements ModelInterface, Array
         'return_address_id' => 'string',
         'return_address_carrier_id' => 'string',
         'return_carrier' => 'string',
-        'return_carrier_codes' => '\OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes'
+        'return_carrier_codes' => '\Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes'
     ];
 
     /**
@@ -457,7 +457,7 @@ class ReturnsWarehouseCarrierReturnsWarehouseV2 implements ModelInterface, Array
     /**
      * Gets return_carrier_codes
      *
-     * @return \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null
+     * @return \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null
      */
     public function getReturnCarrierCodes()
     {
@@ -467,7 +467,7 @@ class ReturnsWarehouseCarrierReturnsWarehouseV2 implements ModelInterface, Array
     /**
      * Sets return_carrier_codes
      *
-     * @param \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null $return_carrier_codes return_carrier_codes
+     * @param \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null $return_carrier_codes return_carrier_codes
      *
      * @return self
      */

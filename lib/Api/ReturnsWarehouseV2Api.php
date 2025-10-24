@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Otto\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\FormDataProcessor;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * ReturnsWarehouseV2Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -158,12 +158,12 @@ class ReturnsWarehouseV2Api
      * create returnWarehouse address
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2
+     * @return \Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2
      */
     public function returnsWarehouseV2CreateReturnWarehouseAddress($authorization, $returns_warehouse_address_request_returns_warehouse_v2, string $contentType = self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'][0])
     {
@@ -177,12 +177,12 @@ class ReturnsWarehouseV2Api
      * create returnWarehouse address
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsWarehouseV2CreateReturnWarehouseAddressWithHttpInfo($authorization, $returns_warehouse_address_request_returns_warehouse_v2, string $contentType = self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'][0])
     {
@@ -214,31 +214,31 @@ class ReturnsWarehouseV2Api
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 503:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
@@ -260,7 +260,7 @@ class ReturnsWarehouseV2Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2',
+                '\Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2',
                 $request,
                 $response,
             );
@@ -269,7 +269,7 @@ class ReturnsWarehouseV2Api
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -277,7 +277,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class ReturnsWarehouseV2Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class ReturnsWarehouseV2Api
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -319,7 +319,7 @@ class ReturnsWarehouseV2Api
      * create returnWarehouse address
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -341,7 +341,7 @@ class ReturnsWarehouseV2Api
      * create returnWarehouse address
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -349,7 +349,7 @@ class ReturnsWarehouseV2Api
      */
     public function returnsWarehouseV2CreateReturnWarehouseAddressAsyncWithHttpInfo($authorization, $returns_warehouse_address_request_returns_warehouse_v2, string $contentType = self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2';
+        $returnType = '\Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2';
         $request = $this->returnsWarehouseV2CreateReturnWarehouseAddressRequest($authorization, $returns_warehouse_address_request_returns_warehouse_v2, $contentType);
 
         return $this->client
@@ -392,7 +392,7 @@ class ReturnsWarehouseV2Api
      * Create request for operation 'returnsWarehouseV2CreateReturnWarehouseAddress'
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnWarehouseAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -502,12 +502,12 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2
+     * @return \Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2
      */
     public function returnsWarehouseV2CreateReturnsWarehouseCarrier($authorization, $return_address_id, $returns_warehouse_carrier_request_returns_warehouse_v2, string $contentType = self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'][0])
     {
@@ -522,12 +522,12 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsWarehouseV2CreateReturnsWarehouseCarrierWithHttpInfo($authorization, $return_address_id, $returns_warehouse_carrier_request_returns_warehouse_v2, string $contentType = self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'][0])
     {
@@ -559,31 +559,31 @@ class ReturnsWarehouseV2Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 503:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
@@ -605,7 +605,7 @@ class ReturnsWarehouseV2Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2',
+                '\Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2',
                 $request,
                 $response,
             );
@@ -614,7 +614,7 @@ class ReturnsWarehouseV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -622,7 +622,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -630,7 +630,7 @@ class ReturnsWarehouseV2Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -638,7 +638,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -646,7 +646,7 @@ class ReturnsWarehouseV2Api
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -665,7 +665,7 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -688,7 +688,7 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -696,7 +696,7 @@ class ReturnsWarehouseV2Api
      */
     public function returnsWarehouseV2CreateReturnsWarehouseCarrierAsyncWithHttpInfo($authorization, $return_address_id, $returns_warehouse_carrier_request_returns_warehouse_v2, string $contentType = self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2';
+        $returnType = '\Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2';
         $request = $this->returnsWarehouseV2CreateReturnsWarehouseCarrierRequest($authorization, $return_address_id, $returns_warehouse_carrier_request_returns_warehouse_v2, $contentType);
 
         return $this->client
@@ -740,7 +740,7 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier post request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2CreateReturnsWarehouseCarrier'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -868,7 +868,7 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2DeleteParcelReturnCarrier'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -887,7 +887,7 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2DeleteParcelReturnCarrier'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -924,7 +924,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -932,7 +932,7 @@ class ReturnsWarehouseV2Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -940,7 +940,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -948,7 +948,7 @@ class ReturnsWarehouseV2Api
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1157,7 +1157,7 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2DeleteReturnsWarehouseAddressById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1175,7 +1175,7 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2DeleteReturnsWarehouseAddressById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1212,7 +1212,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1220,7 +1220,7 @@ class ReturnsWarehouseV2Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1228,7 +1228,7 @@ class ReturnsWarehouseV2Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1236,7 +1236,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1429,9 +1429,9 @@ class ReturnsWarehouseV2Api
      * @param  string|null $return_warehouse_type This parameter allows fetching results filtered by the specified returnWarehouseType. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetAllReturnsWarehouseAddresses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2
+     * @return \Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2
      */
     public function returnsWarehouseV2GetAllReturnsWarehouseAddresses($authorization, $limit = 50, $page = 1, $return_warehouse_type = null, string $contentType = self::contentTypes['returnsWarehouseV2GetAllReturnsWarehouseAddresses'][0])
     {
@@ -1450,9 +1450,9 @@ class ReturnsWarehouseV2Api
      * @param  string|null $return_warehouse_type This parameter allows fetching results filtered by the specified returnWarehouseType. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetAllReturnsWarehouseAddresses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsWarehouseV2GetAllReturnsWarehouseAddressesWithHttpInfo($authorization, $limit = 50, $page = 1, $return_warehouse_type = null, string $contentType = self::contentTypes['returnsWarehouseV2GetAllReturnsWarehouseAddresses'][0])
     {
@@ -1484,31 +1484,31 @@ class ReturnsWarehouseV2Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]',
+                        '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 503:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
@@ -1530,7 +1530,7 @@ class ReturnsWarehouseV2Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]',
+                '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]',
                 $request,
                 $response,
             );
@@ -1539,7 +1539,7 @@ class ReturnsWarehouseV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]',
+                        '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1547,7 +1547,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1555,7 +1555,7 @@ class ReturnsWarehouseV2Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1563,7 +1563,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1571,7 +1571,7 @@ class ReturnsWarehouseV2Api
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1623,7 +1623,7 @@ class ReturnsWarehouseV2Api
      */
     public function returnsWarehouseV2GetAllReturnsWarehouseAddressesAsyncWithHttpInfo($authorization, $limit = 50, $page = 1, $return_warehouse_type = null, string $contentType = self::contentTypes['returnsWarehouseV2GetAllReturnsWarehouseAddresses'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]';
+        $returnType = '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]';
         $request = $this->returnsWarehouseV2GetAllReturnsWarehouseAddressesRequest($authorization, $limit, $page, $return_warehouse_type, $contentType);
 
         return $this->client
@@ -1805,9 +1805,9 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetReturnsWarehouseAddressById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2
+     * @return \Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2
      */
     public function returnsWarehouseV2GetReturnsWarehouseAddressById($authorization, $return_address_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseAddressById'][0])
     {
@@ -1824,9 +1824,9 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetReturnsWarehouseAddressById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsWarehouseV2GetReturnsWarehouseAddressByIdWithHttpInfo($authorization, $return_address_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseAddressById'][0])
     {
@@ -1858,31 +1858,31 @@ class ReturnsWarehouseV2Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 503:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
@@ -1904,7 +1904,7 @@ class ReturnsWarehouseV2Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2',
+                '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2',
                 $request,
                 $response,
             );
@@ -1913,7 +1913,7 @@ class ReturnsWarehouseV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1921,7 +1921,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1929,7 +1929,7 @@ class ReturnsWarehouseV2Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1937,7 +1937,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1945,7 +1945,7 @@ class ReturnsWarehouseV2Api
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1993,7 +1993,7 @@ class ReturnsWarehouseV2Api
      */
     public function returnsWarehouseV2GetReturnsWarehouseAddressByIdAsyncWithHttpInfo($authorization, $return_address_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseAddressById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2';
+        $returnType = '\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2';
         $request = $this->returnsWarehouseV2GetReturnsWarehouseAddressByIdRequest($authorization, $return_address_id, $contentType);
 
         return $this->client
@@ -2149,9 +2149,9 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2
+     * @return \Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2
      */
     public function returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId($authorization, $return_address_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId'][0])
     {
@@ -2168,9 +2168,9 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdWithHttpInfo($authorization, $return_address_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId'][0])
     {
@@ -2202,19 +2202,19 @@ class ReturnsWarehouseV2Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]',
+                        '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
@@ -2236,7 +2236,7 @@ class ReturnsWarehouseV2Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]',
+                '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]',
                 $request,
                 $response,
             );
@@ -2245,7 +2245,7 @@ class ReturnsWarehouseV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]',
+                        '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2253,7 +2253,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2261,7 +2261,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2309,7 +2309,7 @@ class ReturnsWarehouseV2Api
      */
     public function returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAsyncWithHttpInfo($authorization, $return_address_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]';
+        $returnType = '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]';
         $request = $this->returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdRequest($authorization, $return_address_id, $contentType);
 
         return $this->client
@@ -2466,9 +2466,9 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2
+     * @return \Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2
      */
     public function returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId($authorization, $return_address_id, $return_address_carrier_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId'][0])
     {
@@ -2486,9 +2486,9 @@ class ReturnsWarehouseV2Api
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2|\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2|\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierIdWithHttpInfo($authorization, $return_address_id, $return_address_carrier_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId'][0])
     {
@@ -2520,19 +2520,19 @@ class ReturnsWarehouseV2Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $request,
                         $response,
                     );
@@ -2554,7 +2554,7 @@ class ReturnsWarehouseV2Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2',
+                '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2',
                 $request,
                 $response,
             );
@@ -2563,7 +2563,7 @@ class ReturnsWarehouseV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2',
+                        '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2571,7 +2571,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2579,7 +2579,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2629,7 +2629,7 @@ class ReturnsWarehouseV2Api
      */
     public function returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierIdAsyncWithHttpInfo($authorization, $return_address_id, $return_address_carrier_id, string $contentType = self::contentTypes['returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2';
+        $returnType = '\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2';
         $request = $this->returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierIdRequest($authorization, $return_address_id, $return_address_carrier_id, $contentType);
 
         return $this->client
@@ -2800,10 +2800,10 @@ class ReturnsWarehouseV2Api
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateParcelReturnCarrier'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2820,10 +2820,10 @@ class ReturnsWarehouseV2Api
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateParcelReturnCarrier'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2860,7 +2860,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2868,7 +2868,7 @@ class ReturnsWarehouseV2Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2876,7 +2876,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2884,7 +2884,7 @@ class ReturnsWarehouseV2Api
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2904,7 +2904,7 @@ class ReturnsWarehouseV2Api
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateParcelReturnCarrier'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2928,7 +2928,7 @@ class ReturnsWarehouseV2Api
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateParcelReturnCarrier'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2968,7 +2968,7 @@ class ReturnsWarehouseV2Api
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
      * @param  string $return_address_carrier_id Unique identifier for each returnCarrier, which is linked with a returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 $returns_warehouse_carrier_request_returns_warehouse_v2 return warehouse carrier update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateParcelReturnCarrier'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3108,10 +3108,10 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateReturnWarehouseAddress'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3127,10 +3127,10 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateReturnWarehouseAddress'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3167,7 +3167,7 @@ class ReturnsWarehouseV2Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3175,7 +3175,7 @@ class ReturnsWarehouseV2Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3183,7 +3183,7 @@ class ReturnsWarehouseV2Api
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsWithSuggestionsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3191,7 +3191,7 @@ class ReturnsWarehouseV2Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorDetailsReturnsWarehouseV2',
+                        '\Otto\Client\Model\ErrorDetailsReturnsWarehouseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3210,7 +3210,7 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateReturnWarehouseAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3233,7 +3233,7 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateReturnWarehouseAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3272,7 +3272,7 @@ class ReturnsWarehouseV2Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $return_address_id Unique identifier of the returnWarehouse (required)
-     * @param  \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
+     * @param  \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 $returns_warehouse_address_request_returns_warehouse_v2 return warehouse address update request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnsWarehouseV2UpdateReturnWarehouseAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

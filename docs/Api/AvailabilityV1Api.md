@@ -1,4 +1,4 @@
-# OpenAPI\Client\AvailabilityV1Api
+# Otto\Client\AvailabilityV1Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 ## `availabilityV1GetAvailableQuantities()`
 
 ```php
-availabilityV1GetAvailableQuantities($authorization, $limit, $page, $cursor): \OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1
+availabilityV1GetAvailableQuantities($authorization, $limit, $page, $cursor): \Otto\Client\Model\AvailableQuantityResponseAvailabilityV1
 ```
 
 Get quantities from a partner (up to 200 per request)
@@ -30,10 +30,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
+$apiInstance = new Otto\Client\Api\AvailabilityV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1**](../Model/AvailableQuantityResponseAvailabilityV1.md)
+[**\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1**](../Model/AvailableQuantityResponseAvailabilityV1.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `availabilityV1GetAvailableQuantityBySku()`
 
 ```php
-availabilityV1GetAvailableQuantityBySku($authorization, $sku): \OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1
+availabilityV1GetAvailableQuantityBySku($authorization, $sku): \Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1
 ```
 
 Get quantity for a sku
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
+$apiInstance = new Otto\Client\Api\AvailabilityV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1**](../Model/AvailableQuantitySingleResponseDTOAvailabilityV1.md)
+[**\Otto\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1**](../Model/AvailableQuantitySingleResponseDTOAvailabilityV1.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ try {
 ## `availabilityV1GetDeliveryInformationBySKU()`
 
 ```php
-availabilityV1GetDeliveryInformationBySKU($authorization, $sku): \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1
+availabilityV1GetDeliveryInformationBySKU($authorization, $sku): \Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1
 ```
 
 Get product delivery information for a SKU
@@ -158,10 +158,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
+$apiInstance = new Otto\Client\Api\AvailabilityV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,7 +187,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1**](../Model/ProductDeliveryInformationResponseDTOAvailabilityV1.md)
+[**\Otto\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1**](../Model/ProductDeliveryInformationResponseDTOAvailabilityV1.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ try {
 ## `availabilityV1GetProductDeliveryInformation()`
 
 ```php
-availabilityV1GetProductDeliveryInformation($authorization, $limit, $cursor): \OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1
+availabilityV1GetProductDeliveryInformation($authorization, $limit, $cursor): \Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1
 ```
 
 Get product delivery information from a partner
@@ -220,10 +220,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
+$apiInstance = new Otto\Client\Api\AvailabilityV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -251,7 +251,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1**](../Model/GetAllProductDeliveryInfoResponseAvailabilityV1.md)
+[**\Otto\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1**](../Model/GetAllProductDeliveryInfoResponseAvailabilityV1.md)
 
 ### Authorization
 
@@ -282,17 +282,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
+$apiInstance = new Otto\Client\Api\AvailabilityV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = Bearer access_token; // string | Access Token
-$available_quantity_request_dto_availability_v1 = array(new \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1()); // \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[]
+$available_quantity_request_dto_availability_v1 = array(new \Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1()); // \Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[]
 
 try {
     $apiInstance->availabilityV1StoreAvailableQuantitiesUsingPOST($authorization, $available_quantity_request_dto_availability_v1);
@@ -306,7 +306,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
-| **available_quantity_request_dto_availability_v1** | [**\OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[]**](../Model/AvailableQuantityRequestDTOAvailabilityV1.md)|  | |
+| **available_quantity_request_dto_availability_v1** | [**\Otto\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[]**](../Model/AvailableQuantityRequestDTOAvailabilityV1.md)|  | |
 
 ### Return type
 
@@ -328,7 +328,7 @@ void (empty response body)
 ## `availabilityV1StoreProductDeliveryInformationUsingPOST()`
 
 ```php
-availabilityV1StoreProductDeliveryInformationUsingPOST($authorization, $product_delivery_information_request_dto_availability_v1): \OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response
+availabilityV1StoreProductDeliveryInformationUsingPOST($authorization, $product_delivery_information_request_dto_availability_v1): \Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response
 ```
 
 Update product delivery information
@@ -341,17 +341,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
+$apiInstance = new Otto\Client\Api\AvailabilityV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = Bearer access_token; // string | Access Token
-$product_delivery_information_request_dto_availability_v1 = array(new \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1()); // \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]
+$product_delivery_information_request_dto_availability_v1 = array(new \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1()); // \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]
 
 try {
     $result = $apiInstance->availabilityV1StoreProductDeliveryInformationUsingPOST($authorization, $product_delivery_information_request_dto_availability_v1);
@@ -366,11 +366,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
-| **product_delivery_information_request_dto_availability_v1** | [**\OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]**](../Model/ProductDeliveryInformationRequestDTOAvailabilityV1.md)|  | |
+| **product_delivery_information_request_dto_availability_v1** | [**\Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]**](../Model/ProductDeliveryInformationRequestDTOAvailabilityV1.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response**](../Model/AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response.md)
+[**\Otto\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response**](../Model/AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response.md)
 
 ### Authorization
 

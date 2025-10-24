@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * BrandListResponseProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class BrandListResponseProductsV5 implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'brands' => '\OpenAPI\Client\Model\BrandProductsV5[]',
-        'links' => '\OpenAPI\Client\Model\BrandListLinkProductsV5[]'
+        'brands' => '\Otto\Client\Model\BrandProductsV5[]',
+        'links' => '\Otto\Client\Model\BrandListLinkProductsV5[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class BrandListResponseProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets brands
      *
-     * @return \OpenAPI\Client\Model\BrandProductsV5[]|null
+     * @return \Otto\Client\Model\BrandProductsV5[]|null
      */
     public function getBrands()
     {
@@ -309,7 +309,7 @@ class BrandListResponseProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets brands
      *
-     * @param \OpenAPI\Client\Model\BrandProductsV5[]|null $brands brands
+     * @param \Otto\Client\Model\BrandProductsV5[]|null $brands brands
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class BrandListResponseProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\BrandListLinkProductsV5[]|null
+     * @return \Otto\Client\Model\BrandListLinkProductsV5[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class BrandListResponseProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\BrandListLinkProductsV5[]|null $links a list of links that can be used for pagination (among others).
+     * @param \Otto\Client\Model\BrandListLinkProductsV5[]|null $links a list of links that can be used for pagination (among others).
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceReductionResponsePriceReductionsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
       */
     protected static $openAPITypes = [
         'sales_order_id' => 'string',
-        'total_price_reduction' => '\OpenAPI\Client\Model\PriceReductionResponsePriceReductionsV1TotalPriceReduction',
-        'invoice_price' => '\OpenAPI\Client\Model\PriceReductionResponsePriceReductionsV1InvoicePrice',
-        'price_reductions' => '\OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1[]',
+        'total_price_reduction' => '\Otto\Client\Model\PriceReductionResponsePriceReductionsV1TotalPriceReduction',
+        'invoice_price' => '\Otto\Client\Model\PriceReductionResponsePriceReductionsV1InvoicePrice',
+        'price_reductions' => '\Otto\Client\Model\PriceReductionDetailPriceReductionsV1[]',
         'position_item_id' => 'string'
     ];
 
@@ -347,7 +347,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Gets total_price_reduction
      *
-     * @return \OpenAPI\Client\Model\PriceReductionResponsePriceReductionsV1TotalPriceReduction|null
+     * @return \Otto\Client\Model\PriceReductionResponsePriceReductionsV1TotalPriceReduction|null
      */
     public function getTotalPriceReduction()
     {
@@ -357,7 +357,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Sets total_price_reduction
      *
-     * @param \OpenAPI\Client\Model\PriceReductionResponsePriceReductionsV1TotalPriceReduction|null $total_price_reduction total_price_reduction
+     * @param \Otto\Client\Model\PriceReductionResponsePriceReductionsV1TotalPriceReduction|null $total_price_reduction total_price_reduction
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Gets invoice_price
      *
-     * @return \OpenAPI\Client\Model\PriceReductionResponsePriceReductionsV1InvoicePrice|null
+     * @return \Otto\Client\Model\PriceReductionResponsePriceReductionsV1InvoicePrice|null
      */
     public function getInvoicePrice()
     {
@@ -384,7 +384,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Sets invoice_price
      *
-     * @param \OpenAPI\Client\Model\PriceReductionResponsePriceReductionsV1InvoicePrice|null $invoice_price invoice_price
+     * @param \Otto\Client\Model\PriceReductionResponsePriceReductionsV1InvoicePrice|null $invoice_price invoice_price
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Gets price_reductions
      *
-     * @return \OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1[]|null
+     * @return \Otto\Client\Model\PriceReductionDetailPriceReductionsV1[]|null
      */
     public function getPriceReductions()
     {
@@ -411,7 +411,7 @@ class PriceReductionResponsePriceReductionsV1 implements ModelInterface, ArrayAc
     /**
      * Sets price_reductions
      *
-     * @param \OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1[]|null $price_reductions all price reductions applied for an item
+     * @param \Otto\Client\Model\PriceReductionDetailPriceReductionsV1[]|null $price_reductions all price reductions applied for an item
      *
      * @return self
      */

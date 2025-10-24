@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductDeliveryInformationRequestDTOListAvailabilityV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ProductDeliveryInformationRequestDTOListAvailabilityV1 implements ModelInt
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]',
-        'links' => '\OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOListAvailabilityV1Links'
+        'results' => '\Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]',
+        'links' => '\Otto\Client\Model\ProductDeliveryInformationRequestDTOListAvailabilityV1Links'
     ];
 
     /**
@@ -302,7 +302,7 @@ class ProductDeliveryInformationRequestDTOListAvailabilityV1 implements ModelInt
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]
+     * @return \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]
      */
     public function getResults()
     {
@@ -312,7 +312,7 @@ class ProductDeliveryInformationRequestDTOListAvailabilityV1 implements ModelInt
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $results Response
+     * @param \Otto\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] $results Response
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class ProductDeliveryInformationRequestDTOListAvailabilityV1 implements ModelInt
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOListAvailabilityV1Links|null
+     * @return \Otto\Client\Model\ProductDeliveryInformationRequestDTOListAvailabilityV1Links|null
      */
     public function getLinks()
     {
@@ -339,7 +339,7 @@ class ProductDeliveryInformationRequestDTOListAvailabilityV1 implements ModelInt
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOListAvailabilityV1Links|null $links links
+     * @param \Otto\Client\Model\ProductDeliveryInformationRequestDTOListAvailabilityV1Links|null $links links
      *
      * @return self
      */

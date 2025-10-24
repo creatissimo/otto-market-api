@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductProcessTaskResultProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ProductProcessTaskResultProductsV5 implements ModelInterface, ArrayAccess,
       */
     protected static $openAPITypes = [
         'variation' => 'string',
-        'errors' => '\OpenAPI\Client\Model\ProductProcessTaskErrorProductsV5[]'
+        'errors' => '\Otto\Client\Model\ProductProcessTaskErrorProductsV5[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ProductProcessTaskResultProductsV5 implements ModelInterface, ArrayAccess,
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ProductProcessTaskErrorProductsV5[]|null
+     * @return \Otto\Client\Model\ProductProcessTaskErrorProductsV5[]|null
      */
     public function getErrors()
     {
@@ -336,7 +336,7 @@ class ProductProcessTaskResultProductsV5 implements ModelInterface, ArrayAccess,
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ProductProcessTaskErrorProductsV5[]|null $errors errors
+     * @param \Otto\Client\Model\ProductProcessTaskErrorProductsV5[]|null $errors errors
      *
      * @return self
      */

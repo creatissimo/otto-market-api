@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * TotalsReductionReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Reduction amounts on total value of receipts (currently it includes voucher reduction)
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'details' => '\OpenAPI\Client\Model\TotalsReductionDetailsReceiptsV3',
-        'gross' => '\OpenAPI\Client\Model\TotalsReductionReceiptsV3Gross'
+        'details' => '\Otto\Client\Model\TotalsReductionDetailsReceiptsV3',
+        'gross' => '\Otto\Client\Model\TotalsReductionReceiptsV3Gross'
     ];
 
     /**
@@ -372,7 +372,7 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\TotalsReductionDetailsReceiptsV3|null
+     * @return \Otto\Client\Model\TotalsReductionDetailsReceiptsV3|null
      */
     public function getDetails()
     {
@@ -382,7 +382,7 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\TotalsReductionDetailsReceiptsV3|null $details details
+     * @param \Otto\Client\Model\TotalsReductionDetailsReceiptsV3|null $details details
      *
      * @return self
      */
@@ -399,7 +399,7 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets gross
      *
-     * @return \OpenAPI\Client\Model\TotalsReductionReceiptsV3Gross
+     * @return \Otto\Client\Model\TotalsReductionReceiptsV3Gross
      */
     public function getGross()
     {
@@ -409,7 +409,7 @@ class TotalsReductionReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets gross
      *
-     * @param \OpenAPI\Client\Model\TotalsReductionReceiptsV3Gross $gross gross
+     * @param \Otto\Client\Model\TotalsReductionReceiptsV3Gross $gross gross
      *
      * @return self
      */

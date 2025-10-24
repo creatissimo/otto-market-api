@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductComplianceProductsV5 Class Doc Comment
  *
  * @category Class
  * @description Compliance data must always be maintained. Must be used to provide information relevant for product compliance like e.g. addresses for product safety regulations. For the variations of a product, either the product safety container or the food/feed information container must be provided depending on the product category.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ProductComplianceProductsV5 implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product_safety' => '\OpenAPI\Client\Model\ProductSafetyProductsV5',
-        'food_information' => '\OpenAPI\Client\Model\FoodInformationProductsV5'
+        'product_safety' => '\Otto\Client\Model\ProductSafetyProductsV5',
+        'food_information' => '\Otto\Client\Model\FoodInformationProductsV5'
     ];
 
     /**
@@ -300,7 +300,7 @@ class ProductComplianceProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets product_safety
      *
-     * @return \OpenAPI\Client\Model\ProductSafetyProductsV5|null
+     * @return \Otto\Client\Model\ProductSafetyProductsV5|null
      */
     public function getProductSafety()
     {
@@ -310,7 +310,7 @@ class ProductComplianceProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets product_safety
      *
-     * @param \OpenAPI\Client\Model\ProductSafetyProductsV5|null $product_safety product_safety
+     * @param \Otto\Client\Model\ProductSafetyProductsV5|null $product_safety product_safety
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class ProductComplianceProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets food_information
      *
-     * @return \OpenAPI\Client\Model\FoodInformationProductsV5|null
+     * @return \Otto\Client\Model\FoodInformationProductsV5|null
      */
     public function getFoodInformation()
     {
@@ -337,7 +337,7 @@ class ProductComplianceProductsV5 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets food_information
      *
-     * @param \OpenAPI\Client\Model\FoodInformationProductsV5|null $food_information food_information
+     * @param \Otto\Client\Model\FoodInformationProductsV5|null $food_information food_information
      *
      * @return self
      */

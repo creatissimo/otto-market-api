@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ErrorDetailsReturnsWarehouseV2 Class Doc Comment
  *
  * @category Class
  * @description Describes the error details
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ErrorDetailsReturnsWarehouseV2 implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ErrorReturnsWarehouseV2[]'
+        'errors' => '\Otto\Client\Model\ErrorReturnsWarehouseV2[]'
     ];
 
     /**
@@ -296,7 +296,7 @@ class ErrorDetailsReturnsWarehouseV2 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ErrorReturnsWarehouseV2[]
+     * @return \Otto\Client\Model\ErrorReturnsWarehouseV2[]
      */
     public function getErrors()
     {
@@ -306,7 +306,7 @@ class ErrorDetailsReturnsWarehouseV2 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ErrorReturnsWarehouseV2[] $errors errors
+     * @param \Otto\Client\Model\ErrorReturnsWarehouseV2[] $errors errors
      *
      * @return self
      */

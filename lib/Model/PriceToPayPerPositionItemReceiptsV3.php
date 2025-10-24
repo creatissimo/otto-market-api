@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceToPayPerPositionItemReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Price of each unit of the item i.e., price of each positionItemId.&lt;/br&gt;It will be available only for PURCHASE receipt
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PriceToPayPerPositionItemReceiptsV3 implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'position_item_ids' => 'string[]',
-        'price_to_pay' => '\OpenAPI\Client\Model\PriceReceiptsV3'
+        'price_to_pay' => '\Otto\Client\Model\PriceReceiptsV3'
     ];
 
     /**
@@ -333,7 +333,7 @@ class PriceToPayPerPositionItemReceiptsV3 implements ModelInterface, ArrayAccess
     /**
      * Gets price_to_pay
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getPriceToPay()
     {
@@ -343,7 +343,7 @@ class PriceToPayPerPositionItemReceiptsV3 implements ModelInterface, ArrayAccess
     /**
      * Sets price_to_pay
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $price_to_pay price_to_pay
+     * @param \Otto\Client\Model\PriceReceiptsV3 $price_to_pay price_to_pay
      *
      * @return self
      */

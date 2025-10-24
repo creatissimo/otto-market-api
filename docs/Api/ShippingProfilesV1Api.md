@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShippingProfilesV1Api
+# Otto\Client\ShippingProfilesV1Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 ## `shippingProfilesV1CreateShippingProfile()`
 
 ```php
-shippingProfilesV1CreateShippingProfile($authorization, $create_shipping_profile_request_shipping_profiles_v1): \OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1
+shippingProfilesV1CreateShippingProfile($authorization, $create_shipping_profile_request_shipping_profiles_v1): \Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1
 ```
 
 Create shipping profile
@@ -29,17 +29,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShippingProfilesV1Api(
+$apiInstance = new Otto\Client\Api\ShippingProfilesV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = Bearer access_token; // string | Access Token
-$create_shipping_profile_request_shipping_profiles_v1 = new \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1(); // \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 | create shipping profile
+$create_shipping_profile_request_shipping_profiles_v1 = new \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1(); // \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 | create shipping profile
 
 try {
     $result = $apiInstance->shippingProfilesV1CreateShippingProfile($authorization, $create_shipping_profile_request_shipping_profiles_v1);
@@ -54,11 +54,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
-| **create_shipping_profile_request_shipping_profiles_v1** | [**\OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1**](../Model/CreateShippingProfileRequestShippingProfilesV1.md)| create shipping profile | |
+| **create_shipping_profile_request_shipping_profiles_v1** | [**\Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1**](../Model/CreateShippingProfileRequestShippingProfilesV1.md)| create shipping profile | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1**](../Model/CreateShippingProfileResponseShippingProfilesV1.md)
+[**\Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1**](../Model/CreateShippingProfileResponseShippingProfilesV1.md)
 
 ### Authorization
 
@@ -91,10 +91,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShippingProfilesV1Api(
+$apiInstance = new Otto\Client\Api\ShippingProfilesV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -137,7 +137,7 @@ void (empty response body)
 ## `shippingProfilesV1GetShippingProfileById()`
 
 ```php
-shippingProfilesV1GetShippingProfileById($authorization, $shipping_profile_id): \OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1
+shippingProfilesV1GetShippingProfileById($authorization, $shipping_profile_id): \Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1
 ```
 
 Get shipping profile by shipping profile id
@@ -152,10 +152,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShippingProfilesV1Api(
+$apiInstance = new Otto\Client\Api\ShippingProfilesV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -181,7 +181,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1**](../Model/GetShippingProfileResponseShippingProfilesV1.md)
+[**\Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1**](../Model/GetShippingProfileResponseShippingProfilesV1.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ try {
 ## `shippingProfilesV1GetShippingProfiles()`
 
 ```php
-shippingProfilesV1GetShippingProfiles($authorization, $cursor): \OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1
+shippingProfilesV1GetShippingProfiles($authorization, $cursor): \Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1
 ```
 
 Get all shipping profiles from a partner
@@ -214,10 +214,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShippingProfilesV1Api(
+$apiInstance = new Otto\Client\Api\ShippingProfilesV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -243,7 +243,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1**](../Model/GetAllShippingProfilesResponseShippingProfilesV1.md)
+[**\Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1**](../Model/GetAllShippingProfilesResponseShippingProfilesV1.md)
 
 ### Authorization
 
@@ -276,10 +276,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShippingProfilesV1Api(
+$apiInstance = new Otto\Client\Api\ShippingProfilesV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -287,7 +287,7 @@ $apiInstance = new OpenAPI\Client\Api\ShippingProfilesV1Api(
 );
 $authorization = Bearer access_token; // string | Access Token
 $shipping_profile_id = 7bec0ef6-4324-4fa4-9fbf-42c54659ef04; // string | The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU
-$create_shipping_profile_request_shipping_profiles_v1 = new \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1(); // \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 | shipping profile request
+$create_shipping_profile_request_shipping_profiles_v1 = new \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1(); // \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 | shipping profile request
 
 try {
     $apiInstance->shippingProfilesV1UpdateShippingProfile($authorization, $shipping_profile_id, $create_shipping_profile_request_shipping_profiles_v1);
@@ -302,7 +302,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
 | **shipping_profile_id** | **string**| The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU | |
-| **create_shipping_profile_request_shipping_profiles_v1** | [**\OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1**](../Model/CreateShippingProfileRequestShippingProfilesV1.md)| shipping profile request | |
+| **create_shipping_profile_request_shipping_profiles_v1** | [**\Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1**](../Model/CreateShippingProfileRequestShippingProfilesV1.md)| shipping profile request | |
 
 ### Return type
 

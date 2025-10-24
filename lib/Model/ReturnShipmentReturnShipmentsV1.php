@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReturnShipmentReturnShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @description A returnShipment with full details.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,9 +60,9 @@ class ReturnShipmentReturnShipmentsV1 implements ModelInterface, ArrayAccess, \J
     protected static $openAPITypes = [
         'return_shipment_id' => 'string',
         'created_at' => 'string',
-        'tracking_key' => '\OpenAPI\Client\Model\TrackingKeyReturnShipmentsV1',
-        'return_position_items' => '\OpenAPI\Client\Model\ReturnPositionItemReturnShipmentsV1[]',
-        'states' => '\OpenAPI\Client\Model\ReturnShipmentStateReturnShipmentsV1[]'
+        'tracking_key' => '\Otto\Client\Model\TrackingKeyReturnShipmentsV1',
+        'return_position_items' => '\Otto\Client\Model\ReturnPositionItemReturnShipmentsV1[]',
+        'states' => '\Otto\Client\Model\ReturnShipmentStateReturnShipmentsV1[]'
     ];
 
     /**
@@ -395,7 +395,7 @@ class ReturnShipmentReturnShipmentsV1 implements ModelInterface, ArrayAccess, \J
     /**
      * Gets tracking_key
      *
-     * @return \OpenAPI\Client\Model\TrackingKeyReturnShipmentsV1
+     * @return \Otto\Client\Model\TrackingKeyReturnShipmentsV1
      */
     public function getTrackingKey()
     {
@@ -405,7 +405,7 @@ class ReturnShipmentReturnShipmentsV1 implements ModelInterface, ArrayAccess, \J
     /**
      * Sets tracking_key
      *
-     * @param \OpenAPI\Client\Model\TrackingKeyReturnShipmentsV1 $tracking_key tracking_key
+     * @param \Otto\Client\Model\TrackingKeyReturnShipmentsV1 $tracking_key tracking_key
      *
      * @return self
      */
@@ -422,7 +422,7 @@ class ReturnShipmentReturnShipmentsV1 implements ModelInterface, ArrayAccess, \J
     /**
      * Gets return_position_items
      *
-     * @return \OpenAPI\Client\Model\ReturnPositionItemReturnShipmentsV1[]
+     * @return \Otto\Client\Model\ReturnPositionItemReturnShipmentsV1[]
      */
     public function getReturnPositionItems()
     {
@@ -432,7 +432,7 @@ class ReturnShipmentReturnShipmentsV1 implements ModelInterface, ArrayAccess, \J
     /**
      * Sets return_position_items
      *
-     * @param \OpenAPI\Client\Model\ReturnPositionItemReturnShipmentsV1[] $return_position_items The position items included in the returnShipment.
+     * @param \Otto\Client\Model\ReturnPositionItemReturnShipmentsV1[] $return_position_items The position items included in the returnShipment.
      *
      * @return self
      */
@@ -454,7 +454,7 @@ class ReturnShipmentReturnShipmentsV1 implements ModelInterface, ArrayAccess, \J
     /**
      * Gets states
      *
-     * @return \OpenAPI\Client\Model\ReturnShipmentStateReturnShipmentsV1[]|null
+     * @return \Otto\Client\Model\ReturnShipmentStateReturnShipmentsV1[]|null
      */
     public function getStates()
     {
@@ -464,7 +464,7 @@ class ReturnShipmentReturnShipmentsV1 implements ModelInterface, ArrayAccess, \J
     /**
      * Sets states
      *
-     * @param \OpenAPI\Client\Model\ReturnShipmentStateReturnShipmentsV1[]|null $states The history of tracking states of the returnShipment
+     * @param \Otto\Client\Model\ReturnShipmentStateReturnShipmentsV1[]|null $states The history of tracking states of the returnShipment
      *
      * @return self
      */

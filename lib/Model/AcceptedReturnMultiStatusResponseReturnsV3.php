@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AcceptedReturnMultiStatusResponseReturnsV3 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class AcceptedReturnMultiStatusResponseReturnsV3 implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\AcceptedPositionItemReturnsV3[]',
-        'errors' => '\OpenAPI\Client\Model\ApiErrorV3ReturnsV3[]'
+        'results' => '\Otto\Client\Model\AcceptedPositionItemReturnsV3[]',
+        'errors' => '\Otto\Client\Model\ApiErrorV3ReturnsV3[]'
     ];
 
     /**
@@ -302,7 +302,7 @@ class AcceptedReturnMultiStatusResponseReturnsV3 implements ModelInterface, Arra
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\AcceptedPositionItemReturnsV3[]
+     * @return \Otto\Client\Model\AcceptedPositionItemReturnsV3[]
      */
     public function getResults()
     {
@@ -312,7 +312,7 @@ class AcceptedReturnMultiStatusResponseReturnsV3 implements ModelInterface, Arra
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\AcceptedPositionItemReturnsV3[] $results List of all the items received from partner
+     * @param \Otto\Client\Model\AcceptedPositionItemReturnsV3[] $results List of all the items received from partner
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class AcceptedReturnMultiStatusResponseReturnsV3 implements ModelInterface, Arra
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ApiErrorV3ReturnsV3[]|null
+     * @return \Otto\Client\Model\ApiErrorV3ReturnsV3[]|null
      */
     public function getErrors()
     {
@@ -339,7 +339,7 @@ class AcceptedReturnMultiStatusResponseReturnsV3 implements ModelInterface, Arra
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ApiErrorV3ReturnsV3[]|null $errors errors
+     * @param \Otto\Client\Model\ApiErrorV3ReturnsV3[]|null $errors errors
      *
      * @return self
      */

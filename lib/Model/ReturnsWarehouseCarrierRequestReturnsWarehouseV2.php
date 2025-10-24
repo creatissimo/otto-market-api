@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReturnsWarehouseCarrierRequestReturnsWarehouseV2 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ReturnsWarehouseCarrierRequestReturnsWarehouseV2 implements ModelInterface
       */
     protected static $openAPITypes = [
         'return_carrier_name' => 'string',
-        'return_carrier_codes' => '\OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes'
+        'return_carrier_codes' => '\Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes'
     ];
 
     /**
@@ -365,7 +365,7 @@ class ReturnsWarehouseCarrierRequestReturnsWarehouseV2 implements ModelInterface
     /**
      * Gets return_carrier_codes
      *
-     * @return \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null
+     * @return \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null
      */
     public function getReturnCarrierCodes()
     {
@@ -375,7 +375,7 @@ class ReturnsWarehouseCarrierRequestReturnsWarehouseV2 implements ModelInterface
     /**
      * Sets return_carrier_codes
      *
-     * @param \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null $return_carrier_codes return_carrier_codes
+     * @param \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes|null $return_carrier_codes return_carrier_codes
      *
      * @return self
      */

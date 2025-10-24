@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * InitialDiscountOrdersV4 Class Doc Comment
  *
  * @category Class
  * @description InitialDiscount
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class InitialDiscountOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'discount_amount' => '\OpenAPI\Client\Model\AmountOrdersV4',
+        'discount_amount' => '\Otto\Client\Model\AmountOrdersV4',
         'discount_id' => 'string',
         'discount_name' => 'string',
         'name' => 'string',
@@ -346,7 +346,7 @@ class InitialDiscountOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets discount_amount
      *
-     * @return \OpenAPI\Client\Model\AmountOrdersV4
+     * @return \Otto\Client\Model\AmountOrdersV4
      */
     public function getDiscountAmount()
     {
@@ -356,7 +356,7 @@ class InitialDiscountOrdersV4 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets discount_amount
      *
-     * @param \OpenAPI\Client\Model\AmountOrdersV4 $discount_amount discount_amount
+     * @param \Otto\Client\Model\AmountOrdersV4 $discount_amount discount_amount
      *
      * @return self
      */

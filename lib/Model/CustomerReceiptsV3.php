@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CustomerReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Customer details
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class CustomerReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invoice_address' => '\OpenAPI\Client\Model\AddressReceiptsV3'
+        'invoice_address' => '\Otto\Client\Model\AddressReceiptsV3'
     ];
 
     /**
@@ -296,7 +296,7 @@ class CustomerReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets invoice_address
      *
-     * @return \OpenAPI\Client\Model\AddressReceiptsV3
+     * @return \Otto\Client\Model\AddressReceiptsV3
      */
     public function getInvoiceAddress()
     {
@@ -306,7 +306,7 @@ class CustomerReceiptsV3 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets invoice_address
      *
-     * @param \OpenAPI\Client\Model\AddressReceiptsV3 $invoice_address invoice_address
+     * @param \Otto\Client\Model\AddressReceiptsV3 $invoice_address invoice_address
      *
      * @return self
      */

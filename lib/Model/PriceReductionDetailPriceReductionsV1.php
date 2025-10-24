@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceReductionDetailPriceReductionsV1 Class Doc Comment
  *
  * @category Class
  * @description all price reductions applied for an item
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PriceReductionDetailPriceReductionsV1 implements ModelInterface, ArrayAcce
       */
     protected static $openAPITypes = [
         'receipt_number' => 'string',
-        'price_reduction' => '\OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1PriceReduction',
+        'price_reduction' => '\Otto\Client\Model\PriceReductionDetailPriceReductionsV1PriceReduction',
         'creation_date_time' => 'string',
         'status' => 'string'
     ];
@@ -367,7 +367,7 @@ class PriceReductionDetailPriceReductionsV1 implements ModelInterface, ArrayAcce
     /**
      * Gets price_reduction
      *
-     * @return \OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1PriceReduction|null
+     * @return \Otto\Client\Model\PriceReductionDetailPriceReductionsV1PriceReduction|null
      */
     public function getPriceReduction()
     {
@@ -377,7 +377,7 @@ class PriceReductionDetailPriceReductionsV1 implements ModelInterface, ArrayAcce
     /**
      * Sets price_reduction
      *
-     * @param \OpenAPI\Client\Model\PriceReductionDetailPriceReductionsV1PriceReduction|null $price_reduction price_reduction
+     * @param \Otto\Client\Model\PriceReductionDetailPriceReductionsV1PriceReduction|null $price_reduction price_reduction
      *
      * @return self
      */

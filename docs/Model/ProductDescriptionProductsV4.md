@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **product_url** | **string** | Refers to a representation of the product variant in a shop of the partner. Should be a valid URL. | [optional]
 **description** | **string** | Represents a textual description of a product variant. May contain HTML elements. Should contain less than 2000 characters. Relevant for SEO. | [optional]
 **bullet_points** | **string[]** | May contain a minimum of 3 and a maximum of 180 characters. | [optional]
-**attributes** | [**\OpenAPI\Client\Model\AttributeProductsV4[]**](AttributeProductsV4.md) | Lists all the descriptive information about a product variant a partner can provide. Must be provided in the form of a key values pair. Will be validated against the AttributeDefinitions from Category endpoint provided by Otto market. | [optional]
+**attributes** | [**\Otto\Client\Model\AttributeProductsV4[]**](AttributeProductsV4.md) | Lists all the descriptive information about a product variant a partner can provide. Must be provided in the form of a key values pair. Will be validated against the AttributeDefinitions from Category endpoint provided by Otto market. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

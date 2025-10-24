@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace Otto\Client\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Line items for which settlement is made.  ATTENTION: * In previous version this name was used for  itemPositions only. Now there is a substructure that cares about all billing object of a receipt * The object is currently define by mistake as required, we will change it in future as it’s possible that we introduce new receiptTypes without lineItems. For current receiptTypes PURCHASE, PARTIAL_REFUND and REFUND lineItems will always exists.
- * @package     OpenAPI\Client
+ * @package     Otto\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

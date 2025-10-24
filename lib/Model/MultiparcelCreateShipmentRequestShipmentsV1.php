@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * MultiparcelCreateShipmentRequestShipmentsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class MultiparcelCreateShipmentRequestShipmentsV1 implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tracking_key' => '\OpenAPI\Client\Model\MultiparcelTrackingKeyShipmentsV1',
+        'tracking_key' => '\Otto\Client\Model\MultiparcelTrackingKeyShipmentsV1',
         'ship_date' => '\DateTime',
-        'ship_from_address' => '\OpenAPI\Client\Model\AddressShipmentsV1',
-        'position_items' => '\OpenAPI\Client\Model\MultiparcelPositionItemShipmentsV1[]'
+        'ship_from_address' => '\Otto\Client\Model\AddressShipmentsV1',
+        'position_items' => '\Otto\Client\Model\MultiparcelPositionItemShipmentsV1[]'
     ];
 
     /**
@@ -329,7 +329,7 @@ class MultiparcelCreateShipmentRequestShipmentsV1 implements ModelInterface, Arr
     /**
      * Gets tracking_key
      *
-     * @return \OpenAPI\Client\Model\MultiparcelTrackingKeyShipmentsV1
+     * @return \Otto\Client\Model\MultiparcelTrackingKeyShipmentsV1
      */
     public function getTrackingKey()
     {
@@ -339,7 +339,7 @@ class MultiparcelCreateShipmentRequestShipmentsV1 implements ModelInterface, Arr
     /**
      * Sets tracking_key
      *
-     * @param \OpenAPI\Client\Model\MultiparcelTrackingKeyShipmentsV1 $tracking_key tracking_key
+     * @param \Otto\Client\Model\MultiparcelTrackingKeyShipmentsV1 $tracking_key tracking_key
      *
      * @return self
      */
@@ -383,7 +383,7 @@ class MultiparcelCreateShipmentRequestShipmentsV1 implements ModelInterface, Arr
     /**
      * Gets ship_from_address
      *
-     * @return \OpenAPI\Client\Model\AddressShipmentsV1
+     * @return \Otto\Client\Model\AddressShipmentsV1
      */
     public function getShipFromAddress()
     {
@@ -393,7 +393,7 @@ class MultiparcelCreateShipmentRequestShipmentsV1 implements ModelInterface, Arr
     /**
      * Sets ship_from_address
      *
-     * @param \OpenAPI\Client\Model\AddressShipmentsV1 $ship_from_address ship_from_address
+     * @param \Otto\Client\Model\AddressShipmentsV1 $ship_from_address ship_from_address
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class MultiparcelCreateShipmentRequestShipmentsV1 implements ModelInterface, Arr
     /**
      * Gets position_items
      *
-     * @return \OpenAPI\Client\Model\MultiparcelPositionItemShipmentsV1[]
+     * @return \Otto\Client\Model\MultiparcelPositionItemShipmentsV1[]
      */
     public function getPositionItems()
     {
@@ -420,7 +420,7 @@ class MultiparcelCreateShipmentRequestShipmentsV1 implements ModelInterface, Arr
     /**
      * Sets position_items
      *
-     * @param \OpenAPI\Client\Model\MultiparcelPositionItemShipmentsV1[] $position_items The position items included in shipment.
+     * @param \Otto\Client\Model\MultiparcelPositionItemShipmentsV1[] $position_items The position items included in shipment.
      *
      * @return self
      */

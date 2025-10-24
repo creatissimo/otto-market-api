@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CategoryGroupProductsV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,10 +61,10 @@ class CategoryGroupProductsV4 implements ModelInterface, ArrayAccess, \JsonSeria
         'categories' => 'string[]',
         'variation_themes' => 'string[]',
         'title' => 'string',
-        'attributes' => '\OpenAPI\Client\Model\AttributeDefinitionProductsV4[]',
+        'attributes' => '\Otto\Client\Model\AttributeDefinitionProductsV4[]',
         'created_at' => '\DateTime',
         'last_modified' => '\DateTime',
-        'additional_requirements' => '\OpenAPI\Client\Model\AdditionalRequirementProductsV4[]'
+        'additional_requirements' => '\Otto\Client\Model\AdditionalRequirementProductsV4[]'
     ];
 
     /**
@@ -449,7 +449,7 @@ class CategoryGroupProductsV4 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets attributes
      *
-     * @return \OpenAPI\Client\Model\AttributeDefinitionProductsV4[]|null
+     * @return \Otto\Client\Model\AttributeDefinitionProductsV4[]|null
      */
     public function getAttributes()
     {
@@ -459,7 +459,7 @@ class CategoryGroupProductsV4 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets attributes
      *
-     * @param \OpenAPI\Client\Model\AttributeDefinitionProductsV4[]|null $attributes list of the market place attributes for the categories of this group.
+     * @param \Otto\Client\Model\AttributeDefinitionProductsV4[]|null $attributes list of the market place attributes for the categories of this group.
      *
      * @return self
      */
@@ -530,7 +530,7 @@ class CategoryGroupProductsV4 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets additional_requirements
      *
-     * @return \OpenAPI\Client\Model\AdditionalRequirementProductsV4[]|null
+     * @return \Otto\Client\Model\AdditionalRequirementProductsV4[]|null
      */
     public function getAdditionalRequirements()
     {
@@ -540,7 +540,7 @@ class CategoryGroupProductsV4 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets additional_requirements
      *
-     * @param \OpenAPI\Client\Model\AdditionalRequirementProductsV4[]|null $additional_requirements a list of general requirements for certain product attributes that apply to all categories in the category group
+     * @param \Otto\Client\Model\AdditionalRequirementProductsV4[]|null $additional_requirements a list of general requirements for certain product attributes that apply to all categories in the category group
      *
      * @return self
      */

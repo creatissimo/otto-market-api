@@ -1,4 +1,4 @@
-# OpenAPI\Client\PriceReductionsV1Api
+# Otto\Client\PriceReductionsV1Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 ## `priceReductionsV1ApplyPriceReduction()`
 
 ```php
-priceReductionsV1ApplyPriceReduction($partner_price_reduction_request_price_reductions_v1): \OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1
+priceReductionsV1ApplyPriceReduction($partner_price_reduction_request_price_reductions_v1): \Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1
 ```
 
 Apply price reduction for a positionItemId
@@ -26,16 +26,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\PriceReductionsV1Api(
+$apiInstance = new Otto\Client\Api\PriceReductionsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$partner_price_reduction_request_price_reductions_v1 = new \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1(); // \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1
+$partner_price_reduction_request_price_reductions_v1 = new \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1(); // \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1
 
 try {
     $result = $apiInstance->priceReductionsV1ApplyPriceReduction($partner_price_reduction_request_price_reductions_v1);
@@ -49,11 +49,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **partner_price_reduction_request_price_reductions_v1** | [**\OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1**](../Model/PartnerPriceReductionRequestPriceReductionsV1.md)|  | |
+| **partner_price_reduction_request_price_reductions_v1** | [**\Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1**](../Model/PartnerPriceReductionRequestPriceReductionsV1.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1**](../Model/AcceptedPriceReductionResponsePriceReductionsV1.md)
+[**\Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1**](../Model/AcceptedPriceReductionResponsePriceReductionsV1.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ try {
 ## `priceReductionsV1GetAllReductionsForPartner()`
 
 ```php
-priceReductionsV1GetAllReductionsForPartner($position_item_id, $page, $limit): \OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1
+priceReductionsV1GetAllReductionsForPartner($position_item_id, $page, $limit): \Otto\Client\Model\PriceReductionsResponsePriceReductionsV1
 ```
 
 Get all priceReductions
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\PriceReductionsV1Api(
+$apiInstance = new Otto\Client\Api\PriceReductionsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1**](../Model/PriceReductionsResponsePriceReductionsV1.md)
+[**\Otto\Client\Model\PriceReductionsResponsePriceReductionsV1**](../Model/PriceReductionsResponsePriceReductionsV1.md)
 
 ### Authorization
 

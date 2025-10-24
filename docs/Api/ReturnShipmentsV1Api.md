@@ -1,4 +1,4 @@
-# OpenAPI\Client\ReturnShipmentsV1Api
+# Otto\Client\ReturnShipmentsV1Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 ## `returnShipmentsV1ListReturnShipmentsUsingGET()`
 
 ```php
-returnShipmentsV1ListReturnShipmentsUsingGET($datefrom, $limit, $next): \OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1
+returnShipmentsV1ListReturnShipmentsUsingGET($datefrom, $limit, $next): \Otto\Client\Model\ReturnShipmentListReturnShipmentsV1
 ```
 
 Retrieve returnShipments.
@@ -27,10 +27,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ReturnShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1**](../Model/ReturnShipmentListReturnShipmentsV1.md)
+[**\Otto\Client\Model\ReturnShipmentListReturnShipmentsV1**](../Model/ReturnShipmentListReturnShipmentsV1.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET()`
 
 ```php
-returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET($carrier, $tracking_number): \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1
+returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET($carrier, $tracking_number): \Otto\Client\Model\ReturnShipmentReturnShipmentsV1
 ```
 
 Retrieve returnShipment by carrier and tracking number.
@@ -91,10 +91,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ReturnShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -120,7 +120,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1**](../Model/ReturnShipmentReturnShipmentsV1.md)
+[**\Otto\Client\Model\ReturnShipmentReturnShipmentsV1**](../Model/ReturnShipmentReturnShipmentsV1.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ try {
 ## `returnShipmentsV1ReturnShipmentUsingGET()`
 
 ```php
-returnShipmentsV1ReturnShipmentUsingGET($return_shipment_id): \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1
+returnShipmentsV1ReturnShipmentUsingGET($return_shipment_id): \Otto\Client\Model\ReturnShipmentReturnShipmentsV1
 ```
 
 Retrieve returnShipments by returnShipment ID.
@@ -153,10 +153,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnShipmentsV1Api(
+$apiInstance = new Otto\Client\Api\ReturnShipmentsV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -180,7 +180,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1**](../Model/ReturnShipmentReturnShipmentsV1.md)
+[**\Otto\Client\Model\ReturnShipmentReturnShipmentsV1**](../Model/ReturnShipmentReturnShipmentsV1.md)
 
 ### Authorization
 

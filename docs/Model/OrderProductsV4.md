@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**max_order_quantity** | [**\OpenAPI\Client\Model\MaxOrderQuantityProductsV4**](MaxOrderQuantityProductsV4.md) |  | [optional]
+**max_order_quantity** | [**\Otto\Client\Model\MaxOrderQuantityProductsV4**](MaxOrderQuantityProductsV4.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

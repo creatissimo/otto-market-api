@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * NotFoundAddPositionItemByTrackingNumberShipmentsV1 Class Doc Comment
  *
  * @category Class
  * @description Server can not find requested resource.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class NotFoundAddPositionItemByTrackingNumberShipmentsV1 implements ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ErrorDescriptionShipmentsV1'
+        'errors' => '\Otto\Client\Model\ErrorDescriptionShipmentsV1'
     ];
 
     /**
@@ -293,7 +293,7 @@ class NotFoundAddPositionItemByTrackingNumberShipmentsV1 implements ModelInterfa
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ErrorDescriptionShipmentsV1|null
+     * @return \Otto\Client\Model\ErrorDescriptionShipmentsV1|null
      */
     public function getErrors()
     {
@@ -303,7 +303,7 @@ class NotFoundAddPositionItemByTrackingNumberShipmentsV1 implements ModelInterfa
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ErrorDescriptionShipmentsV1|null $errors errors
+     * @param \Otto\Client\Model\ErrorDescriptionShipmentsV1|null $errors errors
      *
      * @return self
      */

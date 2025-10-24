@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PricingProductsV5 Class Doc Comment
  *
  * @category Class
  * @description this container holds attributes for the different price types, currency and tax related information
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,11 +58,11 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'standard_price' => '\OpenAPI\Client\Model\MonetaryAmountProductsV5',
+        'standard_price' => '\Otto\Client\Model\MonetaryAmountProductsV5',
         'vat' => 'string',
-        'msrp' => '\OpenAPI\Client\Model\MonetaryAmountProductsV5',
-        'sale' => '\OpenAPI\Client\Model\SaleProductsV5',
-        'norm_price_info' => '\OpenAPI\Client\Model\NormPriceInfoProductsV5'
+        'msrp' => '\Otto\Client\Model\MonetaryAmountProductsV5',
+        'sale' => '\Otto\Client\Model\SaleProductsV5',
+        'norm_price_info' => '\Otto\Client\Model\NormPriceInfoProductsV5'
     ];
 
     /**
@@ -355,7 +355,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets standard_price
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountProductsV5
+     * @return \Otto\Client\Model\MonetaryAmountProductsV5
      */
     public function getStandardPrice()
     {
@@ -365,7 +365,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets standard_price
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountProductsV5 $standard_price standard_price
+     * @param \Otto\Client\Model\MonetaryAmountProductsV5 $standard_price standard_price
      *
      * @return self
      */
@@ -419,7 +419,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets msrp
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountProductsV5|null
+     * @return \Otto\Client\Model\MonetaryAmountProductsV5|null
      */
     public function getMsrp()
     {
@@ -429,7 +429,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets msrp
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountProductsV5|null $msrp msrp
+     * @param \Otto\Client\Model\MonetaryAmountProductsV5|null $msrp msrp
      *
      * @return self
      */
@@ -446,7 +446,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets sale
      *
-     * @return \OpenAPI\Client\Model\SaleProductsV5|null
+     * @return \Otto\Client\Model\SaleProductsV5|null
      */
     public function getSale()
     {
@@ -456,7 +456,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets sale
      *
-     * @param \OpenAPI\Client\Model\SaleProductsV5|null $sale sale
+     * @param \Otto\Client\Model\SaleProductsV5|null $sale sale
      *
      * @return self
      */
@@ -473,7 +473,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets norm_price_info
      *
-     * @return \OpenAPI\Client\Model\NormPriceInfoProductsV5|null
+     * @return \Otto\Client\Model\NormPriceInfoProductsV5|null
      */
     public function getNormPriceInfo()
     {
@@ -483,7 +483,7 @@ class PricingProductsV5 implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets norm_price_info
      *
-     * @param \OpenAPI\Client\Model\NormPriceInfoProductsV5|null $norm_price_info norm_price_info
+     * @param \Otto\Client\Model\NormPriceInfoProductsV5|null $norm_price_info norm_price_info
      *
      * @return self
      */

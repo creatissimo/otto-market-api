@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**delivery_fee_amount** | [**\OpenAPI\Client\Model\AmountOrdersV4**](AmountOrdersV4.md) |  |
+**delivery_fee_amount** | [**\Otto\Client\Model\AmountOrdersV4**](AmountOrdersV4.md) |  |
 **name** | **string** | The type of this delivery fee |
 **position_item_ids** | **string[]** | The position item ids to which this delivery fee applies |
 **vat_rate** | **float** | The highest VAT rate of the products of all the position items |

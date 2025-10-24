@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **sku** | **string** | Stock keeping unit of the linked item. Unique item identifier on partner side &lt;/br&gt;This information is not reliably provided for older receipts. | [optional]
 **article_number** | **string** | Unique Identifier of linked item the customer knows from order process.  ATTENTION: Different from the previous version, the field also contains the promotion. In last version the promotion was provided separately |
 **product_title** | **string** | Product description of linked item the customer knows from the order process |
-**service_relations** | [**\OpenAPI\Client\Model\ServiceRelationReceiptsV3[]**](ServiceRelationReceiptsV3.md) | List of ServiceRelation objects. &lt;/br&gt;Contains entries if services were sold  together with items otherwise list is empty |
+**service_relations** | [**\Otto\Client\Model\ServiceRelationReceiptsV3[]**](ServiceRelationReceiptsV3.md) | List of ServiceRelation objects. &lt;/br&gt;Contains entries if services were sold  together with items otherwise list is empty |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

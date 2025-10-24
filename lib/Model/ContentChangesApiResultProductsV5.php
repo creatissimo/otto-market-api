@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ContentChangesApiResultProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ContentChangesApiResultProductsV5 implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'content_changes' => '\OpenAPI\Client\Model\ContentChangeProductsV5[]',
-        'links' => '\OpenAPI\Client\Model\ContentChangesLinkProductsV5[]'
+        'content_changes' => '\Otto\Client\Model\ContentChangeProductsV5[]',
+        'links' => '\Otto\Client\Model\ContentChangesLinkProductsV5[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ContentChangesApiResultProductsV5 implements ModelInterface, ArrayAccess, 
     /**
      * Gets content_changes
      *
-     * @return \OpenAPI\Client\Model\ContentChangeProductsV5[]|null
+     * @return \Otto\Client\Model\ContentChangeProductsV5[]|null
      */
     public function getContentChanges()
     {
@@ -309,7 +309,7 @@ class ContentChangesApiResultProductsV5 implements ModelInterface, ArrayAccess, 
     /**
      * Sets content_changes
      *
-     * @param \OpenAPI\Client\Model\ContentChangeProductsV5[]|null $content_changes content_changes
+     * @param \Otto\Client\Model\ContentChangeProductsV5[]|null $content_changes content_changes
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ContentChangesApiResultProductsV5 implements ModelInterface, ArrayAccess, 
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\ContentChangesLinkProductsV5[]|null
+     * @return \Otto\Client\Model\ContentChangesLinkProductsV5[]|null
      */
     public function getLinks()
     {
@@ -336,7 +336,7 @@ class ContentChangesApiResultProductsV5 implements ModelInterface, ArrayAccess, 
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\ContentChangesLinkProductsV5[]|null $links a list of links that can be used for pagination.
+     * @param \Otto\Client\Model\ContentChangesLinkProductsV5[]|null $links a list of links that can be used for pagination.
      *
      * @return self
      */

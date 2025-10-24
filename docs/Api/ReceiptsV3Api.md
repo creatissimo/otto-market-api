@@ -1,4 +1,4 @@
-# OpenAPI\Client\ReceiptsV3Api
+# Otto\Client\ReceiptsV3Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -27,10 +27,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceiptsV3Api(
+$apiInstance = new Otto\Client\Api\ReceiptsV3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -71,7 +71,7 @@ void (empty response body)
 ## `receiptsV3GetReceiptUsingGET5()`
 
 ```php
-receiptsV3GetReceiptUsingGET5($receipt_number): \OpenAPI\Client\Model\ReceiptReceiptsV3
+receiptsV3GetReceiptUsingGET5($receipt_number): \Otto\Client\Model\ReceiptReceiptsV3
 ```
 
 Get the JSON object of a specific receipt
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceiptsV3Api(
+$apiInstance = new Otto\Client\Api\ReceiptsV3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,7 +113,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReceiptReceiptsV3**](../Model/ReceiptReceiptsV3.md)
+[**\Otto\Client\Model\ReceiptReceiptsV3**](../Model/ReceiptReceiptsV3.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ try {
 ## `receiptsV3GetReceiptsUsingGET5()`
 
 ```php
-receiptsV3GetReceiptsUsingGET5($limit, $page, $receipt_types, $from, $to, $sales_order_id, $next): \OpenAPI\Client\Model\ReceiptsListReceiptsV3
+receiptsV3GetReceiptsUsingGET5($limit, $page, $receipt_types, $from, $to, $sales_order_id, $next): \Otto\Client\Model\ReceiptsListReceiptsV3
 ```
 
 Get receipts as list of JSON objects
@@ -146,10 +146,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceiptsV3Api(
+$apiInstance = new Otto\Client\Api\ReceiptsV3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReceiptsListReceiptsV3**](../Model/ReceiptsListReceiptsV3.md)
+[**\Otto\Client\Model\ReceiptsListReceiptsV3**](../Model/ReceiptsListReceiptsV3.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AvailableQuantityResponseAvailabilityV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class AvailableQuantityResponseAvailabilityV1 implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'resources' => '\OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1Resources',
-        'links' => '\OpenAPI\Client\Model\LinkAvailabilityV1[]'
+        'resources' => '\Otto\Client\Model\AvailableQuantityResponseAvailabilityV1Resources',
+        'links' => '\Otto\Client\Model\LinkAvailabilityV1[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class AvailableQuantityResponseAvailabilityV1 implements ModelInterface, ArrayAc
     /**
      * Gets resources
      *
-     * @return \OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1Resources
+     * @return \Otto\Client\Model\AvailableQuantityResponseAvailabilityV1Resources
      */
     public function getResources()
     {
@@ -315,7 +315,7 @@ class AvailableQuantityResponseAvailabilityV1 implements ModelInterface, ArrayAc
     /**
      * Sets resources
      *
-     * @param \OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1Resources $resources resources
+     * @param \Otto\Client\Model\AvailableQuantityResponseAvailabilityV1Resources $resources resources
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class AvailableQuantityResponseAvailabilityV1 implements ModelInterface, ArrayAc
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkAvailabilityV1[]
+     * @return \Otto\Client\Model\LinkAvailabilityV1[]
      */
     public function getLinks()
     {
@@ -342,7 +342,7 @@ class AvailableQuantityResponseAvailabilityV1 implements ModelInterface, ArrayAc
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkAvailabilityV1[] $links contains links to the next page
+     * @param \Otto\Client\Model\LinkAvailabilityV1[] $links contains links to the next page
      *
      * @return self
      */

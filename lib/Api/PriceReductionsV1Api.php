@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Otto\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\FormDataProcessor;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * PriceReductionsV1Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,12 +133,12 @@ class PriceReductionsV1Api
      *
      * Apply price reduction for a positionItemId
      *
-     * @param  \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 partner_price_reduction_request_price_reductions_v1 (required)
+     * @param  \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 partner_price_reduction_request_price_reductions_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['priceReductionsV1ApplyPriceReduction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1|\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\OpenAPI\Client\Model\NotFoundPositionItemIdPriceReductionsV1|\OpenAPI\Client\Model\ConflictPositionItemIdPriceReductionsV1|\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1|\OpenAPI\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1
+     * @return \Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1|\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\Otto\Client\Model\NotFoundPositionItemIdPriceReductionsV1|\Otto\Client\Model\ConflictPositionItemIdPriceReductionsV1|\Otto\Client\Model\FailedDependencyPriceReductionsV1|\Otto\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1
      */
     public function priceReductionsV1ApplyPriceReduction($partner_price_reduction_request_price_reductions_v1, string $contentType = self::contentTypes['priceReductionsV1ApplyPriceReduction'][0])
     {
@@ -151,12 +151,12 @@ class PriceReductionsV1Api
      *
      * Apply price reduction for a positionItemId
      *
-     * @param  \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
+     * @param  \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['priceReductionsV1ApplyPriceReduction'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1|\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\OpenAPI\Client\Model\NotFoundPositionItemIdPriceReductionsV1|\OpenAPI\Client\Model\ConflictPositionItemIdPriceReductionsV1|\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1|\OpenAPI\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1|\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\Otto\Client\Model\NotFoundPositionItemIdPriceReductionsV1|\Otto\Client\Model\ConflictPositionItemIdPriceReductionsV1|\Otto\Client\Model\FailedDependencyPriceReductionsV1|\Otto\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function priceReductionsV1ApplyPriceReductionWithHttpInfo($partner_price_reduction_request_price_reductions_v1, string $contentType = self::contentTypes['priceReductionsV1ApplyPriceReduction'][0])
     {
@@ -188,37 +188,37 @@ class PriceReductionsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1',
+                        '\Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
+                        '\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\NotFoundPositionItemIdPriceReductionsV1',
+                        '\Otto\Client\Model\NotFoundPositionItemIdPriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ConflictPositionItemIdPriceReductionsV1',
+                        '\Otto\Client\Model\ConflictPositionItemIdPriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 424:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1',
+                        '\Otto\Client\Model\FailedDependencyPriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1',
+                        '\Otto\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1',
                         $request,
                         $response,
                     );
@@ -240,7 +240,7 @@ class PriceReductionsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1',
+                '\Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1',
                 $request,
                 $response,
             );
@@ -249,7 +249,7 @@ class PriceReductionsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1',
+                        '\Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -257,7 +257,7 @@ class PriceReductionsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
+                        '\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -265,7 +265,7 @@ class PriceReductionsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundPositionItemIdPriceReductionsV1',
+                        '\Otto\Client\Model\NotFoundPositionItemIdPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class PriceReductionsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConflictPositionItemIdPriceReductionsV1',
+                        '\Otto\Client\Model\ConflictPositionItemIdPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -281,7 +281,7 @@ class PriceReductionsV1Api
                 case 424:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1',
+                        '\Otto\Client\Model\FailedDependencyPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -289,7 +289,7 @@ class PriceReductionsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1',
+                        '\Otto\Client\Model\InternalServerErrorApplyPriceReductionPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -306,7 +306,7 @@ class PriceReductionsV1Api
      *
      * Apply price reduction for a positionItemId
      *
-     * @param  \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
+     * @param  \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['priceReductionsV1ApplyPriceReduction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -327,7 +327,7 @@ class PriceReductionsV1Api
      *
      * Apply price reduction for a positionItemId
      *
-     * @param  \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
+     * @param  \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['priceReductionsV1ApplyPriceReduction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -335,7 +335,7 @@ class PriceReductionsV1Api
      */
     public function priceReductionsV1ApplyPriceReductionAsyncWithHttpInfo($partner_price_reduction_request_price_reductions_v1, string $contentType = self::contentTypes['priceReductionsV1ApplyPriceReduction'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1';
+        $returnType = '\Otto\Client\Model\AcceptedPriceReductionResponsePriceReductionsV1';
         $request = $this->priceReductionsV1ApplyPriceReductionRequest($partner_price_reduction_request_price_reductions_v1, $contentType);
 
         return $this->client
@@ -377,7 +377,7 @@ class PriceReductionsV1Api
     /**
      * Create request for operation 'priceReductionsV1ApplyPriceReduction'
      *
-     * @param  \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
+     * @param  \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1 $partner_price_reduction_request_price_reductions_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['priceReductionsV1ApplyPriceReduction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -479,9 +479,9 @@ class PriceReductionsV1Api
      * @param  int|null $limit Number of positionItemIds to be fetched per page. Limit should not exceed 128 (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['priceReductionsV1GetAllReductionsForPartner'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1|\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\OpenAPI\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1|\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1
+     * @return \Otto\Client\Model\PriceReductionsResponsePriceReductionsV1|\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\Otto\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1|\Otto\Client\Model\FailedDependencyPriceReductionsV1
      */
     public function priceReductionsV1GetAllReductionsForPartner($position_item_id = null, $page = 1, $limit = 10, string $contentType = self::contentTypes['priceReductionsV1GetAllReductionsForPartner'][0])
     {
@@ -499,9 +499,9 @@ class PriceReductionsV1Api
      * @param  int|null $limit Number of positionItemIds to be fetched per page. Limit should not exceed 128 (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['priceReductionsV1GetAllReductionsForPartner'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1|\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\OpenAPI\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1|\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PriceReductionsResponsePriceReductionsV1|\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1|\Otto\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1|\Otto\Client\Model\FailedDependencyPriceReductionsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function priceReductionsV1GetAllReductionsForPartnerWithHttpInfo($position_item_id = null, $page = 1, $limit = 10, string $contentType = self::contentTypes['priceReductionsV1GetAllReductionsForPartner'][0])
     {
@@ -533,25 +533,25 @@ class PriceReductionsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1',
+                        '\Otto\Client\Model\PriceReductionsResponsePriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
+                        '\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1',
+                        '\Otto\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1',
                         $request,
                         $response,
                     );
                 case 424:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1',
+                        '\Otto\Client\Model\FailedDependencyPriceReductionsV1',
                         $request,
                         $response,
                     );
@@ -573,7 +573,7 @@ class PriceReductionsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1',
+                '\Otto\Client\Model\PriceReductionsResponsePriceReductionsV1',
                 $request,
                 $response,
             );
@@ -582,7 +582,7 @@ class PriceReductionsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1',
+                        '\Otto\Client\Model\PriceReductionsResponsePriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class PriceReductionsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
+                        '\Otto\Client\Model\ForbiddenApplyPriceReductionPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class PriceReductionsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1',
+                        '\Otto\Client\Model\NotFoundPriceReductionForPositionItemIdPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -606,7 +606,7 @@ class PriceReductionsV1Api
                 case 424:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FailedDependencyPriceReductionsV1',
+                        '\Otto\Client\Model\FailedDependencyPriceReductionsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -656,7 +656,7 @@ class PriceReductionsV1Api
      */
     public function priceReductionsV1GetAllReductionsForPartnerAsyncWithHttpInfo($position_item_id = null, $page = 1, $limit = 10, string $contentType = self::contentTypes['priceReductionsV1GetAllReductionsForPartner'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PriceReductionsResponsePriceReductionsV1';
+        $returnType = '\Otto\Client\Model\PriceReductionsResponsePriceReductionsV1';
         $request = $this->priceReductionsV1GetAllReductionsForPartnerRequest($position_item_id, $page, $limit, $contentType);
 
         return $this->client

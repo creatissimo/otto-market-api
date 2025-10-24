@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductVariationProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,12 +64,12 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
         'mpn' => 'string',
         'moin' => 'string',
         'release_date' => '\DateTime',
-        'product_description' => '\OpenAPI\Client\Model\ProductDescriptionProductsV5',
-        'media_assets' => '\OpenAPI\Client\Model\MediaAssetProductsV5[]',
-        'order' => '\OpenAPI\Client\Model\OrderProductsV5',
-        'pricing' => '\OpenAPI\Client\Model\PricingProductsV5',
-        'logistics' => '\OpenAPI\Client\Model\LogisticsProductsV5',
-        'compliance' => '\OpenAPI\Client\Model\ProductComplianceProductsV5'
+        'product_description' => '\Otto\Client\Model\ProductDescriptionProductsV5',
+        'media_assets' => '\Otto\Client\Model\MediaAssetProductsV5[]',
+        'order' => '\Otto\Client\Model\OrderProductsV5',
+        'pricing' => '\Otto\Client\Model\PricingProductsV5',
+        'logistics' => '\Otto\Client\Model\LogisticsProductsV5',
+        'compliance' => '\Otto\Client\Model\ProductComplianceProductsV5'
     ];
 
     /**
@@ -586,7 +586,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets product_description
      *
-     * @return \OpenAPI\Client\Model\ProductDescriptionProductsV5
+     * @return \Otto\Client\Model\ProductDescriptionProductsV5
      */
     public function getProductDescription()
     {
@@ -596,7 +596,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets product_description
      *
-     * @param \OpenAPI\Client\Model\ProductDescriptionProductsV5 $product_description product_description
+     * @param \Otto\Client\Model\ProductDescriptionProductsV5 $product_description product_description
      *
      * @return self
      */
@@ -613,7 +613,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets media_assets
      *
-     * @return \OpenAPI\Client\Model\MediaAssetProductsV5[]
+     * @return \Otto\Client\Model\MediaAssetProductsV5[]
      */
     public function getMediaAssets()
     {
@@ -623,7 +623,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets media_assets
      *
-     * @param \OpenAPI\Client\Model\MediaAssetProductsV5[] $media_assets A list of media assets describing this product variation. Currently these may only be static images of the types JPG or PNG with a RGB color space. Furthermore the images have to have a minimum size of 500 x 1000 pixel and a maximum width of 4500 pixel.
+     * @param \Otto\Client\Model\MediaAssetProductsV5[] $media_assets A list of media assets describing this product variation. Currently these may only be static images of the types JPG or PNG with a RGB color space. Furthermore the images have to have a minimum size of 500 x 1000 pixel and a maximum width of 4500 pixel.
      *
      * @return self
      */
@@ -640,7 +640,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets order
      *
-     * @return \OpenAPI\Client\Model\OrderProductsV5|null
+     * @return \Otto\Client\Model\OrderProductsV5|null
      */
     public function getOrder()
     {
@@ -650,7 +650,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets order
      *
-     * @param \OpenAPI\Client\Model\OrderProductsV5|null $order order
+     * @param \Otto\Client\Model\OrderProductsV5|null $order order
      *
      * @return self
      */
@@ -667,7 +667,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets pricing
      *
-     * @return \OpenAPI\Client\Model\PricingProductsV5
+     * @return \Otto\Client\Model\PricingProductsV5
      */
     public function getPricing()
     {
@@ -677,7 +677,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets pricing
      *
-     * @param \OpenAPI\Client\Model\PricingProductsV5 $pricing pricing
+     * @param \Otto\Client\Model\PricingProductsV5 $pricing pricing
      *
      * @return self
      */
@@ -694,7 +694,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets logistics
      *
-     * @return \OpenAPI\Client\Model\LogisticsProductsV5|null
+     * @return \Otto\Client\Model\LogisticsProductsV5|null
      */
     public function getLogistics()
     {
@@ -704,7 +704,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets logistics
      *
-     * @param \OpenAPI\Client\Model\LogisticsProductsV5|null $logistics logistics
+     * @param \Otto\Client\Model\LogisticsProductsV5|null $logistics logistics
      *
      * @return self
      */
@@ -721,7 +721,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets compliance
      *
-     * @return \OpenAPI\Client\Model\ProductComplianceProductsV5
+     * @return \Otto\Client\Model\ProductComplianceProductsV5
      */
     public function getCompliance()
     {
@@ -731,7 +731,7 @@ class ProductVariationProductsV5 implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets compliance
      *
-     * @param \OpenAPI\Client\Model\ProductComplianceProductsV5 $compliance compliance
+     * @param \Otto\Client\Model\ProductComplianceProductsV5 $compliance compliance
      *
      * @return self
      */

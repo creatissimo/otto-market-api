@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductSafetyProductsV5 Class Doc Comment
  *
  * @category Class
  * @description Should be used for providing information about the distributors and/or manufacturer of the product. https://account.otto.market/s/article/Verordnung-ueber-die-allgemeine-Produktsicherheit-EU
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ProductSafetyProductsV5 implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'addresses' => '\OpenAPI\Client\Model\ProductSafetyAddressProductsV5[]'
+        'addresses' => '\Otto\Client\Model\ProductSafetyAddressProductsV5[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ProductSafetyProductsV5 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets addresses
      *
-     * @return \OpenAPI\Client\Model\ProductSafetyAddressProductsV5[]|null
+     * @return \Otto\Client\Model\ProductSafetyAddressProductsV5[]|null
      */
     public function getAddresses()
     {
@@ -303,7 +303,7 @@ class ProductSafetyProductsV5 implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets addresses
      *
-     * @param \OpenAPI\Client\Model\ProductSafetyAddressProductsV5[]|null $addresses The addresses of the distributors and/or manufacturer. If an address is maintained, name, address, email or url and roles are mandatory.
+     * @param \Otto\Client\Model\ProductSafetyAddressProductsV5[]|null $addresses The addresses of the distributors and/or manufacturer. If an address is maintained, name, address, email or url and roles are mandatory.
      *
      * @return self
      */

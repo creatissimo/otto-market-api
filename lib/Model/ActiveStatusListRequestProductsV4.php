@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ActiveStatusListRequestProductsV4 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ActiveStatusListRequestProductsV4 implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => '\OpenAPI\Client\Model\ActiveStatusProductsV4[]'
+        'status' => '\Otto\Client\Model\ActiveStatusProductsV4[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ActiveStatusListRequestProductsV4 implements ModelInterface, ArrayAccess, 
     /**
      * Gets status
      *
-     * @return \OpenAPI\Client\Model\ActiveStatusProductsV4[]|null
+     * @return \Otto\Client\Model\ActiveStatusProductsV4[]|null
      */
     public function getStatus()
     {
@@ -302,7 +302,7 @@ class ActiveStatusListRequestProductsV4 implements ModelInterface, ArrayAccess, 
     /**
      * Sets status
      *
-     * @param \OpenAPI\Client\Model\ActiveStatusProductsV4[]|null $status status
+     * @param \Otto\Client\Model\ActiveStatusProductsV4[]|null $status status
      *
      * @return self
      */

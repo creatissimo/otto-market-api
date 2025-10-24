@@ -1,4 +1,4 @@
-# OpenAPI\Client\ReturnsWarehouseV2Api
+# Otto\Client\ReturnsWarehouseV2Api
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -19,7 +19,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 ## `returnsWarehouseV2CreateReturnWarehouseAddress()`
 
 ```php
-returnsWarehouseV2CreateReturnWarehouseAddress($authorization, $returns_warehouse_address_request_returns_warehouse_v2): \OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2
+returnsWarehouseV2CreateReturnWarehouseAddress($authorization, $returns_warehouse_address_request_returns_warehouse_v2): \Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2
 ```
 
 create returnWarehouse address
@@ -34,17 +34,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = Bearer access_token; // string | Access Token
-$returns_warehouse_address_request_returns_warehouse_v2 = new \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2(); // \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 | return warehouse address
+$returns_warehouse_address_request_returns_warehouse_v2 = new \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2(); // \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 | return warehouse address
 
 try {
     $result = $apiInstance->returnsWarehouseV2CreateReturnWarehouseAddress($authorization, $returns_warehouse_address_request_returns_warehouse_v2);
@@ -59,11 +59,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
-| **returns_warehouse_address_request_returns_warehouse_v2** | [**\OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressRequestReturnsWarehouseV2.md)| return warehouse address | |
+| **returns_warehouse_address_request_returns_warehouse_v2** | [**\Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressRequestReturnsWarehouseV2.md)| return warehouse address | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressIdResponseReturnsWarehouseV2.md)
+[**\Otto\Client\Model\ReturnsWarehouseAddressIdResponseReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressIdResponseReturnsWarehouseV2.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `returnsWarehouseV2CreateReturnsWarehouseCarrier()`
 
 ```php
-returnsWarehouseV2CreateReturnsWarehouseCarrier($authorization, $return_address_id, $returns_warehouse_carrier_request_returns_warehouse_v2): \OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2
+returnsWarehouseV2CreateReturnsWarehouseCarrier($authorization, $return_address_id, $returns_warehouse_carrier_request_returns_warehouse_v2): \Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2
 ```
 
 create returnCarrier for returnWarehouse address
@@ -96,10 +96,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ $apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
 );
 $authorization = Bearer access_token; // string | Access Token
 $return_address_id = 'return_address_id_example'; // string | Unique identifier of the returnWarehouse
-$returns_warehouse_carrier_request_returns_warehouse_v2 = new \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2(); // \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 | return warehouse carrier post request
+$returns_warehouse_carrier_request_returns_warehouse_v2 = new \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2(); // \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 | return warehouse carrier post request
 
 try {
     $result = $apiInstance->returnsWarehouseV2CreateReturnsWarehouseCarrier($authorization, $return_address_id, $returns_warehouse_carrier_request_returns_warehouse_v2);
@@ -123,11 +123,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
 | **return_address_id** | **string**| Unique identifier of the returnWarehouse | |
-| **returns_warehouse_carrier_request_returns_warehouse_v2** | [**\OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseCarrierRequestReturnsWarehouseV2.md)| return warehouse carrier post request | |
+| **returns_warehouse_carrier_request_returns_warehouse_v2** | [**\Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseCarrierRequestReturnsWarehouseV2.md)| return warehouse carrier post request | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnCarrierResponseReturnsWarehouseV2**](../Model/ReturnCarrierResponseReturnsWarehouseV2.md)
+[**\Otto\Client\Model\ReturnCarrierResponseReturnsWarehouseV2**](../Model/ReturnCarrierResponseReturnsWarehouseV2.md)
 
 ### Authorization
 
@@ -160,10 +160,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -223,10 +223,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -269,7 +269,7 @@ void (empty response body)
 ## `returnsWarehouseV2GetAllReturnsWarehouseAddresses()`
 
 ```php
-returnsWarehouseV2GetAllReturnsWarehouseAddresses($authorization, $limit, $page, $return_warehouse_type): \OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]
+returnsWarehouseV2GetAllReturnsWarehouseAddresses($authorization, $limit, $page, $return_warehouse_type): \Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]
 ```
 
 get all returnWarehouse addresses
@@ -284,10 +284,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]**](../Model/ReturnsWarehouseAddressWithIDReturnsWarehouseV2.md)
+[**\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2[]**](../Model/ReturnsWarehouseAddressWithIDReturnsWarehouseV2.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ try {
 ## `returnsWarehouseV2GetReturnsWarehouseAddressById()`
 
 ```php
-returnsWarehouseV2GetReturnsWarehouseAddressById($authorization, $return_address_id): \OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2
+returnsWarehouseV2GetReturnsWarehouseAddressById($authorization, $return_address_id): \Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2
 ```
 
 get returnWarehouse address by returnAddressId
@@ -350,10 +350,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -379,7 +379,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressWithIDReturnsWarehouseV2.md)
+[**\Otto\Client\Model\ReturnsWarehouseAddressWithIDReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressWithIDReturnsWarehouseV2.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ try {
 ## `returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId()`
 
 ```php
-returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId($authorization, $return_address_id): \OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]
+returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressId($authorization, $return_address_id): \Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]
 ```
 
 get returnWarehouse Carriers by returnAddressId
@@ -412,10 +412,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -441,7 +441,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]**](../Model/ReturnsWarehouseCarrierReturnsWarehouseV2.md)
+[**\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2[]**](../Model/ReturnsWarehouseCarrierReturnsWarehouseV2.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ try {
 ## `returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId()`
 
 ```php
-returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId($authorization, $return_address_id, $return_address_carrier_id): \OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2
+returnsWarehouseV2GetReturnsWarehouseCarriersByReturnAddressIdAndReturnAddressCarrierId($authorization, $return_address_id, $return_address_carrier_id): \Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2
 ```
 
 get returnWarehouse Carriers by returnAddressCarrierId
@@ -474,10 +474,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -505,7 +505,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2**](../Model/ReturnsWarehouseCarrierReturnsWarehouseV2.md)
+[**\Otto\Client\Model\ReturnsWarehouseCarrierReturnsWarehouseV2**](../Model/ReturnsWarehouseCarrierReturnsWarehouseV2.md)
 
 ### Authorization
 
@@ -538,10 +538,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -550,7 +550,7 @@ $apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
 $authorization = Bearer access_token; // string | Access Token
 $return_address_id = 'return_address_id_example'; // string | Unique identifier of the returnWarehouse
 $return_address_carrier_id = 'return_address_carrier_id_example'; // string | Unique identifier for each returnCarrier, which is linked with a returnWarehouse
-$returns_warehouse_carrier_request_returns_warehouse_v2 = new \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2(); // \OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 | return warehouse carrier update request
+$returns_warehouse_carrier_request_returns_warehouse_v2 = new \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2(); // \Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2 | return warehouse carrier update request
 
 try {
     $apiInstance->returnsWarehouseV2UpdateParcelReturnCarrier($authorization, $return_address_id, $return_address_carrier_id, $returns_warehouse_carrier_request_returns_warehouse_v2);
@@ -566,7 +566,7 @@ try {
 | **authorization** | **string**| Access Token | |
 | **return_address_id** | **string**| Unique identifier of the returnWarehouse | |
 | **return_address_carrier_id** | **string**| Unique identifier for each returnCarrier, which is linked with a returnWarehouse | |
-| **returns_warehouse_carrier_request_returns_warehouse_v2** | [**\OpenAPI\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseCarrierRequestReturnsWarehouseV2.md)| return warehouse carrier update request | |
+| **returns_warehouse_carrier_request_returns_warehouse_v2** | [**\Otto\Client\Model\ReturnsWarehouseCarrierRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseCarrierRequestReturnsWarehouseV2.md)| return warehouse carrier update request | |
 
 ### Return type
 
@@ -603,10 +603,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
+$apiInstance = new Otto\Client\Api\ReturnsWarehouseV2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -614,7 +614,7 @@ $apiInstance = new OpenAPI\Client\Api\ReturnsWarehouseV2Api(
 );
 $authorization = Bearer access_token; // string | Access Token
 $return_address_id = 'return_address_id_example'; // string | Unique identifier of the returnWarehouse
-$returns_warehouse_address_request_returns_warehouse_v2 = new \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2(); // \OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 | return warehouse address update request
+$returns_warehouse_address_request_returns_warehouse_v2 = new \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2(); // \Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2 | return warehouse address update request
 
 try {
     $apiInstance->returnsWarehouseV2UpdateReturnWarehouseAddress($authorization, $return_address_id, $returns_warehouse_address_request_returns_warehouse_v2);
@@ -629,7 +629,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
 | **return_address_id** | **string**| Unique identifier of the returnWarehouse | |
-| **returns_warehouse_address_request_returns_warehouse_v2** | [**\OpenAPI\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressRequestReturnsWarehouseV2.md)| return warehouse address update request | |
+| **returns_warehouse_address_request_returns_warehouse_v2** | [**\Otto\Client\Model\ReturnsWarehouseAddressRequestReturnsWarehouseV2**](../Model/ReturnsWarehouseAddressRequestReturnsWarehouseV2.md)| return warehouse address update request | |
 
 ### Return type
 

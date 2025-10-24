@@ -4,12 +4,12 @@ All URIs are relative to https://api.otto.market, except if the operation define
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**availabilityV1GetAvailableQuantities()**](AvailabilityV1Api.md#availabilityV1GetAvailableQuantities) | **GET** /v1/availability/quantities | get quantities from a partner (up to 200 per request). |
-| [**availabilityV1GetAvailableQuantityBySku()**](AvailabilityV1Api.md#availabilityV1GetAvailableQuantityBySku) | **GET** /v1/availability/quantities/{sku} | get quantity for a sku |
-| [**availabilityV1GetDeliveryInformationBySKU()**](AvailabilityV1Api.md#availabilityV1GetDeliveryInformationBySKU) | **GET** /v1/availability/product-delivery-information/{sku} | get product delivery information for a SKU |
-| [**availabilityV1GetProductDeliveryInformation()**](AvailabilityV1Api.md#availabilityV1GetProductDeliveryInformation) | **GET** /v1/availability/product-delivery-information | get product delivery information from a partner (up to 200 per request). |
-| [**availabilityV1StoreAvailableQuantitiesUsingPOST()**](AvailabilityV1Api.md#availabilityV1StoreAvailableQuantitiesUsingPOST) | **POST** /v1/availability/quantities | update quantities (up to 200 SKUs per request) |
-| [**availabilityV1StoreProductDeliveryInformationUsingPOST()**](AvailabilityV1Api.md#availabilityV1StoreProductDeliveryInformationUsingPOST) | **POST** /v1/availability/product-delivery-information | update product delivery information (up to 200 SKUs per request) |
+| [**availabilityV1GetAvailableQuantities()**](AvailabilityV1Api.md#availabilityV1GetAvailableQuantities) | **GET** /v1/availability/quantities | Get quantities from a partner (up to 200 per request) |
+| [**availabilityV1GetAvailableQuantityBySku()**](AvailabilityV1Api.md#availabilityV1GetAvailableQuantityBySku) | **GET** /v1/availability/quantities/{sku} | Get quantity for a sku |
+| [**availabilityV1GetDeliveryInformationBySKU()**](AvailabilityV1Api.md#availabilityV1GetDeliveryInformationBySKU) | **GET** /v1/availability/product-delivery-information/{sku} | Get product delivery information for a SKU |
+| [**availabilityV1GetProductDeliveryInformation()**](AvailabilityV1Api.md#availabilityV1GetProductDeliveryInformation) | **GET** /v1/availability/product-delivery-information | Get product delivery information from a partner |
+| [**availabilityV1StoreAvailableQuantitiesUsingPOST()**](AvailabilityV1Api.md#availabilityV1StoreAvailableQuantitiesUsingPOST) | **POST** /v1/availability/quantities | Update quantities |
+| [**availabilityV1StoreProductDeliveryInformationUsingPOST()**](AvailabilityV1Api.md#availabilityV1StoreProductDeliveryInformationUsingPOST) | **POST** /v1/availability/product-delivery-information | Update product delivery information |
 
 
 ## `availabilityV1GetAvailableQuantities()`
@@ -18,7 +18,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 availabilityV1GetAvailableQuantities($authorization, $limit, $page, $cursor): \OpenAPI\Client\Model\AvailableQuantityResponseAvailabilityV1
 ```
 
-get quantities from a partner (up to 200 per request).
+Get quantities from a partner (up to 200 per request)
 
 Retrieve available quantities sorted by sku name in ascending.The maximum number of returned quantities is limited to 200.
 
@@ -84,7 +84,7 @@ try {
 availabilityV1GetAvailableQuantityBySku($authorization, $sku): \OpenAPI\Client\Model\AvailableQuantitySingleResponseDTOAvailabilityV1
 ```
 
-get quantity for a sku
+Get quantity for a sku
 
 Fetch a single available quantity by its unique sku name.
 
@@ -146,7 +146,7 @@ try {
 availabilityV1GetDeliveryInformationBySKU($authorization, $sku): \OpenAPI\Client\Model\ProductDeliveryInformationResponseDTOAvailabilityV1
 ```
 
-get product delivery information for a SKU
+Get product delivery information for a SKU
 
 This GET API endpoint is to get a shipping profile id and processing time for given sku
 
@@ -208,9 +208,9 @@ try {
 availabilityV1GetProductDeliveryInformation($authorization, $limit, $cursor): \OpenAPI\Client\Model\GetAllProductDeliveryInfoResponseAvailabilityV1
 ```
 
-get product delivery information from a partner (up to 200 per request).
+Get product delivery information from a partner
 
-Retrieve sku and shipping profile mapping.The maximum number of returned skus is limited to 200.
+Retrieve sku and shipping profile mapping.The maximum number of returned items is limited to 200. If there are more items, a cursor field is returned to get the next results.
 
 ### Example
 
@@ -269,10 +269,10 @@ try {
 ## `availabilityV1StoreAvailableQuantitiesUsingPOST()`
 
 ```php
-availabilityV1StoreAvailableQuantitiesUsingPOST($authorization, $available_quantity_request_dto_availability_v1): object
+availabilityV1StoreAvailableQuantitiesUsingPOST($authorization, $available_quantity_request_dto_availability_v1)
 ```
 
-update quantities (up to 200 SKUs per request)
+Update quantities
 
 ### Example
 
@@ -292,11 +292,10 @@ $apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
     $config
 );
 $authorization = Bearer access_token; // string | Access Token
-$available_quantity_request_dto_availability_v1 = array(new \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1()); // \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[] | availableQuantityRequestDTO
+$available_quantity_request_dto_availability_v1 = array(new \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1()); // \OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[]
 
 try {
-    $result = $apiInstance->availabilityV1StoreAvailableQuantitiesUsingPOST($authorization, $available_quantity_request_dto_availability_v1);
-    print_r($result);
+    $apiInstance->availabilityV1StoreAvailableQuantitiesUsingPOST($authorization, $available_quantity_request_dto_availability_v1);
 } catch (Exception $e) {
     echo 'Exception when calling AvailabilityV1Api->availabilityV1StoreAvailableQuantitiesUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
@@ -307,11 +306,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
-| **available_quantity_request_dto_availability_v1** | [**\OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[]**](../Model/AvailableQuantityRequestDTOAvailabilityV1.md)| availableQuantityRequestDTO | |
+| **available_quantity_request_dto_availability_v1** | [**\OpenAPI\Client\Model\AvailableQuantityRequestDTOAvailabilityV1[]**](../Model/AvailableQuantityRequestDTOAvailabilityV1.md)|  | |
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -332,7 +331,7 @@ try {
 availabilityV1StoreProductDeliveryInformationUsingPOST($authorization, $product_delivery_information_request_dto_availability_v1): \OpenAPI\Client\Model\AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response
 ```
 
-update product delivery information (up to 200 SKUs per request)
+Update product delivery information
 
 ### Example
 
@@ -352,7 +351,7 @@ $apiInstance = new OpenAPI\Client\Api\AvailabilityV1Api(
     $config
 );
 $authorization = Bearer access_token; // string | Access Token
-$product_delivery_information_request_dto_availability_v1 = array(new \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1()); // \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[] | productDeliveryInformationRequestDTO
+$product_delivery_information_request_dto_availability_v1 = array(new \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1()); // \OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]
 
 try {
     $result = $apiInstance->availabilityV1StoreProductDeliveryInformationUsingPOST($authorization, $product_delivery_information_request_dto_availability_v1);
@@ -367,7 +366,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Access Token | |
-| **product_delivery_information_request_dto_availability_v1** | [**\OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]**](../Model/ProductDeliveryInformationRequestDTOAvailabilityV1.md)| productDeliveryInformationRequestDTO | |
+| **product_delivery_information_request_dto_availability_v1** | [**\OpenAPI\Client\Model\ProductDeliveryInformationRequestDTOAvailabilityV1[]**](../Model/ProductDeliveryInformationRequestDTOAvailabilityV1.md)|  | |
 
 ### Return type
 

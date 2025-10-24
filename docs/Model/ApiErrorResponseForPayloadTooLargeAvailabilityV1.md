@@ -4,9 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** | url of the request |
-**title** | **string** | type of error |
-**status** | **float** | status code of response |
-**validation_errors** | [**\OpenAPI\Client\Model\ErrorForPayloadTooLargeAvailabilityV1[]**](ErrorForPayloadTooLargeAvailabilityV1.md) |  |
+**errors** | [**\OpenAPI\Client\Model\QuantityApiErrorAvailabilityV1[]**](QuantityApiErrorAvailabilityV1.md) | type of error |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

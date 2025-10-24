@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3aec010-a87f-458c-a09b-75e2427796a7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="1eB9URM8LzinJsBUgLiwtE5yDjm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pascal/code/shirtracer/otto-market-api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-a98d8de5180a-fbeb0b58ac0f-com.jetbrains.php.sharedIndexes-PS-243.24978.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3aec010-a87f-458c-a09b-75e2427796a7" name="Default Changelist" comment="" />
+      <created>1593784133765</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593784133765</updated>
+      <workItem from="1593784135351" duration="1266000" />
+      <workItem from="1595504141659" duration="653000" />
+      <workItem from="1595575371302" duration="21000" />
+      <workItem from="1596054514135" duration="2187000" />
+      <workItem from="1596489842256" duration="214000" />
+      <workItem from="1610470015579" duration="931000" />
+      <workItem from="1611188816984" duration="595000" />
+      <workItem from="1617888405502" duration="3903000" />
+      <workItem from="1617894594108" duration="1127000" />
+      <workItem from="1618004322832" duration="538000" />
+      <workItem from="1618060950974" duration="23000" />
+      <workItem from="1733409589082" duration="700000" />
+      <workItem from="1733411902573" duration="3000" />
+      <workItem from="1733411970885" duration="1472000" />
+      <workItem from="1733418199759" duration="2340000" />
+      <workItem from="1733421180493" duration="7161000" />
+      <workItem from="1733858366826" duration="581000" />
+      <workItem from="1733868219552" duration="539000" />
+      <workItem from="1733868798214" duration="1518000" />
+      <workItem from="1734085940256" duration="598000" />
+      <workItem from="1734185392972" duration="598000" />
+      <workItem from="1734196115576" duration="242000" />
+      <workItem from="1734338062859" duration="598000" />
+      <workItem from="1734339178168" duration="597000" />
+      <workItem from="1734347449884" duration="189000" />
+      <workItem from="1734347665029" duration="598000" />
+      <workItem from="1734429601526" duration="597000" />
+      <workItem from="1734599425934" duration="597000" />
+      <workItem from="1734696118400" duration="597000" />
+      <workItem from="1735321083817" duration="598000" />
+      <workItem from="1736162983462" duration="598000" />
+      <workItem from="1736843570431" duration="598000" />
+      <workItem from="1737326822734" duration="597000" />
+      <workItem from="1737966653037" duration="595000" />
+      <workItem from="1738057809211" duration="597000" />
+      <workItem from="1739177549369" duration="597000" />
+      <workItem from="1739305233313" duration="598000" />
+      <workItem from="1739522144713" duration="595000" />
+      <workItem from="1739884200272" duration="601000" />
+      <workItem from="1740124723878" duration="598000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/lib/Api/ProductsV3Api.php</url>
+          <line>239</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

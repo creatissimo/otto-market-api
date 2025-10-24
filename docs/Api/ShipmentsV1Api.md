@@ -21,7 +21,7 @@ shipmentsV1AppendPositionItemsByCarrierAndTrackingNumberUsingPOST($carrier, $tra
 
 Correct an existing shipment (add sent items) by carrier and tracking number.
 
-This endpoint allows to update an existing shipment with new position items. Note that this is just a correction process for shipments where position items are missing. A separate purchase receipt will be generated for the newly added position items.
+This endpoint allows to update an existing shipment with new position items.
 
 ### Example
 
@@ -145,7 +145,7 @@ shipmentsV1CreatedAndSentMultiparcelShipmentUsingPOST($multiparcel_create_shipme
 
 Create a multiparcel shipment and mark the position items as sent.
 
-This endpoint is designed for creating multiparcel shipments when a single article (position item) is sent in multiple shipments, each with its own tracking key.<br><br> Multiparcel shipments can only be created for items with delivery type PARCEL. The typical use case involves 2 to 3 shipments for one article (e.g., furniture that cannot be sent in a single parcel).<br><br> Position items that are not sent in multiple shipments should not be reported using this endpoint.<br><br> Creating a multiparcel shipment confirms that the position item has been handed over to the carrier for final delivery to the customer. At this point, the position item is marked as \"SENT\" in OTTO Market, which triggers the generation of a purchase receipt.
+This endpoint is designed for creating multiparcel shipments when a single article (position item) is sent in multiple shipments, each with its own tracking key.
 
 ### Example
 
@@ -205,7 +205,7 @@ shipmentsV1CreatedAndSentShipmentUsingPOST($create_shipment_request_shipments_v1
 
 Create a shipment and mark the position items as sent.
 
-This endpoint should be used to create a shipment with a list of position items. It confirms that the position items in the list have been handed over to the carrier for final delivery to the customer. At this point, the position items are marked with the state ''SENT'' in OTTO Market. This is the trigger for the generation of a purchase receipt.
+This endpoint should be used to create a shipment with a list of position items.
 
 ### Example
 

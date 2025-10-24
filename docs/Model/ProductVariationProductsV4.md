@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **product_description** | [**\OpenAPI\Client\Model\ProductDescriptionProductsV4**](ProductDescriptionProductsV4.md) |  |
 **media_assets** | [**\OpenAPI\Client\Model\MediaAssetProductsV4[]**](MediaAssetProductsV4.md) | A list of media assets describing this product variation. Currently these may only be static images of the types JPG or PNG with a RGB color space. Furthermore the images have to have a minimum size of 500 x 1000 pixel and a maximum width of 4500 pixel. |
 **order** | [**\OpenAPI\Client\Model\OrderProductsV4**](OrderProductsV4.md) |  | [optional]
-**delivery** | [**\OpenAPI\Client\Model\DeliveryProductsV4**](DeliveryProductsV4.md) |  | [optional]
 **pricing** | [**\OpenAPI\Client\Model\PricingProductsV4**](PricingProductsV4.md) |  |
 **logistics** | [**\OpenAPI\Client\Model\LogisticsProductsV4**](LogisticsProductsV4.md) |  | [optional]
 **product_safety** | [**\OpenAPI\Client\Model\ProductSafetyProductsV4**](ProductSafetyProductsV4.md) |  |

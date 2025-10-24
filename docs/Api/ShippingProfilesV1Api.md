@@ -4,11 +4,11 @@ All URIs are relative to https://api.otto.market, except if the operation define
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**shippingProfilesV1CreateShippingProfile()**](ShippingProfilesV1Api.md#shippingProfilesV1CreateShippingProfile) | **POST** /v1/shipping-profiles | create shipping profile |
-| [**shippingProfilesV1DeleteShippingProfile()**](ShippingProfilesV1Api.md#shippingProfilesV1DeleteShippingProfile) | **DELETE** /v1/shipping-profiles/{shippingProfileId} | delete shipping profile |
-| [**shippingProfilesV1GetShippingProfileById()**](ShippingProfilesV1Api.md#shippingProfilesV1GetShippingProfileById) | **GET** /v1/shipping-profiles/{shippingProfileId} | get shipping profile by shipping profile id |
-| [**shippingProfilesV1GetShippingProfiles()**](ShippingProfilesV1Api.md#shippingProfilesV1GetShippingProfiles) | **GET** /v1/shipping-profiles | get all shipping profiles from a partner |
-| [**shippingProfilesV1UpdateShippingProfile()**](ShippingProfilesV1Api.md#shippingProfilesV1UpdateShippingProfile) | **PUT** /v1/shipping-profiles/{shippingProfileId} | update shipping profile |
+| [**shippingProfilesV1CreateShippingProfile()**](ShippingProfilesV1Api.md#shippingProfilesV1CreateShippingProfile) | **POST** /v1/shipping-profiles | Create shipping profile |
+| [**shippingProfilesV1DeleteShippingProfile()**](ShippingProfilesV1Api.md#shippingProfilesV1DeleteShippingProfile) | **DELETE** /v1/shipping-profiles/{shippingProfileId} | Delete shipping profile |
+| [**shippingProfilesV1GetShippingProfileById()**](ShippingProfilesV1Api.md#shippingProfilesV1GetShippingProfileById) | **GET** /v1/shipping-profiles/{shippingProfileId} | Get shipping profile by shipping profile id |
+| [**shippingProfilesV1GetShippingProfiles()**](ShippingProfilesV1Api.md#shippingProfilesV1GetShippingProfiles) | **GET** /v1/shipping-profiles | Get all shipping profiles from a partner |
+| [**shippingProfilesV1UpdateShippingProfile()**](ShippingProfilesV1Api.md#shippingProfilesV1UpdateShippingProfile) | **PUT** /v1/shipping-profiles/{shippingProfileId} | Update shipping profile |
 
 
 ## `shippingProfilesV1CreateShippingProfile()`
@@ -17,7 +17,7 @@ All URIs are relative to https://api.otto.market, except if the operation define
 shippingProfilesV1CreateShippingProfile($authorization, $create_shipping_profile_request_shipping_profiles_v1): \OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1
 ```
 
-create shipping profile
+Create shipping profile
 
 This POST API endpoint is to create shipping profile API POST will always create a new shipping profile after ensuring it is not a duplicate for a partner.
 
@@ -79,7 +79,7 @@ try {
 shippingProfilesV1DeleteShippingProfile($authorization, $shipping_profile_id)
 ```
 
-delete shipping profile
+Delete shipping profile
 
 This DELETE API endpoint is to delete a shipping profile by id.
 
@@ -140,7 +140,7 @@ void (empty response body)
 shippingProfilesV1GetShippingProfileById($authorization, $shipping_profile_id): \OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1
 ```
 
-get shipping profile by shipping profile id
+Get shipping profile by shipping profile id
 
 This GET API endpoint is to get a shipping profile of the partner by shipping profile id.
 
@@ -202,9 +202,9 @@ try {
 shippingProfilesV1GetShippingProfiles($authorization, $cursor): \OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1
 ```
 
-get all shipping profiles from a partner
+Get all shipping profiles from a partner
 
-This GET API endpoint is to get all shipping profiles for a partner. Response is by default paginated with default page size of 200.
+This GET API endpoint is to get all shipping profiles for a partner. Response is by default paginated with default page size of 300.
 
 ### Example
 
@@ -264,7 +264,7 @@ try {
 shippingProfilesV1UpdateShippingProfile($authorization, $shipping_profile_id, $create_shipping_profile_request_shipping_profiles_v1)
 ```
 
-update shipping profile
+Update shipping profile
 
 This PUT API endpoint is to update a shipping profile PUT will always take an shipping profile and update it.  deliveryType field cannot be updated
 

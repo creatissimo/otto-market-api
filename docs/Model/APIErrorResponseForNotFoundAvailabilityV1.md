@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** | url of the request |
+**path** | **string** | url of the request |
 **title** | **string** | type of error |
-**status** | **float** | status code of response |
-**validation_errors** | [**\OpenAPI\Client\Model\ErrorForSKUNotFoundAvailabilityV1[]**](ErrorForSKUNotFoundAvailabilityV1.md) |  |
+**code** | **float** | status code of response |
+**detail** | **string** | type of error |
+**logref** | **string** | field of the error |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

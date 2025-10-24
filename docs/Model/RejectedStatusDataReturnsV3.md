@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **condition** | **string** | Condition of the returned item | [optional]
-**reason** | **string** | Reason for Rejection |
+**reason** | **string** | Reason for Rejection | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

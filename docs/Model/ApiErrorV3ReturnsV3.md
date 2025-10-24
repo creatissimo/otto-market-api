@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **logref** | **string** |  | [optional]
 **path** | **string** |  | [optional]
 **title** | **string** |  | [optional]
+**code** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

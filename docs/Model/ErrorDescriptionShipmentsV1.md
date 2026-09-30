@@ -1,4 +1,4 @@
-# # ErrorDescriptionShipmentsV1
+# ErrorDescriptionShipmentsV1
 
 ## Properties
 

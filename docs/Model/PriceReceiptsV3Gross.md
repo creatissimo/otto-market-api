@@ -1,4 +1,4 @@
-# # PriceReceiptsV3Gross
+# PriceReceiptsV3Gross
 
 ## Properties
 

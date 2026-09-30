@@ -1,4 +1,4 @@
-# # MarketPlaceStatusApiLinkProductsV5
+# MarketPlaceStatusApiLinkProductsV5
 
 ## Properties
 

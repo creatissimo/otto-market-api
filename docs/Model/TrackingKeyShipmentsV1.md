@@ -1,4 +1,4 @@
-# # TrackingKeyShipmentsV1
+# TrackingKeyShipmentsV1
 
 ## Properties
 

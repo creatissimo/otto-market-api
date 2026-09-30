@@ -1,4 +1,4 @@
-# # PartnerPriceReductionRequestPriceReductionsV1PriceReduction
+# PartnerPriceReductionRequestPriceReductionsV1PriceReduction
 
 ## Properties
 

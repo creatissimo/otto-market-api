@@ -1,4 +1,4 @@
-# # CreateShipmentResponseShipmentsV1
+# CreateShipmentResponseShipmentsV1
 
 ## Properties
 

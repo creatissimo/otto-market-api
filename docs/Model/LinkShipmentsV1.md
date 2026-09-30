@@ -1,4 +1,4 @@
-# # LinkShipmentsV1
+# LinkShipmentsV1
 
 ## Properties
 

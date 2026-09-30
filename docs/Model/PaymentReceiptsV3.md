@@ -1,4 +1,4 @@
-# # PaymentReceiptsV3
+# PaymentReceiptsV3
 
 ## Properties
 

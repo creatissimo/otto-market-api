@@ -1,4 +1,4 @@
-# # APIErrorResponseForInternalServerAvailabilityV1
+# APIErrorResponseForInternalServerAvailabilityV1
 
 ## Properties
 

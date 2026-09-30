@@ -1,4 +1,4 @@
-# # PriceReductionResponsePriceReductionsV1InvoicePrice
+# PriceReductionResponsePriceReductionsV1InvoicePrice
 
 ## Properties
 

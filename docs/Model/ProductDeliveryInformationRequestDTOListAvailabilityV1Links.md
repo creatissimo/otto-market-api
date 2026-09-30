@@ -1,4 +1,4 @@
-# # ProductDeliveryInformationRequestDTOListAvailabilityV1Links
+# ProductDeliveryInformationRequestDTOListAvailabilityV1Links
 
 ## Properties
 

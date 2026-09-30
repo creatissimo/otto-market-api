@@ -1,4 +1,4 @@
-# # LinkReturnShipmentsV1
+# LinkReturnShipmentsV1
 
 ## Properties
 

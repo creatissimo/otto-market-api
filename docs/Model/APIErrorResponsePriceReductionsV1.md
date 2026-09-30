@@ -1,9 +1,9 @@
-# # APIErrorResponsePriceReductionsV1
+# APIErrorResponsePriceReductionsV1
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | [**\Otto\Client\Model\APIResponsePriceReductionsV1[]**](APIResponsePriceReductionsV1.md) |  | [optional]
+**errors** | [**\OpenAPI\Client\Model\APIResponsePriceReductionsV1[]**](APIResponsePriceReductionsV1.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

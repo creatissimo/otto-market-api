@@ -1,4 +1,4 @@
-# # AvailableQuantitySingleResponseDTOAvailabilityV1
+# AvailableQuantitySingleResponseDTOAvailabilityV1
 
 ## Properties
 

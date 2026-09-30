@@ -1,4 +1,4 @@
-# # DetailsReceiptsV3
+# DetailsReceiptsV3
 
 ## Properties
 

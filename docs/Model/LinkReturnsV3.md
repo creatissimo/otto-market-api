@@ -1,4 +1,4 @@
-# # LinkReturnsV3
+# LinkReturnsV3
 
 ## Properties
 

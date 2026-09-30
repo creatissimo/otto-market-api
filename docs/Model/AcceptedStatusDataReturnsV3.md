@@ -1,4 +1,4 @@
-# # AcceptedStatusDataReturnsV3
+# AcceptedStatusDataReturnsV3
 
 ## Properties
 

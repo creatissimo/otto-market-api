@@ -1,4 +1,4 @@
-# # AddressInformationReceiptsV3
+# AddressInformationReceiptsV3
 
 ## Properties
 

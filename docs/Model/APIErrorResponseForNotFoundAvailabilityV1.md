@@ -1,4 +1,4 @@
-# # APIErrorResponseForNotFoundAvailabilityV1
+# APIErrorResponseForNotFoundAvailabilityV1
 
 ## Properties
 

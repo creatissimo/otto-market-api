@@ -91,25 +91,6 @@ Class | Method | HTTP request | Description
 *OrdersV4Api* | [**ordersV4GetPartnerOrderBySalesOrderId**](docs/Api/OrdersV4Api.md#ordersv4getpartnerorderbysalesorderid) | **GET** /v4/orders/{salesOrderId} | Get an order via sales order id
 *PriceReductionsV1Api* | [**priceReductionsV1ApplyPriceReduction**](docs/Api/PriceReductionsV1Api.md#pricereductionsv1applypricereduction) | **POST** /v1/price-reductions | Apply price reduction for a positionItemId
 *PriceReductionsV1Api* | [**priceReductionsV1GetAllReductionsForPartner**](docs/Api/PriceReductionsV1Api.md#pricereductionsv1getallreductionsforpartner) | **GET** /v1/price-reductions | Get all priceReductions
-*ProductsV4Api* | [**productsV4CreateOrUpdateProductVariations**](docs/Api/ProductsV4Api.md#productsv4createorupdateproductvariations) | **POST** /v4/products | Create or update product variations
-*ProductsV4Api* | [**productsV4FailedByProcessId**](docs/Api/ProductsV4Api.md#productsv4failedbyprocessid) | **GET** /v4/products/update-tasks/{processUuid}/failed | List failed products of a product data delivery
-*ProductsV4Api* | [**productsV4GetActiveStatus**](docs/Api/ProductsV4Api.md#productsv4getactivestatus) | **GET** /v4/products/active-status | Read active status
-*ProductsV4Api* | [**productsV4GetBrands**](docs/Api/ProductsV4Api.md#productsv4getbrands) | **GET** /v4/products/brands | List of allowed brands
-*ProductsV4Api* | [**productsV4GetCategoryGroups**](docs/Api/ProductsV4Api.md#productsv4getcategorygroups) | **GET** /v4/products/categories | Read product categories
-*ProductsV4Api* | [**productsV4GetContentChanges**](docs/Api/ProductsV4Api.md#productsv4getcontentchanges) | **GET** /v4/products/{sku}/content-changes | Read content changes for a single product variation
-*ProductsV4Api* | [**productsV4GetContentChanges2**](docs/Api/ProductsV4Api.md#productsv4getcontentchanges2) | **GET** /v4/products/content-changes | Read content changes within time period
-*ProductsV4Api* | [**productsV4GetMarketPlaceStatus**](docs/Api/ProductsV4Api.md#productsv4getmarketplacestatus) | **GET** /v4/products/{sku}/marketplace-status | Read marketplace status for a single product variation
-*ProductsV4Api* | [**productsV4GetMarketPlaceStatusList**](docs/Api/ProductsV4Api.md#productsv4getmarketplacestatuslist) | **GET** /v4/products/marketplace-status | Read marketplace status of product variations
-*ProductsV4Api* | [**productsV4GetPartnerProducts**](docs/Api/ProductsV4Api.md#productsv4getpartnerproducts) | **GET** /v4/products | Read product variations
-*ProductsV4Api* | [**productsV4GetProductVariation**](docs/Api/ProductsV4Api.md#productsv4getproductvariation) | **GET** /v4/products/{sku} | Read a single product variation
-*ProductsV4Api* | [**productsV4GetProductVariationPrice**](docs/Api/ProductsV4Api.md#productsv4getproductvariationprice) | **GET** /v4/products/{sku}/prices | Read a single product variation price
-*ProductsV4Api* | [**productsV4GetProductVariationPrices**](docs/Api/ProductsV4Api.md#productsv4getproductvariationprices) | **GET** /v4/products/prices | Read product variations prices
-*ProductsV4Api* | [**productsV4GetVariationActiveStatus**](docs/Api/ProductsV4Api.md#productsv4getvariationactivestatus) | **GET** /v4/products/{sku}/active-status | Read the active status of a single product variation
-*ProductsV4Api* | [**productsV4ProgressByProcessId**](docs/Api/ProductsV4Api.md#productsv4progressbyprocessid) | **GET** /v4/products/update-tasks/{processUuid} | Request the results of a product data delivery
-*ProductsV4Api* | [**productsV4SucceededByProcessId**](docs/Api/ProductsV4Api.md#productsv4succeededbyprocessid) | **GET** /v4/products/update-tasks/{processUuid}/succeeded | List succeeded products of a product data delivery
-*ProductsV4Api* | [**productsV4UnchangedByProcessId**](docs/Api/ProductsV4Api.md#productsv4unchangedbyprocessid) | **GET** /v4/products/update-tasks/{processUuid}/unchanged | List unchanged products of a product data delivery
-*ProductsV4Api* | [**productsV4UpdateActiveStatus**](docs/Api/ProductsV4Api.md#productsv4updateactivestatus) | **POST** /v4/products/active-status | Update active status
-*ProductsV4Api* | [**productsV4UpdateProductVariationPrices**](docs/Api/ProductsV4Api.md#productsv4updateproductvariationprices) | **POST** /v4/products/prices | Update product variation prices
 *ProductsV5Api* | [**productsV5CreateOrUpdateProductVariations**](docs/Api/ProductsV5Api.md#productsv5createorupdateproductvariations) | **POST** /v5/products | Create or update product variations
 *ProductsV5Api* | [**productsV5FailedByProcessId**](docs/Api/ProductsV5Api.md#productsv5failedbyprocessid) | **GET** /v5/products/update-tasks/{processUuid}/failed | List failed products of a product data delivery
 *ProductsV5Api* | [**productsV5GetActiveStatus**](docs/Api/ProductsV5Api.md#productsv5getactivestatus) | **GET** /v5/products/active-status | Read active status
@@ -160,6 +141,30 @@ Class | Method | HTTP request | Description
 *ShippingProfilesV1Api* | [**shippingProfilesV1GetShippingProfileById**](docs/Api/ShippingProfilesV1Api.md#shippingprofilesv1getshippingprofilebyid) | **GET** /v1/shipping-profiles/{shippingProfileId} | Get shipping profile by shipping profile id
 *ShippingProfilesV1Api* | [**shippingProfilesV1GetShippingProfiles**](docs/Api/ShippingProfilesV1Api.md#shippingprofilesv1getshippingprofiles) | **GET** /v1/shipping-profiles | Get all shipping profiles from a partner
 *ShippingProfilesV1Api* | [**shippingProfilesV1UpdateShippingProfile**](docs/Api/ShippingProfilesV1Api.md#shippingprofilesv1updateshippingprofile) | **PUT** /v1/shipping-profiles/{shippingProfileId} | Update shipping profile
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1CreateCampaignPerformanceReportV1SpaReportingCampaignPerformancePost**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1createcampaignperformancereportv1spareportingcampaignperformancepost) | **POST** /v1/spa-reporting/campaign-performance | Create Campaign Performance Report
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1CreateKeywordPerformanceReportV1SpaReportingKeywordPerformancePost**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1createkeywordperformancereportv1spareportingkeywordperformancepost) | **POST** /v1/spa-reporting/keyword-performance | Create Keyword Performance Report
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1CreateProductPerformanceReportV1SpaReportingProductPerformancePost**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1createproductperformancereportv1spareportingproductperformancepost) | **POST** /v1/spa-reporting/product-performance | Create Product Performance Report
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1DownloadReportV1SpaReportingReportsDownloadGet**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1downloadreportv1spareportingreportsdownloadget) | **GET** /v1/spa-reporting/reports/download | Download a report by ID
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1GetCampaignPerformanceReportStatusV1SpaReportingCampaignPerformanceStatusGet**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1getcampaignperformancereportstatusv1spareportingcampaignperformancestatusget) | **GET** /v1/spa-reporting/campaign-performance/status | Get Campaign Performance Report Status
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1GetCampaignPerformanceV1SpaReportingCampaignPerformanceGet**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1getcampaignperformancev1spareportingcampaignperformanceget) | **GET** /v1/spa-reporting/campaign-performance | Get campaign performance with flexible date filtering
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1GetKeywordPerformanceReportStatusV1SpaReportingKeywordPerformanceStatusGet**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1getkeywordperformancereportstatusv1spareportingkeywordperformancestatusget) | **GET** /v1/spa-reporting/keyword-performance/status | Get Keyword Performance Report Status
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1GetProductPerformanceReportStatusV1SpaReportingProductPerformanceStatusGet**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1getproductperformancereportstatusv1spareportingproductperformancestatusget) | **GET** /v1/spa-reporting/product-performance/status | Get Product Performance Report Status
+*SponsoredProductAdsReportingV1Api* | [**sponsoredProductAdsReportingV1GetSkuPerformanceV1SpaReportingProductPerformanceGet**](docs/Api/SponsoredProductAdsReportingV1Api.md#sponsoredproductadsreportingv1getskuperformancev1spareportingproductperformanceget) | **GET** /v1/spa-reporting/product-performance | Get product&#39;s performance with flexible date filtering
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1CreateCampaign**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1createcampaign) | **POST** /v1/sponsored-product-ads/campaigns | Create campaign
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1CreateKeywords**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1createkeywords) | **POST** /v1/sponsored-product-ads/campaigns/{campaignId}/targets/{targetId}/keywords | Create keywords
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1CreateTargets**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1createtargets) | **POST** /v1/sponsored-product-ads/campaigns/{campaignId}/targets | Create targets
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1DeleteKeywords**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1deletekeywords) | **DELETE** /v1/sponsored-product-ads/campaigns/{campaignId}/targets/{targetId}/keywords | Delete keywords
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1DeleteTargets**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1deletetargets) | **DELETE** /v1/sponsored-product-ads/campaigns/{campaignId}/targets | Delete targets
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1GetCampaign**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1getcampaign) | **GET** /v1/sponsored-product-ads/campaigns/{campaignId} | Get campaign
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1GetCampaignKeywords**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1getcampaignkeywords) | **GET** /v1/sponsored-product-ads/campaigns/{campaignId}/targets/{targetId}/keywords | Get keywords
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1GetCampaignTargets**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1getcampaigntargets) | **GET** /v1/sponsored-product-ads/campaigns/{campaignId}/targets | Get targets
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1GetCampaigns**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1getcampaigns) | **GET** /v1/sponsored-product-ads/campaigns | Get campaigns
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1GetChangeRequest**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1getchangerequest) | **GET** /v1/sponsored-product-ads/change-requests/{requestId} | Get change request
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1GetKeyword**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1getkeyword) | **GET** /v1/sponsored-product-ads/campaigns/{campaignId}/targets/{targetId}/keywords/{keywordId} | Get keyword
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1GetTarget**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1gettarget) | **GET** /v1/sponsored-product-ads/campaigns/{campaignId}/targets/{targetId} | Get target
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1UpdateCampaign**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1updatecampaign) | **PATCH** /v1/sponsored-product-ads/campaigns/{campaignId} | Update campaign
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1UpdateKeywords**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1updatekeywords) | **PATCH** /v1/sponsored-product-ads/campaigns/{campaignId}/targets/{targetId}/keywords | Update keywords
+*SponsoredProductAdsV1Api* | [**sponsoredProductAdsV1UpdateTargets**](docs/Api/SponsoredProductAdsV1Api.md#sponsoredproductadsv1updatetargets) | **PATCH** /v1/sponsored-product-ads/campaigns/{campaignId}/targets | Update targets
 
 ## Models
 
@@ -171,6 +176,8 @@ Class | Method | HTTP request | Description
 - [APIErrorResponseForNotFoundShippingProfilesV1](docs/Model/APIErrorResponseForNotFoundShippingProfilesV1.md)
 - [APIErrorResponseForPreconditionShippingProfilesV1](docs/Model/APIErrorResponseForPreconditionShippingProfilesV1.md)
 - [APIErrorResponsePriceReductionsV1](docs/Model/APIErrorResponsePriceReductionsV1.md)
+- [APIErrorResponseSponsoredProductAdsV1](docs/Model/APIErrorResponseSponsoredProductAdsV1.md)
+- [APIErrorResponseSponsoredProductAdsV1ErrorsInner](docs/Model/APIErrorResponseSponsoredProductAdsV1ErrorsInner.md)
 - [APIInternalServerErrorResponseShippingProfilesV1](docs/Model/APIInternalServerErrorResponseShippingProfilesV1.md)
 - [APIResponsePriceReductionsV1](docs/Model/APIResponsePriceReductionsV1.md)
 - [AcceptedPartnerReturnV3ReturnsV3](docs/Model/AcceptedPartnerReturnV3ReturnsV3.md)
@@ -178,15 +185,10 @@ Class | Method | HTTP request | Description
 - [AcceptedPriceReductionResponsePriceReductionsV1](docs/Model/AcceptedPriceReductionResponsePriceReductionsV1.md)
 - [AcceptedReturnMultiStatusResponseReturnsV3](docs/Model/AcceptedReturnMultiStatusResponseReturnsV3.md)
 - [AcceptedStatusDataReturnsV3](docs/Model/AcceptedStatusDataReturnsV3.md)
-- [ActiveStatusListRequestProductsV4](docs/Model/ActiveStatusListRequestProductsV4.md)
 - [ActiveStatusListRequestProductsV5](docs/Model/ActiveStatusListRequestProductsV5.md)
-- [ActiveStatusListResponseLinkProductsV4](docs/Model/ActiveStatusListResponseLinkProductsV4.md)
 - [ActiveStatusListResponseLinkProductsV5](docs/Model/ActiveStatusListResponseLinkProductsV5.md)
-- [ActiveStatusListResponseProductsV4](docs/Model/ActiveStatusListResponseProductsV4.md)
 - [ActiveStatusListResponseProductsV5](docs/Model/ActiveStatusListResponseProductsV5.md)
-- [ActiveStatusProductsV4](docs/Model/ActiveStatusProductsV4.md)
 - [ActiveStatusProductsV5](docs/Model/ActiveStatusProductsV5.md)
-- [AdditionalRequirementProductsV4](docs/Model/AdditionalRequirementProductsV4.md)
 - [AdditionalRequirementProductsV5](docs/Model/AdditionalRequirementProductsV5.md)
 - [AddressInformationReceiptsV3](docs/Model/AddressInformationReceiptsV3.md)
 - [AddressOrdersV4](docs/Model/AddressOrdersV4.md)
@@ -198,11 +200,8 @@ Class | Method | HTTP request | Description
 - [ApiErrorResponseForPayloadTooLargeAvailabilityV1](docs/Model/ApiErrorResponseForPayloadTooLargeAvailabilityV1.md)
 - [ApiErrorResponseV3ReturnsV3](docs/Model/ApiErrorResponseV3ReturnsV3.md)
 - [ApiErrorV3ReturnsV3](docs/Model/ApiErrorV3ReturnsV3.md)
-- [AttributeDefinitionProductsV4](docs/Model/AttributeDefinitionProductsV4.md)
 - [AttributeDefinitionProductsV5](docs/Model/AttributeDefinitionProductsV5.md)
-- [AttributeProductsV4](docs/Model/AttributeProductsV4.md)
 - [AttributeProductsV5](docs/Model/AttributeProductsV5.md)
-- [AvailabilityV1StoreAvailableQuantitiesUsingPOST401Response](docs/Model/AvailabilityV1StoreAvailableQuantitiesUsingPOST401Response.md)
 - [AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response](docs/Model/AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response.md)
 - [AvailableQuantityRequestDTOAvailabilityV1](docs/Model/AvailableQuantityRequestDTOAvailabilityV1.md)
 - [AvailableQuantityResponseAvailabilityV1](docs/Model/AvailableQuantityResponseAvailabilityV1.md)
@@ -214,38 +213,47 @@ Class | Method | HTTP request | Description
 - [BadRequestReturnShipmentsV1](docs/Model/BadRequestReturnShipmentsV1.md)
 - [BadRequestShipmentsV1](docs/Model/BadRequestShipmentsV1.md)
 - [BenefitReceiptsV3](docs/Model/BenefitReceiptsV3.md)
-- [BrandListLinkProductsV4](docs/Model/BrandListLinkProductsV4.md)
 - [BrandListLinkProductsV5](docs/Model/BrandListLinkProductsV5.md)
-- [BrandListResponseProductsV4](docs/Model/BrandListResponseProductsV4.md)
 - [BrandListResponseProductsV5](docs/Model/BrandListResponseProductsV5.md)
-- [BrandProductsV4](docs/Model/BrandProductsV4.md)
 - [BrandProductsV5](docs/Model/BrandProductsV5.md)
-- [CategoryGroupProductsV4](docs/Model/CategoryGroupProductsV4.md)
+- [CampaignDTOSponsoredProductAdsV1](docs/Model/CampaignDTOSponsoredProductAdsV1.md)
+- [CampaignDTOSponsoredProductAdsV1AllOfEmbedded](docs/Model/CampaignDTOSponsoredProductAdsV1AllOfEmbedded.md)
+- [CampaignDTOSponsoredProductAdsV1AllOfLinks](docs/Model/CampaignDTOSponsoredProductAdsV1AllOfLinks.md)
+- [CampaignListItemDTOSponsoredProductAdsV1](docs/Model/CampaignListItemDTOSponsoredProductAdsV1.md)
+- [CampaignListItemDTOSponsoredProductAdsV1Links](docs/Model/CampaignListItemDTOSponsoredProductAdsV1Links.md)
+- [CampaignMetricsSponsoredProductAdsReportingV1](docs/Model/CampaignMetricsSponsoredProductAdsReportingV1.md)
+- [CampaignReportAvailableColumnsSponsoredProductAdsReportingV1](docs/Model/CampaignReportAvailableColumnsSponsoredProductAdsReportingV1.md)
+- [CampaignReportConfigurationSponsoredProductAdsReportingV1](docs/Model/CampaignReportConfigurationSponsoredProductAdsReportingV1.md)
+- [CampaignReportGroupByColumnsSponsoredProductAdsReportingV1](docs/Model/CampaignReportGroupByColumnsSponsoredProductAdsReportingV1.md)
+- [CampaignReportRequestSponsoredProductAdsReportingV1](docs/Model/CampaignReportRequestSponsoredProductAdsReportingV1.md)
 - [CategoryGroupProductsV5](docs/Model/CategoryGroupProductsV5.md)
-- [CategoryGroupsLinkProductsV4](docs/Model/CategoryGroupsLinkProductsV4.md)
 - [CategoryGroupsLinkProductsV5](docs/Model/CategoryGroupsLinkProductsV5.md)
-- [CategoryGroupsProductsV4](docs/Model/CategoryGroupsProductsV4.md)
 - [CategoryGroupsProductsV5](docs/Model/CategoryGroupsProductsV5.md)
-- [ConditionProductsV4](docs/Model/ConditionProductsV4.md)
+- [ChangeRequestResponseSponsoredProductAdsV1](docs/Model/ChangeRequestResponseSponsoredProductAdsV1.md)
+- [ChangeRequestResponseSponsoredProductAdsV1AllOfLinks](docs/Model/ChangeRequestResponseSponsoredProductAdsV1AllOfLinks.md)
+- [ChangeRequestSponsoredProductAdsV1](docs/Model/ChangeRequestSponsoredProductAdsV1.md)
 - [ConditionProductsV5](docs/Model/ConditionProductsV5.md)
 - [ConflictAddPositionItemByShipmentIdShipmentsV1](docs/Model/ConflictAddPositionItemByShipmentIdShipmentsV1.md)
 - [ConflictAddPositionItemByTrackingNumberShipmentsV1](docs/Model/ConflictAddPositionItemByTrackingNumberShipmentsV1.md)
 - [ConflictMultiparcelShipmentsV1](docs/Model/ConflictMultiparcelShipmentsV1.md)
 - [ConflictPositionItemIdPriceReductionsV1](docs/Model/ConflictPositionItemIdPriceReductionsV1.md)
 - [ConflictShipmentsV1](docs/Model/ConflictShipmentsV1.md)
-- [ContentChangeProductsV4](docs/Model/ContentChangeProductsV4.md)
 - [ContentChangeProductsV5](docs/Model/ContentChangeProductsV5.md)
-- [ContentChangesApiResultProductsV4](docs/Model/ContentChangesApiResultProductsV4.md)
 - [ContentChangesApiResultProductsV5](docs/Model/ContentChangesApiResultProductsV5.md)
-- [ContentChangesLinkProductsV4](docs/Model/ContentChangesLinkProductsV4.md)
 - [ContentChangesLinkProductsV5](docs/Model/ContentChangesLinkProductsV5.md)
+- [CreateCampaignRequestSponsoredProductAdsV1](docs/Model/CreateCampaignRequestSponsoredProductAdsV1.md)
+- [CreateCampaignResponseSponsoredProductAdsV1](docs/Model/CreateCampaignResponseSponsoredProductAdsV1.md)
+- [CreateKeywordsRequestSponsoredProductAdsV1](docs/Model/CreateKeywordsRequestSponsoredProductAdsV1.md)
 - [CreateMultiparcelShipmentResponseShipmentsV1](docs/Model/CreateMultiparcelShipmentResponseShipmentsV1.md)
 - [CreateShipmentRequestShipmentsV1](docs/Model/CreateShipmentRequestShipmentsV1.md)
 - [CreateShipmentResponseShipmentsV1](docs/Model/CreateShipmentResponseShipmentsV1.md)
 - [CreateShippingProfileRequestShippingProfilesV1](docs/Model/CreateShippingProfileRequestShippingProfilesV1.md)
 - [CreateShippingProfileResponseShippingProfilesV1](docs/Model/CreateShippingProfileResponseShippingProfilesV1.md)
+- [CreateTargetsRequestSponsoredProductAdsV1](docs/Model/CreateTargetsRequestSponsoredProductAdsV1.md)
+- [CreateTargetsResponseSponsoredProductAdsV1](docs/Model/CreateTargetsResponseSponsoredProductAdsV1.md)
 - [CustomerReceiptsV3](docs/Model/CustomerReceiptsV3.md)
 - [DHLReturnCarrierCodesReturnsWarehouseV2](docs/Model/DHLReturnCarrierCodesReturnsWarehouseV2.md)
+- [DateRangeSponsoredProductAdsReportingV1](docs/Model/DateRangeSponsoredProductAdsReportingV1.md)
 - [DeliveryCostReceiptsV3](docs/Model/DeliveryCostReceiptsV3.md)
 - [DetailsReceiptsV3](docs/Model/DetailsReceiptsV3.md)
 - [DimensionOrdersV4](docs/Model/DimensionOrdersV4.md)
@@ -255,6 +263,7 @@ Class | Method | HTTP request | Description
 - [ErrorDetailsWithSuggestionsReturnsWarehouseV2](docs/Model/ErrorDetailsWithSuggestionsReturnsWarehouseV2.md)
 - [ErrorForInternalServerErrorShippingProfilesV1](docs/Model/ErrorForInternalServerErrorShippingProfilesV1.md)
 - [ErrorForUnknownSkuAvailabilityV1](docs/Model/ErrorForUnknownSkuAvailabilityV1.md)
+- [ErrorItemSponsoredProductAdsReportingV1](docs/Model/ErrorItemSponsoredProductAdsReportingV1.md)
 - [ErrorReturnsWarehouseV2](docs/Model/ErrorReturnsWarehouseV2.md)
 - [ErrorWithBadRequestSuggestionsShippingProfilesV1](docs/Model/ErrorWithBadRequestSuggestionsShippingProfilesV1.md)
 - [ErrorWithNotFoundSuggestionsShippingProfilesV1](docs/Model/ErrorWithNotFoundSuggestionsShippingProfilesV1.md)
@@ -262,6 +271,8 @@ Class | Method | HTTP request | Description
 - [ErrorWithSuggestionsForConflictShippingProfilesV1](docs/Model/ErrorWithSuggestionsForConflictShippingProfilesV1.md)
 - [ErrorWithSuggestionsReturnsWarehouseV2](docs/Model/ErrorWithSuggestionsReturnsWarehouseV2.md)
 - [FailedDependencyPriceReductionsV1](docs/Model/FailedDependencyPriceReductionsV1.md)
+- [FilterOperatorSponsoredProductAdsReportingV1](docs/Model/FilterOperatorSponsoredProductAdsReportingV1.md)
+- [FilterableColumnSponsoredProductAdsReportingV1](docs/Model/FilterableColumnSponsoredProductAdsReportingV1.md)
 - [FoodInformationAddressProductsV5](docs/Model/FoodInformationAddressProductsV5.md)
 - [FoodInformationAddressRoleProductsV5](docs/Model/FoodInformationAddressRoleProductsV5.md)
 - [FoodInformationProductsV5](docs/Model/FoodInformationProductsV5.md)
@@ -277,6 +288,7 @@ Class | Method | HTTP request | Description
 - [GetAllShippingProfilesResponseShippingProfilesV1](docs/Model/GetAllShippingProfilesResponseShippingProfilesV1.md)
 - [GetAllShippingProfilesResponseShippingProfilesV1Links](docs/Model/GetAllShippingProfilesResponseShippingProfilesV1Links.md)
 - [GetShippingProfileResponseShippingProfilesV1](docs/Model/GetShippingProfileResponseShippingProfilesV1.md)
+- [HTTPValidationErrorSponsoredProductAdsReportingV1](docs/Model/HTTPValidationErrorSponsoredProductAdsReportingV1.md)
 - [InitialDeliveryFeeOrdersV4](docs/Model/InitialDeliveryFeeOrdersV4.md)
 - [InitialDiscountOrdersV4](docs/Model/InitialDiscountOrdersV4.md)
 - [InternalServerErrorAddPositionItemByShipmentIdShipmentsV1](docs/Model/InternalServerErrorAddPositionItemByShipmentIdShipmentsV1.md)
@@ -292,43 +304,46 @@ Class | Method | HTTP request | Description
 - [InternalServerErrorShipmentsV1](docs/Model/InternalServerErrorShipmentsV1.md)
 - [ItemPartialRefundPositionReceiptsV3](docs/Model/ItemPartialRefundPositionReceiptsV3.md)
 - [ItemPositionReceiptsV3](docs/Model/ItemPositionReceiptsV3.md)
+- [KeywordDTOSponsoredProductAdsV1](docs/Model/KeywordDTOSponsoredProductAdsV1.md)
+- [KeywordFilterableColumnSponsoredProductAdsReportingV1](docs/Model/KeywordFilterableColumnSponsoredProductAdsReportingV1.md)
+- [KeywordInputSponsoredProductAdsV1](docs/Model/KeywordInputSponsoredProductAdsV1.md)
+- [KeywordListItemDTOSponsoredProductAdsV1](docs/Model/KeywordListItemDTOSponsoredProductAdsV1.md)
+- [KeywordListItemDTOSponsoredProductAdsV1Links](docs/Model/KeywordListItemDTOSponsoredProductAdsV1Links.md)
+- [KeywordReportAvailableColumnsSponsoredProductAdsReportingV1](docs/Model/KeywordReportAvailableColumnsSponsoredProductAdsReportingV1.md)
+- [KeywordReportConfigurationSponsoredProductAdsReportingV1](docs/Model/KeywordReportConfigurationSponsoredProductAdsReportingV1.md)
+- [KeywordReportFilterSponsoredProductAdsReportingV1](docs/Model/KeywordReportFilterSponsoredProductAdsReportingV1.md)
+- [KeywordReportGroupByColumnsSponsoredProductAdsReportingV1](docs/Model/KeywordReportGroupByColumnsSponsoredProductAdsReportingV1.md)
+- [KeywordReportRequestSponsoredProductAdsReportingV1](docs/Model/KeywordReportRequestSponsoredProductAdsReportingV1.md)
+- [KeywordWriteOperationResponseSponsoredProductAdsV1](docs/Model/KeywordWriteOperationResponseSponsoredProductAdsV1.md)
+- [KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks](docs/Model/KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks.md)
 - [LineItemsReceiptsV3](docs/Model/LineItemsReceiptsV3.md)
 - [LinkAvailabilityV1](docs/Model/LinkAvailabilityV1.md)
 - [LinkOrdersV4](docs/Model/LinkOrdersV4.md)
 - [LinkPriceReductionsV1](docs/Model/LinkPriceReductionsV1.md)
-- [LinkProductsV4](docs/Model/LinkProductsV4.md)
 - [LinkProductsV5](docs/Model/LinkProductsV5.md)
 - [LinkReceiptsV3](docs/Model/LinkReceiptsV3.md)
 - [LinkReturnShipmentsV1](docs/Model/LinkReturnShipmentsV1.md)
 - [LinkReturnsV3](docs/Model/LinkReturnsV3.md)
 - [LinkShipmentsV1](docs/Model/LinkShipmentsV1.md)
+- [LinkSponsoredProductAdsV1](docs/Model/LinkSponsoredProductAdsV1.md)
 - [LinkedItemDetailsReceiptsV3](docs/Model/LinkedItemDetailsReceiptsV3.md)
-- [LogisticsProductsV4](docs/Model/LogisticsProductsV4.md)
+- [LocationInner](docs/Model/LocationInner.md)
 - [LogisticsProductsV5](docs/Model/LogisticsProductsV5.md)
-- [MarketPlaceStatusApiLinkProductsV4](docs/Model/MarketPlaceStatusApiLinkProductsV4.md)
 - [MarketPlaceStatusApiLinkProductsV5](docs/Model/MarketPlaceStatusApiLinkProductsV5.md)
-- [MarketPlaceStatusApiResultProductsV4](docs/Model/MarketPlaceStatusApiResultProductsV4.md)
 - [MarketPlaceStatusApiResultProductsV5](docs/Model/MarketPlaceStatusApiResultProductsV5.md)
-- [MarketPlaceStatusErrorProductsV4](docs/Model/MarketPlaceStatusErrorProductsV4.md)
 - [MarketPlaceStatusErrorProductsV5](docs/Model/MarketPlaceStatusErrorProductsV5.md)
-- [MarketPlaceStatusInformationProductsV4](docs/Model/MarketPlaceStatusInformationProductsV4.md)
 - [MarketPlaceStatusInformationProductsV5](docs/Model/MarketPlaceStatusInformationProductsV5.md)
-- [MarketPlaceStatusLinkProductsV4](docs/Model/MarketPlaceStatusLinkProductsV4.md)
 - [MarketPlaceStatusLinkProductsV5](docs/Model/MarketPlaceStatusLinkProductsV5.md)
-- [MarketPlaceStatusProductsV4](docs/Model/MarketPlaceStatusProductsV4.md)
 - [MarketPlaceStatusProductsV5](docs/Model/MarketPlaceStatusProductsV5.md)
-- [MaxOrderQuantityProductsV4](docs/Model/MaxOrderQuantityProductsV4.md)
 - [MaxOrderQuantityProductsV5](docs/Model/MaxOrderQuantityProductsV5.md)
-- [MediaAssetProductsV4](docs/Model/MediaAssetProductsV4.md)
 - [MediaAssetProductsV5](docs/Model/MediaAssetProductsV5.md)
 - [MisdirectedStatusDataReturnsV3](docs/Model/MisdirectedStatusDataReturnsV3.md)
-- [MonetaryAmountProductsV4](docs/Model/MonetaryAmountProductsV4.md)
 - [MonetaryAmountProductsV5](docs/Model/MonetaryAmountProductsV5.md)
+- [MonetaryAmountSponsoredProductAdsV1](docs/Model/MonetaryAmountSponsoredProductAdsV1.md)
 - [MultiparcelCreateShipmentRequestShipmentsV1](docs/Model/MultiparcelCreateShipmentRequestShipmentsV1.md)
 - [MultiparcelPositionItemShipmentsV1](docs/Model/MultiparcelPositionItemShipmentsV1.md)
 - [MultiparcelReturnTrackingKeyShipmentsV1](docs/Model/MultiparcelReturnTrackingKeyShipmentsV1.md)
 - [MultiparcelTrackingKeyShipmentsV1](docs/Model/MultiparcelTrackingKeyShipmentsV1.md)
-- [NormPriceInfoProductsV4](docs/Model/NormPriceInfoProductsV4.md)
 - [NormPriceInfoProductsV5](docs/Model/NormPriceInfoProductsV5.md)
 - [NotFoundAddPositionItemByShipmentIdShipmentsV1](docs/Model/NotFoundAddPositionItemByShipmentIdShipmentsV1.md)
 - [NotFoundAddPositionItemByTrackingNumberShipmentsV1](docs/Model/NotFoundAddPositionItemByTrackingNumberShipmentsV1.md)
@@ -339,16 +354,21 @@ Class | Method | HTTP request | Description
 - [NotFoundPositionItemIdPriceReductionsV1](docs/Model/NotFoundPositionItemIdPriceReductionsV1.md)
 - [NotFoundPriceReductionForPositionItemIdPriceReductionsV1](docs/Model/NotFoundPriceReductionForPositionItemIdPriceReductionsV1.md)
 - [OrderLifecycleInformationOrdersV4](docs/Model/OrderLifecycleInformationOrdersV4.md)
-- [OrderProductsV4](docs/Model/OrderProductsV4.md)
 - [OrderProductsV5](docs/Model/OrderProductsV5.md)
-- [PackingUnitProductsV4](docs/Model/PackingUnitProductsV4.md)
 - [PackingUnitProductsV5](docs/Model/PackingUnitProductsV5.md)
+- [PaginatedCampaignsResponseSponsoredProductAdsV1](docs/Model/PaginatedCampaignsResponseSponsoredProductAdsV1.md)
+- [PaginatedCampaignsResponseSponsoredProductAdsV1Links](docs/Model/PaginatedCampaignsResponseSponsoredProductAdsV1Links.md)
+- [PaginatedKeywordsResponseSponsoredProductAdsV1](docs/Model/PaginatedKeywordsResponseSponsoredProductAdsV1.md)
+- [PaginatedKeywordsResponseSponsoredProductAdsV1Links](docs/Model/PaginatedKeywordsResponseSponsoredProductAdsV1Links.md)
+- [PaginatedTargetsResponseSponsoredProductAdsV1](docs/Model/PaginatedTargetsResponseSponsoredProductAdsV1.md)
+- [PaginatedTargetsResponseSponsoredProductAdsV1Links](docs/Model/PaginatedTargetsResponseSponsoredProductAdsV1Links.md)
 - [PartialRefundDetailsReceiptsV3](docs/Model/PartialRefundDetailsReceiptsV3.md)
 - [PartnerOrderListOrdersV4](docs/Model/PartnerOrderListOrdersV4.md)
 - [PartnerOrderOrdersV4](docs/Model/PartnerOrderOrdersV4.md)
 - [PartnerPriceReductionRequestPriceReductionsV1](docs/Model/PartnerPriceReductionRequestPriceReductionsV1.md)
 - [PartnerPriceReductionRequestPriceReductionsV1PriceReduction](docs/Model/PartnerPriceReductionRequestPriceReductionsV1PriceReduction.md)
 - [PartnerReceiptsV3](docs/Model/PartnerReceiptsV3.md)
+- [PatchCampaignRequestSponsoredProductAdsV1](docs/Model/PatchCampaignRequestSponsoredProductAdsV1.md)
 - [PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1](docs/Model/PayloadTooLargeApiErrorResponseForQuantitiesAvailabilityV1.md)
 - [PaymentOrdersV4](docs/Model/PaymentOrdersV4.md)
 - [PaymentReceiptsV3](docs/Model/PaymentReceiptsV3.md)
@@ -356,9 +376,7 @@ Class | Method | HTTP request | Description
 - [PositionItemOrdersV4](docs/Model/PositionItemOrdersV4.md)
 - [PositionItemReturnsV3](docs/Model/PositionItemReturnsV3.md)
 - [PositionItemShipmentsV1](docs/Model/PositionItemShipmentsV1.md)
-- [PriceApiResultLinkProductsV4](docs/Model/PriceApiResultLinkProductsV4.md)
 - [PriceApiResultLinkProductsV5](docs/Model/PriceApiResultLinkProductsV5.md)
-- [PriceApiResultProductsV4](docs/Model/PriceApiResultProductsV4.md)
 - [PriceApiResultProductsV5](docs/Model/PriceApiResultProductsV5.md)
 - [PriceModificationReceiptsV3](docs/Model/PriceModificationReceiptsV3.md)
 - [PriceReceiptsV3](docs/Model/PriceReceiptsV3.md)
@@ -372,34 +390,30 @@ Class | Method | HTTP request | Description
 - [PriceReductionResponsePriceReductionsV1TotalPriceReduction](docs/Model/PriceReductionResponsePriceReductionsV1TotalPriceReduction.md)
 - [PriceReductionsResponsePriceReductionsV1](docs/Model/PriceReductionsResponsePriceReductionsV1.md)
 - [PriceToPayPerPositionItemReceiptsV3](docs/Model/PriceToPayPerPositionItemReceiptsV3.md)
-- [PricingProductsV4](docs/Model/PricingProductsV4.md)
 - [PricingProductsV5](docs/Model/PricingProductsV5.md)
+- [ProblemDetailResponseSponsoredProductAdsReportingV1](docs/Model/ProblemDetailResponseSponsoredProductAdsReportingV1.md)
 - [ProductComplianceProductsV5](docs/Model/ProductComplianceProductsV5.md)
 - [ProductDeliveryInformationMultiStatusResponseAvailabilityV1](docs/Model/ProductDeliveryInformationMultiStatusResponseAvailabilityV1.md)
 - [ProductDeliveryInformationRequestDTOAvailabilityV1](docs/Model/ProductDeliveryInformationRequestDTOAvailabilityV1.md)
 - [ProductDeliveryInformationRequestDTOListAvailabilityV1](docs/Model/ProductDeliveryInformationRequestDTOListAvailabilityV1.md)
 - [ProductDeliveryInformationRequestDTOListAvailabilityV1Links](docs/Model/ProductDeliveryInformationRequestDTOListAvailabilityV1Links.md)
 - [ProductDeliveryInformationResponseDTOAvailabilityV1](docs/Model/ProductDeliveryInformationResponseDTOAvailabilityV1.md)
-- [ProductDescriptionProductsV4](docs/Model/ProductDescriptionProductsV4.md)
 - [ProductDescriptionProductsV5](docs/Model/ProductDescriptionProductsV5.md)
+- [ProductMetricsSponsoredProductAdsReportingV1](docs/Model/ProductMetricsSponsoredProductAdsReportingV1.md)
 - [ProductOrdersV4](docs/Model/ProductOrdersV4.md)
-- [ProductProcessProgressProductsV4](docs/Model/ProductProcessProgressProductsV4.md)
 - [ProductProcessProgressProductsV5](docs/Model/ProductProcessProgressProductsV5.md)
-- [ProductProcessResultLinkProductsV4](docs/Model/ProductProcessResultLinkProductsV4.md)
 - [ProductProcessResultLinkProductsV5](docs/Model/ProductProcessResultLinkProductsV5.md)
-- [ProductProcessResultProductsV4](docs/Model/ProductProcessResultProductsV4.md)
 - [ProductProcessResultProductsV5](docs/Model/ProductProcessResultProductsV5.md)
-- [ProductProcessTaskErrorProductsV4](docs/Model/ProductProcessTaskErrorProductsV4.md)
 - [ProductProcessTaskErrorProductsV5](docs/Model/ProductProcessTaskErrorProductsV5.md)
-- [ProductProcessTaskResultProductsV4](docs/Model/ProductProcessTaskResultProductsV4.md)
 - [ProductProcessTaskResultProductsV5](docs/Model/ProductProcessTaskResultProductsV5.md)
+- [ProductReportAvailableColumnsSponsoredProductAdsReportingV1](docs/Model/ProductReportAvailableColumnsSponsoredProductAdsReportingV1.md)
+- [ProductReportConfigurationSponsoredProductAdsReportingV1](docs/Model/ProductReportConfigurationSponsoredProductAdsReportingV1.md)
+- [ProductReportGroupByColumnsSponsoredProductAdsReportingV1](docs/Model/ProductReportGroupByColumnsSponsoredProductAdsReportingV1.md)
+- [ProductReportRequestSponsoredProductAdsReportingV1](docs/Model/ProductReportRequestSponsoredProductAdsReportingV1.md)
 - [ProductSafetyAddressProductsV5](docs/Model/ProductSafetyAddressProductsV5.md)
 - [ProductSafetyAddressRoleProductsV5](docs/Model/ProductSafetyAddressRoleProductsV5.md)
-- [ProductSafetyProductsV4](docs/Model/ProductSafetyProductsV4.md)
 - [ProductSafetyProductsV5](docs/Model/ProductSafetyProductsV5.md)
-- [ProductVariationApiResultProductsV4](docs/Model/ProductVariationApiResultProductsV4.md)
 - [ProductVariationApiResultProductsV5](docs/Model/ProductVariationApiResultProductsV5.md)
-- [ProductVariationProductsV4](docs/Model/ProductVariationProductsV4.md)
 - [ProductVariationProductsV5](docs/Model/ProductVariationProductsV5.md)
 - [QuantityApiErrorAvailabilityV1](docs/Model/QuantityApiErrorAvailabilityV1.md)
 - [ReceiptReceiptsV3](docs/Model/ReceiptReceiptsV3.md)
@@ -410,6 +424,10 @@ Class | Method | HTTP request | Description
 - [RejectedPositionItemReturnsV3](docs/Model/RejectedPositionItemReturnsV3.md)
 - [RejectedReturnMultiStatusResponseReturnsV3](docs/Model/RejectedReturnMultiStatusResponseReturnsV3.md)
 - [RejectedStatusDataReturnsV3](docs/Model/RejectedStatusDataReturnsV3.md)
+- [ReportFilterSponsoredProductAdsReportingV1](docs/Model/ReportFilterSponsoredProductAdsReportingV1.md)
+- [ReportFormatSponsoredProductAdsReportingV1](docs/Model/ReportFormatSponsoredProductAdsReportingV1.md)
+- [ReportJobStatusSponsoredProductAdsReportingV1](docs/Model/ReportJobStatusSponsoredProductAdsReportingV1.md)
+- [ReportStatusResponseSponsoredProductAdsReportingV1](docs/Model/ReportStatusResponseSponsoredProductAdsReportingV1.md)
 - [ReturnCarrierResponseReturnsWarehouseV2](docs/Model/ReturnCarrierResponseReturnsWarehouseV2.md)
 - [ReturnPositionItemReturnShipmentsV1](docs/Model/ReturnPositionItemReturnShipmentsV1.md)
 - [ReturnShipmentListReturnShipmentsV1](docs/Model/ReturnShipmentListReturnShipmentsV1.md)
@@ -424,7 +442,6 @@ Class | Method | HTTP request | Description
 - [ReturnsWarehouseCarrierRequestReturnsWarehouseV2](docs/Model/ReturnsWarehouseCarrierRequestReturnsWarehouseV2.md)
 - [ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes](docs/Model/ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes.md)
 - [ReturnsWarehouseCarrierReturnsWarehouseV2](docs/Model/ReturnsWarehouseCarrierReturnsWarehouseV2.md)
-- [SaleProductsV4](docs/Model/SaleProductsV4.md)
 - [SaleProductsV5](docs/Model/SaleProductsV5.md)
 - [ServicePartialRefundPositionReceiptsV3](docs/Model/ServicePartialRefundPositionReceiptsV3.md)
 - [ServicePositionReceiptsV3](docs/Model/ServicePositionReceiptsV3.md)
@@ -434,21 +451,37 @@ Class | Method | HTTP request | Description
 - [ShipmentShipmentsV1](docs/Model/ShipmentShipmentsV1.md)
 - [ShipmentStateShipmentsV1](docs/Model/ShipmentStateShipmentsV1.md)
 - [ShipmentWithMinimumDetailsShipmentsV1](docs/Model/ShipmentWithMinimumDetailsShipmentsV1.md)
-- [SkuPricingProductsV4](docs/Model/SkuPricingProductsV4.md)
 - [SkuPricingProductsV5](docs/Model/SkuPricingProductsV5.md)
+- [SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1](docs/Model/SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1.md)
+- [SponsoredProductAdsProductPerformanceSponsoredProductAdsReportingV1](docs/Model/SponsoredProductAdsProductPerformanceSponsoredProductAdsReportingV1.md)
 - [SuggestedAddressReturnsWarehouseV2](docs/Model/SuggestedAddressReturnsWarehouseV2.md)
+- [TargetDTOSponsoredProductAdsV1](docs/Model/TargetDTOSponsoredProductAdsV1.md)
+- [TargetInputSponsoredProductAdsV1](docs/Model/TargetInputSponsoredProductAdsV1.md)
+- [TargetListItemDTOSponsoredProductAdsV1](docs/Model/TargetListItemDTOSponsoredProductAdsV1.md)
+- [TargetListItemDTOSponsoredProductAdsV1Links](docs/Model/TargetListItemDTOSponsoredProductAdsV1Links.md)
 - [TotalsReductionDetailsReceiptsV3](docs/Model/TotalsReductionDetailsReceiptsV3.md)
 - [TotalsReductionReceiptsV3](docs/Model/TotalsReductionReceiptsV3.md)
 - [TotalsReductionReceiptsV3Gross](docs/Model/TotalsReductionReceiptsV3Gross.md)
 - [TrackingInfoOrdersV4](docs/Model/TrackingInfoOrdersV4.md)
 - [TrackingKeyReturnShipmentsV1](docs/Model/TrackingKeyReturnShipmentsV1.md)
 - [TrackingKeyShipmentsV1](docs/Model/TrackingKeyShipmentsV1.md)
+- [UpdateKeywordItemSponsoredProductAdsV1](docs/Model/UpdateKeywordItemSponsoredProductAdsV1.md)
+- [UpdateKeywordsRequestSponsoredProductAdsV1](docs/Model/UpdateKeywordsRequestSponsoredProductAdsV1.md)
 - [UpdateQuantityMultiStatusResponseAvailabilityV1](docs/Model/UpdateQuantityMultiStatusResponseAvailabilityV1.md)
+- [UpdateTargetItemSponsoredProductAdsV1](docs/Model/UpdateTargetItemSponsoredProductAdsV1.md)
+- [UpdateTargetsRequestSponsoredProductAdsV1](docs/Model/UpdateTargetsRequestSponsoredProductAdsV1.md)
+- [ValidationErrorSponsoredProductAdsReportingV1](docs/Model/ValidationErrorSponsoredProductAdsReportingV1.md)
+- [WriteOperationResponseSponsoredProductAdsV1](docs/Model/WriteOperationResponseSponsoredProductAdsV1.md)
+- [WriteOperationResponseSponsoredProductAdsV1Links](docs/Model/WriteOperationResponseSponsoredProductAdsV1Links.md)
 
 ## Authorization
 
 Authentication schemes defined for the API:
 ### bearerAuth
+
+- **Type**: Bearer authentication (JWT)
+
+### PartnerJWT
 
 - **Type**: Bearer authentication (JWT)
 
@@ -470,5 +503,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `1.0.0`
-    - Generator version: `7.16.0`
+    - Generator version: `7.22.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

@@ -1,4 +1,4 @@
-# # ActiveStatusListResponseLinkProductsV5
+# ActiveStatusListResponseLinkProductsV5
 
 ## Properties
 

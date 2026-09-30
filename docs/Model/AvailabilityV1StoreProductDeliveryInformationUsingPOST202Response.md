@@ -1,4 +1,4 @@
-# # AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response
+# AvailabilityV1StoreProductDeliveryInformationUsingPOST202Response
 
 ## Properties
 

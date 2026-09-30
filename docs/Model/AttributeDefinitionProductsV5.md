@@ -1,4 +1,4 @@
-# # AttributeDefinitionProductsV5
+# AttributeDefinitionProductsV5
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # ErrorWithBadRequestSuggestionsShippingProfilesV1
+# ErrorWithBadRequestSuggestionsShippingProfilesV1
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # LinkAvailabilityV1
+# LinkAvailabilityV1
 
 ## Properties
 

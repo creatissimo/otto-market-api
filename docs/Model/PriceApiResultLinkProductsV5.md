@@ -1,4 +1,4 @@
-# # PriceApiResultLinkProductsV5
+# PriceApiResultLinkProductsV5
 
 ## Properties
 

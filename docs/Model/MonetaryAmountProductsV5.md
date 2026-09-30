@@ -1,4 +1,4 @@
-# # MonetaryAmountProductsV5
+# MonetaryAmountProductsV5
 
 ## Properties
 

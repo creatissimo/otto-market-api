@@ -1,4 +1,4 @@
-# # GetAllProductDeliveryInfoResponseAvailabilityV1Links
+# GetAllProductDeliveryInfoResponseAvailabilityV1Links
 
 ## Properties
 

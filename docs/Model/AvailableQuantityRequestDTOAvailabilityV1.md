@@ -1,4 +1,4 @@
-# # AvailableQuantityRequestDTOAvailabilityV1
+# AvailableQuantityRequestDTOAvailabilityV1
 
 ## Properties
 

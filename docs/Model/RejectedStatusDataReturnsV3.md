@@ -1,4 +1,4 @@
-# # RejectedStatusDataReturnsV3
+# RejectedStatusDataReturnsV3
 
 ## Properties
 

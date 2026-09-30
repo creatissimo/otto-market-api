@@ -1,4 +1,4 @@
-# # APIResponsePriceReductionsV1
+# APIResponsePriceReductionsV1
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CategoryGroupsLinkProductsV5
+# CategoryGroupsLinkProductsV5
 
 ## Properties
 

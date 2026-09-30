@@ -1,4 +1,4 @@
-# # CreateShippingProfileRequestShippingProfilesV1
+# CreateShippingProfileRequestShippingProfilesV1
 
 ## Properties
 

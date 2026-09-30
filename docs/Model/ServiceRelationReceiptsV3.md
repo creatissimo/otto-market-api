@@ -1,4 +1,4 @@
-# # ServiceRelationReceiptsV3
+# ServiceRelationReceiptsV3
 
 ## Properties
 

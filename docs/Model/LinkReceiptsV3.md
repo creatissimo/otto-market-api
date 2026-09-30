@@ -1,4 +1,4 @@
-# # LinkReceiptsV3
+# LinkReceiptsV3
 
 ## Properties
 

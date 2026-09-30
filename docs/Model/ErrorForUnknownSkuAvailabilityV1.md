@@ -1,4 +1,4 @@
-# # ErrorForUnknownSkuAvailabilityV1
+# ErrorForUnknownSkuAvailabilityV1
 
 ## Properties
 

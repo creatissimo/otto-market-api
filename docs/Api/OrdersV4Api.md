@@ -1,4 +1,6 @@
-# Otto\Client\OrdersV4Api
+# OpenAPI\Client\OrdersV4Api
+
+
 
 All URIs are relative to https://api.otto.market, except if the operation defines another base path.
 
@@ -29,17 +31,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Otto\Client\Api\OrdersV4Api(
+$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $sales_order_id = 'sales_order_id_example'; // string | The salesOrderId of the order
-$position_item_ids = array('position_item_ids_example'); // string[] | The positionItemIds of the order to cancel
+$position_item_ids = 'position_item_ids_example'; // string | The positionItemIds of the order to cancel
 
 try {
     $apiInstance->ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_ids);
@@ -53,7 +55,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sales_order_id** | **string**| The salesOrderId of the order | |
-| **position_item_ids** | [**string[]**](../Model/string.md)| The positionItemIds of the order to cancel | |
+| **position_item_ids** | **string**| The positionItemIds of the order to cancel | |
 
 ### Return type
 
@@ -90,16 +92,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Otto\Client\Api\OrdersV4Api(
+$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sales_order_id = array('sales_order_id_example'); // string[] | The salesOrderIds of the orders to cancel
+$sales_order_id = 'sales_order_id_example'; // string | The salesOrderIds of the orders to cancel
 
 try {
     $apiInstance->ordersV4CancelPartnerOrders($sales_order_id);
@@ -112,7 +114,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sales_order_id** | [**string[]**](../Model/string.md)| The salesOrderIds of the orders to cancel | |
+| **sales_order_id** | **string**| The salesOrderIds of the orders to cancel | |
 
 ### Return type
 
@@ -134,7 +136,7 @@ void (empty response body)
 ## `ordersV4FindPartnerOrders()`
 
 ```php
-ordersV4FindPartnerOrders($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor): \Otto\Client\Model\PartnerOrderListOrdersV4
+ordersV4FindPartnerOrders($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor): \OpenAPI\Client\Model\PartnerOrderListOrdersV4
 ```
 
 List of orders filtered by fulfillment state
@@ -149,10 +151,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Otto\Client\Api\OrdersV4Api(
+$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -162,10 +164,10 @@ $from_date = 2019-08-01T01:00:00+02:00; // string | Defines earliest change date
 $from_order_date = 2020-07-01T00:00:00+02:00; // string | Only orders newer than the date specified (ISO 8601) will be returned
 $to_order_date = 2020-07-01T23:59:59+02:00; // string | Only orders older than the date specified (ISO 8601) will be returned
 $fulfillment_status = PROCESSABLE&fulfillmentStatus=CANCELLED_BY_MARKETPLACE; // string | <br>ANNOUNCED: Orders with at least one position item in state ANNOUNCED<br>PROCESSABLE: Orders with at least one position item in state PROCESSABLE and none in ANNOUNCED<br>SENT: Orders with at least one position item in state SENT and none in either ANNOUNCED or PROCESSABLE<br>RETURNED: Orders with at least one position item in state RETURNED and none in either ANNOUNCED, PROCESSABLE, or SENT<br>CANCELLED_BY_PARTNER: Orders with at least one position item in state CANCELLED_BY_PARTNER<br>CANCELLED_BY_MARKETPLACE: Orders with at least one position item in state CANCELLED_BY_MARKETPLACE<br><br>If no state is provided, orders in all possible states are returned.<br>Several values can be passed; it will return a combination of these states without duplicates.<br>Also see parameter 'mode'.
-$limit = 128; // int | The maximum amount of orders to return. The maximum value is 256
-$order_direction = 'ASC'; // string | Sort result by 'orderColumnType' in ASCending or DESCending order
-$order_column_type = 'ORDER_LIFECYCLE_DATE'; // string | The column on which to apply 'orderDirection' parameter
-$mode = 'BUCKET'; // string | In search mode AT_LEAST_ONE orders with at least one  position item in given 'fulfillmentStatus' will always be returned
+$limit = 'limit_example'; // string | The maximum amount of orders to return. The maximum value is 256
+$order_direction = 'order_direction_example'; // string | Sort result by 'orderColumnType' in ASCending or DESCending order
+$order_column_type = 'order_column_type_example'; // string | The column on which to apply 'orderDirection' parameter
+$mode = 'mode_example'; // string | In search mode AT_LEAST_ONE orders with at least one  position item in given 'fulfillmentStatus' will always be returned
 $nextcursor = eyJmZiI6MTU5NDg5NDQ3MTA1OCwicGlmIjoiNDcxM; // string | Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is 'limit'<br><br>Note: Only the cursor string is required - not the whole link
 
 try {
@@ -184,15 +186,15 @@ try {
 | **from_order_date** | **string**| Only orders newer than the date specified (ISO 8601) will be returned | [optional] |
 | **to_order_date** | **string**| Only orders older than the date specified (ISO 8601) will be returned | [optional] |
 | **fulfillment_status** | **string**| &lt;br&gt;ANNOUNCED: Orders with at least one position item in state ANNOUNCED&lt;br&gt;PROCESSABLE: Orders with at least one position item in state PROCESSABLE and none in ANNOUNCED&lt;br&gt;SENT: Orders with at least one position item in state SENT and none in either ANNOUNCED or PROCESSABLE&lt;br&gt;RETURNED: Orders with at least one position item in state RETURNED and none in either ANNOUNCED, PROCESSABLE, or SENT&lt;br&gt;CANCELLED_BY_PARTNER: Orders with at least one position item in state CANCELLED_BY_PARTNER&lt;br&gt;CANCELLED_BY_MARKETPLACE: Orders with at least one position item in state CANCELLED_BY_MARKETPLACE&lt;br&gt;&lt;br&gt;If no state is provided, orders in all possible states are returned.&lt;br&gt;Several values can be passed; it will return a combination of these states without duplicates.&lt;br&gt;Also see parameter &#39;mode&#39;. | [optional] |
-| **limit** | **int**| The maximum amount of orders to return. The maximum value is 256 | [optional] [default to 128] |
-| **order_direction** | **string**| Sort result by &#39;orderColumnType&#39; in ASCending or DESCending order | [optional] [default to &#39;ASC&#39;] |
-| **order_column_type** | **string**| The column on which to apply &#39;orderDirection&#39; parameter | [optional] [default to &#39;ORDER_LIFECYCLE_DATE&#39;] |
-| **mode** | **string**| In search mode AT_LEAST_ONE orders with at least one  position item in given &#39;fulfillmentStatus&#39; will always be returned | [optional] [default to &#39;BUCKET&#39;] |
+| **limit** | **string**| The maximum amount of orders to return. The maximum value is 256 | [optional] |
+| **order_direction** | **string**| Sort result by &#39;orderColumnType&#39; in ASCending or DESCending order | [optional] |
+| **order_column_type** | **string**| The column on which to apply &#39;orderDirection&#39; parameter | [optional] |
+| **mode** | **string**| In search mode AT_LEAST_ONE orders with at least one  position item in given &#39;fulfillmentStatus&#39; will always be returned | [optional] |
 | **nextcursor** | **string**| Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#39;limit&#39;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link | [optional] |
 
 ### Return type
 
-[**\Otto\Client\Model\PartnerOrderListOrdersV4**](../Model/PartnerOrderListOrdersV4.md)
+[**\OpenAPI\Client\Model\PartnerOrderListOrdersV4**](../Model/PartnerOrderListOrdersV4.md)
 
 ### Authorization
 
@@ -210,7 +212,7 @@ try {
 ## `ordersV4GetPartnerOrderByOrderNumber()`
 
 ```php
-ordersV4GetPartnerOrderByOrderNumber($order_number): \Otto\Client\Model\PartnerOrderOrdersV4
+ordersV4GetPartnerOrderByOrderNumber($order_number): \OpenAPI\Client\Model\PartnerOrderOrdersV4
 ```
 
 Get an order via order number
@@ -225,10 +227,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Otto\Client\Api\OrdersV4Api(
+$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -252,7 +254,7 @@ try {
 
 ### Return type
 
-[**\Otto\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
+[**\OpenAPI\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
 
 ### Authorization
 
@@ -270,7 +272,7 @@ try {
 ## `ordersV4GetPartnerOrderBySalesOrderId()`
 
 ```php
-ordersV4GetPartnerOrderBySalesOrderId($sales_order_id): \Otto\Client\Model\PartnerOrderOrdersV4
+ordersV4GetPartnerOrderBySalesOrderId($sales_order_id): \OpenAPI\Client\Model\PartnerOrderOrdersV4
 ```
 
 Get an order via sales order id
@@ -285,10 +287,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearerAuth
-$config = Otto\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Otto\Client\Api\OrdersV4Api(
+$apiInstance = new OpenAPI\Client\Api\OrdersV4Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -312,7 +314,7 @@ try {
 
 ### Return type
 
-[**\Otto\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
+[**\OpenAPI\Client\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
 
 ### Authorization
 

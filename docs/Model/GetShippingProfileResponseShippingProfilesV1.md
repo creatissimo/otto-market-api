@@ -1,4 +1,4 @@
-# # GetShippingProfileResponseShippingProfilesV1
+# GetShippingProfileResponseShippingProfilesV1
 
 ## Properties
 

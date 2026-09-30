@@ -1,4 +1,4 @@
-# # PriceReceiptsV3Net
+# PriceReceiptsV3Net
 
 ## Properties
 

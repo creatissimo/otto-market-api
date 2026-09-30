@@ -1,4 +1,4 @@
-# # BenefitReceiptsV3
+# BenefitReceiptsV3
 
 ## Properties
 

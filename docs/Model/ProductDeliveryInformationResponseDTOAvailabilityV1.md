@@ -1,4 +1,4 @@
-# # ProductDeliveryInformationResponseDTOAvailabilityV1
+# ProductDeliveryInformationResponseDTOAvailabilityV1
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # PriceReceiptsV3Tax
+# PriceReceiptsV3Tax
 
 ## Properties
 

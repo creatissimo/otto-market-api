@@ -1,4 +1,4 @@
-# # ErrorDescriptionReturnShipmentsV1
+# ErrorDescriptionReturnShipmentsV1
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # TotalsReductionReceiptsV3Gross
+# TotalsReductionReceiptsV3Gross
 
 ## Properties
 

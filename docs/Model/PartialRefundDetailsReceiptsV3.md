@@ -1,9 +1,9 @@
-# # PartialRefundDetailsReceiptsV3
+# PartialRefundDetailsReceiptsV3
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**benefit** | [**\Otto\Client\Model\BenefitReceiptsV3**](BenefitReceiptsV3.md) |  | [optional]
+**benefit** | [**\OpenAPI\Client\Model\BenefitReceiptsV3**](BenefitReceiptsV3.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,4 +1,4 @@
-# # NormPriceInfoProductsV5
+# NormPriceInfoProductsV5
 
 ## Properties
 

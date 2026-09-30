@@ -1,4 +1,4 @@
-# # ReceiptReceiptsV3AmountDue
+# ReceiptReceiptsV3AmountDue
 
 ## Properties
 

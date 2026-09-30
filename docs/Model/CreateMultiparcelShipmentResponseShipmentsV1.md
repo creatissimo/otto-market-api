@@ -1,4 +1,4 @@
-# # CreateMultiparcelShipmentResponseShipmentsV1
+# CreateMultiparcelShipmentResponseShipmentsV1
 
 ## Properties
 

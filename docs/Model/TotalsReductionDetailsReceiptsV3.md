@@ -1,4 +1,4 @@
-# # TotalsReductionDetailsReceiptsV3
+# TotalsReductionDetailsReceiptsV3
 
 ## Properties
 

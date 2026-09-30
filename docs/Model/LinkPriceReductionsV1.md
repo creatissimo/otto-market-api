@@ -1,4 +1,4 @@
-# # LinkPriceReductionsV1
+# LinkPriceReductionsV1
 
 ## Properties
 

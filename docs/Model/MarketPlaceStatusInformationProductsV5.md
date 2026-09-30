@@ -1,4 +1,4 @@
-# # MarketPlaceStatusInformationProductsV5
+# MarketPlaceStatusInformationProductsV5
 
 ## Properties
 

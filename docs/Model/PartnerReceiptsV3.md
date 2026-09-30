@@ -1,4 +1,4 @@
-# # PartnerReceiptsV3
+# PartnerReceiptsV3
 
 ## Properties
 

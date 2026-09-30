@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Otto\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\FormDataProcessor;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * ReturnShipmentsV1Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,9 +141,9 @@ class ReturnShipmentsV1Api
      * @param  string|null $next The cursor which points to the next returnShipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnShipmentsV1ListReturnShipmentsUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1|\OpenAPI\Client\Model\BadRequestReturnShipmentsV1|mixed|\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1
+     * @return \Otto\Client\Model\ReturnShipmentListReturnShipmentsV1|\Otto\Client\Model\BadRequestReturnShipmentsV1|mixed|\Otto\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1
      */
     public function returnShipmentsV1ListReturnShipmentsUsingGET($datefrom, $limit = 25, $next = null, string $contentType = self::contentTypes['returnShipmentsV1ListReturnShipmentsUsingGET'][0])
     {
@@ -161,9 +161,9 @@ class ReturnShipmentsV1Api
      * @param  string|null $next The cursor which points to the next returnShipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnShipmentsV1ListReturnShipmentsUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1|\OpenAPI\Client\Model\BadRequestReturnShipmentsV1|mixed|\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnShipmentListReturnShipmentsV1|\Otto\Client\Model\BadRequestReturnShipmentsV1|mixed|\Otto\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnShipmentsV1ListReturnShipmentsUsingGETWithHttpInfo($datefrom, $limit = 25, $next = null, string $contentType = self::contentTypes['returnShipmentsV1ListReturnShipmentsUsingGET'][0])
     {
@@ -195,13 +195,13 @@ class ReturnShipmentsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1',
+                        '\Otto\Client\Model\ReturnShipmentListReturnShipmentsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\BadRequestReturnShipmentsV1',
+                        '\Otto\Client\Model\BadRequestReturnShipmentsV1',
                         $request,
                         $response,
                     );
@@ -213,7 +213,7 @@ class ReturnShipmentsV1Api
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1',
                         $request,
                         $response,
                     );
@@ -235,7 +235,7 @@ class ReturnShipmentsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1',
+                '\Otto\Client\Model\ReturnShipmentListReturnShipmentsV1',
                 $request,
                 $response,
             );
@@ -244,7 +244,7 @@ class ReturnShipmentsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1',
+                        '\Otto\Client\Model\ReturnShipmentListReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class ReturnShipmentsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BadRequestReturnShipmentsV1',
+                        '\Otto\Client\Model\BadRequestReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -268,7 +268,7 @@ class ReturnShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetReturnShipmentListReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -318,7 +318,7 @@ class ReturnShipmentsV1Api
      */
     public function returnShipmentsV1ListReturnShipmentsUsingGETAsyncWithHttpInfo($datefrom, $limit = 25, $next = null, string $contentType = self::contentTypes['returnShipmentsV1ListReturnShipmentsUsingGET'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnShipmentListReturnShipmentsV1';
+        $returnType = '\Otto\Client\Model\ReturnShipmentListReturnShipmentsV1';
         $request = $this->returnShipmentsV1ListReturnShipmentsUsingGETRequest($datefrom, $limit, $next, $contentType);
 
         return $this->client
@@ -491,9 +491,9 @@ class ReturnShipmentsV1Api
      * @param  string $tracking_number The tracking number of the returnShipment assigned by the carrier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1|\OpenAPI\Client\Model\BadRequestReturnShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1|\OpenAPI\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1
+     * @return \Otto\Client\Model\ReturnShipmentReturnShipmentsV1|\Otto\Client\Model\BadRequestReturnShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1|\Otto\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1|\Otto\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1
      */
     public function returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET($carrier, $tracking_number, string $contentType = self::contentTypes['returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET'][0])
     {
@@ -510,9 +510,9 @@ class ReturnShipmentsV1Api
      * @param  string $tracking_number The tracking number of the returnShipment assigned by the carrier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1|\OpenAPI\Client\Model\BadRequestReturnShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1|\OpenAPI\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnShipmentReturnShipmentsV1|\Otto\Client\Model\BadRequestReturnShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1|\Otto\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1|\Otto\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGETWithHttpInfo($carrier, $tracking_number, string $contentType = self::contentTypes['returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET'][0])
     {
@@ -544,13 +544,13 @@ class ReturnShipmentsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1',
+                        '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\BadRequestReturnShipmentsV1',
+                        '\Otto\Client\Model\BadRequestReturnShipmentsV1',
                         $request,
                         $response,
                     );
@@ -562,19 +562,19 @@ class ReturnShipmentsV1Api
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1',
+                        '\Otto\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1',
+                        '\Otto\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1',
                         $request,
                         $response,
                     );
@@ -596,7 +596,7 @@ class ReturnShipmentsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1',
+                '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1',
                 $request,
                 $response,
             );
@@ -605,7 +605,7 @@ class ReturnShipmentsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1',
+                        '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -613,7 +613,7 @@ class ReturnShipmentsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BadRequestReturnShipmentsV1',
+                        '\Otto\Client\Model\BadRequestReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -629,7 +629,7 @@ class ReturnShipmentsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1',
+                        '\Otto\Client\Model\ForbiddenGetReturnShipmentByTrackingNumberReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -637,7 +637,7 @@ class ReturnShipmentsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1',
+                        '\Otto\Client\Model\NotFoundGetReturnShipmentByTrackingNumberReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -645,7 +645,7 @@ class ReturnShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetReturnShipmentByTrackingNumberReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -693,7 +693,7 @@ class ReturnShipmentsV1Api
      */
     public function returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGETAsyncWithHttpInfo($carrier, $tracking_number, string $contentType = self::contentTypes['returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGET'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1';
+        $returnType = '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1';
         $request = $this->returnShipmentsV1ReturnShipmentByCarrierAndTrackingNumberUsingGETRequest($carrier, $tracking_number, $contentType);
 
         return $this->client
@@ -852,9 +852,9 @@ class ReturnShipmentsV1Api
      * @param  string $return_shipment_id Internal return shipment identifier assigned by OTTO Market. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnShipmentsV1ReturnShipmentUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1|\OpenAPI\Client\Model\BadRequestReturnShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\OpenAPI\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1
+     * @return \Otto\Client\Model\ReturnShipmentReturnShipmentsV1|\Otto\Client\Model\BadRequestReturnShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\Otto\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\Otto\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1
      */
     public function returnShipmentsV1ReturnShipmentUsingGET($return_shipment_id, string $contentType = self::contentTypes['returnShipmentsV1ReturnShipmentUsingGET'][0])
     {
@@ -870,9 +870,9 @@ class ReturnShipmentsV1Api
      * @param  string $return_shipment_id Internal return shipment identifier assigned by OTTO Market. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['returnShipmentsV1ReturnShipmentUsingGET'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1|\OpenAPI\Client\Model\BadRequestReturnShipmentsV1|mixed|\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\OpenAPI\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ReturnShipmentReturnShipmentsV1|\Otto\Client\Model\BadRequestReturnShipmentsV1|mixed|\Otto\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\Otto\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1|\Otto\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnShipmentsV1ReturnShipmentUsingGETWithHttpInfo($return_shipment_id, string $contentType = self::contentTypes['returnShipmentsV1ReturnShipmentUsingGET'][0])
     {
@@ -904,13 +904,13 @@ class ReturnShipmentsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1',
+                        '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\BadRequestReturnShipmentsV1',
+                        '\Otto\Client\Model\BadRequestReturnShipmentsV1',
                         $request,
                         $response,
                     );
@@ -922,19 +922,19 @@ class ReturnShipmentsV1Api
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
+                        '\Otto\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
+                        '\Otto\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
                         $request,
                         $response,
                     );
@@ -956,7 +956,7 @@ class ReturnShipmentsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1',
+                '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1',
                 $request,
                 $response,
             );
@@ -965,7 +965,7 @@ class ReturnShipmentsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1',
+                        '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -973,7 +973,7 @@ class ReturnShipmentsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BadRequestReturnShipmentsV1',
+                        '\Otto\Client\Model\BadRequestReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -989,7 +989,7 @@ class ReturnShipmentsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
+                        '\Otto\Client\Model\ForbiddenGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -997,7 +997,7 @@ class ReturnShipmentsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
+                        '\Otto\Client\Model\NotFoundGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1005,7 +1005,7 @@ class ReturnShipmentsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
+                        '\Otto\Client\Model\InternalServerErrorGetReturnShipmentByReturnShipmentIdReturnShipmentsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1051,7 +1051,7 @@ class ReturnShipmentsV1Api
      */
     public function returnShipmentsV1ReturnShipmentUsingGETAsyncWithHttpInfo($return_shipment_id, string $contentType = self::contentTypes['returnShipmentsV1ReturnShipmentUsingGET'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReturnShipmentReturnShipmentsV1';
+        $returnType = '\Otto\Client\Model\ReturnShipmentReturnShipmentsV1';
         $request = $this->returnShipmentsV1ReturnShipmentUsingGETRequest($return_shipment_id, $contentType);
 
         return $this->client

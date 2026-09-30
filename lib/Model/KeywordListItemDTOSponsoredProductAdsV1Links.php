@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * KeywordListItemDTOSponsoredProductAdsV1Links Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,9 +57,9 @@ class KeywordListItemDTOSponsoredProductAdsV1Links implements ModelInterface, Ar
      * @var string[]
      */
     protected static $openAPITypes = [
-        'self' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'latest_change_request' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'target' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'self' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'latest_change_request' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'target' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -309,7 +309,7 @@ class KeywordListItemDTOSponsoredProductAdsV1Links implements ModelInterface, Ar
     /**
      * Gets self
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1
      */
     public function getSelf()
     {
@@ -319,7 +319,7 @@ class KeywordListItemDTOSponsoredProductAdsV1Links implements ModelInterface, Ar
     /**
      * Sets self
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1 $self self
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1 $self self
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class KeywordListItemDTOSponsoredProductAdsV1Links implements ModelInterface, Ar
     /**
      * Gets latest_change_request
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getLatestChangeRequest()
     {
@@ -346,7 +346,7 @@ class KeywordListItemDTOSponsoredProductAdsV1Links implements ModelInterface, Ar
     /**
      * Sets latest_change_request
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $latest_change_request latest_change_request
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $latest_change_request latest_change_request
      *
      * @return self
      */
@@ -363,7 +363,7 @@ class KeywordListItemDTOSponsoredProductAdsV1Links implements ModelInterface, Ar
     /**
      * Gets target
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getTarget()
     {
@@ -373,7 +373,7 @@ class KeywordListItemDTOSponsoredProductAdsV1Links implements ModelInterface, Ar
     /**
      * Sets target
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $target target
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $target target
      *
      * @return self
      */

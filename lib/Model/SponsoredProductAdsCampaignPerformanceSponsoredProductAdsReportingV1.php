@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1 imple
      */
     protected static $openAPITypes = [
         'campaign_id' => 'string',
-        'date_range' => '\OpenAPI\Client\Model\DateRangeSponsoredProductAdsReportingV1',
-        'metrics' => '\OpenAPI\Client\Model\CampaignMetricsSponsoredProductAdsReportingV1',
+        'date_range' => '\Otto\Client\Model\DateRangeSponsoredProductAdsReportingV1',
+        'metrics' => '\Otto\Client\Model\CampaignMetricsSponsoredProductAdsReportingV1',
         'last_calculated_at' => '\DateTime'
     ];
 
@@ -352,7 +352,7 @@ class SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1 imple
     /**
      * Gets date_range
      *
-     * @return \OpenAPI\Client\Model\DateRangeSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\DateRangeSponsoredProductAdsReportingV1
      */
     public function getDateRange()
     {
@@ -362,7 +362,7 @@ class SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1 imple
     /**
      * Sets date_range
      *
-     * @param \OpenAPI\Client\Model\DateRangeSponsoredProductAdsReportingV1 $date_range date_range
+     * @param \Otto\Client\Model\DateRangeSponsoredProductAdsReportingV1 $date_range date_range
      *
      * @return self
      */
@@ -379,7 +379,7 @@ class SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1 imple
     /**
      * Gets metrics
      *
-     * @return \OpenAPI\Client\Model\CampaignMetricsSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\CampaignMetricsSponsoredProductAdsReportingV1
      */
     public function getMetrics()
     {
@@ -389,7 +389,7 @@ class SponsoredProductAdsCampaignPerformanceSponsoredProductAdsReportingV1 imple
     /**
      * Sets metrics
      *
-     * @param \OpenAPI\Client\Model\CampaignMetricsSponsoredProductAdsReportingV1 $metrics metrics
+     * @param \Otto\Client\Model\CampaignMetricsSponsoredProductAdsReportingV1 $metrics metrics
      *
      * @return self
      */

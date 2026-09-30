@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PatchCampaignRequestSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
  * @description Partial update of a campaign. At least one field must be provided. Note: &#x60;budgetType&#x60; and &#x60;campaignType&#x60; are immutable after creation and cannot be changed.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class PatchCampaignRequestSponsoredProductAdsV1 implements ModelInterface, Array
         'name' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
-        'budget' => '\OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1',
+        'budget' => '\Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1',
         'pacing' => 'string',
         'status' => 'string'
     ];
@@ -488,7 +488,7 @@ class PatchCampaignRequestSponsoredProductAdsV1 implements ModelInterface, Array
     /**
      * Gets budget
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
      */
     public function getBudget()
     {
@@ -498,7 +498,7 @@ class PatchCampaignRequestSponsoredProductAdsV1 implements ModelInterface, Array
     /**
      * Sets budget
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $budget budget
+     * @param \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $budget budget
      *
      * @return self
      */

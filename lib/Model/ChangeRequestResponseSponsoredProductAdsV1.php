@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ChangeRequestResponseSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class ChangeRequestResponseSponsoredProductAdsV1 implements ModelInterface, Arra
         'last_modified_at' => '\DateTime',
         'rejection_reason' => 'string',
         'entity_ids' => 'string[]',
-        '_links' => '\OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1AllOfLinks'
+        '_links' => '\Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1AllOfLinks'
     ];
 
     /**
@@ -607,7 +607,7 @@ class ChangeRequestResponseSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1AllOfLinks
+     * @return \Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1AllOfLinks
      */
     public function getLinks()
     {
@@ -617,7 +617,7 @@ class ChangeRequestResponseSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1AllOfLinks $_links _links
+     * @param \Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1AllOfLinks $_links _links
      *
      * @return self
      */

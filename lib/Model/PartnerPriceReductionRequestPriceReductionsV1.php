@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PartnerPriceReductionRequestPriceReductionsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PartnerPriceReductionRequestPriceReductionsV1 implements ModelInterface, A
     protected static $openAPITypes = [
         'position_item_id' => 'string',
         'sales_order_id' => 'string',
-        'price_reduction' => '\OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1PriceReduction'
+        'price_reduction' => '\Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1PriceReduction'
     ];
 
     /**
@@ -369,7 +369,7 @@ class PartnerPriceReductionRequestPriceReductionsV1 implements ModelInterface, A
     /**
      * Gets price_reduction
      *
-     * @return \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1PriceReduction
+     * @return \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1PriceReduction
      */
     public function getPriceReduction()
     {
@@ -379,7 +379,7 @@ class PartnerPriceReductionRequestPriceReductionsV1 implements ModelInterface, A
     /**
      * Sets price_reduction
      *
-     * @param \OpenAPI\Client\Model\PartnerPriceReductionRequestPriceReductionsV1PriceReduction $price_reduction price_reduction
+     * @param \Otto\Client\Model\PartnerPriceReductionRequestPriceReductionsV1PriceReduction $price_reduction price_reduction
      *
      * @return self
      */

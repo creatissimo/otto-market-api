@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Otto\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\FormDataProcessor;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * OrdersV4Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -146,7 +146,7 @@ class OrdersV4Api
      * @param  string $position_item_ids The positionItemIds of the order to cancel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4CancelPartnerOrderPositionItems'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -164,7 +164,7 @@ class OrdersV4Api
      * @param  string $position_item_ids The positionItemIds of the order to cancel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4CancelPartnerOrderPositionItems'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -387,7 +387,7 @@ class OrdersV4Api
      * @param  string $sales_order_id The salesOrderIds of the orders to cancel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4CancelPartnerOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -404,7 +404,7 @@ class OrdersV4Api
      * @param  string $sales_order_id The salesOrderIds of the orders to cancel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4CancelPartnerOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -617,9 +617,9 @@ class OrdersV4Api
      * @param  string|null $nextcursor Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#39;limit&#39;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4FindPartnerOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PartnerOrderListOrdersV4
+     * @return \Otto\Client\Model\PartnerOrderListOrdersV4
      */
     public function ordersV4FindPartnerOrders($from_date = null, $from_order_date = null, $to_order_date = null, $fulfillment_status = null, $limit = null, $order_direction = null, $order_column_type = null, $mode = null, $nextcursor = null, string $contentType = self::contentTypes['ordersV4FindPartnerOrders'][0])
     {
@@ -643,9 +643,9 @@ class OrdersV4Api
      * @param  string|null $nextcursor Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#39;limit&#39;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4FindPartnerOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PartnerOrderListOrdersV4, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PartnerOrderListOrdersV4, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersV4FindPartnerOrdersWithHttpInfo($from_date = null, $from_order_date = null, $to_order_date = null, $fulfillment_status = null, $limit = null, $order_direction = null, $order_column_type = null, $mode = null, $nextcursor = null, string $contentType = self::contentTypes['ordersV4FindPartnerOrders'][0])
     {
@@ -677,7 +677,7 @@ class OrdersV4Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PartnerOrderListOrdersV4',
+                        '\Otto\Client\Model\PartnerOrderListOrdersV4',
                         $request,
                         $response,
                     );
@@ -699,7 +699,7 @@ class OrdersV4Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PartnerOrderListOrdersV4',
+                '\Otto\Client\Model\PartnerOrderListOrdersV4',
                 $request,
                 $response,
             );
@@ -708,7 +708,7 @@ class OrdersV4Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PartnerOrderListOrdersV4',
+                        '\Otto\Client\Model\PartnerOrderListOrdersV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class OrdersV4Api
      */
     public function ordersV4FindPartnerOrdersAsyncWithHttpInfo($from_date = null, $from_order_date = null, $to_order_date = null, $fulfillment_status = null, $limit = null, $order_direction = null, $order_column_type = null, $mode = null, $nextcursor = null, string $contentType = self::contentTypes['ordersV4FindPartnerOrders'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PartnerOrderListOrdersV4';
+        $returnType = '\Otto\Client\Model\PartnerOrderListOrdersV4';
         $request = $this->ordersV4FindPartnerOrdersRequest($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor, $contentType);
 
         return $this->client
@@ -996,9 +996,9 @@ class OrdersV4Api
      * @param  string $order_number order_number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4GetPartnerOrderByOrderNumber'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PartnerOrderOrdersV4
+     * @return \Otto\Client\Model\PartnerOrderOrdersV4
      */
     public function ordersV4GetPartnerOrderByOrderNumber($order_number, string $contentType = self::contentTypes['ordersV4GetPartnerOrderByOrderNumber'][0])
     {
@@ -1014,9 +1014,9 @@ class OrdersV4Api
      * @param  string $order_number (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4GetPartnerOrderByOrderNumber'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PartnerOrderOrdersV4, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PartnerOrderOrdersV4, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersV4GetPartnerOrderByOrderNumberWithHttpInfo($order_number, string $contentType = self::contentTypes['ordersV4GetPartnerOrderByOrderNumber'][0])
     {
@@ -1048,7 +1048,7 @@ class OrdersV4Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PartnerOrderOrdersV4',
+                        '\Otto\Client\Model\PartnerOrderOrdersV4',
                         $request,
                         $response,
                     );
@@ -1070,7 +1070,7 @@ class OrdersV4Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PartnerOrderOrdersV4',
+                '\Otto\Client\Model\PartnerOrderOrdersV4',
                 $request,
                 $response,
             );
@@ -1079,7 +1079,7 @@ class OrdersV4Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PartnerOrderOrdersV4',
+                        '\Otto\Client\Model\PartnerOrderOrdersV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1125,7 +1125,7 @@ class OrdersV4Api
      */
     public function ordersV4GetPartnerOrderByOrderNumberAsyncWithHttpInfo($order_number, string $contentType = self::contentTypes['ordersV4GetPartnerOrderByOrderNumber'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PartnerOrderOrdersV4';
+        $returnType = '\Otto\Client\Model\PartnerOrderOrdersV4';
         $request = $this->ordersV4GetPartnerOrderByOrderNumberRequest($order_number, $contentType);
 
         return $this->client
@@ -1268,9 +1268,9 @@ class OrdersV4Api
      * @param  string $sales_order_id sales_order_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4GetPartnerOrderBySalesOrderId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PartnerOrderOrdersV4
+     * @return \Otto\Client\Model\PartnerOrderOrdersV4
      */
     public function ordersV4GetPartnerOrderBySalesOrderId($sales_order_id, string $contentType = self::contentTypes['ordersV4GetPartnerOrderBySalesOrderId'][0])
     {
@@ -1286,9 +1286,9 @@ class OrdersV4Api
      * @param  string $sales_order_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersV4GetPartnerOrderBySalesOrderId'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PartnerOrderOrdersV4, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PartnerOrderOrdersV4, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersV4GetPartnerOrderBySalesOrderIdWithHttpInfo($sales_order_id, string $contentType = self::contentTypes['ordersV4GetPartnerOrderBySalesOrderId'][0])
     {
@@ -1320,7 +1320,7 @@ class OrdersV4Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PartnerOrderOrdersV4',
+                        '\Otto\Client\Model\PartnerOrderOrdersV4',
                         $request,
                         $response,
                     );
@@ -1342,7 +1342,7 @@ class OrdersV4Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PartnerOrderOrdersV4',
+                '\Otto\Client\Model\PartnerOrderOrdersV4',
                 $request,
                 $response,
             );
@@ -1351,7 +1351,7 @@ class OrdersV4Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PartnerOrderOrdersV4',
+                        '\Otto\Client\Model\PartnerOrderOrdersV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1397,7 +1397,7 @@ class OrdersV4Api
      */
     public function ordersV4GetPartnerOrderBySalesOrderIdAsyncWithHttpInfo($sales_order_id, string $contentType = self::contentTypes['ordersV4GetPartnerOrderBySalesOrderId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PartnerOrderOrdersV4';
+        $returnType = '\Otto\Client\Model\PartnerOrderOrdersV4';
         $request = $this->ordersV4GetPartnerOrderBySalesOrderIdRequest($sales_order_id, $contentType);
 
         return $this->client

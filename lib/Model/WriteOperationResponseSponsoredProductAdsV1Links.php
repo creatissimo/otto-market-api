@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * WriteOperationResponseSponsoredProductAdsV1Links Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class WriteOperationResponseSponsoredProductAdsV1Links implements ModelInterface
      * @var string[]
      */
     protected static $openAPITypes = [
-        'self' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'change_request' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'self' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'change_request' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -302,7 +302,7 @@ class WriteOperationResponseSponsoredProductAdsV1Links implements ModelInterface
     /**
      * Gets self
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1
      */
     public function getSelf()
     {
@@ -312,7 +312,7 @@ class WriteOperationResponseSponsoredProductAdsV1Links implements ModelInterface
     /**
      * Sets self
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1 $self self
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1 $self self
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class WriteOperationResponseSponsoredProductAdsV1Links implements ModelInterface
     /**
      * Gets change_request
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getChangeRequest()
     {
@@ -339,7 +339,7 @@ class WriteOperationResponseSponsoredProductAdsV1Links implements ModelInterface
     /**
      * Sets change_request
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $change_request change_request
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $change_request change_request
      *
      * @return self
      */

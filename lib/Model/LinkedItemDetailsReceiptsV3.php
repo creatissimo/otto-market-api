@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * LinkedItemDetailsReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description Additional information to an item directly related to the service. &lt;/br&gt;Object exists only if the service was sold together with an item
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class LinkedItemDetailsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
         'sku' => 'string',
         'article_number' => 'string',
         'product_title' => 'string',
-        'service_relations' => '\OpenAPI\Client\Model\ServiceRelationReceiptsV3[]'
+        'service_relations' => '\Otto\Client\Model\ServiceRelationReceiptsV3[]'
     ];
 
     /**
@@ -472,7 +472,7 @@ class LinkedItemDetailsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets service_relations
      *
-     * @return \OpenAPI\Client\Model\ServiceRelationReceiptsV3[]
+     * @return \Otto\Client\Model\ServiceRelationReceiptsV3[]
      */
     public function getServiceRelations()
     {
@@ -482,7 +482,7 @@ class LinkedItemDetailsReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets service_relations
      *
-     * @param \OpenAPI\Client\Model\ServiceRelationReceiptsV3[] $service_relations List of ServiceRelation objects. </br>Contains entries if services were sold  together with items otherwise list is empty
+     * @param \Otto\Client\Model\ServiceRelationReceiptsV3[] $service_relations List of ServiceRelation objects. </br>Contains entries if services were sold  together with items otherwise list is empty
      *
      * @return self
      */

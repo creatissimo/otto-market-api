@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PositionItemOrdersV4 Class Doc Comment
  *
  * @category Class
  * @description PositionItem
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,16 +64,16 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
         'deal_name' => 'string',
         'expected_delivery_date' => '\DateTime',
         'fulfillment_status' => 'string',
-        'item_value_discount' => '\OpenAPI\Client\Model\AmountOrdersV4',
-        'item_value_gross_price' => '\OpenAPI\Client\Model\AmountOrdersV4',
-        'item_value_reduced_gross_price' => '\OpenAPI\Client\Model\AmountOrdersV4',
+        'item_value_discount' => '\Otto\Client\Model\AmountOrdersV4',
+        'item_value_gross_price' => '\Otto\Client\Model\AmountOrdersV4',
+        'item_value_reduced_gross_price' => '\Otto\Client\Model\AmountOrdersV4',
         'position_item_id' => 'string',
         'processable_date' => '\DateTime',
-        'product' => '\OpenAPI\Client\Model\ProductOrdersV4',
+        'product' => '\Otto\Client\Model\ProductOrdersV4',
         'return_accepted_by_marketplace' => 'bool',
         'returned_date' => '\DateTime',
         'sent_date' => '\DateTime',
-        'tracking_info' => '\OpenAPI\Client\Model\TrackingInfoOrdersV4',
+        'tracking_info' => '\Otto\Client\Model\TrackingInfoOrdersV4',
         'weee_pickup' => 'bool'
     ];
 
@@ -667,7 +667,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets item_value_discount
      *
-     * @return \OpenAPI\Client\Model\AmountOrdersV4|null
+     * @return \Otto\Client\Model\AmountOrdersV4|null
      */
     public function getItemValueDiscount()
     {
@@ -677,7 +677,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets item_value_discount
      *
-     * @param \OpenAPI\Client\Model\AmountOrdersV4|null $item_value_discount item_value_discount
+     * @param \Otto\Client\Model\AmountOrdersV4|null $item_value_discount item_value_discount
      *
      * @return self
      */
@@ -694,7 +694,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets item_value_gross_price
      *
-     * @return \OpenAPI\Client\Model\AmountOrdersV4
+     * @return \Otto\Client\Model\AmountOrdersV4
      */
     public function getItemValueGrossPrice()
     {
@@ -704,7 +704,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets item_value_gross_price
      *
-     * @param \OpenAPI\Client\Model\AmountOrdersV4 $item_value_gross_price item_value_gross_price
+     * @param \Otto\Client\Model\AmountOrdersV4 $item_value_gross_price item_value_gross_price
      *
      * @return self
      */
@@ -721,7 +721,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets item_value_reduced_gross_price
      *
-     * @return \OpenAPI\Client\Model\AmountOrdersV4|null
+     * @return \Otto\Client\Model\AmountOrdersV4|null
      */
     public function getItemValueReducedGrossPrice()
     {
@@ -731,7 +731,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets item_value_reduced_gross_price
      *
-     * @param \OpenAPI\Client\Model\AmountOrdersV4|null $item_value_reduced_gross_price item_value_reduced_gross_price
+     * @param \Otto\Client\Model\AmountOrdersV4|null $item_value_reduced_gross_price item_value_reduced_gross_price
      *
      * @return self
      */
@@ -802,7 +802,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets product
      *
-     * @return \OpenAPI\Client\Model\ProductOrdersV4
+     * @return \Otto\Client\Model\ProductOrdersV4
      */
     public function getProduct()
     {
@@ -812,7 +812,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets product
      *
-     * @param \OpenAPI\Client\Model\ProductOrdersV4 $product product
+     * @param \Otto\Client\Model\ProductOrdersV4 $product product
      *
      * @return self
      */
@@ -910,7 +910,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets tracking_info
      *
-     * @return \OpenAPI\Client\Model\TrackingInfoOrdersV4|null
+     * @return \Otto\Client\Model\TrackingInfoOrdersV4|null
      */
     public function getTrackingInfo()
     {
@@ -920,7 +920,7 @@ class PositionItemOrdersV4 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets tracking_info
      *
-     * @param \OpenAPI\Client\Model\TrackingInfoOrdersV4|null $tracking_info tracking_info
+     * @param \Otto\Client\Model\TrackingInfoOrdersV4|null $tracking_info tracking_info
      *
      * @return self
      */

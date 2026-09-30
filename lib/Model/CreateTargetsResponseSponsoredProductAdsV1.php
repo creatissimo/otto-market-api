@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CreateTargetsResponseSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class CreateTargetsResponseSponsoredProductAdsV1 implements ModelInterface, Arra
      * @var string[]
      */
     protected static $openAPITypes = [
-        'change_request' => '\OpenAPI\Client\Model\ChangeRequestSponsoredProductAdsV1',
+        'change_request' => '\Otto\Client\Model\ChangeRequestSponsoredProductAdsV1',
         '_links' => 'mixed'
     ];
 
@@ -305,7 +305,7 @@ class CreateTargetsResponseSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Gets change_request
      *
-     * @return \OpenAPI\Client\Model\ChangeRequestSponsoredProductAdsV1
+     * @return \Otto\Client\Model\ChangeRequestSponsoredProductAdsV1
      */
     public function getChangeRequest()
     {
@@ -315,7 +315,7 @@ class CreateTargetsResponseSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Sets change_request
      *
-     * @param \OpenAPI\Client\Model\ChangeRequestSponsoredProductAdsV1 $change_request change_request
+     * @param \Otto\Client\Model\ChangeRequestSponsoredProductAdsV1 $change_request change_request
      *
      * @return self
      */

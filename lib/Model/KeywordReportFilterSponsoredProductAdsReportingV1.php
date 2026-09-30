@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * KeywordReportFilterSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
  * @description A single filter condition for a keyword report query.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class KeywordReportFilterSponsoredProductAdsReportingV1 implements ModelInterfac
      * @var string[]
      */
     protected static $openAPITypes = [
-        'column' => '\OpenAPI\Client\Model\KeywordFilterableColumnSponsoredProductAdsReportingV1',
-        'operator' => '\OpenAPI\Client\Model\FilterOperatorSponsoredProductAdsReportingV1',
+        'column' => '\Otto\Client\Model\KeywordFilterableColumnSponsoredProductAdsReportingV1',
+        'operator' => '\Otto\Client\Model\FilterOperatorSponsoredProductAdsReportingV1',
         'value' => 'string'
     ];
 
@@ -316,7 +316,7 @@ class KeywordReportFilterSponsoredProductAdsReportingV1 implements ModelInterfac
     /**
      * Gets column
      *
-     * @return \OpenAPI\Client\Model\KeywordFilterableColumnSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\KeywordFilterableColumnSponsoredProductAdsReportingV1
      */
     public function getColumn()
     {
@@ -326,7 +326,7 @@ class KeywordReportFilterSponsoredProductAdsReportingV1 implements ModelInterfac
     /**
      * Sets column
      *
-     * @param \OpenAPI\Client\Model\KeywordFilterableColumnSponsoredProductAdsReportingV1 $column column
+     * @param \Otto\Client\Model\KeywordFilterableColumnSponsoredProductAdsReportingV1 $column column
      *
      * @return self
      */
@@ -343,7 +343,7 @@ class KeywordReportFilterSponsoredProductAdsReportingV1 implements ModelInterfac
     /**
      * Gets operator
      *
-     * @return \OpenAPI\Client\Model\FilterOperatorSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\FilterOperatorSponsoredProductAdsReportingV1
      */
     public function getOperator()
     {
@@ -353,7 +353,7 @@ class KeywordReportFilterSponsoredProductAdsReportingV1 implements ModelInterfac
     /**
      * Sets operator
      *
-     * @param \OpenAPI\Client\Model\FilterOperatorSponsoredProductAdsReportingV1 $operator operator
+     * @param \Otto\Client\Model\FilterOperatorSponsoredProductAdsReportingV1 $operator operator
      *
      * @return self
      */

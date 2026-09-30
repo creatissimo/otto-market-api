@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * KeywordReportRequestSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class KeywordReportRequestSponsoredProductAdsReportingV1 implements ModelInterfa
         'name' => 'string',
         'from_date' => '\DateTime',
         'to_date' => '\DateTime',
-        'configuration' => '\OpenAPI\Client\Model\KeywordReportConfigurationSponsoredProductAdsReportingV1'
+        'configuration' => '\Otto\Client\Model\KeywordReportConfigurationSponsoredProductAdsReportingV1'
     ];
 
     /**
@@ -414,7 +414,7 @@ class KeywordReportRequestSponsoredProductAdsReportingV1 implements ModelInterfa
     /**
      * Gets configuration
      *
-     * @return \OpenAPI\Client\Model\KeywordReportConfigurationSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\KeywordReportConfigurationSponsoredProductAdsReportingV1
      */
     public function getConfiguration()
     {
@@ -424,7 +424,7 @@ class KeywordReportRequestSponsoredProductAdsReportingV1 implements ModelInterfa
     /**
      * Sets configuration
      *
-     * @param \OpenAPI\Client\Model\KeywordReportConfigurationSponsoredProductAdsReportingV1 $configuration configuration
+     * @param \Otto\Client\Model\KeywordReportConfigurationSponsoredProductAdsReportingV1 $configuration configuration
      *
      * @return self
      */

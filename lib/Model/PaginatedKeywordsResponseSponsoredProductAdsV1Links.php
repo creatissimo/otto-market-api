@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PaginatedKeywordsResponseSponsoredProductAdsV1Links Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
      * @var string[]
      */
     protected static $openAPITypes = [
-        'self' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'next' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'prev' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'target' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'campaign' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'self' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'next' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'prev' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'target' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'campaign' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -320,7 +320,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Gets self
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getSelf()
     {
@@ -330,7 +330,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Sets self
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $self self
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $self self
      *
      * @return self
      */
@@ -347,7 +347,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Gets next
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getNext()
     {
@@ -357,7 +357,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Sets next
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $next next
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $next next
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Gets prev
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getPrev()
     {
@@ -384,7 +384,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Sets prev
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $prev prev
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $prev prev
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Gets target
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getTarget()
     {
@@ -411,7 +411,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Sets target
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $target target
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $target target
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Gets campaign
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getCampaign()
     {
@@ -438,7 +438,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1Links implements ModelInterf
     /**
      * Sets campaign
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $campaign campaign
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $campaign campaign
      *
      * @return self
      */

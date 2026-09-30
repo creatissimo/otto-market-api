@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductSafetyAddressProductsV5 Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class ProductSafetyAddressProductsV5 implements ModelInterface, ArrayAccess, \Js
         'email' => 'string',
         'url' => 'string',
         'phone' => 'string',
-        'roles' => '\OpenAPI\Client\Model\ProductSafetyAddressRoleProductsV5[]',
+        'roles' => '\Otto\Client\Model\ProductSafetyAddressRoleProductsV5[]',
         'components' => 'string[]'
     ];
 
@@ -513,7 +513,7 @@ class ProductSafetyAddressProductsV5 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets roles
      *
-     * @return \OpenAPI\Client\Model\ProductSafetyAddressRoleProductsV5[]
+     * @return \Otto\Client\Model\ProductSafetyAddressRoleProductsV5[]
      */
     public function getRoles()
     {
@@ -523,7 +523,7 @@ class ProductSafetyAddressProductsV5 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets roles
      *
-     * @param \OpenAPI\Client\Model\ProductSafetyAddressRoleProductsV5[] $roles The role(s) of the economic agent to which the address belongs. Allowed values are 'DISTRIBUTOR' and 'MANUFACTURER'. At least one distributor must be specified.
+     * @param \Otto\Client\Model\ProductSafetyAddressRoleProductsV5[] $roles The role(s) of the economic agent to which the address belongs. Allowed values are 'DISTRIBUTOR' and 'MANUFACTURER'. At least one distributor must be specified.
      *
      * @return self
      */

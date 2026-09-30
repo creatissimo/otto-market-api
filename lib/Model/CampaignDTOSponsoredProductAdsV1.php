@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CampaignDTOSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,14 +62,14 @@ class CampaignDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
         'status' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
-        'budget' => '\OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1',
+        'budget' => '\Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1',
         'budget_type' => 'string',
         'pacing' => 'string',
         'campaign_type' => 'string',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        '_links' => '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks',
-        '_embedded' => '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded'
+        '_links' => '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks',
+        '_embedded' => '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded'
     ];
 
     /**
@@ -669,7 +669,7 @@ class CampaignDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Gets budget
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1
+     * @return \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1
      */
     public function getBudget()
     {
@@ -679,7 +679,7 @@ class CampaignDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Sets budget
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1 $budget budget
+     * @param \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1 $budget budget
      *
      * @return self
      */
@@ -861,7 +861,7 @@ class CampaignDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks
+     * @return \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks
      */
     public function getLinks()
     {
@@ -871,7 +871,7 @@ class CampaignDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks $_links _links
+     * @param \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks $_links _links
      *
      * @return self
      */
@@ -888,7 +888,7 @@ class CampaignDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Gets _embedded
      *
-     * @return \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null
+     * @return \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null
      */
     public function getEmbedded()
     {
@@ -898,7 +898,7 @@ class CampaignDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Sets _embedded
      *
-     * @param \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null $_embedded _embedded
+     * @param \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null $_embedded _embedded
      *
      * @return self
      */

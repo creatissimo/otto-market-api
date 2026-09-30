@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks implements Mo
      * @var string[]
      */
     protected static $openAPITypes = [
-        'target' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'campaign' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'target' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'campaign' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -299,7 +299,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks implements Mo
     /**
      * Gets target
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getTarget()
     {
@@ -309,7 +309,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks implements Mo
     /**
      * Sets target
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $target target
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $target target
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks implements Mo
     /**
      * Gets campaign
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getCampaign()
     {
@@ -336,7 +336,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks implements Mo
     /**
      * Sets campaign
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $campaign campaign
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $campaign campaign
      *
      * @return self
      */

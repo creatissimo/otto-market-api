@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductDescriptionProductsV5 Class Doc Comment
  *
  * @category Class
  * @description Extensive description of the product.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -69,7 +69,7 @@ class ProductDescriptionProductsV5 implements ModelInterface, ArrayAccess, \Json
         'product_url' => 'string',
         'description' => 'string',
         'bullet_points' => 'string[]',
-        'attributes' => '\OpenAPI\Client\Model\AttributeProductsV5[]'
+        'attributes' => '\Otto\Client\Model\AttributeProductsV5[]'
     ];
 
     /**
@@ -673,7 +673,7 @@ class ProductDescriptionProductsV5 implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets attributes
      *
-     * @return \OpenAPI\Client\Model\AttributeProductsV5[]|null
+     * @return \Otto\Client\Model\AttributeProductsV5[]|null
      */
     public function getAttributes()
     {
@@ -683,7 +683,7 @@ class ProductDescriptionProductsV5 implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets attributes
      *
-     * @param \OpenAPI\Client\Model\AttributeProductsV5[]|null $attributes Lists all the descriptive information about a product variant a partner can provide. Must be provided in the form of a key values pair. Will be validated against the AttributeDefinitions from Category endpoint provided by Otto market.
+     * @param \Otto\Client\Model\AttributeProductsV5[]|null $attributes Lists all the descriptive information about a product variant a partner can provide. Must be provided in the form of a key values pair. Will be validated against the AttributeDefinitions from Category endpoint provided by Otto market.
      *
      * @return self
      */

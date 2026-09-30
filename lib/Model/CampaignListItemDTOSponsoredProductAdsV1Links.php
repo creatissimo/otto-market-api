@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CampaignListItemDTOSponsoredProductAdsV1Links Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class CampaignListItemDTOSponsoredProductAdsV1Links implements ModelInterface, A
      * @var string[]
      */
     protected static $openAPITypes = [
-        'self' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'targets' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'self' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'targets' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -302,7 +302,7 @@ class CampaignListItemDTOSponsoredProductAdsV1Links implements ModelInterface, A
     /**
      * Gets self
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1
      */
     public function getSelf()
     {
@@ -312,7 +312,7 @@ class CampaignListItemDTOSponsoredProductAdsV1Links implements ModelInterface, A
     /**
      * Sets self
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1 $self self
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1 $self self
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class CampaignListItemDTOSponsoredProductAdsV1Links implements ModelInterface, A
     /**
      * Gets targets
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getTargets()
     {
@@ -339,7 +339,7 @@ class CampaignListItemDTOSponsoredProductAdsV1Links implements ModelInterface, A
     /**
      * Sets targets
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $targets targets
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $targets targets
      *
      * @return self
      */

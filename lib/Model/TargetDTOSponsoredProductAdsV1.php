@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * TargetDTOSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,11 +59,11 @@ class TargetDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \Js
     protected static $openAPITypes = [
         'target_id' => 'string',
         'sku' => 'string',
-        'bid' => '\OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1',
+        'bid' => '\Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        '_links' => '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks',
-        '_embedded' => '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded'
+        '_links' => '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks',
+        '_embedded' => '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded'
     ];
 
     /**
@@ -403,7 +403,7 @@ class TargetDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets bid
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
      */
     public function getBid()
     {
@@ -413,7 +413,7 @@ class TargetDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets bid
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid bid
+     * @param \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid bid
      *
      * @return self
      */
@@ -491,7 +491,7 @@ class TargetDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks
+     * @return \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks
      */
     public function getLinks()
     {
@@ -501,7 +501,7 @@ class TargetDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks $_links _links
+     * @param \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfLinks $_links _links
      *
      * @return self
      */
@@ -518,7 +518,7 @@ class TargetDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets _embedded
      *
-     * @return \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null
+     * @return \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null
      */
     public function getEmbedded()
     {
@@ -528,7 +528,7 @@ class TargetDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets _embedded
      *
-     * @param \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null $_embedded _embedded
+     * @param \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1AllOfEmbedded|null $_embedded _embedded
      *
      * @return self
      */

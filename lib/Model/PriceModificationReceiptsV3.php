@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PriceModificationReceiptsV3 Class Doc Comment
  *
  * @category Class
  * @description List of additional fees and reductions represented as price modifications. &lt;/br&gt;If there are no price modifications, an empty list is displayed
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class PriceModificationReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'line_number' => 'int',
         'price_modification_type' => 'string',
-        'details' => '\OpenAPI\Client\Model\DetailsReceiptsV3',
-        'price_modification_amount' => '\OpenAPI\Client\Model\PriceReceiptsV3'
+        'details' => '\Otto\Client\Model\DetailsReceiptsV3',
+        'price_modification_amount' => '\Otto\Client\Model\PriceReceiptsV3'
     ];
 
     /**
@@ -421,7 +421,7 @@ class PriceModificationReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\DetailsReceiptsV3
+     * @return \Otto\Client\Model\DetailsReceiptsV3
      */
     public function getDetails()
     {
@@ -431,7 +431,7 @@ class PriceModificationReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\DetailsReceiptsV3 $details details
+     * @param \Otto\Client\Model\DetailsReceiptsV3 $details details
      *
      * @return self
      */
@@ -448,7 +448,7 @@ class PriceModificationReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets price_modification_amount
      *
-     * @return \OpenAPI\Client\Model\PriceReceiptsV3
+     * @return \Otto\Client\Model\PriceReceiptsV3
      */
     public function getPriceModificationAmount()
     {
@@ -458,7 +458,7 @@ class PriceModificationReceiptsV3 implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets price_modification_amount
      *
-     * @param \OpenAPI\Client\Model\PriceReceiptsV3 $price_modification_amount price_modification_amount
+     * @param \Otto\Client\Model\PriceReceiptsV3 $price_modification_amount price_modification_amount
      *
      * @return self
      */

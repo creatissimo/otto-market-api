@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CampaignDTOSponsoredProductAdsV1AllOfLinks Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class CampaignDTOSponsoredProductAdsV1AllOfLinks implements ModelInterface, Arra
      * @var string[]
      */
     protected static $openAPITypes = [
-        'latest_change_request' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'latest_change_request' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -292,7 +292,7 @@ class CampaignDTOSponsoredProductAdsV1AllOfLinks implements ModelInterface, Arra
     /**
      * Gets latest_change_request
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getLatestChangeRequest()
     {
@@ -302,7 +302,7 @@ class CampaignDTOSponsoredProductAdsV1AllOfLinks implements ModelInterface, Arra
     /**
      * Sets latest_change_request
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $latest_change_request latest_change_request
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $latest_change_request latest_change_request
      *
      * @return self
      */

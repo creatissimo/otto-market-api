@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * TargetListItemDTOSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,10 +59,10 @@ class TargetListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAcc
     protected static $openAPITypes = [
         'target_id' => 'string',
         'sku' => 'string',
-        'bid' => '\OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1',
+        'bid' => '\Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        '_links' => '\OpenAPI\Client\Model\TargetListItemDTOSponsoredProductAdsV1Links'
+        '_links' => '\Otto\Client\Model\TargetListItemDTOSponsoredProductAdsV1Links'
     ];
 
     /**
@@ -396,7 +396,7 @@ class TargetListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAcc
     /**
      * Gets bid
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
      */
     public function getBid()
     {
@@ -406,7 +406,7 @@ class TargetListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAcc
     /**
      * Sets bid
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid bid
+     * @param \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid bid
      *
      * @return self
      */
@@ -484,7 +484,7 @@ class TargetListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAcc
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\TargetListItemDTOSponsoredProductAdsV1Links
+     * @return \Otto\Client\Model\TargetListItemDTOSponsoredProductAdsV1Links
      */
     public function getLinks()
     {
@@ -494,7 +494,7 @@ class TargetListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAcc
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\TargetListItemDTOSponsoredProductAdsV1Links $_links _links
+     * @param \Otto\Client\Model\TargetListItemDTOSponsoredProductAdsV1Links $_links _links
      *
      * @return self
      */

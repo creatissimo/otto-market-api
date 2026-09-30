@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReportStatusResponseSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ReportStatusResponseSponsoredProductAdsReportingV1 implements ModelInterfa
      */
     protected static $openAPITypes = [
         'report_id' => 'string',
-        'status' => '\OpenAPI\Client\Model\ReportJobStatusSponsoredProductAdsReportingV1',
+        'status' => '\Otto\Client\Model\ReportJobStatusSponsoredProductAdsReportingV1',
         'download_url' => 'string'
     ];
 
@@ -339,7 +339,7 @@ class ReportStatusResponseSponsoredProductAdsReportingV1 implements ModelInterfa
     /**
      * Gets status
      *
-     * @return \OpenAPI\Client\Model\ReportJobStatusSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\ReportJobStatusSponsoredProductAdsReportingV1
      */
     public function getStatus()
     {
@@ -349,7 +349,7 @@ class ReportStatusResponseSponsoredProductAdsReportingV1 implements ModelInterfa
     /**
      * Sets status
      *
-     * @param \OpenAPI\Client\Model\ReportJobStatusSponsoredProductAdsReportingV1 $status status
+     * @param \Otto\Client\Model\ReportJobStatusSponsoredProductAdsReportingV1 $status status
      *
      * @return self
      */

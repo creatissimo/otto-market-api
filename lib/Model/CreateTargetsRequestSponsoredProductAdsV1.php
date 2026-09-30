@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CreateTargetsRequestSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class CreateTargetsRequestSponsoredProductAdsV1 implements ModelInterface, Array
      * @var string[]
      */
     protected static $openAPITypes = [
-        'targets' => '\OpenAPI\Client\Model\TargetInputSponsoredProductAdsV1[]'
+        'targets' => '\Otto\Client\Model\TargetInputSponsoredProductAdsV1[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class CreateTargetsRequestSponsoredProductAdsV1 implements ModelInterface, Array
     /**
      * Gets targets
      *
-     * @return \OpenAPI\Client\Model\TargetInputSponsoredProductAdsV1[]
+     * @return \Otto\Client\Model\TargetInputSponsoredProductAdsV1[]
      */
     public function getTargets()
     {
@@ -309,7 +309,7 @@ class CreateTargetsRequestSponsoredProductAdsV1 implements ModelInterface, Array
     /**
      * Sets targets
      *
-     * @param \OpenAPI\Client\Model\TargetInputSponsoredProductAdsV1[] $targets targets
+     * @param \Otto\Client\Model\TargetInputSponsoredProductAdsV1[] $targets targets
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Otto\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\FormDataProcessor;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * ShippingProfilesV1Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,12 +143,12 @@ class ShippingProfilesV1Api
      * Create shipping profile
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1CreateShippingProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1|\OpenAPI\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1|\OpenAPI\Client\Model\APIErrorResponseForConflictShippingProfilesV1|\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1
+     * @return \Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1|\Otto\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1|\Otto\Client\Model\APIErrorResponseForConflictShippingProfilesV1|\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1
      */
     public function shippingProfilesV1CreateShippingProfile($authorization, $create_shipping_profile_request_shipping_profiles_v1, string $contentType = self::contentTypes['shippingProfilesV1CreateShippingProfile'][0])
     {
@@ -162,12 +162,12 @@ class ShippingProfilesV1Api
      * Create shipping profile
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1CreateShippingProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1|\OpenAPI\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1|\OpenAPI\Client\Model\APIErrorResponseForConflictShippingProfilesV1|\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1|\Otto\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1|\Otto\Client\Model\APIErrorResponseForConflictShippingProfilesV1|\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shippingProfilesV1CreateShippingProfileWithHttpInfo($authorization, $create_shipping_profile_request_shipping_profiles_v1, string $contentType = self::contentTypes['shippingProfilesV1CreateShippingProfile'][0])
     {
@@ -199,25 +199,25 @@ class ShippingProfilesV1Api
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1',
+                        '\Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseForConflictShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForConflictShippingProfilesV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $request,
                         $response,
                     );
@@ -239,7 +239,7 @@ class ShippingProfilesV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1',
+                '\Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1',
                 $request,
                 $response,
             );
@@ -248,7 +248,7 @@ class ShippingProfilesV1Api
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1',
+                        '\Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class ShippingProfilesV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -264,7 +264,7 @@ class ShippingProfilesV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForConflictShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForConflictShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -272,7 +272,7 @@ class ShippingProfilesV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -290,7 +290,7 @@ class ShippingProfilesV1Api
      * Create shipping profile
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1CreateShippingProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -312,7 +312,7 @@ class ShippingProfilesV1Api
      * Create shipping profile
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1CreateShippingProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -320,7 +320,7 @@ class ShippingProfilesV1Api
      */
     public function shippingProfilesV1CreateShippingProfileAsyncWithHttpInfo($authorization, $create_shipping_profile_request_shipping_profiles_v1, string $contentType = self::contentTypes['shippingProfilesV1CreateShippingProfile'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateShippingProfileResponseShippingProfilesV1';
+        $returnType = '\Otto\Client\Model\CreateShippingProfileResponseShippingProfilesV1';
         $request = $this->shippingProfilesV1CreateShippingProfileRequest($authorization, $create_shipping_profile_request_shipping_profiles_v1, $contentType);
 
         return $this->client
@@ -363,7 +363,7 @@ class ShippingProfilesV1Api
      * Create request for operation 'shippingProfilesV1CreateShippingProfile'
      *
      * @param  string $authorization Access Token (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 create shipping profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1CreateShippingProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -475,7 +475,7 @@ class ShippingProfilesV1Api
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1DeleteShippingProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -493,7 +493,7 @@ class ShippingProfilesV1Api
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1DeleteShippingProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -530,7 +530,7 @@ class ShippingProfilesV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -538,7 +538,7 @@ class ShippingProfilesV1Api
                 case 412:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForPreconditionShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForPreconditionShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -546,7 +546,7 @@ class ShippingProfilesV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -737,9 +737,9 @@ class ShippingProfilesV1Api
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1GetShippingProfileById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1|\OpenAPI\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1|\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1
+     * @return \Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1|\Otto\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1|\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1
      */
     public function shippingProfilesV1GetShippingProfileById($authorization, $shipping_profile_id, string $contentType = self::contentTypes['shippingProfilesV1GetShippingProfileById'][0])
     {
@@ -756,9 +756,9 @@ class ShippingProfilesV1Api
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1GetShippingProfileById'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1|\OpenAPI\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1|\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1|\Otto\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1|\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shippingProfilesV1GetShippingProfileByIdWithHttpInfo($authorization, $shipping_profile_id, string $contentType = self::contentTypes['shippingProfilesV1GetShippingProfileById'][0])
     {
@@ -790,19 +790,19 @@ class ShippingProfilesV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1',
+                        '\Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $request,
                         $response,
                     );
@@ -824,7 +824,7 @@ class ShippingProfilesV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1',
+                '\Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1',
                 $request,
                 $response,
             );
@@ -833,7 +833,7 @@ class ShippingProfilesV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1',
+                        '\Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -841,7 +841,7 @@ class ShippingProfilesV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -849,7 +849,7 @@ class ShippingProfilesV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -897,7 +897,7 @@ class ShippingProfilesV1Api
      */
     public function shippingProfilesV1GetShippingProfileByIdAsyncWithHttpInfo($authorization, $shipping_profile_id, string $contentType = self::contentTypes['shippingProfilesV1GetShippingProfileById'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetShippingProfileResponseShippingProfilesV1';
+        $returnType = '\Otto\Client\Model\GetShippingProfileResponseShippingProfilesV1';
         $request = $this->shippingProfilesV1GetShippingProfileByIdRequest($authorization, $shipping_profile_id, $contentType);
 
         return $this->client
@@ -1053,9 +1053,9 @@ class ShippingProfilesV1Api
      * @param  string|null $cursor Page number to fetch. This parameter is required to fetch data for specific page number (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1GetShippingProfiles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1|\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1
+     * @return \Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1|\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1
      */
     public function shippingProfilesV1GetShippingProfiles($authorization, $cursor = null, string $contentType = self::contentTypes['shippingProfilesV1GetShippingProfiles'][0])
     {
@@ -1072,9 +1072,9 @@ class ShippingProfilesV1Api
      * @param  string|null $cursor Page number to fetch. This parameter is required to fetch data for specific page number (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1GetShippingProfiles'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1|\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1|\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function shippingProfilesV1GetShippingProfilesWithHttpInfo($authorization, $cursor = null, string $contentType = self::contentTypes['shippingProfilesV1GetShippingProfiles'][0])
     {
@@ -1106,13 +1106,13 @@ class ShippingProfilesV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1',
+                        '\Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $request,
                         $response,
                     );
@@ -1134,7 +1134,7 @@ class ShippingProfilesV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1',
+                '\Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1',
                 $request,
                 $response,
             );
@@ -1143,7 +1143,7 @@ class ShippingProfilesV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1',
+                        '\Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1151,7 +1151,7 @@ class ShippingProfilesV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1199,7 +1199,7 @@ class ShippingProfilesV1Api
      */
     public function shippingProfilesV1GetShippingProfilesAsyncWithHttpInfo($authorization, $cursor = null, string $contentType = self::contentTypes['shippingProfilesV1GetShippingProfiles'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1';
+        $returnType = '\Otto\Client\Model\GetAllShippingProfilesResponseShippingProfilesV1';
         $request = $this->shippingProfilesV1GetShippingProfilesRequest($authorization, $cursor, $contentType);
 
         return $this->client
@@ -1348,10 +1348,10 @@ class ShippingProfilesV1Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1UpdateShippingProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1367,10 +1367,10 @@ class ShippingProfilesV1Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1UpdateShippingProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1407,7 +1407,7 @@ class ShippingProfilesV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForBadRequestShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1415,7 +1415,7 @@ class ShippingProfilesV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
+                        '\Otto\Client\Model\APIErrorResponseForNotFoundShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1423,7 +1423,7 @@ class ShippingProfilesV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
+                        '\Otto\Client\Model\APIInternalServerErrorResponseShippingProfilesV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1442,7 +1442,7 @@ class ShippingProfilesV1Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1UpdateShippingProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1465,7 +1465,7 @@ class ShippingProfilesV1Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1UpdateShippingProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1504,7 +1504,7 @@ class ShippingProfilesV1Api
      *
      * @param  string $authorization Access Token (required)
      * @param  string $shipping_profile_id The id of the shipping profile in uuid4 format and the primaryKey for mapping a Profile to a SKU (required)
-     * @param  \OpenAPI\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
+     * @param  \Otto\Client\Model\CreateShippingProfileRequestShippingProfilesV1 $create_shipping_profile_request_shipping_profiles_v1 shipping profile request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shippingProfilesV1UpdateShippingProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

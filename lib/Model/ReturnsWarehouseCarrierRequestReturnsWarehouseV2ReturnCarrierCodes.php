@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReturnsWarehouseCarrierRequestReturnsWarehouseV2ReturnCarrierCodes Class Doc Comment
  *
  * @category Class
  * @description GLSReturnCarrierCodes__ReturnsWarehouse-V2 (object) or DHLReturnCarrierCodes__ReturnsWarehouse-V2 (object) No return carrier codes when carrier in path is HERMES
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

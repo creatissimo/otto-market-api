@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CreateCampaignRequestSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CreateCampaignRequestSponsoredProductAdsV1 implements ModelInterface, Arra
         'name' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
-        'budget' => '\OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1',
+        'budget' => '\Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1',
         'pacing' => 'string',
         'budget_type' => 'string',
         'campaign_type' => 'string'
@@ -538,7 +538,7 @@ class CreateCampaignRequestSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Gets budget
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1
+     * @return \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1
      */
     public function getBudget()
     {
@@ -548,7 +548,7 @@ class CreateCampaignRequestSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Sets budget
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1 $budget budget
+     * @param \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1 $budget budget
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PaginatedKeywordsResponseSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1 implements ModelInterface, 
      * @var string[]
      */
     protected static $openAPITypes = [
-        'keywords' => '\OpenAPI\Client\Model\KeywordListItemDTOSponsoredProductAdsV1[]',
+        'keywords' => '\Otto\Client\Model\KeywordListItemDTOSponsoredProductAdsV1[]',
         'next_cursor' => 'string',
         'prev_cursor' => 'string',
-        '_links' => '\OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1Links'
+        '_links' => '\Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1Links'
     ];
 
     /**
@@ -319,7 +319,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1 implements ModelInterface, 
     /**
      * Gets keywords
      *
-     * @return \OpenAPI\Client\Model\KeywordListItemDTOSponsoredProductAdsV1[]
+     * @return \Otto\Client\Model\KeywordListItemDTOSponsoredProductAdsV1[]
      */
     public function getKeywords()
     {
@@ -329,7 +329,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1 implements ModelInterface, 
     /**
      * Sets keywords
      *
-     * @param \OpenAPI\Client\Model\KeywordListItemDTOSponsoredProductAdsV1[] $keywords keywords
+     * @param \Otto\Client\Model\KeywordListItemDTOSponsoredProductAdsV1[] $keywords keywords
      *
      * @return self
      */
@@ -414,7 +414,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1 implements ModelInterface, 
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1Links
+     * @return \Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1Links
      */
     public function getLinks()
     {
@@ -424,7 +424,7 @@ class PaginatedKeywordsResponseSponsoredProductAdsV1 implements ModelInterface, 
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1Links $_links _links
+     * @param \Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1Links $_links _links
      *
      * @return self
      */

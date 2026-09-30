@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,15 +26,15 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
-use \OpenAPI\Client\ObjectSerializer;
+namespace Otto\Client\Model;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProductSafetyAddressRoleProductsV5 Class Doc Comment
  *
  * @category Class
  * @description The role of an address in the product safety context. Allowed values are &#39;MANUFACTURER&#39; and &#39;DISTRIBUTOR&#39;.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

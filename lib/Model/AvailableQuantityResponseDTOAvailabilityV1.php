@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AvailableQuantityResponseDTOAvailabilityV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class AvailableQuantityResponseDTOAvailabilityV1 implements ModelInterface, Arra
         'last_modified' => 'string',
         'quantity' => 'int',
         'sku' => 'string',
-        'links' => '\OpenAPI\Client\Model\LinkAvailabilityV1[]'
+        'links' => '\Otto\Client\Model\LinkAvailabilityV1[]'
     ];
 
     /**
@@ -422,7 +422,7 @@ class AvailableQuantityResponseDTOAvailabilityV1 implements ModelInterface, Arra
     /**
      * Gets links
      *
-     * @return \OpenAPI\Client\Model\LinkAvailabilityV1[]
+     * @return \Otto\Client\Model\LinkAvailabilityV1[]
      */
     public function getLinks()
     {
@@ -432,7 +432,7 @@ class AvailableQuantityResponseDTOAvailabilityV1 implements ModelInterface, Arra
     /**
      * Sets links
      *
-     * @param \OpenAPI\Client\Model\LinkAvailabilityV1[] $links contains links to prev, self and next page url's
+     * @param \Otto\Client\Model\LinkAvailabilityV1[] $links contains links to prev, self and next page url's
      *
      * @return self
      */

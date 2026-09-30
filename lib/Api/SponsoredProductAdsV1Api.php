@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Otto\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Otto\Client\ApiException;
+use Otto\Client\Configuration;
+use Otto\Client\FormDataProcessor;
+use Otto\Client\HeaderSelector;
+use Otto\Client\ObjectSerializer;
 
 /**
  * SponsoredProductAdsV1Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -172,12 +172,12 @@ class SponsoredProductAdsV1Api
      *
      * Create campaign
      *
-     * @param  \OpenAPI\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 create_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 create_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateCampaign'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateCampaignResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\CreateCampaignResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1CreateCampaign($create_campaign_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateCampaign'][0])
     {
@@ -190,12 +190,12 @@ class SponsoredProductAdsV1Api
      *
      * Create campaign
      *
-     * @param  \OpenAPI\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateCampaign'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateCampaignResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\CreateCampaignResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1CreateCampaignWithHttpInfo($create_campaign_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateCampaign'][0])
     {
@@ -227,31 +227,31 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CreateCampaignResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\CreateCampaignResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -273,7 +273,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CreateCampaignResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\CreateCampaignResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -282,7 +282,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateCampaignResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\CreateCampaignResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -290,7 +290,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,7 +298,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -306,7 +306,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -314,7 +314,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class SponsoredProductAdsV1Api
      *
      * Create campaign
      *
-     * @param  \OpenAPI\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -352,7 +352,7 @@ class SponsoredProductAdsV1Api
      *
      * Create campaign
      *
-     * @param  \OpenAPI\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -360,7 +360,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1CreateCampaignAsyncWithHttpInfo($create_campaign_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateCampaign'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateCampaignResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\CreateCampaignResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1CreateCampaignRequest($create_campaign_request_sponsored_product_ads_v1, $contentType);
 
         return $this->client
@@ -402,7 +402,7 @@ class SponsoredProductAdsV1Api
     /**
      * Create request for operation 'sponsoredProductAdsV1CreateCampaign'
      *
-     * @param  \OpenAPI\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateCampaignRequestSponsoredProductAdsV1 $create_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -501,12 +501,12 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 create_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 create_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1CreateKeywords($campaign_id, $target_id, $create_keywords_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateKeywords'][0])
     {
@@ -521,12 +521,12 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1CreateKeywordsWithHttpInfo($campaign_id, $target_id, $create_keywords_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateKeywords'][0])
     {
@@ -558,43 +558,43 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -616,7 +616,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -625,7 +625,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -633,7 +633,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -641,7 +641,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -649,7 +649,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -657,7 +657,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -665,7 +665,7 @@ class SponsoredProductAdsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -673,7 +673,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -692,7 +692,7 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateKeywords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -715,7 +715,7 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateKeywords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -723,7 +723,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1CreateKeywordsAsyncWithHttpInfo($campaign_id, $target_id, $create_keywords_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateKeywords'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1CreateKeywordsRequest($campaign_id, $target_id, $create_keywords_request_sponsored_product_ads_v1, $contentType);
 
         return $this->client
@@ -767,7 +767,7 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateKeywordsRequestSponsoredProductAdsV1 $create_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateKeywords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -895,12 +895,12 @@ class SponsoredProductAdsV1Api
      * Create targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 create_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 create_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateTargetsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\CreateTargetsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1CreateTargets($campaign_id, $create_targets_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateTargets'][0])
     {
@@ -914,12 +914,12 @@ class SponsoredProductAdsV1Api
      * Create targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateTargetsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\CreateTargetsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1CreateTargetsWithHttpInfo($campaign_id, $create_targets_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateTargets'][0])
     {
@@ -951,43 +951,43 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CreateTargetsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\CreateTargetsResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -1009,7 +1009,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CreateTargetsResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\CreateTargetsResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -1018,7 +1018,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateTargetsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\CreateTargetsResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1026,7 +1026,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1034,7 +1034,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1050,7 +1050,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1058,7 +1058,7 @@ class SponsoredProductAdsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1066,7 +1066,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1084,7 +1084,7 @@ class SponsoredProductAdsV1Api
      * Create targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateTargets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1106,7 +1106,7 @@ class SponsoredProductAdsV1Api
      * Create targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateTargets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1114,7 +1114,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1CreateTargetsAsyncWithHttpInfo($campaign_id, $create_targets_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1CreateTargets'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateTargetsResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\CreateTargetsResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1CreateTargetsRequest($campaign_id, $create_targets_request_sponsored_product_ads_v1, $contentType);
 
         return $this->client
@@ -1157,7 +1157,7 @@ class SponsoredProductAdsV1Api
      * Create request for operation 'sponsoredProductAdsV1CreateTargets'
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\CreateTargetsRequestSponsoredProductAdsV1 $create_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1CreateTargets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1274,9 +1274,9 @@ class SponsoredProductAdsV1Api
      * @param  string[] $keyword_ids One or more keyword IDs to delete. Repeat the parameter for multiple values (e.g. &#x60;?keywordIds&#x3D;X&amp;keywordIds&#x3D;Y&#x60;). (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1DeleteKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1DeleteKeywords($campaign_id, $target_id, $keyword_ids, string $contentType = self::contentTypes['sponsoredProductAdsV1DeleteKeywords'][0])
     {
@@ -1294,9 +1294,9 @@ class SponsoredProductAdsV1Api
      * @param  string[] $keyword_ids One or more keyword IDs to delete. Repeat the parameter for multiple values (e.g. &#x60;?keywordIds&#x3D;X&amp;keywordIds&#x3D;Y&#x60;). (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1DeleteKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1DeleteKeywordsWithHttpInfo($campaign_id, $target_id, $keyword_ids, string $contentType = self::contentTypes['sponsoredProductAdsV1DeleteKeywords'][0])
     {
@@ -1328,43 +1328,43 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -1386,7 +1386,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -1395,7 +1395,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1403,7 +1403,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1411,7 +1411,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1419,7 +1419,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1427,7 +1427,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1435,7 +1435,7 @@ class SponsoredProductAdsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1443,7 +1443,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1493,7 +1493,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1DeleteKeywordsAsyncWithHttpInfo($campaign_id, $target_id, $keyword_ids, string $contentType = self::contentTypes['sponsoredProductAdsV1DeleteKeywords'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1DeleteKeywordsRequest($campaign_id, $target_id, $keyword_ids, $contentType);
 
         return $this->client
@@ -1676,9 +1676,9 @@ class SponsoredProductAdsV1Api
      * @param  string[] $target_ids One or more target IDs to delete. Repeat the parameter for multiple values (e.g. &#x60;?targetIds&#x3D;X&amp;targetIds&#x3D;Y&#x60;). (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1DeleteTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1DeleteTargets($campaign_id, $target_ids, string $contentType = self::contentTypes['sponsoredProductAdsV1DeleteTargets'][0])
     {
@@ -1695,9 +1695,9 @@ class SponsoredProductAdsV1Api
      * @param  string[] $target_ids One or more target IDs to delete. Repeat the parameter for multiple values (e.g. &#x60;?targetIds&#x3D;X&amp;targetIds&#x3D;Y&#x60;). (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1DeleteTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1DeleteTargetsWithHttpInfo($campaign_id, $target_ids, string $contentType = self::contentTypes['sponsoredProductAdsV1DeleteTargets'][0])
     {
@@ -1729,43 +1729,43 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -1787,7 +1787,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -1796,7 +1796,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1804,7 +1804,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1812,7 +1812,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1820,7 +1820,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1828,7 +1828,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1836,7 +1836,7 @@ class SponsoredProductAdsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1844,7 +1844,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1892,7 +1892,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1DeleteTargetsAsyncWithHttpInfo($campaign_id, $target_ids, string $contentType = self::contentTypes['sponsoredProductAdsV1DeleteTargets'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1DeleteTargetsRequest($campaign_id, $target_ids, $contentType);
 
         return $this->client
@@ -2058,9 +2058,9 @@ class SponsoredProductAdsV1Api
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaign'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1GetCampaign($campaign_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaign'][0])
     {
@@ -2076,9 +2076,9 @@ class SponsoredProductAdsV1Api
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaign'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\CampaignDTOSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1GetCampaignWithHttpInfo($campaign_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaign'][0])
     {
@@ -2110,37 +2110,37 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1',
+                        '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -2162,7 +2162,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1',
+                '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -2171,7 +2171,7 @@ class SponsoredProductAdsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1',
+                        '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2179,7 +2179,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2187,7 +2187,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2195,7 +2195,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2203,7 +2203,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2211,7 +2211,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2257,7 +2257,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1GetCampaignAsyncWithHttpInfo($campaign_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaign'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CampaignDTOSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\CampaignDTOSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1GetCampaignRequest($campaign_id, $contentType);
 
         return $this->client
@@ -2403,9 +2403,9 @@ class SponsoredProductAdsV1Api
      * @param  int|null $limit Results per page (max 1000) (optional, default to 100)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaignKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1GetCampaignKeywords($campaign_id, $target_id, $cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaignKeywords'][0])
     {
@@ -2424,9 +2424,9 @@ class SponsoredProductAdsV1Api
      * @param  int|null $limit Results per page (max 1000) (optional, default to 100)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaignKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1GetCampaignKeywordsWithHttpInfo($campaign_id, $target_id, $cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaignKeywords'][0])
     {
@@ -2458,37 +2458,37 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -2510,7 +2510,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -2519,7 +2519,7 @@ class SponsoredProductAdsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2527,7 +2527,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2535,7 +2535,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2543,7 +2543,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2551,7 +2551,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2559,7 +2559,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2611,7 +2611,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1GetCampaignKeywordsAsyncWithHttpInfo($campaign_id, $target_id, $cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaignKeywords'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\PaginatedKeywordsResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1GetCampaignKeywordsRequest($campaign_id, $target_id, $cursor, $limit, $contentType);
 
         return $this->client
@@ -2800,9 +2800,9 @@ class SponsoredProductAdsV1Api
      * @param  int|null $limit Results per page (max 1000) (optional, default to 100)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaignTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1GetCampaignTargets($campaign_id, $cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaignTargets'][0])
     {
@@ -2820,9 +2820,9 @@ class SponsoredProductAdsV1Api
      * @param  int|null $limit Results per page (max 1000) (optional, default to 100)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaignTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1GetCampaignTargetsWithHttpInfo($campaign_id, $cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaignTargets'][0])
     {
@@ -2854,37 +2854,37 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -2906,7 +2906,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -2915,7 +2915,7 @@ class SponsoredProductAdsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2923,7 +2923,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2931,7 +2931,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2939,7 +2939,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2947,7 +2947,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2955,7 +2955,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3005,7 +3005,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1GetCampaignTargetsAsyncWithHttpInfo($campaign_id, $cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaignTargets'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1GetCampaignTargetsRequest($campaign_id, $cursor, $limit, $contentType);
 
         return $this->client
@@ -3177,9 +3177,9 @@ class SponsoredProductAdsV1Api
      * @param  int|null $limit Results per page (max 1000) (optional, default to 100)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaigns'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1GetCampaigns($cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaigns'][0])
     {
@@ -3196,9 +3196,9 @@ class SponsoredProductAdsV1Api
      * @param  int|null $limit Results per page (max 1000) (optional, default to 100)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetCampaigns'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1GetCampaignsWithHttpInfo($cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaigns'][0])
     {
@@ -3230,31 +3230,31 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -3276,7 +3276,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -3285,7 +3285,7 @@ class SponsoredProductAdsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3293,7 +3293,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3301,7 +3301,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3309,7 +3309,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3317,7 +3317,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3365,7 +3365,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1GetCampaignsAsyncWithHttpInfo($cursor = null, $limit = 100, string $contentType = self::contentTypes['sponsoredProductAdsV1GetCampaigns'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\PaginatedCampaignsResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1GetCampaignsRequest($cursor, $limit, $contentType);
 
         return $this->client
@@ -3520,9 +3520,9 @@ class SponsoredProductAdsV1Api
      * @param  string $request_id Unique change request identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetChangeRequest'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1GetChangeRequest($request_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetChangeRequest'][0])
     {
@@ -3538,9 +3538,9 @@ class SponsoredProductAdsV1Api
      * @param  string $request_id Unique change request identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetChangeRequest'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1GetChangeRequestWithHttpInfo($request_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetChangeRequest'][0])
     {
@@ -3572,31 +3572,31 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -3618,7 +3618,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -3627,7 +3627,7 @@ class SponsoredProductAdsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3635,7 +3635,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3643,7 +3643,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3651,7 +3651,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3659,7 +3659,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3705,7 +3705,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1GetChangeRequestAsyncWithHttpInfo($request_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetChangeRequest'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ChangeRequestResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\ChangeRequestResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1GetChangeRequestRequest($request_id, $contentType);
 
         return $this->client
@@ -3850,9 +3850,9 @@ class SponsoredProductAdsV1Api
      * @param  string $keyword_id Unique keyword identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetKeyword'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\KeywordDTOSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\KeywordDTOSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1GetKeyword($campaign_id, $target_id, $keyword_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetKeyword'][0])
     {
@@ -3870,9 +3870,9 @@ class SponsoredProductAdsV1Api
      * @param  string $keyword_id Unique keyword identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetKeyword'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\KeywordDTOSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\KeywordDTOSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1GetKeywordWithHttpInfo($campaign_id, $target_id, $keyword_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetKeyword'][0])
     {
@@ -3904,37 +3904,37 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\KeywordDTOSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordDTOSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -3956,7 +3956,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\KeywordDTOSponsoredProductAdsV1',
+                '\Otto\Client\Model\KeywordDTOSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -3965,7 +3965,7 @@ class SponsoredProductAdsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\KeywordDTOSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordDTOSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3973,7 +3973,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3981,7 +3981,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3989,7 +3989,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3997,7 +3997,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4005,7 +4005,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4055,7 +4055,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1GetKeywordAsyncWithHttpInfo($campaign_id, $target_id, $keyword_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetKeyword'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\KeywordDTOSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\KeywordDTOSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1GetKeywordRequest($campaign_id, $target_id, $keyword_id, $contentType);
 
         return $this->client
@@ -4231,9 +4231,9 @@ class SponsoredProductAdsV1Api
      * @param  string $target_id Unique target identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetTarget'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TargetDTOSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\TargetDTOSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1GetTarget($campaign_id, $target_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetTarget'][0])
     {
@@ -4250,9 +4250,9 @@ class SponsoredProductAdsV1Api
      * @param  string $target_id Unique target identifier. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1GetTarget'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TargetDTOSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\TargetDTOSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1GetTargetWithHttpInfo($campaign_id, $target_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetTarget'][0])
     {
@@ -4284,37 +4284,37 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\TargetDTOSponsoredProductAdsV1',
+                        '\Otto\Client\Model\TargetDTOSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -4336,7 +4336,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\TargetDTOSponsoredProductAdsV1',
+                '\Otto\Client\Model\TargetDTOSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -4345,7 +4345,7 @@ class SponsoredProductAdsV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TargetDTOSponsoredProductAdsV1',
+                        '\Otto\Client\Model\TargetDTOSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4353,7 +4353,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4361,7 +4361,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4369,7 +4369,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4377,7 +4377,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4385,7 +4385,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4433,7 +4433,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1GetTargetAsyncWithHttpInfo($campaign_id, $target_id, string $contentType = self::contentTypes['sponsoredProductAdsV1GetTarget'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TargetDTOSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\TargetDTOSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1GetTargetRequest($campaign_id, $target_id, $contentType);
 
         return $this->client
@@ -4590,12 +4590,12 @@ class SponsoredProductAdsV1Api
      * Update campaign
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 patch_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 patch_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateCampaign'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1UpdateCampaign($campaign_id, $patch_campaign_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateCampaign'][0])
     {
@@ -4609,12 +4609,12 @@ class SponsoredProductAdsV1Api
      * Update campaign
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateCampaign'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1UpdateCampaignWithHttpInfo($campaign_id, $patch_campaign_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateCampaign'][0])
     {
@@ -4646,43 +4646,43 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -4704,7 +4704,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -4713,7 +4713,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4721,7 +4721,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4729,7 +4729,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4737,7 +4737,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4745,7 +4745,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4753,7 +4753,7 @@ class SponsoredProductAdsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4761,7 +4761,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4779,7 +4779,7 @@ class SponsoredProductAdsV1Api
      * Update campaign
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4801,7 +4801,7 @@ class SponsoredProductAdsV1Api
      * Update campaign
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4809,7 +4809,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1UpdateCampaignAsyncWithHttpInfo($campaign_id, $patch_campaign_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateCampaign'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1UpdateCampaignRequest($campaign_id, $patch_campaign_request_sponsored_product_ads_v1, $contentType);
 
         return $this->client
@@ -4852,7 +4852,7 @@ class SponsoredProductAdsV1Api
      * Create request for operation 'sponsoredProductAdsV1UpdateCampaign'
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\PatchCampaignRequestSponsoredProductAdsV1 $patch_campaign_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4966,12 +4966,12 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 update_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 update_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1UpdateKeywords($campaign_id, $target_id, $update_keywords_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateKeywords'][0])
     {
@@ -4986,12 +4986,12 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateKeywords'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1UpdateKeywordsWithHttpInfo($campaign_id, $target_id, $update_keywords_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateKeywords'][0])
     {
@@ -5023,43 +5023,43 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -5081,7 +5081,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -5090,7 +5090,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5098,7 +5098,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5106,7 +5106,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5114,7 +5114,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5122,7 +5122,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5130,7 +5130,7 @@ class SponsoredProductAdsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5138,7 +5138,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5157,7 +5157,7 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateKeywords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5180,7 +5180,7 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateKeywords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5188,7 +5188,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1UpdateKeywordsAsyncWithHttpInfo($campaign_id, $target_id, $update_keywords_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateKeywords'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1UpdateKeywordsRequest($campaign_id, $target_id, $update_keywords_request_sponsored_product_ads_v1, $contentType);
 
         return $this->client
@@ -5232,7 +5232,7 @@ class SponsoredProductAdsV1Api
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
      * @param  string $target_id Unique target identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateKeywordsRequestSponsoredProductAdsV1 $update_keywords_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateKeywords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5360,12 +5360,12 @@ class SponsoredProductAdsV1Api
      * Update targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 update_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 update_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1
+     * @return \Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1
      */
     public function sponsoredProductAdsV1UpdateTargets($campaign_id, $update_targets_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateTargets'][0])
     {
@@ -5379,12 +5379,12 @@ class SponsoredProductAdsV1Api
      * Update targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateTargets'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Otto\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1|\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1|\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1, HTTP status code, HTTP response headers (array of strings)
      */
     public function sponsoredProductAdsV1UpdateTargetsWithHttpInfo($campaign_id, $update_targets_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateTargets'][0])
     {
@@ -5416,43 +5416,43 @@ class SponsoredProductAdsV1Api
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $request,
                         $response,
                     );
@@ -5474,7 +5474,7 @@ class SponsoredProductAdsV1Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                 $request,
                 $response,
             );
@@ -5483,7 +5483,7 @@ class SponsoredProductAdsV1Api
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5491,7 +5491,7 @@ class SponsoredProductAdsV1Api
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5499,7 +5499,7 @@ class SponsoredProductAdsV1Api
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5507,7 +5507,7 @@ class SponsoredProductAdsV1Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5515,7 +5515,7 @@ class SponsoredProductAdsV1Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5523,7 +5523,7 @@ class SponsoredProductAdsV1Api
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5531,7 +5531,7 @@ class SponsoredProductAdsV1Api
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1',
+                        '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5549,7 +5549,7 @@ class SponsoredProductAdsV1Api
      * Update targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateTargets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5571,7 +5571,7 @@ class SponsoredProductAdsV1Api
      * Update targets
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateTargets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5579,7 +5579,7 @@ class SponsoredProductAdsV1Api
      */
     public function sponsoredProductAdsV1UpdateTargetsAsyncWithHttpInfo($campaign_id, $update_targets_request_sponsored_product_ads_v1, string $contentType = self::contentTypes['sponsoredProductAdsV1UpdateTargets'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WriteOperationResponseSponsoredProductAdsV1';
+        $returnType = '\Otto\Client\Model\WriteOperationResponseSponsoredProductAdsV1';
         $request = $this->sponsoredProductAdsV1UpdateTargetsRequest($campaign_id, $update_targets_request_sponsored_product_ads_v1, $contentType);
 
         return $this->client
@@ -5622,7 +5622,7 @@ class SponsoredProductAdsV1Api
      * Create request for operation 'sponsoredProductAdsV1UpdateTargets'
      *
      * @param  string $campaign_id Unique campaign identifier. (required)
-     * @param  \OpenAPI\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
+     * @param  \Otto\Client\Model\UpdateTargetsRequestSponsoredProductAdsV1 $update_targets_request_sponsored_product_ads_v1 (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sponsoredProductAdsV1UpdateTargets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

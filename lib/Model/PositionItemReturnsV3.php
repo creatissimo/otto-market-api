@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PositionItemReturnsV3 Class Doc Comment
  *
  * @category Class
  * @description Details about a positionItem.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class PositionItemReturnsV3 implements ModelInterface, ArrayAccess, \JsonSeriali
         'sales_order_id' => 'string',
         'status' => 'string',
         'occurred_time' => 'string',
-        'details' => '\OpenAPI\Client\Model\ReturnedItemStatusDataReturnsV3'
+        'details' => '\Otto\Client\Model\ReturnedItemStatusDataReturnsV3'
     ];
 
     /**
@@ -467,7 +467,7 @@ class PositionItemReturnsV3 implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\ReturnedItemStatusDataReturnsV3|null
+     * @return \Otto\Client\Model\ReturnedItemStatusDataReturnsV3|null
      */
     public function getDetails()
     {
@@ -477,7 +477,7 @@ class PositionItemReturnsV3 implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\ReturnedItemStatusDataReturnsV3|null $details details
+     * @param \Otto\Client\Model\ReturnedItemStatusDataReturnsV3|null $details details
      *
      * @return self
      */

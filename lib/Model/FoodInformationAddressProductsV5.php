@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * FoodInformationAddressProductsV5 Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class FoodInformationAddressProductsV5 implements ModelInterface, ArrayAccess, \
         'email' => 'string',
         'url' => 'string',
         'phone' => 'string',
-        'roles' => '\OpenAPI\Client\Model\FoodInformationAddressRoleProductsV5[]',
+        'roles' => '\Otto\Client\Model\FoodInformationAddressRoleProductsV5[]',
         'components' => 'string[]'
     ];
 
@@ -513,7 +513,7 @@ class FoodInformationAddressProductsV5 implements ModelInterface, ArrayAccess, \
     /**
      * Gets roles
      *
-     * @return \OpenAPI\Client\Model\FoodInformationAddressRoleProductsV5[]
+     * @return \Otto\Client\Model\FoodInformationAddressRoleProductsV5[]
      */
     public function getRoles()
     {
@@ -523,7 +523,7 @@ class FoodInformationAddressProductsV5 implements ModelInterface, ArrayAccess, \
     /**
      * Sets roles
      *
-     * @param \OpenAPI\Client\Model\FoodInformationAddressRoleProductsV5[] $roles The role of the business operator to which the address belongs. Allowed values are 'FOOD_BUSINESS_OPERATOR' or 'FEED_BUSINESS_OPERATOR'. Every variation within a product must have the same role.
+     * @param \Otto\Client\Model\FoodInformationAddressRoleProductsV5[] $roles The role of the business operator to which the address belongs. Allowed values are 'FOOD_BUSINESS_OPERATOR' or 'FEED_BUSINESS_OPERATOR'. Every variation within a product must have the same role.
      *
      * @return self
      */

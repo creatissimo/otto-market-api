@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CreateKeywordsRequestSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class CreateKeywordsRequestSponsoredProductAdsV1 implements ModelInterface, Arra
      * @var string[]
      */
     protected static $openAPITypes = [
-        'keywords' => '\OpenAPI\Client\Model\KeywordInputSponsoredProductAdsV1[]'
+        'keywords' => '\Otto\Client\Model\KeywordInputSponsoredProductAdsV1[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class CreateKeywordsRequestSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Gets keywords
      *
-     * @return \OpenAPI\Client\Model\KeywordInputSponsoredProductAdsV1[]
+     * @return \Otto\Client\Model\KeywordInputSponsoredProductAdsV1[]
      */
     public function getKeywords()
     {
@@ -309,7 +309,7 @@ class CreateKeywordsRequestSponsoredProductAdsV1 implements ModelInterface, Arra
     /**
      * Sets keywords
      *
-     * @param \OpenAPI\Client\Model\KeywordInputSponsoredProductAdsV1[] $keywords keywords
+     * @param \Otto\Client\Model\KeywordInputSponsoredProductAdsV1[] $keywords keywords
      *
      * @return self
      */

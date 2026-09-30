@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * APIErrorResponseForNotFoundShippingProfilesV1 Class Doc Comment
  *
  * @category Class
  * @description Describes the error details
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class APIErrorResponseForNotFoundShippingProfilesV1 implements ModelInterface, A
         'type' => 'string',
         'title' => 'string',
         'status' => 'float',
-        'validation_errors' => '\OpenAPI\Client\Model\ErrorWithNotFoundSuggestionsShippingProfilesV1[]'
+        'validation_errors' => '\Otto\Client\Model\ErrorWithNotFoundSuggestionsShippingProfilesV1[]'
     ];
 
     /**
@@ -407,7 +407,7 @@ class APIErrorResponseForNotFoundShippingProfilesV1 implements ModelInterface, A
     /**
      * Gets validation_errors
      *
-     * @return \OpenAPI\Client\Model\ErrorWithNotFoundSuggestionsShippingProfilesV1[]
+     * @return \Otto\Client\Model\ErrorWithNotFoundSuggestionsShippingProfilesV1[]
      */
     public function getValidationErrors()
     {
@@ -417,7 +417,7 @@ class APIErrorResponseForNotFoundShippingProfilesV1 implements ModelInterface, A
     /**
      * Sets validation_errors
      *
-     * @param \OpenAPI\Client\Model\ErrorWithNotFoundSuggestionsShippingProfilesV1[] $validation_errors validation_errors
+     * @param \Otto\Client\Model\ErrorWithNotFoundSuggestionsShippingProfilesV1[] $validation_errors validation_errors
      *
      * @return self
      */

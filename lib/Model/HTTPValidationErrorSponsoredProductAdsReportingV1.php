@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * HTTPValidationErrorSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class HTTPValidationErrorSponsoredProductAdsReportingV1 implements ModelInterfac
      * @var string[]
      */
     protected static $openAPITypes = [
-        'detail' => '\OpenAPI\Client\Model\ValidationErrorSponsoredProductAdsReportingV1[]'
+        'detail' => '\Otto\Client\Model\ValidationErrorSponsoredProductAdsReportingV1[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class HTTPValidationErrorSponsoredProductAdsReportingV1 implements ModelInterfac
     /**
      * Gets detail
      *
-     * @return \OpenAPI\Client\Model\ValidationErrorSponsoredProductAdsReportingV1[]|null
+     * @return \Otto\Client\Model\ValidationErrorSponsoredProductAdsReportingV1[]|null
      */
     public function getDetail()
     {
@@ -302,7 +302,7 @@ class HTTPValidationErrorSponsoredProductAdsReportingV1 implements ModelInterfac
     /**
      * Sets detail
      *
-     * @param \OpenAPI\Client\Model\ValidationErrorSponsoredProductAdsReportingV1[]|null $detail detail
+     * @param \Otto\Client\Model\ValidationErrorSponsoredProductAdsReportingV1[]|null $detail detail
      *
      * @return self
      */

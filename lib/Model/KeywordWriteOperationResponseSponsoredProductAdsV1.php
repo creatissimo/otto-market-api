@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * KeywordWriteOperationResponseSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1 implements ModelInterfa
      * @var string[]
      */
     protected static $openAPITypes = [
-        'change_request' => '\OpenAPI\Client\Model\ChangeRequestSponsoredProductAdsV1',
-        '_links' => '\OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks'
+        'change_request' => '\Otto\Client\Model\ChangeRequestSponsoredProductAdsV1',
+        '_links' => '\Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks'
     ];
 
     /**
@@ -305,7 +305,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1 implements ModelInterfa
     /**
      * Gets change_request
      *
-     * @return \OpenAPI\Client\Model\ChangeRequestSponsoredProductAdsV1
+     * @return \Otto\Client\Model\ChangeRequestSponsoredProductAdsV1
      */
     public function getChangeRequest()
     {
@@ -315,7 +315,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1 implements ModelInterfa
     /**
      * Sets change_request
      *
-     * @param \OpenAPI\Client\Model\ChangeRequestSponsoredProductAdsV1 $change_request change_request
+     * @param \Otto\Client\Model\ChangeRequestSponsoredProductAdsV1 $change_request change_request
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1 implements ModelInterfa
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks
+     * @return \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks
      */
     public function getLinks()
     {
@@ -342,7 +342,7 @@ class KeywordWriteOperationResponseSponsoredProductAdsV1 implements ModelInterfa
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks $_links _links
+     * @param \Otto\Client\Model\KeywordWriteOperationResponseSponsoredProductAdsV1AllOfLinks $_links _links
      *
      * @return self
      */

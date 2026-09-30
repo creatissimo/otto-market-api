@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * CampaignReportConfigurationSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
      * @var string[]
      */
     protected static $openAPITypes = [
-        'columns' => '\OpenAPI\Client\Model\CampaignReportAvailableColumnsSponsoredProductAdsReportingV1[]',
-        'group_by' => '\OpenAPI\Client\Model\CampaignReportGroupByColumnsSponsoredProductAdsReportingV1[]',
-        'filters' => '\OpenAPI\Client\Model\ReportFilterSponsoredProductAdsReportingV1[]',
-        'format' => '\OpenAPI\Client\Model\ReportFormatSponsoredProductAdsReportingV1'
+        'columns' => '\Otto\Client\Model\CampaignReportAvailableColumnsSponsoredProductAdsReportingV1[]',
+        'group_by' => '\Otto\Client\Model\CampaignReportGroupByColumnsSponsoredProductAdsReportingV1[]',
+        'filters' => '\Otto\Client\Model\ReportFilterSponsoredProductAdsReportingV1[]',
+        'format' => '\Otto\Client\Model\ReportFormatSponsoredProductAdsReportingV1'
     ];
 
     /**
@@ -319,7 +319,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Gets columns
      *
-     * @return \OpenAPI\Client\Model\CampaignReportAvailableColumnsSponsoredProductAdsReportingV1[]
+     * @return \Otto\Client\Model\CampaignReportAvailableColumnsSponsoredProductAdsReportingV1[]
      */
     public function getColumns()
     {
@@ -329,7 +329,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Sets columns
      *
-     * @param \OpenAPI\Client\Model\CampaignReportAvailableColumnsSponsoredProductAdsReportingV1[] $columns List of columns to include in the report. TOTAL_COSTS and TOTAL_SALES are reported in euro cents (EUR cents).
+     * @param \Otto\Client\Model\CampaignReportAvailableColumnsSponsoredProductAdsReportingV1[] $columns List of columns to include in the report. TOTAL_COSTS and TOTAL_SALES are reported in euro cents (EUR cents).
      *
      * @return self
      */
@@ -346,7 +346,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Gets group_by
      *
-     * @return \OpenAPI\Client\Model\CampaignReportGroupByColumnsSponsoredProductAdsReportingV1[]|null
+     * @return \Otto\Client\Model\CampaignReportGroupByColumnsSponsoredProductAdsReportingV1[]|null
      */
     public function getGroupBy()
     {
@@ -356,7 +356,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Sets group_by
      *
-     * @param \OpenAPI\Client\Model\CampaignReportGroupByColumnsSponsoredProductAdsReportingV1[]|null $group_by List of groupBy columns for the kpis in the report. Dimension columns in 'columns' are auto-added to GROUP BY. Columns in 'groupBy' are auto-added to SELECT. If not specified, defaults to grouping by CAMPAIGN_ID for campaign reports.
+     * @param \Otto\Client\Model\CampaignReportGroupByColumnsSponsoredProductAdsReportingV1[]|null $group_by List of groupBy columns for the kpis in the report. Dimension columns in 'columns' are auto-added to GROUP BY. Columns in 'groupBy' are auto-added to SELECT. If not specified, defaults to grouping by CAMPAIGN_ID for campaign reports.
      *
      * @return self
      */
@@ -380,7 +380,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Gets filters
      *
-     * @return \OpenAPI\Client\Model\ReportFilterSponsoredProductAdsReportingV1[]|null
+     * @return \Otto\Client\Model\ReportFilterSponsoredProductAdsReportingV1[]|null
      */
     public function getFilters()
     {
@@ -390,7 +390,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Sets filters
      *
-     * @param \OpenAPI\Client\Model\ReportFilterSponsoredProductAdsReportingV1[]|null $filters List of filters to apply to the report data.
+     * @param \Otto\Client\Model\ReportFilterSponsoredProductAdsReportingV1[]|null $filters List of filters to apply to the report data.
      *
      * @return self
      */
@@ -414,7 +414,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Gets format
      *
-     * @return \OpenAPI\Client\Model\ReportFormatSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\ReportFormatSponsoredProductAdsReportingV1
      */
     public function getFormat()
     {
@@ -424,7 +424,7 @@ class CampaignReportConfigurationSponsoredProductAdsReportingV1 implements Model
     /**
      * Sets format
      *
-     * @param \OpenAPI\Client\Model\ReportFormatSponsoredProductAdsReportingV1 $format format
+     * @param \Otto\Client\Model\ReportFormatSponsoredProductAdsReportingV1 $format format
      *
      * @return self
      */

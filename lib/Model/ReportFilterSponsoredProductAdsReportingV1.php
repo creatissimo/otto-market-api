@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ReportFilterSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
  * @description A single filter condition for a report query.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ReportFilterSponsoredProductAdsReportingV1 implements ModelInterface, Arra
      * @var string[]
      */
     protected static $openAPITypes = [
-        'column' => '\OpenAPI\Client\Model\FilterableColumnSponsoredProductAdsReportingV1',
-        'operator' => '\OpenAPI\Client\Model\FilterOperatorSponsoredProductAdsReportingV1',
+        'column' => '\Otto\Client\Model\FilterableColumnSponsoredProductAdsReportingV1',
+        'operator' => '\Otto\Client\Model\FilterOperatorSponsoredProductAdsReportingV1',
         'value' => 'string'
     ];
 
@@ -316,7 +316,7 @@ class ReportFilterSponsoredProductAdsReportingV1 implements ModelInterface, Arra
     /**
      * Gets column
      *
-     * @return \OpenAPI\Client\Model\FilterableColumnSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\FilterableColumnSponsoredProductAdsReportingV1
      */
     public function getColumn()
     {
@@ -326,7 +326,7 @@ class ReportFilterSponsoredProductAdsReportingV1 implements ModelInterface, Arra
     /**
      * Sets column
      *
-     * @param \OpenAPI\Client\Model\FilterableColumnSponsoredProductAdsReportingV1 $column column
+     * @param \Otto\Client\Model\FilterableColumnSponsoredProductAdsReportingV1 $column column
      *
      * @return self
      */
@@ -343,7 +343,7 @@ class ReportFilterSponsoredProductAdsReportingV1 implements ModelInterface, Arra
     /**
      * Gets operator
      *
-     * @return \OpenAPI\Client\Model\FilterOperatorSponsoredProductAdsReportingV1
+     * @return \Otto\Client\Model\FilterOperatorSponsoredProductAdsReportingV1
      */
     public function getOperator()
     {
@@ -353,7 +353,7 @@ class ReportFilterSponsoredProductAdsReportingV1 implements ModelInterface, Arra
     /**
      * Sets operator
      *
-     * @param \OpenAPI\Client\Model\FilterOperatorSponsoredProductAdsReportingV1 $operator operator
+     * @param \Otto\Client\Model\FilterOperatorSponsoredProductAdsReportingV1 $operator operator
      *
      * @return self
      */

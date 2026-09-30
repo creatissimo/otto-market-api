@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ProblemDetailResponseSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ProblemDetailResponseSponsoredProductAdsReportingV1 implements ModelInterf
      * @var string[]
      */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\ErrorItemSponsoredProductAdsReportingV1[]'
+        'errors' => '\Otto\Client\Model\ErrorItemSponsoredProductAdsReportingV1[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class ProblemDetailResponseSponsoredProductAdsReportingV1 implements ModelInterf
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ErrorItemSponsoredProductAdsReportingV1[]
+     * @return \Otto\Client\Model\ErrorItemSponsoredProductAdsReportingV1[]
      */
     public function getErrors()
     {
@@ -305,7 +305,7 @@ class ProblemDetailResponseSponsoredProductAdsReportingV1 implements ModelInterf
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ErrorItemSponsoredProductAdsReportingV1[] $errors List of error items (always exactly one)
+     * @param \Otto\Client\Model\ErrorItemSponsoredProductAdsReportingV1[] $errors List of error items (always exactly one)
      *
      * @return self
      */

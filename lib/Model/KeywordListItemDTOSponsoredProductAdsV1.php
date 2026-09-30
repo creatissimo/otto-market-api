@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * KeywordListItemDTOSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,10 +61,10 @@ class KeywordListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAc
         'keyword' => 'string',
         'match_type' => 'string',
         'keyword_type' => 'string',
-        'bid' => '\OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1',
+        'bid' => '\Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        '_links' => '\OpenAPI\Client\Model\KeywordListItemDTOSponsoredProductAdsV1Links'
+        '_links' => '\Otto\Client\Model\KeywordListItemDTOSponsoredProductAdsV1Links'
     ];
 
     /**
@@ -534,7 +534,7 @@ class KeywordListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAc
     /**
      * Gets bid
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
      */
     public function getBid()
     {
@@ -544,7 +544,7 @@ class KeywordListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAc
     /**
      * Sets bid
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid bid
+     * @param \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid bid
      *
      * @return self
      */
@@ -622,7 +622,7 @@ class KeywordListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAc
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\KeywordListItemDTOSponsoredProductAdsV1Links
+     * @return \Otto\Client\Model\KeywordListItemDTOSponsoredProductAdsV1Links
      */
     public function getLinks()
     {
@@ -632,7 +632,7 @@ class KeywordListItemDTOSponsoredProductAdsV1 implements ModelInterface, ArrayAc
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\KeywordListItemDTOSponsoredProductAdsV1Links $_links _links
+     * @param \Otto\Client\Model\KeywordListItemDTOSponsoredProductAdsV1Links $_links _links
      *
      * @return self
      */

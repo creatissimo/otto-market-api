@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ValidationErrorSponsoredProductAdsReportingV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ValidationErrorSponsoredProductAdsReportingV1 implements ModelInterface, A
      * @var string[]
      */
     protected static $openAPITypes = [
-        'loc' => '\OpenAPI\Client\Model\LocationInner[]',
+        'loc' => '\Otto\Client\Model\LocationInner[]',
         'msg' => 'string',
         'type' => 'string',
         'input' => 'mixed',
@@ -329,7 +329,7 @@ class ValidationErrorSponsoredProductAdsReportingV1 implements ModelInterface, A
     /**
      * Gets loc
      *
-     * @return \OpenAPI\Client\Model\LocationInner[]
+     * @return \Otto\Client\Model\LocationInner[]
      */
     public function getLoc()
     {
@@ -339,7 +339,7 @@ class ValidationErrorSponsoredProductAdsReportingV1 implements ModelInterface, A
     /**
      * Sets loc
      *
-     * @param \OpenAPI\Client\Model\LocationInner[] $loc loc
+     * @param \Otto\Client\Model\LocationInner[] $loc loc
      *
      * @return self
      */

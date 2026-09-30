@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * AdditionalRequirementProductsV5 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class AdditionalRequirementProductsV5 implements ModelInterface, ArrayAccess, \J
         'name' => 'string',
         'json_path' => 'string',
         'description' => 'string',
-        'condition' => '\OpenAPI\Client\Model\ConditionProductsV5',
+        'condition' => '\Otto\Client\Model\ConditionProductsV5',
         'feature_relevance' => 'string[]'
     ];
 
@@ -401,7 +401,7 @@ class AdditionalRequirementProductsV5 implements ModelInterface, ArrayAccess, \J
     /**
      * Gets condition
      *
-     * @return \OpenAPI\Client\Model\ConditionProductsV5|null
+     * @return \Otto\Client\Model\ConditionProductsV5|null
      */
     public function getCondition()
     {
@@ -411,7 +411,7 @@ class AdditionalRequirementProductsV5 implements ModelInterface, ArrayAccess, \J
     /**
      * Sets condition
      *
-     * @param \OpenAPI\Client\Model\ConditionProductsV5|null $condition condition
+     * @param \Otto\Client\Model\ConditionProductsV5|null $condition condition
      *
      * @return self
      */

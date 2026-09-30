@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PaginatedTargetsResponseSponsoredProductAdsV1Links Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,9 +57,9 @@ class PaginatedTargetsResponseSponsoredProductAdsV1Links implements ModelInterfa
      * @var string[]
      */
     protected static $openAPITypes = [
-        'self' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'next' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'prev' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'self' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'next' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'prev' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -306,7 +306,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1Links implements ModelInterfa
     /**
      * Gets self
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getSelf()
     {
@@ -316,7 +316,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1Links implements ModelInterfa
     /**
      * Sets self
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $self self
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $self self
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1Links implements ModelInterfa
     /**
      * Gets next
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getNext()
     {
@@ -343,7 +343,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1Links implements ModelInterfa
     /**
      * Sets next
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $next next
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $next next
      *
      * @return self
      */
@@ -360,7 +360,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1Links implements ModelInterfa
     /**
      * Gets prev
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getPrev()
     {
@@ -370,7 +370,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1Links implements ModelInterfa
     /**
      * Sets prev
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $prev prev
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $prev prev
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * APIErrorResponseSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class APIErrorResponseSponsoredProductAdsV1 implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1ErrorsInner[]',
+        'errors' => '\Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1ErrorsInner[]',
         'timestamp' => '\DateTime'
     ];
 
@@ -309,7 +309,7 @@ class APIErrorResponseSponsoredProductAdsV1 implements ModelInterface, ArrayAcce
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1ErrorsInner[]
+     * @return \Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1ErrorsInner[]
      */
     public function getErrors()
     {
@@ -319,7 +319,7 @@ class APIErrorResponseSponsoredProductAdsV1 implements ModelInterface, ArrayAcce
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\APIErrorResponseSponsoredProductAdsV1ErrorsInner[] $errors errors
+     * @param \Otto\Client\Model\APIErrorResponseSponsoredProductAdsV1ErrorsInner[] $errors errors
      *
      * @return self
      */

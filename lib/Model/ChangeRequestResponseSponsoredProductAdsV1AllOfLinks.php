@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * ChangeRequestResponseSponsoredProductAdsV1AllOfLinks Class Doc Comment
  *
  * @category Class
  * @description Navigation links. Always contains &#x60;self&#x60;. When status is &#x60;ACCEPTED&#x60;, also contains a &#x60;campaign&#x60; link in the current implementation.
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ChangeRequestResponseSponsoredProductAdsV1AllOfLinks implements ModelInter
      * @var string[]
      */
     protected static $openAPITypes = [
-        'self' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1',
-        'campaign' => '\OpenAPI\Client\Model\LinkSponsoredProductAdsV1'
+        'self' => '\Otto\Client\Model\LinkSponsoredProductAdsV1',
+        'campaign' => '\Otto\Client\Model\LinkSponsoredProductAdsV1'
     ];
 
     /**
@@ -303,7 +303,7 @@ class ChangeRequestResponseSponsoredProductAdsV1AllOfLinks implements ModelInter
     /**
      * Gets self
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1
      */
     public function getSelf()
     {
@@ -313,7 +313,7 @@ class ChangeRequestResponseSponsoredProductAdsV1AllOfLinks implements ModelInter
     /**
      * Sets self
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1 $self self
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1 $self self
      *
      * @return self
      */
@@ -330,7 +330,7 @@ class ChangeRequestResponseSponsoredProductAdsV1AllOfLinks implements ModelInter
     /**
      * Gets campaign
      *
-     * @return \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\LinkSponsoredProductAdsV1|null
      */
     public function getCampaign()
     {
@@ -340,7 +340,7 @@ class ChangeRequestResponseSponsoredProductAdsV1AllOfLinks implements ModelInter
     /**
      * Sets campaign
      *
-     * @param \OpenAPI\Client\Model\LinkSponsoredProductAdsV1|null $campaign campaign
+     * @param \Otto\Client\Model\LinkSponsoredProductAdsV1|null $campaign campaign
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * PaginatedTargetsResponseSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class PaginatedTargetsResponseSponsoredProductAdsV1 implements ModelInterface, A
      * @var string[]
      */
     protected static $openAPITypes = [
-        'targets' => '\OpenAPI\Client\Model\TargetListItemDTOSponsoredProductAdsV1[]',
+        'targets' => '\Otto\Client\Model\TargetListItemDTOSponsoredProductAdsV1[]',
         'next_cursor' => 'string',
         'prev_cursor' => 'string',
-        '_links' => '\OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1Links'
+        '_links' => '\Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1Links'
     ];
 
     /**
@@ -319,7 +319,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1 implements ModelInterface, A
     /**
      * Gets targets
      *
-     * @return \OpenAPI\Client\Model\TargetListItemDTOSponsoredProductAdsV1[]
+     * @return \Otto\Client\Model\TargetListItemDTOSponsoredProductAdsV1[]
      */
     public function getTargets()
     {
@@ -329,7 +329,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1 implements ModelInterface, A
     /**
      * Sets targets
      *
-     * @param \OpenAPI\Client\Model\TargetListItemDTOSponsoredProductAdsV1[] $targets targets
+     * @param \Otto\Client\Model\TargetListItemDTOSponsoredProductAdsV1[] $targets targets
      *
      * @return self
      */
@@ -414,7 +414,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1 implements ModelInterface, A
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1Links
+     * @return \Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1Links
      */
     public function getLinks()
     {
@@ -424,7 +424,7 @@ class PaginatedTargetsResponseSponsoredProductAdsV1 implements ModelInterface, A
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1Links $_links _links
+     * @param \Otto\Client\Model\PaginatedTargetsResponseSponsoredProductAdsV1Links $_links _links
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Otto\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Otto\Client\ObjectSerializer;
 
 /**
  * TargetInputSponsoredProductAdsV1 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Otto\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class TargetInputSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
      */
     protected static $openAPITypes = [
         'sku' => 'string',
-        'bid' => '\OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1'
+        'bid' => '\Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1'
     ];
 
     /**
@@ -329,7 +329,7 @@ class TargetInputSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Gets bid
      *
-     * @return \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
+     * @return \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null
      */
     public function getBid()
     {
@@ -339,7 +339,7 @@ class TargetInputSponsoredProductAdsV1 implements ModelInterface, ArrayAccess, \
     /**
      * Sets bid
      *
-     * @param \OpenAPI\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid Required for AUTOMATIC campaigns, ignored for MANUAL campaigns.
+     * @param \Otto\Client\Model\MonetaryAmountSponsoredProductAdsV1|null $bid Required for AUTOMATIC campaigns, ignored for MANUAL campaigns.
      *
      * @return self
      */

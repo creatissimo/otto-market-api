@@ -5877,7 +5877,7 @@ class ProductsV5Api
             $content = $response->getBody(); //stream goes to serializer
         } else {
             $content = (string) $response->getBody();
-            if ($dataType !== 'string') {
+            if ($dataType !== 'string' && $content !== "") {
                 try {
                     $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                 } catch (\JsonException $exception) {
